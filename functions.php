@@ -288,55 +288,55 @@ add_action( 'wp_enqueue_scripts', 'options_stylesheets_alt_style' );
 
 
 
-    /**
- * Enqueues the Google $font that is passed
- */
- 
-function options_typography_enqueue_google_font($font) {
-	$font = explode(',', $font);
-	$font = $font[0];
-	// Certain Google fonts need slight tweaks in order to load properly
-	// Like our friend "Raleway"
-	if ( $font == 'Raleway' )
-		$font = 'Raleway:100';
-	$font = str_replace(" ", "+", $font);
-	wp_enqueue_style( "options_typography_$font", "http://fonts.googleapis.com/css?family=$font", false, null, 'all' );
-}
-    
-    /* 
- * Outputs the selected option panel styles inline into the <head>
- */
- 
-function options_typography_styles() {
-     $output = '';
-     $input = '';
-
-     if ( of_get_option( 'google_font' ) ) {
-          $input = of_get_option( 'google_font' );
-	  $output .= options_typography_font_styles( of_get_option( 'google_font' ) , '.google-font');
-     }
-
-     if ( $output != '' ) {
-	$output = "\n<style>\n" . $output . "</style>\n";
-	echo $output;
-     }
-}
-add_action('wp_head', 'options_typography_styles');
-    
-    /* 
- * Returns a typography option in a format that can be outputted as inline CSS
- */
- 
-function options_typography_font_styles($option, $selectors) {
-		$output = $selectors . ' {';
-		$output .= ' color:' . $option['color'] .'; ';
-		$output .= 'font-family:' . $option['face'] . '; ';
-		$output .= 'font-weight:' . $option['style'] . '; ';
-		$output .= 'font-size:' . $option['size'] . '; ';
-		$output .= '}';
-		$output .= "\n";
-		return $output;
-}
+//    /**
+// * Enqueues the Google $font that is passed
+// */
+// 
+//function options_typography_enqueue_google_font($font) {
+//	$font = explode(',', $font);
+//	$font = $font[0];
+//	// Certain Google fonts need slight tweaks in order to load properly
+//	// Like our friend "Raleway"
+//	if ( $font == 'Raleway' )
+//		$font = 'Raleway:100';
+//	$font = str_replace(" ", "+", $font);
+//	wp_enqueue_style( "options_typography_$font", "http://fonts.googleapis.com/css?family=$font", false, null, 'all' );
+//}
+//    
+//    /* 
+// * Outputs the selected option panel styles inline into the <head>
+// */
+// 
+//function options_typography_styles() {
+//     $output = '';
+//     $input = '';
+//
+//     if ( of_get_option( 'google_font' ) ) {
+//          $input = of_get_option( 'google_font' );
+//	  $output .= options_typography_font_styles( of_get_option( 'google_font' ) , '.google-font');
+//     }
+//
+//     if ( $output != '' ) {
+//	$output = "\n<style>\n" . $output . "</style>\n";
+//	echo $output;
+//     }
+//}
+//add_action('wp_head', 'options_typography_styles');
+//    
+//    /* 
+// * Returns a typography option in a format that can be outputted as inline CSS
+// */
+// 
+//function options_typography_font_styles($option, $selectors) {
+//		$output = $selectors . ' {';
+//		$output .= ' color:' . $option['color'] .'; ';
+//		$output .= 'font-family:' . $option['face'] . '; ';
+//		$output .= 'font-weight:' . $option['style'] . '; ';
+//		$output .= 'font-size:' . $option['size'] . '; ';
+//		$output .= '}';
+//		$output .= "\n";
+//		return $output;
+//}
 
 
 
