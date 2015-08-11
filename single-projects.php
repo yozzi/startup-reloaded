@@ -109,6 +109,11 @@ get_header(); ?>
                         <?php foreach ( $project_plans as $attachment_id => $img_medium_url ) {
                             $image = wp_get_attachment_link($attachment_id, 'medium');
                             echo $image;
+                            // À tester
+                            $description = $attachment_id->post_content;
+                            if ($description){
+                                echo $description;
+                            }
                         } ?>
                     
                     <?php } ?>
