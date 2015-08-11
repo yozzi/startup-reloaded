@@ -110,6 +110,7 @@ get_header(); ?>
                             $image = wp_get_attachment_link($attachment_id, 'medium');
                             echo $image;
                             // À tester
+                            echo apply_filters( 'the_title' , $attachment_id->post_title );
                             $description = $attachment_id->post_content;
                             if ($description){
                                 echo $description;
