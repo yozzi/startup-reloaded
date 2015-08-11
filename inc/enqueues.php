@@ -20,7 +20,7 @@ function startup_reloaded_scripts() {
     
     wp_enqueue_style( 'startup-reloaded-ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/dist/css/jquery.mb.YTPlayer.min.css' );
     
-        wp_enqueue_style( 'startup-reloaded-magnific-popup', get_template_directory_uri() . '/lib/Magnific-Popup/dist/magnific-popup.css' );
+    wp_enqueue_style( 'startup-reloaded-magnific-popup', get_template_directory_uri() . '/lib/Magnific-Popup/dist/magnific-popup.css' );
 	
     wp_enqueue_style( 'startup-reloaded-style', get_stylesheet_uri() );
     
