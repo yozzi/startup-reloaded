@@ -349,3 +349,18 @@ function startup_reloaded_modify_attachment_link( $markup, $id, $size, $permalin
     return $markup;
 }
 add_filter( 'wp_get_attachment_link', 'startup_reloaded_modify_attachment_link', 10, 4 );
+
+
+//Fonction pour récupérer les info d'un attachement à partir de son id, utilisé dans projects
+function wp_get_attachment( $attachment_id ) {
+
+    $attachment = get_post( $attachment_id );
+    return array(
+        'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+        'caption' => $attachment->post_excerpt,
+        'description' => $attachment->post_content,
+        'href' => get_permalink( $attachment->ID ),
+        'src' => $attachment->guid,
+        'title' => $attachment->post_title
+    );
+}        

@@ -108,18 +108,13 @@ get_header(); ?>
                         <h5>Plans</h5>
                         <?php foreach ( $project_plans as $attachment_id => $img_medium_url ) {
                             $image = wp_get_attachment_link($attachment_id, 'medium');
+                            $attachment_meta = wp_get_attachment($attachment_id);
                             echo $image;
-                            // À tester
-                            echo apply_filters( 'the_title' , $attachment_id->post_title ); // Display Title
-                            echo $attachment_id->post_excerpt; // Display Caption
-                            echo $attachment_id['_wp_attachment_image_alt']['0']; // Display Alt text
-                            $description = $attachment_id->post_content; // Display Description
-                            if ($description){
-                                echo $description;
+                            if ( $attachment_meta['description'] ){
+                                echo '<br />' . $attachment_meta['description'];
                             }
-                        } ?>
-                    
-                    <?php } ?>
+                        }
+                    } ?>
                     
                     <?php if ( $project_gallery ) { ?>
                         <h5>Galerie photos</h5>
