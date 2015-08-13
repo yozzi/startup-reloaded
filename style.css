@@ -882,6 +882,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     font-size: 24px;
     text-align: center;
     font-weight: 700;
+    cursor: default;
 }
 
 #pricing .pricing-table .pricing-header .pricing-rate {
@@ -889,6 +890,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     color: #ffffff;
     position: relative;
     text-align: center;
+    cursor: default;
 }
 
 #pricing .pricing-table .pricing-header .pricing-rate sup {
@@ -896,12 +898,14 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     position: relative;
     top: -30px;
     color: #ccc;
+    cursor: default;
 }
 
 #pricing .pricing-table .pricing-header .pricing-rate span {
     font-size: 16px;
     color: #ccc;
     text-transform: uppercase;
+    cursor: default;
 }
 
 #pricing .pricing-list {
@@ -922,10 +926,19 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     color: #939393;
     font-size: 16px;
     line-height: 42px;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+    cursor: default;
 }
 
 #pricing .pricing-list ul li:last-child {
     border: none;
+}
+
+#pricing .pricing-list ul li:hover {
+    color: #323232;
 }
 
 #pricing .pricing-list ul li i {
