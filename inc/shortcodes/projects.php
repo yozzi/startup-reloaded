@@ -7,20 +7,20 @@ $total_projects = count($projects);
     <div class="container">
         <div class="row">
             <?php foreach ($projects as $key=> $project) {
-                $project_thumbnail  = get_post_meta( $project->ID, '_startup_reloaded_projects_thumbnail', true );  
-                $project_short  = get_post_meta( $project->ID, '_startup_reloaded_projects_short', true );  
-                $project_type  = get_post_meta( $project->ID, '_startup_reloaded_projects_type', true );                  
-                $project_status  = get_post_meta( $project->ID, '_startup_reloaded_projects_status', true );
-                $project_main_pic  = get_post_meta( $project->ID, '_startup_reloaded_projects_main_pic', true );                    
-                $project_description  = get_post_meta( $project->ID, '_startup_reloaded_projects_description', true );
-                $project_specifications  = get_post_meta( $project->ID, '_startup_reloaded_projects_specifications', true );                    
-                $project_options  = get_post_meta( $project->ID, '_startup_reloaded_projects_options', true );
-                $project_warranty  = get_post_meta( $project->ID, '_startup_reloaded_projects_warranty', true );                    
-                $project_price  = get_post_meta( $project->ID, '_startup_reloaded_projects_price', true );
-                $project_implantation  = get_post_meta( $project->ID, '_startup_reloaded_projects_implantation', true );                    
-                $project_plans  = get_post_meta( $project->ID, '_startup_reloaded_projects_plans', true );
-                $project_gallery  = get_post_meta( $project->ID, '_startup_reloaded_projects_gallery', true );
-                $project_url   = get_post_meta( $project->ID, '_startup_reloaded_projects_url', true );
+                $thumbnail  = wp_get_attachment_image( get_post_meta( $project->ID, '_startup_reloaded_projects_thumbnail_id', 1 ), 'thumbnail' );
+                $short  = get_post_meta( $project->ID, '_startup_reloaded_projects_short', true );  
+                $type  = get_post_meta( $project->ID, '_startup_reloaded_projects_type', true );                  
+                $status  = get_post_meta( $project->ID, '_startup_reloaded_projects_status', true );
+                $main_pic  = wp_get_attachment_image( get_post_meta( $project->ID, '_startup_reloaded_projects_main_pic_id', 1 ), 'thumbnail' );
+                $description  = get_post_meta( $project->ID, '_startup_reloaded_projects_description', true );
+                $specifications  = get_post_meta( $project->ID, '_startup_reloaded_projects_specifications', true );                    
+                $options  = get_post_meta( $project->ID, '_startup_reloaded_projects_options', true );
+                $warranty  = get_post_meta( $project->ID, '_startup_reloaded_projects_warranty', true );                    
+                $price  = get_post_meta( $project->ID, '_startup_reloaded_projects_price', true );
+                $implantation  = get_post_meta( $project->ID, '_startup_reloaded_projects_implantation', true );                    
+                $plans  = get_post_meta( $project->ID, '_startup_reloaded_projects_plans', true );
+                $gallery  = get_post_meta( $project->ID, '_startup_reloaded_projects_gallery', true );
+                $url   = get_post_meta( $project->ID, '_startup_reloaded_projects_url', true );
     
             ?>
                 <div class="col-xs-12 col-sm-4">
@@ -29,13 +29,13 @@ $total_projects = count($projects);
                             <p class="project-title"><?php echo $project->post_title ?></p>
                             
                             
-                            <?php if ( $project_thumbnail ) { 
+                            <?php if ( $thumbnail ) { 
                                 
-                                $image = wp_get_attachment_image( get_post_meta( $project->ID, '_startup_reloaded_projects_thumbnail_id', 1 ), 'thumbnail' );
+                                $image = $thumbnail
                             
-                            } elseif ( $project_main_pic ) {
+                            } elseif ( $main_pic ) {
                             
-                                $image = wp_get_attachment_image( get_post_meta( $project->ID, '_startup_reloaded_projects_main_pic_id', 1 ), 'thumbnail' );
+                                $image = $main_pic
                             
                             } else {
                             
@@ -45,8 +45,8 @@ $total_projects = count($projects);
                             
                                 <a href="<?php echo esc_url( get_permalink($project->ID) ) ?>"><? echo $image ;?></a>
                             
-                            <?php if ( $project_short ) { ?><h5><?php echo esc_html( $project_short ); ?></h5><?php } ?>
-                            <?php if ( $project_status ) { ?><div><em><?php echo esc_html( $project_status ); ?></em></div><?php } ?>
+                            <?php if ( $short ) { ?><h5><?php echo esc_html( $short ); ?></h5><?php } ?>
+                            <?php if ( $status ) { ?><div><em><?php echo esc_html( $status ); ?></em></div><?php } ?>
                             <a href="<?php echo esc_url( get_permalink($project->ID) ) ?>">Visiter ce projet</a>
                    
                    

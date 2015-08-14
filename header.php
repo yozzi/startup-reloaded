@@ -84,7 +84,7 @@ if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
     <?php endif ?>
 
 </head>
-<?php if ( $responsive != 1 ) { $unresponsive = 'ur'; } ?>
+<?php if ( $responsive != 1 ) { $unresponsive = 'ur'; } else { $unresponsive = ''; } ?>
 <body <?php body_class( $unresponsive ); if ( is_front_page() ) { echo ' style="padding-top:' . $body_padding . 'px"'; } ?>>
     <div class="animsition" data-animsition-in="<?php echo $page_transition_in; ?>" data-animsition-out="<?php echo $page_transition_out; ?>">
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
