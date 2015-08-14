@@ -1,142 +1,121 @@
 <?php
-/**
- * Include the TGM_Plugin_Activation class.
- */
 require get_template_directory() . '/lib/class-tgm-plugin-activation.php';
  
 add_action( 'tgmpa_register', 'startup_reloaded_register_required_plugins' );
-/**
- * Register the required plugins for this theme.
- *
- * In this example, we register two plugins - one included with the TGMPA library
- * and one from the .org repo.
- *
- * The variable passed to tgmpa_register_plugins() should be an array of plugin
- * arrays.
- *
- * This function is hooked into tgmpa_init, which is fired within the
- * TGM_Plugin_Activation class constructor.
- */
+
 function startup_reloaded_register_required_plugins() {
- 
-    /**
-     * Array of plugin arrays. Required keys are name and slug.
-     * If the source is NOT from the .org repo, then source is also required.
-     */
     $plugins = array(
- 
-        // This is an example of how to include a plugin pre-packaged with a theme.
         array(
             'name'               => 'StartUp', // The plugin name.
             'slug'               => 'startup', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Milestones Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-milestones', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-milestones.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-milestones/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-milestones', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Portfolio Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-portfolio', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-portfolio.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-portfolio/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-portfolio', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Pricing Table Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-pricing-table', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-pricing-table.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-pricing-table/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-pricing-table', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Projects Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-projects', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-projects.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-projects/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-projects', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Rooms Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-rooms', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-rooms.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-rooms/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-rooms', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Services Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-services', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-services.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-services/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-services', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Slider Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-slider', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-slider.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-slider/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-slider', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Team Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-team', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-team.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-team/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-team', // If set, overrides default API URL and points to an external URL.
         ),
         array(
             'name'               => 'StartUp Testimonials Custom Post', // The plugin name.
             'slug'               => 'startup-cpt-testimonials', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/plugins/startup-cpt-testimonials.zip', // The plugin source.
+            'source'             => 'https://github.com/yozzi/startup-cpt-testimonials/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-            'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-testimonials', // If set, overrides default API URL and points to an external URL.
+        ),     
+        array(
+            'name'               => 'StartUp Menus Custom Post', // The plugin name.
+            'slug'               => 'startup-cpt-testimonials', // The plugin slug (typically the folder name).
+            'source'             => 'https://github.com/yozzi/startup-cpt-menus/archive/master.zip', // The plugin source.
+            'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+            'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
+            'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-menus', // If set, overrides default API URL and points to an external URL.
         ),
- 
-        // This is an example of how to include a plugin from a private repo in your theme.
-//        array(
-//            'name'               => 'TGM New Media Plugin', // The plugin name.
-//            'slug'               => 'tgm-new-media-plugin', // The plugin slug (typically the folder name).
-//            'source'             => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip', // The plugin source.
-//            'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-//            'external_url'       => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
-//        ),
- 
-        // This is an example of how to include a plugin from the WordPress Plugin Repository.
+
         array(
             'name'      => 'Bootstrap Shortcodes for WordPress',
             'slug'      => 'bootstrap-3-shortcodes',
@@ -165,13 +144,6 @@ function startup_reloaded_register_required_plugins() {
  
     );
  
-    /**
-     * Array of configuration settings. Amend each line as needed.
-     * If you want the default strings to be available under your own theme domain,
-     * leave the strings uncommented.
-     * Some of the strings are added into a sprintf, so see the comments at the
-     * end of each line for what each argument will be.
-     */
     $config = array(
         'default_path' => '',                      // Default absolute path to pre-packaged plugins.
         'menu'         => 'tgmpa-install-plugins', // Menu slug.
