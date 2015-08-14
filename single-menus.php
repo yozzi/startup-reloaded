@@ -39,7 +39,7 @@ get_header(); ?>
                             <h3>Mise en bouche</h3>
                             <ul class="list-unstyled">
                                 <?php foreach ( (array) $miseenbouches as $key => $miseenbouche ) { ?>
-                                <li><h4><?php echo esc_html( $miseenbouche['name'] ); ?><?php if ( array_key_exists('extra', $miseenbouche) ) { echo ' <small>+extra</small>'; } ?></h4></li>
+                                <li><h4><?php echo esc_html( $miseenbouche['name'] ); if ( array_key_exists('extra', $miseenbouche) ) { echo ' <small>+extra</small>'; } ?></h4></li>
                                     <?php if ( array_key_exists('desc', $miseenbouche) ) { ?><li><?php echo esc_html( $miseenbouche['desc'] ); ?></li><?php } ?>
                                 <?php } ?>     
                             </ul>
@@ -51,7 +51,7 @@ get_header(); ?>
                             <h3>Entr&eacute; en mati&egrave;re</h3>
                             <ul class="list-unstyled">
                                 <?php foreach ( (array) $entrees as $key => $entree ) { ?>
-                                <li><h4><?php echo esc_html( $entree['name'] ); ?><?php if ( array_key_exists('extra', $entree) ) { echo ' <small>+extra</small>'; } ?></h4></li>
+                                <li><h4><?php echo esc_html( $entree['name'] ); if ( array_key_exists('extra', $entree) ) { echo ' <small>+extra</small>'; } ?></h4></li>
                                     <?php if ( array_key_exists('desc', $entree) ) { ?><li><?php echo esc_html( $entree['desc'] ); ?></li><?php } ?>
                                 <?php } ?>     
                             </ul>
@@ -63,7 +63,7 @@ get_header(); ?>
                             <h3>Pr&eacute;lude</h3>
                             <ul class="list-unstyled">
                                 <?php foreach ( (array) $preludes as $key => $prelude ) { ?>
-                               <li><h4><?php echo esc_html( $prelude['name'] ); ?><?php if ( array_key_exists('extra', $prelude) ) { echo ' <small>+extra</small>'; } ?></h4></li>
+                               <li><h4><?php echo esc_html( $prelude['name'] ); if ( array_key_exists('extra', $prelude) ) { echo ' <small>+extra</small>'; } ?></h4></li>
                                     <?php if ( array_key_exists('desc', $prelude) ) { ?><li><?php echo esc_html( $prelude['desc'] ); ?></li><?php } ?>
                                 <?php } ?>     
                             </ul>
@@ -75,7 +75,7 @@ get_header(); ?>
                             <h3>Plat principal</h3>
                             <ul class="list-unstyled">
                                 <?php foreach ( (array) $plats as $key => $plat ) { ?>
-                                <li><h4><?php echo esc_html( $plat['name'] ); ?><?php if ( array_key_exists('extra', $plat) ) { echo ' <small>+extra</small>'; } ?></h4></li>
+                                <li><h4><?php echo esc_html( $plat['name'] ); if ( array_key_exists('extra', $plat) ) { echo ' <small>+extra</small>'; } ?></h4></li>
                                     <?php if ( array_key_exists('desc', $plat) ) { ?><li><?php echo esc_html( $plat['desc'] ); ?></li><?php } ?>
                                 <?php } ?>     
                             </ul>
@@ -87,7 +87,7 @@ get_header(); ?>
                             <h3>Dessert du capitaine</h3>
                             <ul class="list-unstyled">
                                 <?php foreach ( (array) $desserts as $key => $dessert ) { ?>
-                                <li><h4><?php echo esc_html( $dessert['name'] ); ?><?php if ( array_key_exists('extra', $dessert) ) { echo ' <small>+extra</small>'; } ?></h4></li>
+                                <li><h4><?php echo esc_html( $dessert['name'] ); if ( array_key_exists('extra', $dessert) ) { echo ' <small>+extra</small>'; } ?></h4></li>
                                     <?php if ( array_key_exists('desc', $dessert) ) { ?><li><?php echo esc_html( $dessert['desc'] ); ?></li><?php } ?>
                                 <?php } ?>     
                             </ul>
