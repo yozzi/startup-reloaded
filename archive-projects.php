@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="row site-main" role="main">
 
 		<?php if ( have_posts() ) :
-             $project_thumbnail  = get_post_meta( get_the_ID(), '_startup_reloaded_projects_thumbnail', true );                    
+            $project_thumbnail  = get_post_meta( get_the_ID(), '_startup_reloaded_projects_thumbnail', true );                    
             $project_type  = get_post_meta( get_the_ID(), '_startup_reloaded_projects_type', true );
             $project_category  = get_post_meta( get_the_ID(), '_startup_reloaded_projects_category', true );                    
             $project_status  = get_post_meta( get_the_ID(), '_startup_reloaded_projects_status', true );
