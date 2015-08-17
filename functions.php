@@ -240,12 +240,6 @@ if( $auto_format_off == 1 ){
  */
 require get_template_directory() . '/inc/google-fonts.php';
 
-
-
-
-
-
-
  /* 
  * The CSS file selected in the options panel 'stylesheet' option
  * is loaded on the theme front end
@@ -258,88 +252,6 @@ function options_stylesheets_alt_style()   {
 }
 add_action( 'wp_enqueue_scripts', 'options_stylesheets_alt_style' );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    /**
-// * Enqueues the Google $font that is passed
-// */
-// 
-//function options_typography_enqueue_google_font($font) {
-//	$font = explode(',', $font);
-//	$font = $font[0];
-//	// Certain Google fonts need slight tweaks in order to load properly
-//	// Like our friend "Raleway"
-//	if ( $font == 'Raleway' )
-//		$font = 'Raleway:100';
-//	$font = str_replace(" ", "+", $font);
-//	wp_enqueue_style( "options_typography_$font", "http://fonts.googleapis.com/css?family=$font", false, null, 'all' );
-//}
-//    
-//    /* 
-// * Outputs the selected option panel styles inline into the <head>
-// */
-// 
-//function options_typography_styles() {
-//     $output = '';
-//     $input = '';
-//
-//     if ( of_get_option( 'google_font' ) ) {
-//          $input = of_get_option( 'google_font' );
-//	  $output .= options_typography_font_styles( of_get_option( 'google_font' ) , '.google-font');
-//     }
-//
-//     if ( $output != '' ) {
-//	$output = "\n<style>\n" . $output . "</style>\n";
-//	echo $output;
-//     }
-//}
-//add_action('wp_head', 'options_typography_styles');
-//    
-//    /* 
-// * Returns a typography option in a format that can be outputted as inline CSS
-// */
-// 
-//function options_typography_font_styles($option, $selectors) {
-//		$output = $selectors . ' {';
-//		$output .= ' color:' . $option['color'] .'; ';
-//		$output .= 'font-family:' . $option['face'] . '; ';
-//		$output .= 'font-weight:' . $option['style'] . '; ';
-//		$output .= 'font-size:' . $option['size'] . '; ';
-//		$output .= '}';
-//		$output .= "\n";
-//		return $output;
-//}
-
-
-
 //Ajouter une class css a wp_get_attachment_link() pour empêcher qu'une transition animsition apparaisse à l'ouvertue de magnific popup
 function startup_reloaded_modify_attachment_link( $markup, $id, $size, $permalink ) {
     global $post;
@@ -349,7 +261,6 @@ function startup_reloaded_modify_attachment_link( $markup, $id, $size, $permalin
     return $markup;
 }
 add_filter( 'wp_get_attachment_link', 'startup_reloaded_modify_attachment_link', 10, 4 );
-
 
 //Fonction pour récupérer les info d'un attachement à partir de son id, utilisé dans projects
 function wp_get_attachment( $attachment_id ) {
@@ -364,3 +275,70 @@ function wp_get_attachment( $attachment_id ) {
         'title' => $attachment->post_title
     );
 }        
+
+//CPT archives in menu
+ /* http://codeseekah.com/2012/03/01/custom-post-ty…dpress-menus-2/ */
+  /* this code comes with no guarantees */
+
+  /* inject cpt archives meta box */
+  add_action( 'admin_head-nav-menus.php', 'inject_cpt_archives_menu_meta_box' );
+  function inject_cpt_archives_menu_meta_box() {
+    add_meta_box( 'add-cpt', __( 'Custom Post Types', 'default' ), 'wp_nav_menu_cpt_archives_meta_box', 'nav-menus', 'side', 'default' );
+  }
+
+  /* render custom post type archives meta box */
+  function wp_nav_menu_cpt_archives_meta_box() {
+    /* get custom post types with archive support */
+    $post_types = get_post_types( array( 'show_in_nav_menus' => true, 'has_archive' => true ), 'object' );
+
+    /* hydrate the necessary object properties for the walker */
+    foreach ( $post_types as &$post_type ) {
+        $post_type->classes = array();
+        $post_type->type = $post_type->name;
+        $post_type->object_id = $post_type->name;
+        $post_type->title = $post_type->labels->name . ' ' . __( 'Archive', 'default' );
+        $post_type->object = 'cpt-archive';
+    }
+
+
+    $walker = new Walker_Nav_Menu_Checklist( array() );
+
+    ?>
+    <div id="cpt-archive" class="posttypediv">
+      <div id="tabs-panel-cpt-archive" class="tabs-panel tabs-panel-active">
+        <ul id="ctp-archive-checklist" class="categorychecklist form-no-clear">
+          <?php
+            echo walk_nav_menu_tree( array_map('wp_setup_nav_menu_item', $post_types), 0, (object) array( 'walker' => $walker) );
+          ?>
+        </ul>
+      </div><!-- /.tabs-panel -->
+    </div>
+    <p class="button-controls">
+      <span class="add-to-menu">
+        <input type="submit"<?php disabled( $nav_menu_selected_id, 0 ); ?> class="button-secondary submit-add-to-menu right" value="<?php esc_attr_e('Add to Menu'); ?>" name="add-ctp-archive-menu-item" id="submit-cpt-archive" />
+          <span class="spinner"></span>
+      </span>
+    </p>
+    <?php
+  }
+
+  /* ...did you? */
+//  wp_die('You pasted the code without reading it...');
+
+  /* take care of the urls */
+  add_filter( 'wp_get_nav_menu_items', 'cpt_archive_menu_filter', 10, 3 );
+  function cpt_archive_menu_filter( $items, $menu, $args ) {
+    /* alter the URL for cpt-archive objects */
+    foreach ( $items as &$item ) {
+      if ( $item->object != 'cpt-archive' ) continue;
+      $item->url = get_post_type_archive_link( $item->type );
+      
+      /* set current */
+      if ( get_query_var( 'post_type' ) == $item->type ) {
+        $item->classes []= 'current-menu-item';
+        $item->current = true;
+      }
+    }
+
+    return $items;
+  }
