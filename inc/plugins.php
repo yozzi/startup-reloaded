@@ -16,7 +16,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Milestones Custom Post Type', // The plugin name.
+            'name'               => 'StartUp Milestones', // The plugin name.
             'slug'               => 'startup-cpt-milestones', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-milestones/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -26,7 +26,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-milestones', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Portfolio Custom Post Type', // The plugin name.
+            'name'               => 'StartUp Portfolio', // The plugin name.
             'slug'               => 'startup-cpt-portfolio', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-portfolio/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -36,7 +36,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-portfolio', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Pricing Table Custom Post Type', // The plugin name.
+            'name'               => 'StartUp Pricing Table', // The plugin name.
             'slug'               => 'startup-cpt-pricing-table', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-pricing-table/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -46,7 +46,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-pricing-table', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Projects Custom Post Type Type', // The plugin name.
+            'name'               => 'StartUp Projects', // The plugin name.
             'slug'               => 'startup-cpt-projects', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-projects/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -56,7 +56,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-projects', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Rooms Custom Post Type', // The plugin name.
+            'name'               => 'StartUp Rooms', // The plugin name.
             'slug'               => 'startup-cpt-rooms', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-rooms/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -66,7 +66,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-rooms', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Services Custom Post Type Type', // The plugin name.
+            'name'               => 'StartUp Services', // The plugin name.
             'slug'               => 'startup-cpt-services', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-services/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -76,7 +76,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-services', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Slider Custom Post Type', // The plugin name.
+            'name'               => 'StartUp Slider', // The plugin name.
             'slug'               => 'startup-cpt-slider', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-slider/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -86,7 +86,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-slider', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Team Custom Post Type', // The plugin name.
+            'name'               => 'StartUp Team', // The plugin name.
             'slug'               => 'startup-cpt-team', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-team/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -96,7 +96,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-team', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name'               => 'StartUp Testimonials Custom Post Type', // The plugin name.
+            'name'               => 'StartUp Testimonials', // The plugin name.
             'slug'               => 'startup-cpt-testimonials', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-testimonials/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
@@ -106,8 +106,8 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-testimonials', // If set, overrides default API URL and points to an external URL.
         ),     
         array(
-            'name'               => 'StartUp Menus Custom Post Type', // The plugin name.
-            'slug'               => 'startup-cpt-testimonials', // The plugin slug (typically the folder name).
+            'name'               => 'StartUp Menus', // The plugin name.
+            'slug'               => 'startup-cpt-menus', // The plugin slug (typically the folder name).
             'source'             => 'https://github.com/yozzi/startup-cpt-menus/archive/master.zip', // The plugin source.
             'required'           => false, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
