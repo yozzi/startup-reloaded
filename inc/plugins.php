@@ -141,6 +141,11 @@ function startup_reloaded_register_required_plugins() {
             'slug'      => 'duplicate-post',
             'required'  => false,
         ),
+        array(
+            'name'      => 'WP Maintenance Mode',
+            'slug'      => 'wp-maintenance-mode',
+            'required'  => false,
+        ),
  
     );
  
