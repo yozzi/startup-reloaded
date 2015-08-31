@@ -342,3 +342,31 @@ function wp_get_attachment( $attachment_id ) {
 
     return $items;
   }
+
+// Ajouter CPF aux annonces
+function startup_reloaded_add_adverts_currency($list) {
+    $list[] = array(
+        "code"=>"XPF", // ISO 4217 currency code, see http://en.wikipedia.org/wiki/ISO_4217
+        "sign"=>"CFP", // currency prefix or postfix
+        "label"=>"Franc CFP" // currency long name
+    );
+    return $list;
+}
+
+add_filter("adverts_currency_list", "startup_reloaded_add_adverts_currency");
+
+// Limiter les annonces à une seule catégorie
+function startup_reloaded_limit_category_selection( $form ) {
+    if($form["name"] != 'advert' || is_admin()) {
+        return $form;
+    }
+    $count = count( $form["field"] );
+    for( $i = 0; $i < $count; $i++ ) {
+        if($form["field"][$i]["name"] == "advert_category") {
+            $form["field"][$i]["max_choices"] = 1;
+        }
+    }
+    return $form;
+}
+
+add_filter("adverts_form_load", "startup_reloaded_limit_category_selection");
