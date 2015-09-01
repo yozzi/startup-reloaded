@@ -7,6 +7,7 @@
  * @package StartUp Reloaded
  */
 
+$back_to_top = of_get_option( 'general-back-to-top' );
 $footer = of_get_option( 'general-footer' );
 ?>
 
@@ -24,5 +25,14 @@ $footer = of_get_option( 'general-footer' );
 
 <?php wp_footer(); ?>
 </div>
+
+<?php if ( $back_to_top ) { ?>
+    <div class="scroll-top-wrapper ">
+        <span class="scroll-top-inner">
+            <i class="fa fa-2x fa-angle-up"></i>
+        </span>
+    </div>
+<?php } ?>
+
 </body>
 </html>

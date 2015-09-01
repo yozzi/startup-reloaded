@@ -15,7 +15,6 @@ function optionsframework_options() {
     // Général Serial
     $options[] = array(
 		'name' => __( 'StartUp serial number', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'general-serial',
 		'std' => '',
 		'type' => 'text'
@@ -24,7 +23,6 @@ function optionsframework_options() {
     // Général Responsive
 	$options[] = array(
 		'name' => __( 'Responsive', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'general-responsive',
 		'std' => '1',
 		'type' => 'checkbox'
@@ -33,16 +31,22 @@ function optionsframework_options() {
     // Général Boxed
 	$options[] = array(
 		'name' => __( 'Boxed', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'general-boxed',
 		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
+    // Général Back to top button
+	$options[] = array(
+		'name' => __( 'Back to top button', 'theme-textdomain' ),
+		'id' => 'general-back-to-top',
+		'std' => '1',
 		'type' => 'checkbox'
 	);
     
     // Général Footer
     $options[] = array(
 		'name' => __( 'Footer content', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'general-footer',
 		'std' => 'Website powered with Startup by <a href="http://yozz.net" target="_blank">yozz.net</a>',
 		'type' => 'textarea'
@@ -81,7 +85,6 @@ function optionsframework_options() {
     
 	$options[] = array(
 		'name' => __( 'Page transition in', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'page-transition-in',
 		'std' => 'fade-in',
 		'type' => 'select',
@@ -91,7 +94,6 @@ function optionsframework_options() {
     
     $options[] = array(
 		'name' => __( 'Page transition out', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'page-transition-out',
 		'std' => 'fade-out',
 		'type' => 'select',
@@ -204,7 +206,6 @@ function optionsframework_options() {
     // Navbar activate
 	$options[] = array(
 		'name' => __( 'Activate navbar', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'navbar-on',
 		'std' => '1',
 		'type' => 'checkbox'
@@ -220,7 +221,6 @@ function optionsframework_options() {
     
 	$options[] = array(
 		'name' => __( 'Position', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'navbar-position',
 		'std' => 'navbar-fixed-top',
 		'type' => 'select',
@@ -240,7 +240,6 @@ function optionsframework_options() {
     // Navbar height
     $options[] = array(
 		'name' => __( 'Height in px', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'navbar-height',
 		'std' => '50',
 		'type' => 'text'
@@ -254,7 +253,6 @@ function optionsframework_options() {
     
 	$options[] = array(
 		'name' => __( 'Logo Position', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'navbar-logo-position',
 		'std' => 'pull-left',
 		'type' => 'select',
@@ -264,7 +262,6 @@ function optionsframework_options() {
     
     $options[] = array(
 		'name' => __( 'Menu Position', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'navbar-menu-position',
 		'std' => 'pull-right',
 		'type' => 'select',
@@ -290,7 +287,6 @@ function optionsframework_options() {
     // Slider activate
 	$options[] = array(
 		'name' => __( 'Slider on homepage', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'slider-on',
 		'std' => '1',
 		'type' => 'checkbox'
@@ -299,7 +295,6 @@ function optionsframework_options() {
     // Slider height
     $options[] = array(
 		'name' => __( 'Height in px', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'slider-height',
 		'std' => '400',
 		'type' => 'text'
@@ -308,7 +303,6 @@ function optionsframework_options() {
     // Slider interval
     $options[] = array(
 		'name' => __( 'Interval in ms or false', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'slider-interval',
 		'std' => '4000',
 		'type' => 'text'
@@ -322,7 +316,6 @@ function optionsframework_options() {
     
     $options[] = array(
 		'name' => __( 'Transition', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'slider-transition',
 		'std' => 'carousel-fade',
 		'type' => 'select',
@@ -333,7 +326,6 @@ function optionsframework_options() {
     // Slider arrows
 	$options[] = array(
 		'name' => __( 'Show arrows', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'slider-arrows',
 		'std' => '1',
 		'type' => 'checkbox'
@@ -344,7 +336,6 @@ function optionsframework_options() {
     
     $options[] = array(
 		'name' => __( 'Slider arrows hover effect', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'slider-arrows-hover',
 		'std' => 'float',
 		'type' => 'select',
@@ -361,7 +352,6 @@ function optionsframework_options() {
     
     $options[] = array(
 		'name' => __( 'Navigation', 'theme-textdomain' ),
-		'desc' => __( '', 'theme-textdomain' ),
 		'id' => 'slider-navigation',
 		'std' => 'slider_content_arrow',
 		'type' => 'select',
