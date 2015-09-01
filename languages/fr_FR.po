@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"PO-Revision-Date: Tue Sep 01 2015 15:47:16 GMT-0400 (Est (heure d’été))\n"
+"PO-Revision-Date: Tue Sep 01 2015 15:48:34 GMT-0400 (Est (heure d’été))\n"
 "Last-Translator: yann <ycaplain@croisieresaml.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: French (France)\n"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: 404.php:27
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Catégories récentes"
 
 #. translators: %1$s: smiley
 #: 404.php:44
