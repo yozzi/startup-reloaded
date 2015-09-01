@@ -209,9 +209,11 @@ $(function(){
 	$(document).on( 'scroll', function(){
  
 		if ($(window).scrollTop() > 300) {
-			$('.scroll-top-wrapper').addClass('show');
+            $('.scroll-top-wrapper').removeClass('fadeOutDownBig');
+			$('.scroll-top-wrapper').addClass('show animated fadeInUpBig');
 		} else {
 			$('.scroll-top-wrapper').removeClass('show');
+            $('.scroll-top-wrapper').addClass('animated fadeOutDownBig');
 		}
 	});
  
