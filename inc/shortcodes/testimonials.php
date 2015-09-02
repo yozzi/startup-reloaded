@@ -7,21 +7,25 @@ $total_testimonials = count($testimonials);
     <div class="container">
         <div class="row">            
             <?php if ($total_testimonials > 1){ ?>
-                <div id="testimonials-carousel" class="carousel slide">
+                <div id="testimonials-carousel" class="carousel slide" data-interval="4000" data-ride="carousel">
                     <div class="carousel-inner">
-                        <?php }  foreach ($testimonials as $key=> $testimonial) { ?>
+                        <?php }  $count = 1;
+foreach ($testimonials as $key=> $testimonial) { ?>
                             <div class="item<?php if ($count == 1){ echo ' active';} ?>">
                                 <div class="col-xs-12">
-                                    <div class="testimonial">
-                                        <strong class="name"><?php echo $testimonial->post_title ?></strong>
-                                        <p class="desc"><?php echo $testimonial->post_content ?></p>
-                                    </div>
+                                    <blockquote class="testimonial">
+                                        <?php echo $testimonial->post_content ?>
+                                        <br />
+                                        <small><?php echo $testimonial->post_title ?></small>
+                                    </blockquote>
                                 </div>        
                             </div>
-                        <?php } if ($total_testimonials > 1){ ?>
+                        <?php $count++;
+                            }
+                        if ($total_testimonials > 1){ ?>
                     </div>
                 </div>
-            <?php } ?>   
+            <?php } ?>
         </div>
     </div>
 </section>

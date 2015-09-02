@@ -17,8 +17,6 @@ var $slider = $('#slider');
 $slider.carousel({
   //interval: 4000
 });
-
-
  
 function doAnimations(elems) {
   var animEndEv = 'webkitAnimationEnd animationend';
