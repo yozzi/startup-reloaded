@@ -46,4 +46,11 @@ add_shortcode( 'testimonials', function( $atts, $content= null ){
     return ob_get_clean();
 });
 
+// Products
+add_shortcode( 'products', function( $atts, $content= null ){
+    ob_start();
+    require get_template_directory() . '/inc/shortcodes/products.php';
+    return ob_get_clean();
+});
+
 ?>
