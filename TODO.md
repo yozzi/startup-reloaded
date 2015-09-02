@@ -34,32 +34,38 @@
 
 ## CPT:
 - [ ] Problème de container/row selon si on est en page d'accueil ou non
-	### Milestones:
-	### Team:
-	- [ ] Taille des portraits? Définir une nouvelle taille spécialement pour le CPT?
-	### Pricing Table:
-	### Projects :
-	- [ ] Popup info dans gmap @v2
-	- [ ] Voir le fonctionnement des catégories pour le shortcode
-	- [ ] Créer page archive globale + catégories qui vient chercher la fonction du shortcode directement
-	- [ ] Finir le design de la page projet
-	- [ ] Finir le design du listing
-	- [ ] Ajouter tableau (responsive) avec superficie des pièces @v2
-	- [ ] Sidebar navigation
-	### Rooms:
-	### Portfolio:
-	- [ ] isotope
-	- [ ] masonry
-	### Testimonials:
-	- [ ] À terminer
+
+##### Milestones:
+
+##### Team:
+- [ ] Taille des portraits? Définir une nouvelle taille spécialement pour le CPT?
+
+##### Pricing Table:
+
+##### Projects :
+- [ ] Popup info dans gmap @v2
+- [ ] Voir le fonctionnement des catégories pour le shortcode
+- [ ] Créer page archive globale + catégories qui vient chercher la fonction du shortcode directement
+- [ ] Finir le design de la page projet
+- [ ] Finir le design du listing
+- [ ] Ajouter tableau (responsive) avec superficie des pièces @v2
+- [ ] Sidebar navigation
+
+##### Rooms:
+
+##### Portfolio:
+- [ ] isotope
+- [ ] masonry
+
+##### Testimonials:
+- [ ] À terminer
 
 ## Autres:
 - [ ] Icones médias sociaux @v2
 - [ ] Zone membre pour contenu protégé @v2
 - [ ] Theme my login @v2
 - [ ] Un générateur de Lipsum serait sympa @v2
-- [ ] Utiliser le serial comme il faut, en pointant sur un fichier de mon serveur @v2
-		si le serial est bon, charger ok.html, sinon charger fail.html. Et ces fichiers contiennent mon code analytics.
+- [ ] Utiliser le serial comme il faut, en pointant sur un fichier de mon serveur @v2. Si le serial est bon, charger ok.html, sinon charger fail.html. Et ces fichiers contiennent mon code analytics.
 - [ ] Test IE
 - [ ] Test responsive / unresponsive
 - [ ] Fallback image pour video background
