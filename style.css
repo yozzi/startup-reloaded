@@ -1176,7 +1176,7 @@ header.entry-header h3.boxed, header.entry-header h4.boxed{
 }
 
 /* Content */
-.entry-content{
+.home .entry-content{
     margin: 0;
 }
 
