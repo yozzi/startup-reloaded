@@ -1103,6 +1103,11 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     text-align: center;
 }
 
+.modal-body img{
+    width: 100%;
+    height: auto;
+}
+
 /*--------------------------------------------------------------
 ## Services
 --------------------------------------------------------------*/

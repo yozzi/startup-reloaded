@@ -9,6 +9,7 @@ function startup_reloaded_custom_theme_features()  {
 	set_post_thumbnail_size( 1200, 400, true );
     
     add_image_size( 'product_thumb', 300, 300, true);
+    add_image_size( 'product_main', 580, 580, false);
     
 //    // Add theme support for Custom Header
 //	$header_args = array(
