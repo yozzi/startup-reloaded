@@ -1067,6 +1067,10 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 /*    background: #f0f0f0*/
 }
 
+#products #grid{
+    margin-top: 20px;
+}
+
 .product{
     margin-bottom: 30px;
     background: #f0f0f0;

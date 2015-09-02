@@ -4,14 +4,15 @@ $products = get_posts( $args );
 $total_products = count($products);
 ?>
 
-<ul id="filter">
+<section id="products">
+    
+<ul id="filter" class="nav nav-pills">
     <li><a class="active" href="#" data-group="all">Tous</a></li>
     <li><a href="#" data-group="trois-rivieres">trois-rivieres</a></li>
     <li><a href="#" data-group="quebec">quebec</a></li>
     <li><a href="#" data-group="montreal">montreal</a></li>
 </ul>
 
-<section id="products">
 <!--    <div class="container">-->
         <div id="grid" class="row">
             <?php foreach ($products as $key=> $product) {
