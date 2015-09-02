@@ -1043,7 +1043,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 
 .team-member ul.social li a {
-color: #aaa
+    color: #aaa
 }
 
 /*--------------------------------------------------------------
@@ -1051,11 +1051,12 @@ color: #aaa
 --------------------------------------------------------------*/
 
 #testimonials {
-background: #f0f0f0
+    background: #f0f0f0
 }
 
 #testimonials blockquote{
-border-left: 5px solid #fff;
+    border-left: 5px solid #fff;
+    margin: 0;
 }
 
 /*--------------------------------------------------------------
