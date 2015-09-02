@@ -1045,6 +1045,19 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 .team-member ul.social li a {
 color: #aaa
 }
+
+/*--------------------------------------------------------------
+## Testimonials
+--------------------------------------------------------------*/
+
+#testimonials {
+background: #f0f0f0
+}
+
+#testimonials blockquote{
+border-left: 5px solid #fff;
+}
+
 /*--------------------------------------------------------------
 ## Services
 --------------------------------------------------------------*/
@@ -1106,6 +1119,11 @@ header.entry-header h3.boxed, header.entry-header h4.boxed{
     padding: 10px 15px;
     display: inline-block;
     clear: both;
+}
+
+/* Content */
+.entry-content{
+    margin: 0;
 }
 
 /*--------------------------------------------------------------
