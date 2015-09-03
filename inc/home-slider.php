@@ -82,10 +82,10 @@
             <!--/.carousel-inner-->
         <!-- Controls -->
         <?php if ( $slider_arrows ) { ?>
-            <a class="left carousel-control hidden-xs hvr-<?php echo $slider_arrows_hover ?>" href="#slider" data-slide="prev">
+            <a class="left carousel-control hidden-xs hvr-<?php echo $slider_arrows_hover ?>" href="#slider" role="button" data-slide="prev">
                 <i class="fa fa-chevron-left fa-lg"></i>
             </a>
-            <a class="right carousel-control hidden-xs hvr-<?php echo $slider_arrows_hover ?>" href="#slider" data-slide="next">
+            <a class="right carousel-control hidden-xs hvr-<?php echo $slider_arrows_hover ?>" href="#slider" role="button" data-slide="next">
                 <i class="fa fa-chevron-right fa-lg"></i>
             </a>
         <?php } ?>
