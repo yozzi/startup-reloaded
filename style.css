@@ -806,26 +806,8 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     height: 100%;
 }
 
-
-/* Controls */
-
-.carousel-arrow{
-    display: inline-block;
-    top: 50%;
-    position: absolute;
-    margin-top: -25px;
-}
-
-.carousel-arrow.left{
-    right: auto;
-    left: auto;
-}
-.carousel-arrow.right{
-    right: 0;
-    left: auto;
-}
 .carousel-control {
-/*    top: 50%;*/
+    top: 50%;
     width: 50px;
     height: 50px;
     text-shadow: none;
@@ -846,7 +828,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 
 .carousel-control.left,
 .carousel-control.right {
-   
+    margin-top: -25px;
 }
 
 #slider .slider-down-arrow {
