@@ -545,7 +545,7 @@ body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
 ## Général
 --------------------------------------------------------------*/
 
-a {
+a, button {
     -webkit-transition: 300ms;
     -moz-transition: 300ms;
     -o-transition: 300ms;
