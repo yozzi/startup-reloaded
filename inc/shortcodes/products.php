@@ -36,11 +36,11 @@ $total_products = count($products);
                             elseif ( $main_pic ) { $image = $main_pic; }
                             else { $image = 'Il manque une image'; } ?>
                             <? echo $image ;?>
-                            <?php if ( $status == 'Available') { ?><span class="label label-success"><?php echo esc_html( $status ); ?></span><?php }
+                            <?php if ( $status == 'Available') { ?><span class="label label-success"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
                             elseif ( $status == 'Sold out soon') { ?><span class="label label-warning"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
-                            elseif ( $status == 'Back order') { ?><span class="label label-info"><?php echo esc_html( $status ); ?></span><?php }
-                            elseif ( $status == 'Sold out' || $status == 'Unavailable') { ?><span class="label label-danger"><?php echo esc_html( $status ); ?></span><?php }
-                            elseif ( $status ) { ?><span class="label label-default"><?php echo esc_html( $status ); ?></span><?php } ?>
+                            elseif ( $status == 'Back order') { ?><span class="label label-info"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
+                            elseif ( $status == 'Sold out' || $status == 'Unavailable') { ?><span class="label label-danger"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
+                            elseif ( $status ) { ?><span class="label label-default"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php } ?>
                         </div>
                         <div class="product-details">
                             <h4><?php echo $product->post_title; ?></h4>

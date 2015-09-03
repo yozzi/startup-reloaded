@@ -1063,10 +1063,6 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 ## Products
 --------------------------------------------------------------*/
 
-#products {
-/*    background: #f0f0f0*/
-}
-
 #products #grid{
     margin-top: 20px;
 }
@@ -1091,6 +1087,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 
 .product-thumbnail .label{
     font-size:15px;
+    font-weight: 400;
     position: absolute;
     top: 10px;
     right: 10px;
