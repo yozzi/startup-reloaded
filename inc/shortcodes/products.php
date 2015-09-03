@@ -104,7 +104,7 @@
                       <div class="modal-footer">
                            <?php if ( $special_price != '0, 00' ) { echo '<div class="product-price well well-sm"><small><strike>' . esc_html( $price ) . ' $</strike></small> <span class="text-danger">' . esc_html( $special_price ) . ' $</span></div>'; }
                             elseif ( $price != '0, 00' ) { echo '<div class="product-price well well-sm">' . esc_html( $price ) . ' $</div>'; } ?>
-                        <a href="<?php if ( $url ) { echo $url; } ?>" class="btn btn-primary btn-lg btn-block" role="button">J'ach&egrave;te !</a>
+                        <a href="<?php if ( $url ) { echo $url; } ?>" class="btn btn-primary btn-lg btn-block" role="button"><?php _e( 'Buy it now!', 'startup-reloaded-products' ) ?></a>
                       </div>
                     </div>
                   </div>
