@@ -8,6 +8,8 @@ function startup_reloaded_custom_theme_features()  {
 	 // Set custom thumbnail dimensions
 	set_post_thumbnail_size( 1200, 400, true );
     
+    // CPT Image Custom Sizes
+    // Products
     add_image_size( 'product_thumb', 300, 300, true);
     add_image_size( 'product_main', 580, 580, false);
     
