@@ -2,6 +2,7 @@
     $args=array( 'post_type'=>'products', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
     $products = get_posts( $args );
     $total_products = count($products);
+    $slider_arrows_hover    = of_get_option( 'slider-arrows-hover' );
 ?>
 
 <section id="products">
@@ -85,12 +86,16 @@
                                     } ?>                      
                                 </div>
                                     <!-- Controls -->
-                                    <a class="left carousel-control hidden-xs" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="prev">
-                                        <i class="fa fa-chevron-left fa-lg"></i>
-                                    </a>
-                                    <a class="right carousel-control hidden-xs" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next">
-                                        <i class="fa fa-chevron-right fa-lg"></i>
-                                    </a>             
+                                    <div class="carousel-arrow left hvr-<?php echo $slider_arrows_hover ?> hidden-xs">                                       
+                                        <a class="left carousel-control" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="prev">
+                                            <i class="fa fa-chevron-left fa-lg"></i>
+                                        </a>                
+                                    </div>
+                                    <div class="carousel-arrow right hvr-<?php echo $slider_arrows_hover ?> hidden-xs">
+                                       <a class="right carousel-control" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next">
+                                            <i class="fa fa-chevron-right fa-lg"></i>
+                                        </a>
+                                    </div>
                             </div>
                             <?php } else { echo 'Il manque une image'; } ?>
                           

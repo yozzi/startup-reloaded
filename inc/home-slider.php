@@ -82,12 +82,16 @@
             <!--/.carousel-inner-->
         <!-- Controls -->
         <?php if ( $slider_arrows ) { ?>
-            <a class="left carousel-control hidden-xs hvr-<?php echo $slider_arrows_hover ?>" href="#slider" role="button" data-slide="prev">
-                <i class="fa fa-chevron-left fa-lg"></i>
-            </a>
-            <a class="right carousel-control hidden-xs hvr-<?php echo $slider_arrows_hover ?>" href="#slider" role="button" data-slide="next">
-                <i class="fa fa-chevron-right fa-lg"></i>
-            </a>
+            <div class="carousel-arrow left hvr-<?php echo $slider_arrows_hover ?> hidden-xs">
+                <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                    <i class="fa fa-chevron-left fa-lg"></i>
+                </a>
+            </div>
+            <div class="carousel-arrow right hvr-<?php echo $slider_arrows_hover ?> hidden-xs">
+                <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                    <i class="fa fa-chevron-right fa-lg"></i>
+                </a>
+            </div>
         <?php } ?>
 
         <!-- Goto content -->
