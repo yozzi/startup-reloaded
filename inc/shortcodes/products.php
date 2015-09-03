@@ -1,7 +1,7 @@
 <?php
-$args=array( 'post_type'=>'products', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
-$products = get_posts( $args );
-$total_products = count($products);
+    $args=array( 'post_type'=>'products', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
+    $products = get_posts( $args );
+    $total_products = count($products);
 ?>
 
 <section id="products">
@@ -27,38 +27,13 @@ $total_products = count($products);
                 $main_pic_popup  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_main_pic_id', 1 ), 'product_main' );
                 $short  = get_post_meta( $product->ID, '_startup_reloaded_products_short', true );
                 $description  = get_post_meta( $product->ID, '_startup_reloaded_products_description', true );
-                $type  = get_post_meta( $product->ID, '_startup_reloaded_products_type', true );
                 $categories = get_the_terms( $product->ID, 'product-category' );
                 $status  = get_post_meta( $product->ID, '_startup_reloaded_products_status', true );
                 $price  = get_post_meta( $product->ID, '_startup_reloaded_products_price', true );
                 $special_price  = get_post_meta( $product->ID, '_startup_reloaded_products_special_price', true );
                 $url  = get_post_meta( $product->ID, '_startup_reloaded_products_url', true );
-
-            
-            
-            
-            
-            
-            
-
-
-
-
-            
-            
-            
-            
-            
-            
-            
             ?>
-                <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) {
-                                                                                                foreach( $categories as $category ) {
-                                                                                                    print '"' . $category->slug . '",';
-                                                                                                    unset($category);
-                                                                                                }
-                                                                                            }
-                                                                                             ?>"all"]'>
+                <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
                     <div class="product">
                         <div class="product-thumbnail">        
                             <?php if ( $thumbnail ) { $image = $thumbnail; }
