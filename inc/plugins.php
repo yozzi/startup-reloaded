@@ -172,6 +172,21 @@ function startup_reloaded_register_required_plugins() {
             'slug'      => 'wpadverts',
             'required'  => false,
         ),
+        array(
+            'name'      => 'Resize images before upload',
+            'slug'      => 'resize-images-before-upload',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Gallery Carousel Without JetPack',
+            'slug'      => 'carousel-without-jetpack',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Polylang',
+            'slug'      => 'polylang',
+            'required'  => false,
+        ),
  
     );
  
