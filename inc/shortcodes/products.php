@@ -37,7 +37,7 @@ $total_products = count($products);
                             else { $image = 'Il manque une image'; } ?>
                             <? echo $image ;?>
                             <?php if ( $status == 'Available') { ?><span class="label label-success"><?php echo esc_html( $status ); ?></span><?php }
-                            elseif ( $status == 'Sold out soon') { ?><span class="label label-warning"><?php _e( $status, 'startup-reloaded' ) ?></span><?php }
+                            elseif ( $status == 'Sold out soon') { ?><span class="label label-warning"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
                             elseif ( $status == 'Back order') { ?><span class="label label-info"><?php echo esc_html( $status ); ?></span><?php }
                             elseif ( $status == 'Sold out' || $status == 'Unavailable') { ?><span class="label label-danger"><?php echo esc_html( $status ); ?></span><?php }
                             elseif ( $status ) { ?><span class="label label-default"><?php echo esc_html( $status ); ?></span><?php } ?>
