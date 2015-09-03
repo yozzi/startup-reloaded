@@ -226,7 +226,7 @@ function scrollToTop() {
 	$('html, body').animate({scrollTop: offsetTop}, 200, 'linear');
 }
 
-//Shuffle
+//Shuffle Products
 $(document).ready(function() {
      
     /* initialize shuffle plugin */

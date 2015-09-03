@@ -1070,7 +1070,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 .product{
     margin-bottom: 30px;
     background: #f0f0f0;
-     -webkit-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
     border-radius: 0 0 4px 4px;
 }
 
