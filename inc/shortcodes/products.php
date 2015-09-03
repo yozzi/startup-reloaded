@@ -31,6 +31,7 @@
                 $status  = get_post_meta( $product->ID, '_startup_reloaded_products_status', true );
                 $price  = get_post_meta( $product->ID, '_startup_reloaded_products_price', true );
                 $special_price  = get_post_meta( $product->ID, '_startup_reloaded_products_special_price', true );
+                $gallery  = get_post_meta( $product->ID, '_startup_reloaded_products_gallery', true );
                 $url  = get_post_meta( $product->ID, '_startup_reloaded_products_url', true );
             ?>
                 <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
@@ -70,9 +71,28 @@
                         <h2 class="modal-title" id="myModalLabel"><?php echo $product->post_title ?></h2>
                       </div>
                       <div class="modal-body">
-                          <?php if ( $main_pic_popup ) { ?>
-                            <? echo $main_pic_popup ;?>
-                          <?php } else { echo 'Il manque une image'; } ?>
+                           <?php if ( $gallery ) { ?>
+                            <div id="carousel-popup-<?php echo $product->ID; ?>" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <?php $x = 1;
+                                    foreach ( $gallery as $attachment_id => $img_product_main_url ) { ?>
+                                        <div class="item <?php echo ( $x==1 ) ? 'active' : '' ?>">
+                                            <?php $image = wp_get_attachment_link($attachment_id, 'product_main');
+                                            echo $image; ?>
+                                        </div>
+                                    <?php $x++;
+                                    } ?>                      
+                                </div>
+                                    <!-- Controls -->
+                                    <a class="left carousel-control hidden-xs" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="prev">
+                                        <i class="fa fa-chevron-left fa-lg"></i>
+                                    </a>
+                                    <a class="right carousel-control hidden-xs" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next">
+                                        <i class="fa fa-chevron-right fa-lg"></i>
+                                    </a>             
+                            </div>
+                            <?php } else { echo 'Il manque une image'; } ?>
                           
                         <?php if ( $description ) { echo '<h4>Description</h4><p>' . $description . '</p>'; } ?>
                       </div>

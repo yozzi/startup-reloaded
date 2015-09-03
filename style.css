@@ -1104,7 +1104,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     text-align: center;
 }
 
-.modal-body img{
+.modal-body .carousel .item img{
     width: 100%;
     height: auto;
 }
