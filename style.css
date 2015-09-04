@@ -1165,6 +1165,44 @@ width: 100%;
     width: 100%;
     height: auto;
 }
+
+/*--------------------------------------------------------------
+## Portfolio
+--------------------------------------------------------------*/
+
+#portfolio #grid {
+    margin-top: 20px;
+}
+
+#portfolio #grid > .item {
+    margin-bottom: 30px;
+}
+
+#portfolio #grid .item .portfolio-item {
+    background: #f0f0f0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    height: auto;
+}
+
+.portfolio-item-thumbnail {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.portfolio-item-thumbnail img {
+width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-item-details {
+    padding: 15px;
+}
 /*--------------------------------------------------------------
 ## Services
 --------------------------------------------------------------*/
