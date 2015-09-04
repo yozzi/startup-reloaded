@@ -42,6 +42,20 @@ var $firstAnimatingElems = $slider.find('.item:first')
  
 // Apply the animation using our function
 doAnimations($firstAnimatingElems);
+
+// Animate carousel height change
+function bsCarouselAnimHeight()
+{
+    $('.carousel').carousel({
+        interval: 5000
+    }).on('slide.bs.carousel', function (e)
+    {
+        var nextH = $(e.relatedTarget).height();
+        $(this).find('.active.item').parent().animate({ height: nextH }, 500);
+    });
+}
+
+bsCarouselAnimHeight();
  
 // Pause the carousel 
 //$slider.carousel('pause');
@@ -72,6 +86,8 @@ $(".carousel-inner").swipe( {
     threshold:0
     });
 });
+
+
 // Smooth Scroll to anchor
 
 $(".scroll").on('click', function(e) {

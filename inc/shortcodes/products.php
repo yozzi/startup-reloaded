@@ -79,7 +79,7 @@
                                     <?php $x = 1;
                                     foreach ( $gallery as $attachment_id => $img_product_main_url ) { ?>
                                         <div class="item <?php echo ( $x==1 ) ? 'active' : '' ?>">
-                                            <?php $image = wp_get_attachment_link($attachment_id, 'product_main');
+                                            <?php $image = wp_get_attachment_image($attachment_id, 'product_main');
                                             echo $image; ?>
                                         </div>
                                     <?php $x++;
@@ -99,7 +99,7 @@
                             </div>
                             <?php } else { echo 'Il manque une image'; } ?>
                           
-                        <?php if ( $description ) { echo '<h4>Description</h4><p>' . $description . '</p>'; } ?>
+                        <?php if ( $description ) { echo '<p>' . $description . '</p>'; } ?>
                       </div>
                       <div class="modal-footer">
                            <?php if ( $special_price != '0, 00' ) { echo '<div class="product-price well well-sm"><small><strike>' . esc_html( $price ) . ' $</strike></small> <span class="text-danger">' . esc_html( $special_price ) . ' $</span></div>'; }
