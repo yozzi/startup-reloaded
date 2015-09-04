@@ -1116,11 +1116,11 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     margin-top: 20px;
 }
 
-#products .item {
+#products #grid > .item {
     margin-bottom: 30px;
 }
 
-#products .item .product {
+#products #grid .item .product {
     background: #f0f0f0;
     -webkit-border-radius: 4px;
     border-radius: 4px;
