@@ -79,8 +79,8 @@
                                     <?php $x = 1;
                                     foreach ( $gallery as $attachment_id => $img_product_main_url ) { ?>
                                         <div class="item <?php echo ( $x==1 ) ? 'active' : '' ?>">
-                                            <?php $image = wp_get_attachment_image($attachment_id, 'product_main');
-                                            echo $image; ?>
+                                            <?php $image = wp_get_attachment_image($attachment_id, 'product_main'); ?>
+                                            <a href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next"><?php echo $image; ?></a>
                                         </div>
                                     <?php $x++;
                                     } ?>                      
