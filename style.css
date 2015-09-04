@@ -1136,9 +1136,10 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 
 .product-thumbnail img {
-    width: 100%;
+width: 100%;
     max-width: 100%;
     height: auto;
+    display: block;
 }
 
 .product-thumbnail .label {

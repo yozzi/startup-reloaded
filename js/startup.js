@@ -243,7 +243,10 @@ function scrollToTop() {
 }
 
 //Shuffle Products
-$(document).ready(function() {
+//On utilise imagesloaded pour que Shuffle ne fasse pas de bug d'overlapping avec les tailles d'images responsives
+
+$('#grid').imagesLoaded( function() {
+  // images have loaded
      
     /* initialize shuffle plugin */
     var $grid = $('#grid');

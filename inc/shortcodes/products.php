@@ -37,7 +37,7 @@
             ?>
                 <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
                     <div class="product">
-                        <div class="product-thumbnail">   
+                        <div class="product-thumbnail">  
                             <?php if ( $thumbnail ) { $image = $thumbnail; }
                             elseif ( $main_pic ) { $image = $main_pic; }
                             else { $image = 'Il manque une image'; } ?>
