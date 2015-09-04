@@ -44,18 +44,19 @@ var $firstAnimatingElems = $slider.find('.item:first')
 doAnimations($firstAnimatingElems);
 
 // Animate carousel height change
-function bsCarouselAnimHeight()
-{
-    $('.carousel').carousel({
-        interval: 5000
-    }).on('slide.bs.carousel', function (e)
-    {
-        var nextH = $(e.relatedTarget).height();
-        $(this).find('.active.item').parent().animate({ height: nextH }, 500);
-    });
-}
-
-bsCarouselAnimHeight();
+//Désactivé, ça déconne dans le modal : le premier slide a une hauteur de 0px
+//function bsCarouselAnimHeight()
+//{
+//    $('.carousel').carousel({
+//        interval: 5000
+//    }).on('slide.bs.carousel', function (e)
+//    {
+//        var nextH = $(e.relatedTarget).height();
+//        $(this).find('.active.item').parent().animate({ height: nextH }, 500);
+//    });
+//}
+//
+//bsCarouselAnimHeight();
  
 // Pause the carousel 
 //$slider.carousel('pause');

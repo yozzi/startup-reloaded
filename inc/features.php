@@ -11,7 +11,7 @@ function startup_reloaded_custom_theme_features()  {
     // CPT Image Custom Sizes
     // Products
     add_image_size( 'product_thumb', 720, 0, false);
-    add_image_size( 'product_main', 580, 320, true);
+    add_image_size( 'product_main', 720, 320, true);
     
 //    // Add theme support for Custom Header
 //	$header_args = array(

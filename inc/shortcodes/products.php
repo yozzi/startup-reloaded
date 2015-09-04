@@ -25,7 +25,6 @@
             <?php foreach ($products as $key=> $product) {
                 $thumbnail  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_thumbnail_id', 1 ), 'product_thumb' );
                 $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_main_pic_id', 1 ), 'product_thumb' );
-                $main_pic_popup  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_main_pic_id', 1 ), 'product_main' );
                 $short  = get_post_meta( $product->ID, '_startup_reloaded_products_short', true );
                 $description  = get_post_meta( $product->ID, '_startup_reloaded_products_description', true );
                 $categories = get_the_terms( $product->ID, 'product-category' );
