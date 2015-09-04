@@ -3,6 +3,7 @@
     $products = get_posts( $args );
     $total_products = count($products);
     $slider_arrows_hover    = of_get_option( 'slider-arrows-hover' );
+    $auto_format_off = of_get_option( 'auto-format-off' );
 ?>
 
 <section id="products">
@@ -102,7 +103,13 @@
                             </div>
                             <?php } else { echo 'Il manque une image'; } ?>
                           
-                        <?php if ( $description ) { echo '<p>' . $description . '</p>'; } ?>
+                        <?php if ( $description ) { 
+                                if( $auto_format_off == 1 ){
+                                    echo '<p>' . $description . '</p>';
+                                } else {
+                                    echo '<p>' . wpautop( $description ) . '</p>';
+                                }
+                            } ?>
                       </div>
                       <div class="modal-footer">
                            <?php if ( $special_price != '0, 00' ) { echo '<div class="product-price well well-sm"><small><strike>' . esc_html( $price ) . ' $</strike></small> <span class="text-danger">' . esc_html( $special_price ) . ' $</span></div>'; }
