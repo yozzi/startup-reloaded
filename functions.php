@@ -370,3 +370,13 @@ function startup_reloaded_limit_category_selection( $form ) {
 }
 
 add_filter("adverts_form_load", "startup_reloaded_limit_category_selection");
+
+// Ajouter les tailles personnalisées au selecteur de l'uploadeur
+function startup_reloaded_insert_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'shuffle_thumb' => __( 'Shuffle thumbnail' ),
+        'shuffle_main' => __( 'Shuffle main' ),
+    ) );
+}
+
+add_filter( 'image_size_names_choose', 'startup_reloaded_insert_custom_sizes' );

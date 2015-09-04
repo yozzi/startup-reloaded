@@ -1,5 +1,5 @@
 <?php
-    $args=array( 'post_type'=>'portfolio', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
+    $args=array( 'post_type'=>'portfolio', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 10000 );
     $portfolio = get_posts( $args );
     $total_portfolio = count($portfolio);
     $slider_arrows_hover = of_get_option( 'slider-arrows-hover' );
@@ -45,9 +45,8 @@
 
                                 <?php if ( $short ) { echo '<p>' . esc_html( $short ) . '</p>'; } ?>
 
-                                <a href="<?php echo esc_url( get_permalink($portfolio_item->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button">More information</a>
-                            
-                        </div>  
+                                <a href="<?php echo esc_url( get_permalink($portfolio_item->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button">More information</a>                
+                        </div>
                                 
                     </div>
                 </div>
