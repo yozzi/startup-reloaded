@@ -1,13 +1,10 @@
 <?php
-
 // Milestones
 add_shortcode( 'milestones', function( $atts, $content= null ){
     ob_start();
     require get_template_directory() . '/inc/shortcodes/milestones.php';
     return ob_get_clean();
 });
-
-
 
 // Services
 add_shortcode( 'services', function( $atts, $content= null ){
@@ -16,14 +13,12 @@ add_shortcode( 'services', function( $atts, $content= null ){
     return ob_get_clean();
 });
 
-
 // Pricing table
 add_shortcode( 'pricing', function( $atts, $content= null ){
     ob_start();
     require get_template_directory() . '/inc/shortcodes/pricing.php';
     return ob_get_clean();
 });
-
 
 // Team
 add_shortcode( 'team', function( $atts, $content= null ){
@@ -53,4 +48,10 @@ add_shortcode( 'products', function( $atts, $content= null ){
     return ob_get_clean();
 });
 
+// Portfolio
+add_shortcode( 'portfolio', function( $atts, $content= null ){
+    ob_start();
+    require get_template_directory() . '/inc/shortcodes/portfolio.php';
+    return ob_get_clean();
+});
 ?>
