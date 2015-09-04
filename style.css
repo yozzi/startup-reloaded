@@ -545,7 +545,8 @@ body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
 ## Général
 --------------------------------------------------------------*/
 
-a, button {
+a,
+button {
     -webkit-transition: 300ms;
     -moz-transition: 300ms;
     -o-transition: 300ms;
@@ -805,11 +806,9 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 #slider .item .video {
     height: 100%;
 }
-
-
 /* Controls */
 
-.carousel-arrow{
+.carousel-arrow {
     display: inline-block;
     top: 50%;
     position: absolute;
@@ -817,16 +816,19 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     z-index: 2;
 }
 
-.carousel-arrow.left{
+.carousel-arrow.left {
     right: auto;
     left: auto;
 }
-.carousel-arrow.right{
+
+.carousel-arrow.right {
     right: 0;
     left: auto;
 }
+
 .carousel-control {
-/*    top: 50%;*/
+    /*    top: 50%;*/
+    
     width: 50px;
     height: 50px;
     text-shadow: none;
@@ -846,9 +848,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 
 .carousel-control.left,
-.carousel-control.right {
-   
-}
+.carousel-control.right {}
 
 #slider .slider-down-arrow {
     width: 50px;
@@ -1116,22 +1116,29 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     margin-top: 20px;
 }
 
-.product {
+#products .item {
     margin-bottom: 30px;
+}
+
+#products .item .product {
     background: #f0f0f0;
-    -webkit-border-radius: 0 0 4px 4px;
-    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    height: auto;
 }
 
 .product-thumbnail {
-    position: relative
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 
 .product-thumbnail img {
     width: 100%;
+    max-width: 100%;
     height: auto;
-    -webkit-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0;
 }
 
 .product-thumbnail .label {

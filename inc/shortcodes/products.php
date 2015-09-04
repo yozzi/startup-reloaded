@@ -37,11 +37,15 @@
             ?>
                 <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
                     <div class="product">
-                        <div class="product-thumbnail">        
+                        <div class="product-thumbnail">   
                             <?php if ( $thumbnail ) { $image = $thumbnail; }
                             elseif ( $main_pic ) { $image = $main_pic; }
                             else { $image = 'Il manque une image'; } ?>
+                            
+                            
                             <? echo $image ;?>
+                            
+                            
                             <?php if ( $status == 'Available') { ?><span class="label label-success"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
                             elseif ( $status == 'Sold out soon') { ?><span class="label label-warning"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
                             elseif ( $status == 'Back order') { ?><span class="label label-info"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
