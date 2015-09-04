@@ -24,8 +24,7 @@
 <!--    <div class="container">-->
         <div id="grid" class="row">
             <?php foreach ($products as $key=> $product) {
-                $thumbnail  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_thumbnail_id', 1 ), 'product_thumb' );
-                $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_main_pic_id', 1 ), 'product_thumb' );
+                $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_main_pic_id', 1 ), 'shuffle_thumb' );
                 $short  = get_post_meta( $product->ID, '_startup_reloaded_products_short', true );
                 $description  = get_post_meta( $product->ID, '_startup_reloaded_products_description', true );
                 $categories = get_the_terms( $product->ID, 'product-category' );
@@ -38,8 +37,7 @@
                 <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
                     <div class="product">
                         <div class="product-thumbnail">  
-                            <?php if ( $thumbnail ) { $image = $thumbnail; }
-                            elseif ( $main_pic ) { $image = $main_pic; }
+                            <?php if ( $main_pic ) { $image = $main_pic; }
                             else { $image = 'Il manque une image'; } ?>
                             
                             
