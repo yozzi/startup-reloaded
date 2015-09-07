@@ -31,43 +31,33 @@ $page_header_parallax = get_post_meta( get_the_ID(), '_startup_reloaded_pages_he
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
+ 
+            <?php if (!is_front_page() && !$page_header_visible ){?>
+                <div class="effect <?php echo $page_header_effect ?>">
+                    <header class="page-header <?php echo $page_header_position ?>" style="<?php if ( $page_header_color ){ echo 'color:' . $page_header_color . ';'; }; if ( $page_header_padding ){ echo 'padding-top:' . $page_header_padding . 'px;padding-bottom:' . $page_header_padding . 'px;';if ( $page_header_background && $page_header_parallax == '' ){  echo 'background: url(' . $page_header_background[0] . '); background-size:cover;';} elseif ( $page_header_background_color && $page_header_parallax == '' ) { echo 'background: ' . $page_header_background_color . ';'; };} ?>" <?php if ( $page_header_parallax ){ echo 'data-parallax="scroll" data-image-src="' . $page_header_background[0] . '"'; } ?>>      
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <?php if ( $page_header_boxed == 1){ ?><h3 class="page-title boxed"><?php post_type_archive_title(); ?></h3><?php }  
+                                        else { ?><h3 class="page-title"><?php post_type_archive_title(); ?></h3><?php } ?>                                                      
+                                    <?php if ( the_archive_description() && $page_header_boxed == 1){ echo '<h4 class="boxed">' . the_archive_description() . '</h4>'; }  
+                                        else if ( the_archive_description() ){ echo '<h4>' . the_archive_description() . '</h4>'; } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </header><!-- .entry-header -->
+                </div>
+            <?php }?>
 
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-    <?php if (!is_front_page() && !$page_header_visible ){?>
-        <div class="effect <?php echo $page_header_effect ?>">
-        <header class="page-header <?php echo $page_header_position ?>" style="<?php if ( $page_header_color ){ echo 'color:' . $page_header_color . ';'; }; if ( $page_header_padding ){ echo 'padding-top:' . $page_header_padding . 'px;padding-bottom:' . $page_header_padding . 'px;';if ( $page_header_background && $page_header_parallax == '' ){  echo 'background: url(' . $page_header_background[0] . '); background-size:cover;';} elseif ( $page_header_background_color && $page_header_parallax == '' ) { echo 'background: ' . $page_header_background_color . ';'; };} ?>" <?php if ( $page_header_parallax ){ echo 'data-parallax="scroll" data-image-src="' . $page_header_background[0] . '"'; } ?>>      
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <?php if ( $page_header_boxed == 1){ ?><h3 class="page-title boxed"><?php post_type_archive_title(); ?></h3><?php }  
-                            else { ?><h3 class="page-title"><?php post_type_archive_title(); ?></h3><?php } ?>                                                      
-                        <?php if ( the_archive_description() && $page_header_boxed == 1){ echo '<h4 class="boxed">' . the_archive_description() . '</h4>'; }  
-                            else if ( the_archive_description() ){ echo '<h4>' . the_archive_description() . '</h4>'; } ?>
+            <div class="entry-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <?php require get_template_directory() . '/inc/shortcodes/portfolio.php'; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header><!-- .entry-header -->
-        </div>
-    <?php }?>
-
-<div class="entry-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <?php require get_template_directory() . '/inc/shortcodes/portfolio.php'; ?>
-                </div>
-            </div>
-        </div>
-	</div><!-- .entry-content -->
+            </div><!-- .entry-content -->
 
 		<?php endif; ?>
 
