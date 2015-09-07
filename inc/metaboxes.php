@@ -13,8 +13,8 @@ function startup_reloaded_metabox_pages() {
 	) );
     
     $cmb_box->add_field( array(
-		'name'             => __( 'Visible', 'cmb2' ),
-        'desc'             => __( 'Display the header. Or not.', 'cmb2' ),
+		'name'             => __( 'Hidden', 'cmb2' ),
+        'desc'             => __( 'Hide the header. Or not.', 'cmb2' ),
 		'id'               => $prefix . 'header_visible',
 		'type'             => 'checkbox'
 	) );
@@ -61,7 +61,7 @@ function startup_reloaded_metabox_pages() {
 		'id'               => $prefix . 'header_position',
 		'type'             => 'select',
 		'show_option_none' => false,
-        'default'          => 'center',
+        'default'          => 'left',
 		'options'          => array(
 			'left' => __( 'Left', 'cmb2' ),
 			'center'   => __( 'Center', 'cmb2' ),

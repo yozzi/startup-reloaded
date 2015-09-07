@@ -17,7 +17,7 @@ $page_header_parallax = get_post_meta( get_the_ID(), '_startup_reloaded_pages_he
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php if (!is_front_page() && $page_header_visible ){?>
+    <?php if (!is_front_page() && !$page_header_visible ){?>
         <div class="effect <?php echo $page_header_effect ?>">
         <header class="entry-header <?php echo $page_header_position ?>" style="<?php if ( $page_header_color ){ echo 'color:' . $page_header_color . ';'; }; if ( $page_header_padding ){ echo 'padding-top:' . $page_header_padding . 'px;padding-bottom:' . $page_header_padding . 'px;';if ( $page_header_background && $page_header_parallax == '' ){  echo 'background: url(' . $page_header_background[0] . '); background-size:cover;';} elseif ( $page_header_background_color && $page_header_parallax == '' ) { echo 'background: ' . $page_header_background_color . ';'; };} ?>" <?php if ( $page_header_parallax ){ echo 'data-parallax="scroll" data-image-src="' . $page_header_background[0] . '"'; } ?>>      
             <div class="container">
