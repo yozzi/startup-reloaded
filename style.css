@@ -1240,15 +1240,15 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 --------------------------------------------------------------*/
 /* Header */
 
-.entry-header.left {
+.entry-header.left, .page-header.left {
     text-align: left
 }
 
-.entry-header.center {
+.entry-header.center, .page-header.center {
     text-align: center
 }
 
-.entry-header.right {
+.entry-header.right, .page-header.right {
     text-align: right
 }
 
@@ -1269,6 +1269,7 @@ header.page-header h4.boxed {
 
 .page-header {
     margin: 0;
+    border: 0;
 }
 /* Content */
 
