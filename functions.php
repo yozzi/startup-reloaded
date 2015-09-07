@@ -380,3 +380,25 @@ function startup_reloaded_insert_custom_sizes( $sizes ) {
 }
 
 add_filter( 'image_size_names_choose', 'startup_reloaded_insert_custom_sizes' );
+
+// Page slug priority over archive
+function startup_reloaded_page_priority_init() {
+    $GLOBALS['wp_rewrite']->use_verbose_page_rules = true;
+}
+
+add_action( 'init', 'startup_reloaded_page_priority_init' );
+
+function startup_reloaded_page_priority_collect_page_rewrite_rules( $page_rewrite_rules )
+{
+    $GLOBALS['startup_reloaded_page_priority_page_rewrite_rules'] = $page_rewrite_rules;
+    return array();
+}
+
+add_filter( 'page_rewrite_rules', 'startup_reloaded_page_priority_collect_page_rewrite_rules' );
+
+function startup_reloaded_page_priority_prepend_page_rewrite_rules( $rewrite_rules )
+{
+    return $GLOBALS['startup_reloaded_page_priority_page_rewrite_rules'] + $rewrite_rules;
+}
+
+add_filter( 'rewrite_rules_array', 'startup_reloaded_page_priority_prepend_page_rewrite_rules' );
