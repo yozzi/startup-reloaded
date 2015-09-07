@@ -1136,7 +1136,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 
 .product-thumbnail img {
-width: 100%;
+    width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
@@ -1165,7 +1165,6 @@ width: 100%;
     width: 100%;
     height: auto;
 }
-
 /*--------------------------------------------------------------
 ## Portfolio
 --------------------------------------------------------------*/
@@ -1194,7 +1193,7 @@ width: 100%;
 }
 
 .portfolio-item-thumbnail img {
-width: 100%;
+    width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
@@ -1268,10 +1267,9 @@ header.page-header h4.boxed {
     clear: both;
 }
 
-.page-header{
+.page-header {
     margin: 0;
 }
-
 /* Content */
 
 .home .entry-content {
