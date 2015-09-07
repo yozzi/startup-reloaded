@@ -1240,22 +1240,31 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 --------------------------------------------------------------*/
 /* Header */
 
-.entry-header.left, .page-header.left {
+.entry-header.left,
+.page-header.left {
     text-align: left
 }
 
-.entry-header.center, .page-header.center {
+.entry-header.center,
+.page-header.center {
     text-align: center
 }
 
-.entry-header.right, .page-header.right {
+.entry-header.right,
+.page-header.right {
     text-align: right
 }
 
-.entry-header {
+.entry-header,
+.page-header {
     padding-top: 80px;
     padding-bottom: 80px;
     color: #fff
+}
+
+.page-header {
+    margin: 0;
+    border: 0;
 }
 
 header.entry-header h3.boxed,
@@ -1265,11 +1274,6 @@ header.page-header h4.boxed {
     padding: 10px 15px;
     display: inline-block;
     clear: both;
-}
-
-.page-header {
-    margin: 0;
-    border: 0;
 }
 /* Content */
 
