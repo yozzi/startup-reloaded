@@ -1260,11 +1260,18 @@ width: 100%;
 }
 
 header.entry-header h3.boxed,
-header.entry-header h4.boxed {
+header.entry-header h4.boxed,
+header.page-header h3.boxed,
+header.page-header h4.boxed {
     padding: 10px 15px;
     display: inline-block;
     clear: both;
 }
+
+.page-header{
+    margin: 0;
+}
+
 /* Content */
 
 .home .entry-content {

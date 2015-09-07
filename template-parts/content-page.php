@@ -4,15 +4,6 @@
  *
  * @package StartUp Reloaded
  */
-//Charger les options globales
-//$page_header_visible = of_get_option( 'general-responsive' );
-//$page_header_background_color = of_get_option( 'general-responsive' );
-//$page_header_color = of_get_option( 'general-responsive' );
-//$page_header_padding = of_get_option( 'general-responsive' );
-//$page_header_position = of_get_option( 'general-responsive' );
-//$page_header_boxed = of_get_option( 'general-responsive' );
-
-// Charger les options individuelles
 $page_header_visible = get_post_meta( get_the_ID(), '_startup_reloaded_pages_header_visible', true );
 if ( !$page_header_visible ) { $page_header_visible = of_get_option( 'page-header-hidden' ); }
 $page_header_background_color = get_post_meta( get_the_ID(), '_startup_reloaded_pages_header_background_color', true );
