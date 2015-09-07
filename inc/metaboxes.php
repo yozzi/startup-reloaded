@@ -23,14 +23,14 @@ function startup_reloaded_metabox_pages() {
         'name'    => __( 'Background color', 'cmb2' ),
         'id'      => $prefix . 'header_background_color',
         'type'    => 'colorpicker',
-        'default' => '#ccc'
+        'default' => ''
     ) );
     
     $cmb_box->add_field( array(
         'name'    => __( 'Text color', 'cmb2' ),
         'id'      => $prefix . 'header_color',
         'type'    => 'colorpicker',
-        'default' => '#323232'
+        'default' => ''
     ) );
     
     $cmb_box->add_field( array(
@@ -60,8 +60,8 @@ function startup_reloaded_metabox_pages() {
 		'name'             => __( 'Content position', 'cmb2' ),
 		'id'               => $prefix . 'header_position',
 		'type'             => 'select',
-		'show_option_none' => false,
-        'default'          => 'left',
+		'show_option_none' => 'Default',
+        'default'          => '',
 		'options'          => array(
 			'left' => __( 'Left', 'cmb2' ),
 			'center'   => __( 'Center', 'cmb2' ),
@@ -73,8 +73,8 @@ function startup_reloaded_metabox_pages() {
 		'name'             => __( 'Effect', 'cmb2' ),
 		'id'               => $prefix . 'header_effect',
 		'type'             => 'select',
-		'show_option_none' => 'none',
-        'default'          => 'none',
+		'show_option_none' => true,
+        'default'          => '',
 		'options'          => array(
 			'light' => __( 'Light', 'cmb2' ),
 			'dark'   => __( 'Dark', 'cmb2' ),
@@ -83,11 +83,24 @@ function startup_reloaded_metabox_pages() {
 		)
 	) );
     
+//    $cmb_box->add_field( array(
+//		'name'             => __( 'Boxed', 'cmb2' ),
+//        'desc'             => __( 'Put the text inside a box', 'cmb2' ),
+//		'id'               => $prefix . 'header_boxed',
+//		'type'             => 'checkbox'
+//	) );
+    
     $cmb_box->add_field( array(
 		'name'             => __( 'Boxed', 'cmb2' ),
         'desc'             => __( 'Put the text inside a box', 'cmb2' ),
 		'id'               => $prefix . 'header_boxed',
-		'type'             => 'checkbox'
+		'type'             => 'select',
+		'show_option_none' => 'Default',
+        'default'          => '',
+		'options'          => array(
+			'no' => __( 'No', 'cmb2' ),
+			'1'   => __( 'Yes', 'cmb2' )
+		)
 	) );
     
     $cmb_box->add_field( array(

@@ -197,6 +197,71 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
+    // Style Page Header
+    $options[] = array(
+		'name' => __( 'Page header', 'theme-textdomain' ),
+		'type' => 'info'
+	);
+    
+    // Style Page Header Hidden
+	$options[] = array(
+		'name' => __( 'Hidden', 'theme-textdomain' ),
+        'desc' => __( 'Hide the header. Or not. Overrides individual page setting if ckecked.', 'theme-textdomain' ),
+		'id' => 'page-header-hidden',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
+    // Style Page Header Background Color
+    $options[] = array(
+		'name' => __( 'Background color', 'theme-textdomain' ),
+		'id' => 'page-header-background-color',
+		'std' => '#323232',
+		'type' => 'color'
+	);
+    
+    // Style Page Header Text Color
+    $options[] = array(
+		'name' => __( 'Text color', 'theme-textdomain' ),
+		'id' => 'page-header-text-color',
+		'std' => '#ffffff',
+		'type' => 'color'
+	);
+    
+    // Style Page Header Padding
+    $options[] = array(
+		'name' => __( 'Padding', 'theme-textdomain' ),
+        'desc' => __( 'Padding of page header in px', 'theme-textdomain' ),
+		'id' => 'page-header-padding',
+		'std' => '50',
+		'type' => 'text'
+	);
+    
+    // Style Page Header Content Position
+	$page_header_positions = array(
+		'left' => __( 'Left', 'theme-textdomain' ),
+		'center' => __( 'Center', 'theme-textdomain' ),
+		'right' => __( 'Right', 'theme-textdomain' )
+	);
+    
+	$options[] = array(
+		'name' => __( 'Content position', 'theme-textdomain' ),
+		'id' => 'page-header-position',
+		'std' => 'left',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => $page_header_positions
+	);
+    
+    // Style Page Header Boxed 
+	$options[] = array(
+		'name' => __( 'Boxed', 'theme-textdomain' ),
+        'desc' => __( 'Put the text inside a box', 'theme-textdomain' ),
+		'id' => 'page-header-boxed',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
     // Navbar
     $options[] = array(
 		'name' => __( 'Navbar', 'theme-textdomain' ),
@@ -239,7 +304,8 @@ function optionsframework_options() {
     
     // Navbar height
     $options[] = array(
-		'name' => __( 'Height in px', 'theme-textdomain' ),
+		'name' => __( 'Height in px.', 'theme-textdomain' ),
+        'desc' => __( 'Required for fixed-top position to prevent content overlapping. Should be left blank or set to 0 for other navbar positions.', 'theme-textdomain' ),
 		'id' => 'navbar-height',
 		'std' => '50',
 		'type' => 'text'
