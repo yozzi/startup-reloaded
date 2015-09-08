@@ -33,6 +33,7 @@
                 $main_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'shuffle_thumb' );
                 $detail_thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'grid_main' );
                 $detail_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'grid_main' );
+                $gallery  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_gallery', true );
                 $short = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_short', true );
                 $description  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_description', true );
                 $categories = get_the_terms( $portfolio_item->ID, 'portfolio-category' );
@@ -58,6 +59,7 @@
                                 
                     </div>
                 </div>
+            
                 <!-- Modal -->
                 <div class="modal fade simple" id="myModal-<?php echo $portfolio_item->ID; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                   <div class="modal-dialog" role="document">
@@ -75,8 +77,32 @@
                                         <hr class="star-primary" />
                                       </div>
                                       <div class="modal-body">
-                                        
-                                        <?php if ( $detail_pic ) { $image = $detail_pic; }
+                                        <?php if ( $gallery ) { ?>
+                                            <div id="carousel-popup-<?php echo $portfolio_item->ID; ?>" class="carousel slide" data-ride="carousel">
+                                                <!-- Wrapper for slides -->
+                                                <div class="carousel-inner">
+                                                    <?php $x = 1;
+                                                    foreach ( $gallery as $attachment_id => $img_portfolio_main_url ) { ?>
+                                                        <div class="item <?php echo ( $x==1 ) ? 'active' : '' ?>">
+                                                            <?php $image = wp_get_attachment_image($attachment_id, 'shuffle_main'); ?>
+                                                            <a href="#carousel-popup-<?php echo $portfolio_item->ID; ?>" role="button" data-slide="next"><?php echo $image; ?></a>
+                                                        </div>
+                                                    <?php $x++;
+                                                    } ?>                      
+                                                </div>
+                                                    <!-- Controls -->
+                                                    <div class="carousel-arrow left hvr-<?php echo $slider_arrows_hover ?> hidden-xs">                                       
+                                                        <a class="left carousel-control" href="#carousel-popup-<?php echo $portfolio_item->ID; ?>" role="button" data-slide="prev">
+                                                            <i class="fa fa-chevron-left fa-lg"></i>
+                                                        </a>                
+                                                    </div>
+                                                    <div class="carousel-arrow right hvr-<?php echo $slider_arrows_hover ?> hidden-xs">
+                                                       <a class="right carousel-control" href="#carousel-popup-<?php echo $portfolio_item->ID; ?>" role="button" data-slide="next">
+                                                            <i class="fa fa-chevron-right fa-lg"></i>
+                                                        </a>
+                                                    </div>
+                                            </div>
+                                            <?php } elseif ( $detail_pic ) { $image = $detail_pic; }
                                                 elseif ( $detail_thumbnail ) { $image = $detail_thumbnail; }
                                                 else { $image = 'Il manque une image'; } ?>
                                         <? echo $image ;?>
@@ -93,7 +119,7 @@
                                         </div>
                                       </div>
                                       <div class="modal-footer">
-                                                                                  <?php if ($client || $date){ ?>
+                                        <?php if ($client || $date){ ?>
                                             <div class="well well-sm">
                                                 <?php if($client) {echo 'Client: <strong>' . $client . '</strong>';}?> <?php if($date) {echo 'Date: <strong>' . gmdate("m/Y", $date) . '</strong>';}?>
                                             </div>
@@ -115,6 +141,7 @@
                 $main_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'grid_thumb' );
                 $detail_thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'grid_main' );
                 $detail_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'grid_main' );
+                $gallery  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_gallery', true );
                 $description  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_description', true );
                 $client  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_client', true );
                 $date  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_date', true );
@@ -133,7 +160,6 @@
                         </div>       
                     </div>
                 </div>
-            
             
                 <!-- Modal -->
                 <div class="modal fade simple" id="myModal-<?php echo $portfolio_item->ID; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -170,7 +196,7 @@
                                         </div>
                                       </div>
                                       <div class="modal-footer">
-                                                                                  <?php if ($client || $date){ ?>
+                                        <?php if ($client || $date){ ?>
                                             <div class="well well-sm">
                                                 <?php if($client) {echo 'Client: <strong>' . $client . '</strong>';}?> <?php if($date) {echo 'Date: <strong>' . gmdate("m/Y", $date) . '</strong>';}?>
                                             </div>
