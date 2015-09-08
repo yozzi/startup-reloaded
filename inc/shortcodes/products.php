@@ -22,7 +22,7 @@
     </ul>
 
 <!--    <div class="container">-->
-        <div id="grid" class="row">
+        <div id="shuffle" class="row">
             <?php foreach ($products as $key=> $product) {
                 $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_main_pic_id', 1 ), 'shuffle_thumb' );
                 $short  = get_post_meta( $product->ID, '_startup_reloaded_products_short', true );
