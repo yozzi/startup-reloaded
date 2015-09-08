@@ -103,6 +103,7 @@
                                                 elseif ( $detail_thumbnail ) { $image = $detail_thumbnail; }
                                                 else { $image = 'Il manque une image'; } ?>
                                         <? echo $image ;?>
+                                        
                                         <div class="modal-description">  
                                         <?php if ( $description ) { 
                                                 if( $auto_format_off == 1 ){
@@ -111,11 +112,16 @@
                                                     echo '<p>' . wpautop( $description ) . '</p>';
                                                 }
                                             } ?>
+
                                         </div>
                                       </div>
                                       <div class="modal-footer">
-                                        <?php if($client) {echo 'Client: <strong>' . $client . '</strong>';}?> <?php if($date) {echo 'Date: <strong>' . gmdate("m/Y", $date) . '</strong>';}?>
-                                        <?php if($url) {echo '<br /><a href="' . $url . '"class="btn btn-primary">Visit</a>';}?>
+                                                                                  <?php if ($client || $date){ ?>
+                                            <div class="well well-sm">
+                                                <?php if($client) {echo 'Client: <strong>' . $client . '</strong>';}?> <?php if($date) {echo 'Date: <strong>' . gmdate("m/Y", $date) . '</strong>';}?>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if($url) {echo '<a href="' . $url . '"class="btn btn-primary" target="_blank">Visit</a>';}?>
                                       </div>
                                 </div>
                             </div>

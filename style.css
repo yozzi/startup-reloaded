@@ -588,6 +588,12 @@ section {
 .hentry {
     margin: 0;
 }
+
+.well {
+    border: none; 
+    -webkit-box-shadow:none; 
+    box-shadow: none; 
+}
 /* Footer */
 
 #secondary,
@@ -1184,6 +1190,10 @@ hr.star-primary:after {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.modal.simple .modal-header, .modal.simple .modal-footer{
+   border: 0;
 }
 
 .modal.simple .modal-footer{
