@@ -425,20 +425,34 @@ function optionsframework_options() {
 		'options' => $slider_navigation
 	);
     
-    // Milestones
-//	$options[] = array(
-//		'name' => __( 'Milestones', 'theme-textdomain' ),
-//		'type' => 'heading'
-//	);
+    // Post types
+	$options[] = array(
+		'name' => __( 'Post types', 'theme-textdomain' ),
+		'type' => 'heading'
+	);
     
-    // Milestones activate
-//	$options[] = array(
-//		'name' => __( 'Milestones on homepage', 'theme-textdomain' ),
-//		'desc' => __( '', 'theme-textdomain' ),
-//		'id' => 'milestones-on',
-//		'std' => '1',
-//		'type' => 'checkbox'
-//	);
+    // Post types portfolio style
+    $portfolio_styles= array(
+		'grid' => __( 'Grid', 'theme-textdomain' ),
+		'shuffle' => __( 'Shuffle', 'theme-textdomain' )
+	);
+    
+	$options[] = array(
+		'name' => __( 'Portfolio style', 'theme-textdomain' ),
+		'id' => 'portfolio-style',
+		'std' => 'grid',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => $portfolio_styles
+	);
+    
+    // Post types portfolio number
+    $options[] = array(
+		'name' => __( 'Max number of items to show for grid style. Leave empty for unlimited.', 'theme-textdomain' ),
+		'id' => 'portfolio-number',
+		'std' => '',
+		'type' => 'text'
+	);
 
 //    // Fonts
 //	$options[] = array(
