@@ -31,8 +31,14 @@
             <?php foreach ($portfolio as $key=> $portfolio_item) {
                 $thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_thumbnail_id', 1 ), 'shuffle_thumb' );
                 $main_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'shuffle_thumb' );
+                $detail_thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'grid_main' );
+                $detail_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_main_pic_id', 1 ), 'grid_main' );
                 $short = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_short', true );
+                $description  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_description', true );
                 $categories = get_the_terms( $portfolio_item->ID, 'portfolio-category' );
+                $client  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_client', true );
+                $date  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_date', true );
+                $url  = get_post_meta( $portfolio_item->ID, '_startup_reloaded_portfolio_url', true );
             ?>
                 <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
                     <div class="portfolio-item">
@@ -47,10 +53,58 @@
 
                                 <?php if ( $short ) { echo '<p>' . esc_html( $short ) . '</p>'; } ?>
 
-                                <a href="<?php echo esc_url( get_permalink($portfolio_item->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button">More information</a>                
+                                <a href="#" data-toggle="modal" data-target="#myModal-<?php echo $portfolio_item->ID; ?>" class="btn btn-info btn-lg btn-block" role="button">More information</a>
                         </div>
                                 
                     </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade simple" id="myModal-<?php echo $portfolio_item->ID; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>     
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                      <div class="modal-header">
+                                        <h2 class="modal-title" id="myModalLabel"><?php echo $portfolio_item->post_title ?></h2>
+                                        <hr class="star-primary" />
+                                      </div>
+                                      <div class="modal-body">
+                                        
+                                        <?php if ( $detail_pic ) { $image = $detail_pic; }
+                                                elseif ( $detail_thumbnail ) { $image = $detail_thumbnail; }
+                                                else { $image = 'Il manque une image'; } ?>
+                                        <? echo $image ;?>
+                                        
+                                        <div class="modal-description">  
+                                        <?php if ( $description ) { 
+                                                if( $auto_format_off == 1 ){
+                                                    echo '<p>' . $description . '</p>';
+                                                } else {
+                                                    echo '<p>' . wpautop( $description ) . '</p>';
+                                                }
+                                            } ?>
+
+                                        </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                                                                  <?php if ($client || $date){ ?>
+                                            <div class="well well-sm">
+                                                <?php if($client) {echo 'Client: <strong>' . $client . '</strong>';}?> <?php if($date) {echo 'Date: <strong>' . gmdate("m/Y", $date) . '</strong>';}?>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if($url) {echo '<a href="' . $url . '"class="btn btn-primary" target="_blank">Visit</a>';}?>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
                 </div>
             <?php } // endforeach ?>
         </div>
@@ -74,14 +128,14 @@
                             else { $image = 'Il manque une image'; } ?>
                             <? echo $image ;?>
                             <div class="portfolio-item-details">
-                                <a href="#" data-toggle="modal" data-target="#myModal-<?php echo $portfolio_item->ID; ?>"><div class="caption"><i class="fa fa-plus-circle fa-5x"></i></div></a>                
+                                <a href="#" data-toggle="modal" data-target="#myModal-<?php echo $portfolio_item->ID; ?>"><div class="caption"><i class="fa fa-plus-circle fa-5x"></i></div></a>
                             </div>
                         </div>       
                     </div>
                 </div>
             
             
-                 <!-- Modal -->
+                <!-- Modal -->
                 <div class="modal fade simple" id="myModal-<?php echo $portfolio_item->ID; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
