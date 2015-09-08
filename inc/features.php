@@ -9,9 +9,11 @@ function startup_reloaded_custom_theme_features()  {
 	set_post_thumbnail_size( 1200, 400, true );
     
     // CPT Image Custom Sizes
-    // Products
+    // Grid + Shuffle
+    // Ne pas oublier de donner un nom et ajouter les tailles personnalisées au selecteur de médias dans functions.php
     add_image_size( 'shuffle_thumb', 720, 0, false);
     add_image_size( 'shuffle_main', 720, 320, true);
+    add_image_size( 'grid_thumb', 720, 720, true);
     
 //    // Add theme support for Custom Header
 //	$header_args = array(

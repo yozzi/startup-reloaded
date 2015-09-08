@@ -376,6 +376,7 @@ function startup_reloaded_insert_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'shuffle_thumb' => __( 'Shuffle thumbnail' ),
         'shuffle_main' => __( 'Shuffle main' ),
+        'grid_thumb' => __( 'Grid thumbnail' ),
     ) );
 }
 
