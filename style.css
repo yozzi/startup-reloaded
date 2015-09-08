@@ -1257,9 +1257,15 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 
 .entry-header,
 .page-header {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    color: #fff
+    padding-top: 0;
+    padding-bottom: 0;
+/*    color: #fff*/
+}
+
+.entry-header .effect,
+.page-header .effect {
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .page-header {

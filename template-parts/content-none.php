@@ -6,6 +6,12 @@
  *
  * @package StartUp Reloaded
  */
+$page_header_visible = of_get_option( 'page-header-hidden' );
+$page_header_background_color = of_get_option( 'page-header-background-color' );
+$page_header_color = of_get_option( 'page-header-text-color' );
+$page_header_padding = of_get_option( 'page-header-padding' );
+$page_header_position = of_get_option( 'page-header-position' );
+$page_header_boxed = of_get_option( 'page-header-boxed' );
 ?>
 <div class="col-lg-12">
 <section class="no-results not-found">
