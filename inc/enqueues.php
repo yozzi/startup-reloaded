@@ -14,7 +14,7 @@ function startup_reloaded_scripts() {
     wp_enqueue_style( 'startup-reloaded-animate-css', get_template_directory_uri() . '/lib/animate-css/animate.css' );
     
     if( of_get_option( 'page-transition' ) ){
-        wp_enqueue_style( 'startup-reloaded-animsition', get_template_directory_uri() . '/lib/animsition/dist/css/animsition.min.css' );
+        wp_enqueue_style( 'startup-reloaded-animsition', get_template_directory_uri() . '/lib/animsition/animsition.min.css' );
     }
     
     if( of_get_option( 'general-ytplayer' ) ){
@@ -79,7 +79,7 @@ function startup_reloaded_scripts() {
     wp_enqueue_script( 'startup-reloaded-parallax', get_template_directory_uri() . '/js/parallax.min.js', array( ), false, 'all' );
     
     if( of_get_option( 'page-transition' ) ){
-        wp_enqueue_script( 'startup-reloaded-animsition', get_template_directory_uri() . '/lib/animsition/dist/js/jquery.animsition.min.js', array( ), false, 'all' );
+        wp_enqueue_script( 'startup-reloaded-animsition', get_template_directory_uri() . '/lib/animsition/jquery.animsition.min.js', array( ), false, 'all' );
     }
     
     if( of_get_option( 'general-ytplayer' ) ){
