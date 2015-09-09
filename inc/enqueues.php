@@ -18,7 +18,7 @@ function startup_reloaded_scripts() {
     }
     
     if( of_get_option( 'general-ytplayer' ) ){
-        wp_enqueue_style( 'startup-reloaded-ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/dist/css/jquery.mb.YTPlayer.min.css' );
+        wp_enqueue_style( 'startup-reloaded-ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/css/jquery.mb.YTPlayer.min.css' );
     }
     
     if( of_get_option( 'sliding-left-on' ) || of_get_option( 'sliding-right-on' ) ){
@@ -83,7 +83,7 @@ function startup_reloaded_scripts() {
     }
     
     if( of_get_option( 'general-ytplayer' ) ){
-        wp_enqueue_script( 'startup-reloaded-ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/dist/jquery.mb.YTPlayer.min.js', array( ), false, 'all' );
+        wp_enqueue_script( 'startup-reloaded-ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/jquery.mb.YTPlayer.min.js', array( ), false, 'all' );
     }
     
     if( of_get_option( 'portfolio-style' ) == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){
