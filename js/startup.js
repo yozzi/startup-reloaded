@@ -154,7 +154,7 @@ $( document ).ready(function() {
 
 //mmenu
 $(function() {
-    $('nav#menu').mmenu({
+    $('nav#menu-left').mmenu({
         extensions	: [ 'effect-slide-menu', 'pageshadow' ],
         searchfield	: true,
         counters	: true,

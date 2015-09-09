@@ -91,8 +91,8 @@ if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
     <?php if( $page_transition ) { ?>
         <div class="animsition" data-animsition-in="<?php echo $page_transition_in; ?>" data-animsition-out="<?php echo $page_transition_out; ?>">
     <?php } ?>
-        <?php if( $sliding_left_on ){ require get_template_directory() . '/inc/sliding-menu-left.php'; } ?>
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
+            <?php if( $sliding_left_on ){ require get_template_directory() . '/inc/sliding-menu-left.php'; } ?>
             <a class="skip-link screen-reader-text" href="#content">
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
             </a>
