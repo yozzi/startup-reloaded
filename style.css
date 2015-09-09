@@ -696,6 +696,14 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 .navbar-inverse .navbar-brand:hover {
     color: rgba(255, 255, 255, 0.7);
 }
+
+/*--------------------------------------------------------------
+## Slider
+--------------------------------------------------------------*/
+/* Hide mmenu flickering */
+#page #menu-left {
+   display: none;
+}
 /*--------------------------------------------------------------
 ## Slider
 --------------------------------------------------------------*/
