@@ -43,9 +43,9 @@ function startup_reloaded_setup() {
 
 	// This theme uses wp_nav_menu() in three locations.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'startup-reloaded' ),
-        'secondary' => esc_html__( 'Secondary Menu', 'startup-reloaded' ),
-        'ternery' => esc_html__( 'Ternary Menu', 'startup-reloaded' ),
+		'navbar-primary' => esc_html__( 'Navbar Primary', 'startup-reloaded' ),
+        'navbar-secondary' => esc_html__( 'Navbar Secondary', 'startup-reloaded' ),
+        'sliding-left' => esc_html__( 'Sliding Left', 'startup-reloaded' ),
 	) );
 
 	/*

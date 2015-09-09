@@ -62,6 +62,14 @@ function optionsframework_options() {
 	);
     
     // Général page transition
+	$options[] = array(
+		'name' => __( 'Activate page transitions', 'theme-textdomain' ),
+		'id' => 'page-transition',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+    
+    // Général page transition list
 	$general_page_transitions = array(
 		'fade-in' => __( 'Fade in', 'theme-textdomain' ),
 		'fade-out' => __( 'Fade out', 'theme-textdomain' ),
@@ -262,13 +270,13 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Navbar
+    // Navigation
     $options[] = array(
-		'name' => __( 'Navbar', 'theme-textdomain' ),
+		'name' => __( 'Navigation', 'theme-textdomain' ),
 		'type' => 'heading'
 	);
     
-    // Navbar activate
+    // Navigation Navbar activate
 	$options[] = array(
 		'name' => __( 'Activate navbar', 'theme-textdomain' ),
 		'id' => 'navbar-on',
@@ -276,7 +284,7 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
 
-    // Navbar position
+    // Navigation Navbar position
 	$navbar_position = array(
         //'' => __( 'Float', 'theme-textdomain' ),
 		'navbar-static-top' => __( 'Static top', 'theme-textdomain' ),
@@ -293,7 +301,7 @@ function optionsframework_options() {
 		'options' => $navbar_position
 	);
     
-    // Navbar opacity
+    // Navigation Navbar opacity
 	$options[] = array(
 		'name' => __( 'Opacity', 'theme-textdomain' ),
 		'desc' => __( 'Transparent on homepage. Available for fixed top navbar only', 'theme-textdomain' ),
@@ -302,7 +310,7 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Navbar height
+    // Navigation Navbar height
     $options[] = array(
 		'name' => __( 'Height in px.', 'theme-textdomain' ),
         'desc' => __( 'Required for fixed-top position to prevent content overlapping. Should be left blank or set to 0 for other navbar positions.', 'theme-textdomain' ),
@@ -311,7 +319,7 @@ function optionsframework_options() {
 		'type' => 'text'
 	);
     
-    // Navbar item positions
+    // Navigation Navbar item positions
     $navbar_item_positions = array(
 		'pull-left' => __( 'Left', 'theme-textdomain' ),
 		'pull-right' => __( 'Right', 'theme-textdomain' )
@@ -335,7 +343,7 @@ function optionsframework_options() {
 		'options' => $navbar_item_positions
 	);
 
-//    // Navbar style
+//    // Navigation Navbar style
 //	$options[] = array(
 //		'name' => __( 'Style', 'theme-textdomain' ),
 //		'desc' => __( 'Inverse.', 'theme-textdomain' ),
@@ -343,6 +351,14 @@ function optionsframework_options() {
 //		'std' => '',
 //		'type' => 'checkbox'
 //	);
+    
+    // Navigation Sliding Left activate
+	$options[] = array(
+		'name' => __( 'Activate sliding left menu', 'theme-textdomain' ),
+		'id' => 'sliding-left-on',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
     
     // Slider
 	$options[] = array(

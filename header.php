@@ -15,12 +15,14 @@
         //Charger les variables d'Option Framework
         $responsive = of_get_option( 'general-responsive' );
         $ga = of_get_option( 'general-ga' ); //Code utilisateur Google Analyics
+        $page_transition = of_get_option( 'page-transition' );
         $page_transition_in = of_get_option( 'page-transition-in' );
         $page_transition_out = of_get_option( 'page-transition-out' );
         $navbar_on = of_get_option( 'navbar-on' );
         $navbar_position = of_get_option( 'navbar-position' );
         $navbar_height = of_get_option( 'navbar-height' );
         $navbar_transparent = of_get_option( 'navbar-transparent' );
+        $sliding_left_on = of_get_option( 'sliding-left-on' );
         $boxed = of_get_option( 'general-boxed' );
         $background = of_get_option( 'style-background' );
         $cover = of_get_option( 'style-cover' );
@@ -87,6 +89,7 @@ if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
 <?php if ( $responsive != 1 ) { $unresponsive = 'ur'; } else { $unresponsive = ''; } ?>
 <body <?php body_class( $unresponsive ); if ( is_front_page() ) { echo ' style="padding-top:' . $body_padding . 'px"'; } ?>>
     <div class="animsition" data-animsition-in="<?php echo $page_transition_in; ?>" data-animsition-out="<?php echo $page_transition_out; ?>">
+        <?php if( $sliding_left_on ){ require get_template_directory() . '/inc/sliding-menu-left.php'; } ?>
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
             <a class="skip-link screen-reader-text" href="#content">
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
