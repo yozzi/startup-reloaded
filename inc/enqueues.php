@@ -118,8 +118,8 @@ add_action('admin_head', 'startup_reloaded_admin_enqueues');
 
 
 function startup_reloaded_admin_enqueues() {
-  echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/lib/select2/dist/css/select2.min.css' . '" type="text/css" media="all">';
-  echo '<script type="text/javascript" src="' . get_template_directory_uri() . '/lib/select2/dist/js/select2.min.js' . '"></script>';
+  echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/lib/select2/css/select2.min.css' . '" type="text/css" media="all">';
+  echo '<script type="text/javascript" src="' . get_template_directory_uri() . '/lib/select2/js/select2.min.js' . '"></script>';
   echo '<script type="text/javascript" src="' . get_template_directory_uri() . '/js/startup-admin.js' . '"></script>';
 }
 
