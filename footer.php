@@ -7,6 +7,7 @@
  * @package StartUp Reloaded
  */
 
+$page_transition = of_get_option( 'page-transition' );
 $back_to_top = of_get_option( 'general-back-to-top' );
 $footer = of_get_option( 'general-footer' );
 ?>
@@ -24,7 +25,9 @@ $footer = of_get_option( 'general-footer' );
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-</div>
+<?php if( $page_transition ) { ?>
+        </div>
+<?php } ?>
 
 <?php if ( $back_to_top ) { ?>
     <div class="scroll-top-wrapper ">
