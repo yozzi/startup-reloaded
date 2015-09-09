@@ -698,11 +698,23 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 
 /*--------------------------------------------------------------
-## Slider
+## mmenu
 --------------------------------------------------------------*/
 /* Hide mmenu flickering */
 #page #menu-left {
    display: none;
+}
+
+#menu-left.mm-menu{
+    background: #fff;
+}
+
+.mm-panel{
+        -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+    
 }
 /*--------------------------------------------------------------
 ## Slider

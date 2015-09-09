@@ -360,6 +360,14 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
+    // Navigation Sliding Right activate
+	$options[] = array(
+		'name' => __( 'Activate sliding right menu', 'theme-textdomain' ),
+		'id' => 'sliding-right-on',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
     // Slider
 	$options[] = array(
 		'name' => __( 'Slider', 'theme-textdomain' ),

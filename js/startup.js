@@ -152,31 +152,35 @@ $( document ).ready(function() {
     $('.widget > ul').addClass('list-unstyled');
 });
 
-//mmenu
+//mmenu left
 $(function() {
     $('nav#menu-left').mmenu({
         slidingSubmenus : false,
-        extensions	: [ 'effect-slide-menu', 'pageshadow' ],
-        searchfield	: true,
-        counters	: true,
-        navbar 		: {
-            title		: 'Advanced menu'
-        },
+        extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels' ],
         navbars		: [
             {
                 position	: 'top',
-                content		: [ 'searchfield' ]
-            }, {
-                position	: 'top',
                 content		: [
-                    'prev',
-                    'title',
                     'close'
                 ]
-            }, {
-                position	: 'bottom',
+            }
+        ]
+    });
+});
+
+//mmenu right
+$(function() {
+    $('nav#menu-right').mmenu({
+        offCanvas: {
+            position: "right"
+         },
+        slidingSubmenus : false,
+        extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels' ],
+        navbars		: [
+            {
+                position	: 'top',
                 content		: [
-                    '<a href="http://mmenu.frebsite.nl/wordpress-plugin.html" target="_blank">WordPress plugin</a>'
+                    'close'
                 ]
             }
         ]

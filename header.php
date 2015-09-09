@@ -23,6 +23,7 @@
         $navbar_height = of_get_option( 'navbar-height' );
         $navbar_transparent = of_get_option( 'navbar-transparent' );
         $sliding_left_on = of_get_option( 'sliding-left-on' );
+        $sliding_right_on = of_get_option( 'sliding-right-on' );
         $boxed = of_get_option( 'general-boxed' );
         $background = of_get_option( 'style-background' );
         $cover = of_get_option( 'style-cover' );
@@ -93,6 +94,7 @@ if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
     <?php } ?>
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
             <?php if( $sliding_left_on ){ require get_template_directory() . '/inc/sliding-menu-left.php'; } ?>
+            <?php if( $sliding_right_on ){ require get_template_directory() . '/inc/sliding-menu-right.php'; } ?>
             <a class="skip-link screen-reader-text" href="#content">
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
             </a>
