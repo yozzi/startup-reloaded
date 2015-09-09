@@ -31,11 +31,11 @@ $total_projects = count($projects);
                             
                             <?php if ( $thumbnail ) { 
                                 
-                                $image = $thumbnail
+                                $image = $thumbnail;
                             
                             } elseif ( $main_pic ) {
                             
-                                $image = $main_pic
+                                $image = $main_pic;
                             
                             } else {
                             
