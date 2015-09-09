@@ -109,6 +109,14 @@ function optionsframework_options() {
 		'options' => $general_page_transitions
 	);
     
+    // Général ytplayer
+	$options[] = array(
+		'name' => __( 'Activate YTPlayer', 'theme-textdomain' ),
+		'id' => 'general-ytplayer',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
     // Style
     $options[] = array(
 		'name' => __( 'Style', 'theme-textdomain' ),

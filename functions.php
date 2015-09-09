@@ -209,18 +209,6 @@ function options_stylesheets_alt_style()   {
 }
 add_action( 'wp_enqueue_scripts', 'options_stylesheets_alt_style' );
 
-////Ajouter une class css a wp_get_attachment_link() pour empêcher qu'une transition animsition apparaisse à l'ouvertue de magnific popup
-//function startup_reloaded_modify_attachment_link( $markup, $id, $size, $permalink ) {
-//    if (of_get_option( 'page-transition' )){
-//        global $post;
-//        if ( ! $permalink ) {
-//            $markup = str_replace( '<a href', '<a class="no-animsition" href', $markup );
-//        }
-//        return $markup;
-//    }
-//}
-//add_filter( 'wp_get_attachment_link', 'startup_reloaded_modify_attachment_link', 10, 4 );
-
 //Fonction pour récupérer les info d'un attachement à partir de son id, utilisé avec CMB2
 function wp_get_attachment( $attachment_id ) {
 

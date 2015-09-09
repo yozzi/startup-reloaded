@@ -27,6 +27,7 @@
         $boxed = of_get_option( 'general-boxed' );
         $background = of_get_option( 'style-background' );
         $cover = of_get_option( 'style-cover' );
+        $ytplayer = of_get_option( 'general-ytplayer' );
 
         if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -126,7 +127,49 @@
             });
         </script>
     <?php } ?>
-
+    
+    <?php if( $ytplayer ){ ?>
+        <script type="text/javascript">
+            jQuery(function(){
+                jQuery(".player").YTPlayer();
+            });
+        </script>
+    <?php } ?>
+    
+    <?php if (is_plugin_active('startup-cpt-milestones/startup-cpt-milestones.php')){ ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function( $ ) {
+                jQuery('.milestone-count').counterUp({
+                    delay: 50, // the delay time in ms
+                    time: 3500 // the speed time in ms
+                });
+            });
+        </script>
+    <?php } ?>
+    
+    <?php if( $page_transition ){ ?>
+        <script type="text/javascript">
+            jQuery( document ).ready(function() {
+                jQuery(".animsition").animsition({
+                    inDuration            :    1000,
+                    outDuration           :    800,
+                    //linkElement           :   '.animsition-link',
+                    linkElement   :   'a:not([target="_blank"]):not([href^=#]):not([class="no-animsition"])',
+                    loading               :    true,
+                    loadingParentElement  :   'body', //animsition wrapper element
+                    loadingClass          :   'animsition-loading',
+                    unSupportCss          : [ 'animation-duration',
+                                              '-webkit-animation-duration',
+                                              '-o-animation-duration'
+                                            ],
+                    overlay               :   false,
+                    overlayClass          :   'animsition-overlay-slide',
+                    overlayParentElement  :   'body'
+                });
+            });
+        </script>
+    <?php } ?>
+    
 </head>
 <?php if ( $responsive != 1 ) { $unresponsive = 'ur'; } else { $unresponsive = ''; } ?>
 <body <?php body_class( $unresponsive ); if ( is_front_page() ) { echo ' style="padding-top:' . $body_padding . 'px"'; } ?>>
