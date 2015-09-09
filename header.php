@@ -37,43 +37,43 @@
 
     <?php wp_head(); ?>
 
-<style>
-body{
-<?php
-if ( $background[color] ) { ?>  background-color: <?php echo $background[color] ?>;
-<?php }
-if ( $background[image] ) { ?>  background-image: url(<?php echo $background[image] ?>);
-<?php }
-if ( $background[repeat] && $background[image] ) { ?>  background-repeat: <?php echo $background[repeat] ?>;
-<?php }
-if ( $background[position] && $background[image] ) { ?>  background-position: <?php echo $background[position] ?>;
-<?php }
-if ( $background[attachment] && $background[image] ) { ?>  background-attachment: <?php echo $background[attachment] ?>;
-<?php }
-if ( $cover && $background[image]) { ?>  background-size: cover;
-<?php }
-?>
-}
-<?php
-// On définit le padding-top du body en fonction des options choisies
-if ( $navbar_position == 'navbar-fixed-top' && $navbar_transparent != 1 ){
-$body_padding = $navbar_height;
-} else {
-$body_padding = '0';
-}
-if  ( $navbar_position == 'navbar-fixed-bottom' ){ ?>
-body{
-  padding-bottom: <?php echo $navbar_height; ?>px;
-}
-<?php }
-if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
-@media (min-width: 768px){
-  body.home #site-navigation.navbar{
-    background-color: transparent !important;
-  }
-}
-<?php } ?>
-</style>
+    <style>
+    body{
+    <?php
+    if ( $background[color] ) { ?>  background-color: <?php echo $background[color] ?>;
+    <?php }
+    if ( $background[image] ) { ?>  background-image: url(<?php echo $background[image] ?>);
+    <?php }
+    if ( $background[repeat] && $background[image] ) { ?>  background-repeat: <?php echo $background[repeat] ?>;
+    <?php }
+    if ( $background[position] && $background[image] ) { ?>  background-position: <?php echo $background[position] ?>;
+    <?php }
+    if ( $background[attachment] && $background[image] ) { ?>  background-attachment: <?php echo $background[attachment] ?>;
+    <?php }
+    if ( $cover && $background[image]) { ?>  background-size: cover;
+    <?php }
+    ?>
+    }
+    <?php
+    // On définit le padding-top du body en fonction des options choisies
+    if ( $navbar_position == 'navbar-fixed-top' && $navbar_transparent != 1 ){
+    $body_padding = $navbar_height;
+    } else {
+    $body_padding = '0';
+    }
+    if  ( $navbar_position == 'navbar-fixed-bottom' ){ ?>
+    body{
+      padding-bottom: <?php echo $navbar_height; ?>px;
+    }
+    <?php }
+    if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
+    @media (min-width: 768px){
+      body.home #site-navigation.navbar{
+        background-color: transparent !important;
+      }
+    }
+    <?php } ?>
+    </style>
 
     <?php if ( $ga ) : ?>
         <script>
@@ -85,6 +85,47 @@ if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
             ga('send', 'pageview');
         </script>
     <?php endif ?>
+
+    <?php if( $sliding_left_on ){ ?>
+        <script type="text/javascript">
+            jQuery(function() {
+                jQuery('nav#menu-left').mmenu({
+                    slidingSubmenus : false,
+                    extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels' ],
+                    navbars		: [
+                        {
+                            position	: 'top',
+                            content		: [
+                                'close'
+                            ]
+                        }
+                    ]
+                });
+            });
+        </script>
+    <?php } ?>
+
+    <?php if( $sliding_right_on ){ ?>
+        <script type="text/javascript">
+            jQuery(function() {
+                jQuery('nav#menu-right').mmenu({
+                    offCanvas: {
+                        position: "right"
+                     },
+                    slidingSubmenus : false,
+                    extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels' ],
+                    navbars		: [
+                        {
+                            position	: 'top',
+                            content		: [
+                                'close'
+                            ]
+                        }
+                    ]
+                });
+            });
+        </script>
+    <?php } ?>
 
 </head>
 <?php if ( $responsive != 1 ) { $unresponsive = 'ur'; } else { $unresponsive = ''; } ?>

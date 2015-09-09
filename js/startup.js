@@ -152,41 +152,6 @@ $( document ).ready(function() {
     $('.widget > ul').addClass('list-unstyled');
 });
 
-//mmenu left
-$(function() {
-    $('nav#menu-left').mmenu({
-        slidingSubmenus : false,
-        extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels' ],
-        navbars		: [
-            {
-                position	: 'top',
-                content		: [
-                    'close'
-                ]
-            }
-        ]
-    });
-});
-
-//mmenu right
-$(function() {
-    $('nav#menu-right').mmenu({
-        offCanvas: {
-            position: "right"
-         },
-        slidingSubmenus : false,
-        extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels' ],
-        navbars		: [
-            {
-                position	: 'top',
-                content		: [
-                    'close'
-                ]
-            }
-        ]
-    });
-});
-
 // Animsition
 $( document ).ready(function() {
     $(".animsition").animsition({
@@ -246,9 +211,6 @@ $(document).ready(function() {
 				return element.find('img');
 			}
 		}
-  
-  
-  
   });
 });
 

@@ -709,13 +709,10 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     background: #fff;
 }
 
-.mm-panel{
-        -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
-    
+#menu-right.mm-menu{
+    background: #000;
 }
+
 /*--------------------------------------------------------------
 ## Slider
 --------------------------------------------------------------*/
