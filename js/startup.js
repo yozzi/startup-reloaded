@@ -155,6 +155,7 @@ $( document ).ready(function() {
 //mmenu
 $(function() {
     $('nav#menu-left').mmenu({
+        slidingSubmenus : false,
         extensions	: [ 'effect-slide-menu', 'pageshadow' ],
         searchfield	: true,
         counters	: true,
