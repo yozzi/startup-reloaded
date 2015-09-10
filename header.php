@@ -120,7 +120,7 @@
         <script type="text/javascript">
             jQuery(function() {
                 jQuery('nav#left-panel').mmenu({
-                    slidingSubmenus : false,
+                    slidingSubmenus : true,
                     extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbars		: [
                         {
@@ -142,7 +142,7 @@
                     offCanvas: {
                         position: "right"
                      },
-                    slidingSubmenus : false,
+                    slidingSubmenus : true,
                     
                     extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbars		: [

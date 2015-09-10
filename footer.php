@@ -61,16 +61,15 @@ $right_panel_on = of_get_option( 'right-panel-on' );
     </script>
 <?php } ?>
 
-<?php if( $page_transition ) { ?>
-        </div>
-<?php } ?>
-
 <?php if ( $back_to_top ) { ?>
     <div class="scroll-top-wrapper ">
         <span class="scroll-top-inner">
             <i class="fa fa-2x fa-angle-up"></i>
         </span>
     </div>
+<?php } ?>
+<?php if( $page_transition ) { ?>
+        </div>
 <?php } ?>
 <?php if( $left_panel_on || $right_panel_on ) { ?></div><?php } ?>
 </body>
