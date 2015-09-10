@@ -94,10 +94,10 @@ get_header(); ?>
                                     <?php } else { ?>
                                         zoom:14,
                                     <?php } ?>
-                                    center:new google.maps.LatLng(<?php echo $mapGPS[latitude]; ?>,<?php echo $mapGPS[longitude]; ?>)
+                                    center:new google.maps.LatLng(<?php echo $mapGPS['latitude']; ?>,<?php echo $mapGPS['longitude']; ?>)
                                 };
                                 map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-                                marker = new google.maps.Marker({map: map,clickable: false,position: new google.maps.LatLng(<?php echo $mapGPS[latitude]; ?>,<?php echo $mapGPS[longitude]; ?>)});
+                                marker = new google.maps.Marker({map: map,clickable: false,position: new google.maps.LatLng(<?php echo $mapGPS['latitude']; ?>,<?php echo $mapGPS['longitude']; ?>)});
                             }
                             google.maps.event.addDomListener(window, 'load', init_map);
                         </script>
