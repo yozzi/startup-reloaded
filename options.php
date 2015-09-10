@@ -360,21 +360,83 @@ function optionsframework_options() {
 //		'type' => 'checkbox'
 //	);
     
-    // Navigation Sliding Left activate
+    // Navigation Left Panel Activate
 	$options[] = array(
-		'name' => __( 'Activate sliding left menu', 'theme-textdomain' ),
-		'id' => 'sliding-left-on',
+		'name' => __( 'Activate left panel', 'theme-textdomain' ),
+		'id' => 'left-panel-on',
 		'std' => '0',
 		'type' => 'checkbox'
 	);
     
-    // Navigation Sliding Right activate
+    $options[] = array(
+		'name' => __( 'Left panel color', 'theme-textdomain' ),
+		'id' => 'left-panel-color',
+        'std' => '#323232',
+		'type' => 'color'
+	);
+    
 	$options[] = array(
-		'name' => __( 'Activate sliding right menu', 'theme-textdomain' ),
-		'id' => 'sliding-right-on',
+		'name' => __( 'Left panel theme', 'theme-textdomain' ),
+		'id' => 'left-panel-theme',
+		'std' => 'theme-dark',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => array(
+            'theme-light' => __( 'Light', 'theme-textdomain' ),
+            'theme-dark' => __( 'Dark', 'theme-textdomain' )
+        )
+	);
+    
+	$options[] = array(
+		'name' => __( 'Left panel mode', 'theme-textdomain' ),
+		'id' => 'left-panel-mode',
+		'std' => 'default',
+        'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => array(
+            'default' => __( 'Default', 'theme-textdomain' ),
+            'tileview' => __( 'Tileview', 'theme-textdomain' )
+        )
+	);	
+     
+    // Navigation Right Panel Activate
+	$options[] = array(
+		'name' => __( 'Activate right panel', 'theme-textdomain' ),
+		'id' => 'right-panel-on',
 		'std' => '0',
 		'type' => 'checkbox'
 	);
+    
+    $options[] = array(
+		'name' => __( 'Right panel color', 'theme-textdomain' ),
+		'id' => 'right-panel-color',
+        'std' => '#323232',
+		'type' => 'color'
+	);
+    
+	$options[] = array(
+		'name' => __( 'Right panel theme', 'theme-textdomain' ),
+		'id' => 'right-panel-theme',
+		'std' => 'theme-dark',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => array(
+            'theme-light' => __( 'Light', 'theme-textdomain' ),
+            'theme-dark' => __( 'Dark', 'theme-textdomain' )
+        )
+	);
+    
+	$options[] = array(
+		'name' => __( 'Right panel mode', 'theme-textdomain' ),
+		'id' => 'right-panel-mode',
+		'std' => 'default',
+        'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => array(
+            'default' => __( 'Default', 'theme-textdomain' ),
+            'tileview' => __( 'Tileview', 'theme-textdomain' )
+        )
+	);	
     
     // Slider
 	$options[] = array(

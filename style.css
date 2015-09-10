@@ -701,16 +701,16 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 ## mmenu
 --------------------------------------------------------------*/
 /* Hide mmenu flickering */
-#page #menu-left {
+#page #left-panel, #page #right-panel {
    display: none;
 }
 
-#menu-left.mm-menu{
-    background: #;
+#left-panel.mm-menu{
+    background: #323232;
 }
 
-#menu-right.mm-menu{
-    background: #333;
+#right-panel.mm-menu{
+    background: #323232;
 }
 
 /*--------------------------------------------------------------

@@ -22,8 +22,14 @@
         $navbar_position = of_get_option( 'navbar-position' );
         $navbar_height = of_get_option( 'navbar-height' );
         $navbar_transparent = of_get_option( 'navbar-transparent' );
-        $sliding_left_on = of_get_option( 'sliding-left-on' );
-        $sliding_right_on = of_get_option( 'sliding-right-on' );
+        $left_panel_on = of_get_option( 'left-panel-on' );
+        $left_panel_color = of_get_option( 'left-panel-color' );
+        $left_panel_theme = of_get_option( 'left-panel-theme' );
+        $left_panel_mode = of_get_option( 'left-panel-mode' );
+        $right_panel_on = of_get_option( 'right-panel-on' );
+        $right_panel_color = of_get_option( 'right-panel-color' );
+        $right_panel_theme = of_get_option( 'right-panel-theme' );
+        $right_panel_mode = of_get_option( 'right-panel-mode' );
         $boxed = of_get_option( 'general-boxed' );
         $background = of_get_option( 'style-background' );
         $cover = of_get_option( 'style-cover' );
@@ -73,7 +79,30 @@
         background-color: transparent !important;
       }
     }
-    <?php } ?>
+    <?php }
+    if ($left_panel_on){
+        if ($left_panel_color){ ?>
+            #left-panel.mm-menu{
+                background: <?php echo $left_panel_color ?>;
+            }
+        <?php }
+    }    
+    if ($right_panel_on){
+        if ($right_panel_color){ ?>
+            #right-panel.mm-menu{
+                background: <?php echo $right_panel_color ?>;
+            }
+        <?php }
+    }  
+        
+        
+        
+        
+    ?>
+        
+        
+        
+        
     </style>
 
     <?php if ( $ga ) : ?>
@@ -87,12 +116,12 @@
         </script>
     <?php endif ?>
 
-    <?php if( $sliding_left_on ){ ?>
+    <?php if( $left_panel_on ){ ?>
         <script type="text/javascript">
             jQuery(function() {
-                jQuery('nav#menu-left').mmenu({
+                jQuery('nav#left-panel').mmenu({
                     slidingSubmenus : false,
-                    extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels' ],
+                    extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbars		: [
                         {
                             position	: 'top',
@@ -106,16 +135,16 @@
         </script>
     <?php } ?>
 
-    <?php if( $sliding_right_on ){ ?>
+    <?php if( $right_panel_on ){ ?>
         <script type="text/javascript">
             jQuery(function() {
-                jQuery('nav#menu-right').mmenu({
+                jQuery('nav#right-panel').mmenu({
                     offCanvas: {
                         position: "right"
                      },
                     slidingSubmenus : false,
                     
-                    extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels', 'theme-dark' ],
+                    extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbars		: [
                         {
                             position	: 'top',
@@ -178,8 +207,8 @@
         <div class="animsition" data-animsition-in="<?php echo $page_transition_in; ?>" data-animsition-out="<?php echo $page_transition_out; ?>">
     <?php } ?>
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
-            <?php if( $sliding_left_on ){ require get_template_directory() . '/inc/sliding-menu-left.php'; } ?>
-            <?php if( $sliding_right_on ){ require get_template_directory() . '/inc/sliding-menu-right.php'; } ?>
+            <?php if( $left_panel_on ){ require get_template_directory() . '/inc/left-panel.php'; } ?>
+            <?php if( $right_panel_on ){ require get_template_directory() . '/inc/right-panel.php'; } ?>
             <a class="skip-link screen-reader-text" href="#content">
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
             </a>

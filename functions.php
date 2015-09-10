@@ -47,8 +47,8 @@ function startup_reloaded_setup() {
 	register_nav_menus( array(
 		'navbar-primary' => esc_html__( 'Navbar Primary', 'startup-reloaded' ),
         'navbar-secondary' => esc_html__( 'Navbar Secondary', 'startup-reloaded' ),
-        'sliding-left' => esc_html__( 'Sliding Left', 'startup-reloaded' ),
-        'sliding-right' => esc_html__( 'Sliding Right', 'startup-reloaded' ),
+        'left-panel' => esc_html__( 'Left Panel', 'startup-reloaded' ),
+        'right-panel' => esc_html__( 'Right Panel', 'startup-reloaded' ),
 	) );
 
 	/*
