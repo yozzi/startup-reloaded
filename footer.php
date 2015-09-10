@@ -11,6 +11,8 @@ $page_transition = of_get_option( 'page-transition' );
 $back_to_top = of_get_option( 'general-back-to-top' );
 $footer = of_get_option( 'general-footer' );
 $portfolio_style = of_get_option( 'portfolio-style' );
+$left_panel_on = of_get_option( 'left-panel-on' );
+$right_panel_on = of_get_option( 'right-panel-on' );
 ?>
 
 	</div><!-- #content -->
@@ -70,6 +72,6 @@ $portfolio_style = of_get_option( 'portfolio-style' );
         </span>
     </div>
 <?php } ?>
-
+<?php if( $left_panel_on || $right_panel_on ) { ?></div><?php } ?>
 </body>
 </html>
