@@ -706,11 +706,11 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 
 #menu-left.mm-menu{
-    background: #fff;
+    background: #;
 }
 
 #menu-right.mm-menu{
-    background: #000;
+    background: #333;
 }
 
 /*--------------------------------------------------------------
@@ -1364,7 +1364,7 @@ hr.star-primary:after {
     height: 70px;
     margin-top: -35px;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
 }
 
 /*--------------------------------------------------------------
