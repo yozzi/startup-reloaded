@@ -41,17 +41,17 @@
     <style>
     body{
     <?php
-    if ( $background[color] ) { ?>  background-color: <?php echo $background[color] ?>;
+    if ( $background['color'] ) { ?>  background-color: <?php echo $background['color'] ?>;
     <?php }
-    if ( $background[image] ) { ?>  background-image: url(<?php echo $background[image] ?>);
+    if ( $background['image'] ) { ?>  background-image: url(<?php echo $background['image'] ?>);
     <?php }
-    if ( $background[repeat] && $background[image] ) { ?>  background-repeat: <?php echo $background[repeat] ?>;
+    if ( $background['repeat'] && $background['image'] ) { ?>  background-repeat: <?php echo $background['repeat'] ?>;
     <?php }
-    if ( $background[position] && $background[image] ) { ?>  background-position: <?php echo $background[position] ?>;
+    if ( $background['position'] && $background['image'] ) { ?>  background-position: <?php echo $background['position'] ?>;
     <?php }
-    if ( $background[attachment] && $background[image] ) { ?>  background-attachment: <?php echo $background[attachment] ?>;
+    if ( $background['attachment'] && $background['image'] ) { ?>  background-attachment: <?php echo $background['attachment'] ?>;
     <?php }
-    if ( $cover && $background[image]) { ?>  background-size: cover;
+    if ( $cover && $background['image']) { ?>  background-size: cover;
     <?php }
     ?>
     }
@@ -114,7 +114,8 @@
                         position: "right"
                      },
                     slidingSubmenus : false,
-                    extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels' ],
+                    
+                    extensions	: [ 'effect-slide-menu', 'border-full', 'effect-zoom-panels', 'theme-dark' ],
                     navbars		: [
                         {
                             position	: 'top',
