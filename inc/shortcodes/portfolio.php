@@ -54,7 +54,7 @@
 
                                 <?php if ( $short ) { echo '<p>' . esc_html( $short ) . '</p>'; } ?>
 
-                                <a href="#" data-toggle="modal" data-target="#myModal-<?php echo $portfolio_item->ID; ?>" class="btn btn-info btn-lg btn-block" role="button">More information</a>
+                                <a href="#" data-toggle="modal" data-target="#myModal-<?php echo $portfolio_item->ID; ?>" class="btn btn-custom btn-lg btn-block" role="button">More information</a>
                         </div>
                                 
                     </div>
@@ -124,7 +124,7 @@
                                                 <?php if($client) {echo 'Client: <strong>' . $client . '</strong>';}?> <?php if($date) {echo 'Date: <strong>' . gmdate("m/Y", $date) . '</strong>';}?>
                                             </div>
                                         <?php } ?>
-                                        <?php if($url) {echo '<a href="' . $url . '"class="btn btn-primary" target="_blank">Visit</a>';}?>
+                                        <?php if($url) {echo '<a href="' . $url . '"class="btn btn-custom" target="_blank">Visit</a>';}?>
                                       </div>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@
                                                 <?php if($client) {echo 'Client: <strong>' . $client . '</strong>';}?> <?php if($date) {echo 'Date: <strong>' . gmdate("m/Y", $date) . '</strong>';}?>
                                             </div>
                                         <?php } ?>
-                                        <?php if($url) {echo '<a href="' . $url . '"class="btn btn-primary" target="_blank">Visit</a>';}?>
+                                        <?php if($url) {echo '<a href="' . $url . '"class="btn btn-custom" target="_blank">Visit</a>';}?>
                                       </div>
                                 </div>
                             </div>

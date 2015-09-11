@@ -100,7 +100,56 @@
         
     ?>
         
+    
         
+    /* Custom button colors */
+    .btn{
+        border-radius: 6px !important;
+    }    
+        
+    .btn-custom {
+      color: #fff;
+      background-color: #323232;
+      border: none;
+    }
+    .btn-custom:hover,
+    .btn-custom:focus,
+    .btn-custom:active,
+    .btn-custom.active,
+    .open .dropdown-toggle.btn-custom {
+      color: #fff;
+      background-color: #000;
+      border: none;
+      outline: none;
+    }
+    .btn-custom:active,
+    .btn-custom.active,
+    .open .dropdown-toggle.btn-custom {
+      background-image: none;
+    }
+    .btn-custom.disabled,
+    .btn-custom[disabled],
+    fieldset[disabled] .btn-custom,
+    .btn-custom.disabled:hover,
+    .btn-custom[disabled]:hover,
+    fieldset[disabled] .btn-custom:hover,
+    .btn-custom.disabled:focus,
+    .btn-custom[disabled]:focus,
+    fieldset[disabled] .btn-custom:focus,
+    .btn-custom.disabled:active,
+    .btn-custom[disabled]:active,
+    fieldset[disabled] .btn-custom:active,
+    .btn-custom.disabled.active,
+    .btn-custom[disabled].active,
+    fieldset[disabled] .btn-custom.active {
+      background-color: #2a2a2a;
+      border: none;
+      outline: none;
+    }
+    .btn-custom .badge {
+      color: #000;
+      background-color: #fff;
+    }
         
         
     </style>

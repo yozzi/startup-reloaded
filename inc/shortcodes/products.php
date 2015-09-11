@@ -59,7 +59,7 @@
                             elseif ( $price != '0, 00' ) { echo '<div class="product-price well well-sm">' . esc_html( $price ) . ' $</div>'; } ?>
 <!--                            <a href="<?php echo esc_url( get_permalink($product->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button">More information</a>-->
                             
-                            <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $product->ID; ?>">Voir les d&eacute;tails</button>
+                            <button type="button" class="btn btn-custom btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $product->ID; ?>">Voir les d&eacute;tails</button>
                         </div>  
                                 
                     </div>
@@ -112,7 +112,7 @@
                       <div class="modal-footer">
                            <?php if ( $special_price != '0, 00' ) { echo '<div class="product-price well well-sm"><small><strike>' . esc_html( $price ) . ' $</strike></small> <span class="text-danger">' . esc_html( $special_price ) . ' $</span></div>'; }
                             elseif ( $price != '0, 00' ) { echo '<div class="product-price well well-sm">' . esc_html( $price ) . ' $</div>'; } ?>
-                        <a href="<?php if ( $url ) { echo $url; } ?>" class="btn btn-primary btn-lg btn-block" role="button"><?php _e( 'Buy it now!', 'startup-reloaded-products' ) ?></a>
+                        <a href="<?php if ( $url ) { echo $url; } ?>" class="btn btn-custom btn-lg btn-block" role="button"><?php _e( 'Buy it now!', 'startup-reloaded-products' ) ?></a>
                       </div>
                     </div>
                   </div>
