@@ -374,14 +374,13 @@ function optionsframework_options() {
     
 	$options[] = array(
 		'name' => __( 'Left panel', 'theme-textdomain' ),
-        'desc' => __( 'Activate', 'theme-textdomain' ),
+        'desc' => __( 'Activate. Use <strong>#left-panel</strong> on any button / link / menu item to make the magic happen.', 'theme-textdomain' ),
 		'id' => 'left-panel-on',
 		'std' => '0',
 		'type' => 'checkbox'
 	);
     
     $options[] = array(
-		'desc' => __( 'Background', 'theme-textdomain' ),
 		'id' => 'left-panel-color',
         'std' => '#323232',
 		'type' => 'color'
@@ -413,14 +412,13 @@ function optionsframework_options() {
      
 	$options[] = array(
 		'name' => __( 'Right panel', 'theme-textdomain' ),
-        'desc' => __( 'Activate', 'theme-textdomain' ),
+        'desc' => __( 'Activate. Use <strong>#right-panel</strong> on any button / link / menu item to make the fantasy happen.', 'theme-textdomain' ),
 		'id' => 'right-panel-on',
 		'std' => '0',
 		'type' => 'checkbox'
 	);
     
     $options[] = array(
-		'desc' => __( 'Background', 'theme-textdomain' ),
 		'id' => 'right-panel-color',
         'std' => '#323232',
 		'type' => 'color'
