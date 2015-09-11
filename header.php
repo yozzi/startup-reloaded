@@ -166,6 +166,60 @@
     <?php endif ?>
 
     <?php if( $left_panel_on ){ ?>
+    
+    
+    <?php
+        $locations = get_registered_nav_menus();
+        $menus = wp_get_nav_menus();
+        $menu_locations = get_nav_menu_locations();
+
+        $location_left_id = 'left-panel';
+        if (isset($menu_locations[ $location_left_id ])) {
+            foreach ($menus as $menu) {
+                // If the ID of this menu is the ID associated with the location we're searching for
+                if ($menu->term_id == $menu_locations[ $location_left_id ]) {
+                    // This is the correct menu
+
+                    // Get the items for this menu
+                    $left_panel_title = $menu->name;
+
+                    // Now do something with them here.
+                    //
+                    //
+                    break;
+                }
+            }
+        } else {
+            // The location that you're trying to search doesn't exist
+            $left_panel_title = 'menu';
+        }
+
+        $location_right_id = 'right-panel';
+            if (isset($menu_locations[ $location_right_id ])) {
+                foreach ($menus as $menu) {
+                    // If the ID of this menu is the ID associated with the location we're searching for
+                    if ($menu->term_id == $menu_locations[ $location_right_id ]) {
+                        // This is the correct menu
+
+                        // Get the items for this menu
+                        $right_panel_title = $menu->name;
+
+                        // Now do something with them here.
+                        //
+                        //
+                        break;
+                    }
+                }
+            } else {
+                // The location that you're trying to search doesn't exist
+                $right_panel_title = 'menu';
+        } 
+    
+    
+    
+    
+    ?>
+    
         <script type="text/javascript">
             jQuery(function() {
                 jQuery('nav#left-panel').mmenu({
@@ -174,11 +228,16 @@
                     },
                     slidingSubmenus : true,
                     extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
+                    navbar 		: {
+						title		: '<?= $left_panel_title ?>'
+					},
                     navbars		: [
                         {
                             position	: 'top',
                             content		: [
-                                'close'
+                                'prev',
+								'title',
+								'close'
                             ]
                         }
                     ]
@@ -200,11 +259,16 @@
                     slidingSubmenus : true,
                     
                     extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
+                    navbar 		: {
+						title		: '<?= $right_panel_title ?>'
+					},
                     navbars		: [
                         {
                             position	: 'top',
                             content		: [
-                                'close'
+                                'prev',
+								'title',
+								'close'
                             ]
                         }
                     ]
