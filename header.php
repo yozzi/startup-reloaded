@@ -34,6 +34,16 @@
         $background = of_get_option( 'style-background' );
         $cover = of_get_option( 'style-cover' );
         $ytplayer = of_get_option( 'general-ytplayer' );
+        $bt_radius = of_get_option( 'button-radius' );
+        $bt_background = of_get_option( 'button-background' );
+        $bt_text = of_get_option( 'button-text' );
+        $bt_hover_background = of_get_option( 'button-hover-background' );
+        $bt_hover_text = of_get_option( 'button-hover-text' );
+        $bt_disabled_background = of_get_option( 'button-disabled-background' );
+        $bt_badge_background = of_get_option( 'button-badge-background' );
+        $bt_badge_text = of_get_option( 'button-badge-text' );
+
+
 
         if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -102,14 +112,26 @@
         
     
         
-    /* Custom button colors */
+    /* Custom buttons */
+/*
+        $bt_radius = of_get_option( 'button-radius' );
+        $bt_background = of_get_option( 'button-background' );
+        $bt_text = of_get_option( 'button-text' );
+        $bt_hover_background = of_get_option( 'button-hover-background' );
+        $bt_hover_text = of_get_option( 'button-hover-text' );
+        $bt_disabled_background = of_get_option( 'button-disabled-background' );
+        $bt_badge_background = of_get_option( 'button-badge-background' );
+        $bt_badge_text = of_get_option( 'button-badge-text' );
+*/
+        
+        
     .btn{
-        border-radius: 6px !important;
+        border-radius: <?= $bt_radius ?>px !important;
     }    
         
     .btn-custom {
-      color: #fff;
-      background-color: #323232;
+      color: <?= $bt_text ?>;
+      background-color: <?= $bt_background ?>;
       border: none;
     }
     .btn-custom:hover,
@@ -117,8 +139,8 @@
     .btn-custom:active,
     .btn-custom.active,
     .open .dropdown-toggle.btn-custom {
-      color: #fff;
-      background-color: #000;
+      color: <?= $bt_hover_text ?>;
+      background-color: <?= $bt_hover_background ?>;
       border: none;
       outline: none;
     }
@@ -142,13 +164,13 @@
     .btn-custom.disabled.active,
     .btn-custom[disabled].active,
     fieldset[disabled] .btn-custom.active {
-      background-color: #2a2a2a;
+      background-color: <?= $bt_disabled_background ?>;
       border: none;
       outline: none;
     }
     .btn-custom .badge {
-      color: #000;
-      background-color: #fff;
+      color: <?= $bt_badge_text ?>;
+      background-color: <?= $bt_badge_background ?>;
     }
         
         

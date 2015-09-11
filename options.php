@@ -12,7 +12,6 @@ function optionsframework_options() {
 		'type' => 'heading'
 	);
     
-    // Général Serial
     $options[] = array(
 		'name' => __( 'StartUp serial number', 'theme-textdomain' ),
 		'id' => 'general-serial',
@@ -20,13 +19,11 @@ function optionsframework_options() {
 		'type' => 'text'
 	);
     
-    // Général Layout
 	$options[] = array(
 		'name' => __( 'Layout', 'theme-textdomain' ),
 		'type' => 'info'
 	);
     
-    // Général Responsive
 	$options[] = array(
 		'desc' => __( 'Responsive', 'theme-textdomain' ),
 		'id' => 'general-responsive',
@@ -34,7 +31,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Général Boxed
 	$options[] = array(
 		'desc' => __( 'Boxed', 'theme-textdomain' ),
 		'id' => 'general-boxed',
@@ -42,7 +38,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Général page transition
 	$options[] = array(
 		'name' => __( 'Page transitions', 'theme-textdomain' ),
         'desc' => __( 'Activate', 'theme-textdomain' ),
@@ -51,7 +46,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Général page transition list
 	$general_page_transitions = array(
 		'fade-in' => __( 'Fade in', 'theme-textdomain' ),
 		'fade-out' => __( 'Fade out', 'theme-textdomain' ),
@@ -91,13 +85,11 @@ function optionsframework_options() {
 		'options' => $general_page_transitions
 	);
     
-    // Général Options
 	$options[] = array(
 		'name' => __( 'Options', 'theme-textdomain' ),
 		'type' => 'info'
 	);
     
-    // Général Back to top button
 	$options[] = array(
 		'desc' => __( 'Back to top button', 'theme-textdomain' ),
 		'id' => 'general-back-to-top',
@@ -105,7 +97,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Général ytplayer
 	$options[] = array(
 		'desc' => __( 'Activate YTPlayer', 'theme-textdomain' ),
 		'id' => 'general-ytplayer',
@@ -113,7 +104,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Général Footer
     $options[] = array(
 		'name' => __( 'Footer content', 'theme-textdomain' ),
 		'id' => 'general-footer',
@@ -121,7 +111,6 @@ function optionsframework_options() {
 		'type' => 'textarea'
 	);
     
-    // Général Analytics
     $options[] = array(
 		'name' => __( 'Google Analytics ID', 'theme-textdomain' ),
 		'desc' => __( 'Provided by Google in the form UA-XXXXXXX-XX', 'theme-textdomain' ),
@@ -173,36 +162,6 @@ function optionsframework_options() {
         "type" => "select",
         "options" => $alt_stylesheets );
     
-//    // Style Primary Color
-//    $options[] = array(
-//		'name' => __( 'Primary color', 'theme-textdomain' ),
-//		'desc' => __( 'Navbar background, footer, sidebar', 'theme-textdomain' ),
-//		'id' => 'primary-color',
-//		'std' => '#323232',
-//		'type' => 'color'
-//	);
-//    
-//    // Style Secondary Color
-//    $options[] = array(
-//		'name' => __( 'Secondary color', 'theme-textdomain' ),
-//		'desc' => __( '', 'theme-textdomain' ),
-//		'id' => 'secondary-color',
-//		'std' => '',
-//		'type' => 'color'
-//	);
-//    
-//   // Style Ternary Color
-//    $options[] = array(
-//		'name' => __( 'Ternary', 'theme-textdomain' ),
-//		'desc' => __( '', 'theme-textdomain' ),
-//		'id' => 'ternary-color',
-//		'std' => '',
-//		'type' => 'color'
-//	);
-    
-    // Style Background
-    
-    // Background Defaults
 	$background_defaults = array(
 		'color' => '',
 		'image' => '',
@@ -218,16 +177,13 @@ function optionsframework_options() {
 		'type' => 'background'
 	);
     
-    // Style Background Size
 	$options[] = array(
 		'name' => __( '', 'theme-textdomain' ),
         'desc' => __( 'Cover', 'theme-textdomain' ),
 		'id' => 'style-cover',
-		'std' => '1',
+		'std' => '0',
 		'type' => 'checkbox'
 	);
-    
-    // Style Button Radius
     
     $options[] = array(
 		'name' => __( 'Custom button', 'theme-textdomain' ),
@@ -248,21 +204,21 @@ function optionsframework_options() {
     $options[] = array(
         'desc' => __( 'Text', 'theme-textdomain' ),
 		'id' => 'button-text',
-		'std' => '#fff',
+		'std' => '#ffffff',
 		'type' => 'color'
 	);
     
     $options[] = array(
         'desc' => __( 'Hover, focus, active background', 'theme-textdomain' ),
 		'id' => 'button-hover-background',
-		'std' => '#000',
+		'std' => '#000000',
 		'type' => 'color'
 	);
     
     $options[] = array(
         'desc' => __( 'Hover, focus, active text', 'theme-textdomain' ),
 		'id' => 'button-hover-text',
-		'std' => '#fff',
+		'std' => '#ffffff',
 		'type' => 'color'
 	);
     
@@ -276,18 +232,17 @@ function optionsframework_options() {
     $options[] = array(
         'desc' => __( 'Badge background', 'theme-textdomain' ),
 		'id' => 'button-badge-background',
-		'std' => '#fff',
+		'std' => '#ffffff',
 		'type' => 'color'
 	);
     
     $options[] = array(
         'desc' => __( 'Badge text', 'theme-textdomain' ),
 		'id' => 'button-badge-text',
-		'std' => '#000',
+		'std' => '#000000',
 		'type' => 'color'
 	);
     
-    // Style Page Header Hidden
 	$options[] = array(
 		'name' => __( 'Page header', 'theme-textdomain' ),
         'desc' => __( 'Hide the header. Or not. Overrides individual page setting if ckecked.', 'theme-textdomain' ),
@@ -296,7 +251,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Style Page Header Background Color
     $options[] = array(
 		'desc' => __( 'Background', 'theme-textdomain' ),
 		'id' => 'page-header-background-color',
@@ -304,7 +258,6 @@ function optionsframework_options() {
 		'type' => 'color'
 	);
     
-    // Style Page Header Text Color
     $options[] = array(
 		'desc' => __( 'Text', 'theme-textdomain' ),
 		'id' => 'page-header-text-color',
@@ -312,7 +265,6 @@ function optionsframework_options() {
 		'type' => 'color'
 	);
     
-    // Style Page Header Padding
     $options[] = array(
         'desc' => __( 'Padding in px', 'theme-textdomain' ),
 		'id' => 'page-header-padding',
@@ -321,7 +273,6 @@ function optionsframework_options() {
         'class' => 'mini'
 	);
     
-    // Style Page Header Content Position
 	$page_header_positions = array(
 		'left' => __( 'Left', 'theme-textdomain' ),
 		'center' => __( 'Center', 'theme-textdomain' ),
@@ -337,7 +288,6 @@ function optionsframework_options() {
 		'options' => $page_header_positions
 	);
     
-    // Style Page Header Boxed 
 	$options[] = array(
         'desc' => __( 'Put the text inside a box', 'theme-textdomain' ),
 		'id' => 'page-header-boxed',
@@ -351,7 +301,6 @@ function optionsframework_options() {
 		'type' => 'heading'
 	);
     
-    // Navigation Navbar activate
 	$options[] = array(
 		'name' => __( 'Navbar', 'theme-textdomain' ),
         'desc' => __( 'Activate', 'theme-textdomain' ),
@@ -360,7 +309,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
 
-    // Navigation Navbar position
 	$navbar_position = array(
         //'' => __( 'Float', 'theme-textdomain' ),
 		'navbar-static-top' => __( 'Static top', 'theme-textdomain' ),
@@ -377,7 +325,6 @@ function optionsframework_options() {
 		'options' => $navbar_position
 	);
     
-    // Navigation Navbar opacity
 	$options[] = array(
 		'desc' => __( 'Transparent on homepage. Available for fixed top navbar only.', 'theme-textdomain' ),
 		'id' => 'navbar-transparent',
@@ -385,7 +332,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Navigation Navbar height
     $options[] = array(
         'desc' => __( 'Height in px. Required for fixed-top position to prevent content overlapping. Should be left blank or set to 0 for other navbar positions.', 'theme-textdomain' ),
 		'id' => 'navbar-height',
@@ -394,7 +340,6 @@ function optionsframework_options() {
         'class' => 'mini'
 	);
     
-    // Navigation Navbar item positions
     $navbar_item_positions = array(
 		'pull-left' => __( 'Left', 'theme-textdomain' ),
 		'pull-right' => __( 'Right', 'theme-textdomain' )
@@ -427,7 +372,6 @@ function optionsframework_options() {
 //		'type' => 'checkbox'
 //	);
     
-    // Navigation Left Panel Activate
 	$options[] = array(
 		'name' => __( 'Left panel', 'theme-textdomain' ),
         'desc' => __( 'Activate', 'theme-textdomain' ),
@@ -467,7 +411,6 @@ function optionsframework_options() {
         )
 	);	
      
-    // Navigation Right Panel Activate
 	$options[] = array(
 		'name' => __( 'Right panel', 'theme-textdomain' ),
         'desc' => __( 'Activate', 'theme-textdomain' ),
@@ -513,7 +456,6 @@ function optionsframework_options() {
 		'type' => 'heading'
 	);
     
-    // Slider activate
 	$options[] = array(
 		'desc' => __( 'Activate on homepage', 'theme-textdomain' ),
 		'id' => 'slider-on',
@@ -521,7 +463,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Slider height
     $options[] = array(
 		'desc' => __( 'Height in px', 'theme-textdomain' ),
 		'id' => 'slider-height',
@@ -530,7 +471,6 @@ function optionsframework_options() {
         'class' => 'mini'
 	);
     
-    // Slider interval
     $options[] = array(
 		'desc' => __( 'Interval in ms or false', 'theme-textdomain' ),
 		'id' => 'slider-interval',
@@ -539,7 +479,6 @@ function optionsframework_options() {
         'class' => 'mini'
 	);
     
-    // Slider transition
     $slider_transition = array(
 		'carousel-slide' => __( 'Slide', 'theme-textdomain' ),
 		'carousel-fade' => __( 'Fade', 'theme-textdomain' )
@@ -554,7 +493,6 @@ function optionsframework_options() {
 		'options' => $slider_transition
 	);
     
-    // Slider arrows
 	$options[] = array(
 		'desc' => __( 'Show arrows', 'theme-textdomain' ),
 		'id' => 'slider-arrows',
@@ -562,7 +500,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    // Slider arrows hover effect
     require get_template_directory() . '/inc/hover-css.php';
     
     $options[] = array(
@@ -574,7 +511,6 @@ function optionsframework_options() {
 		'options' => $hover_css
 	);
     
-    // Slider navigation
     $slider_navigation= array(
         'slider_no_nav' => __( 'None', 'theme-textdomain' ),
 		'slider_pagination' => __( 'Pagination', 'theme-textdomain' ),
@@ -596,7 +532,6 @@ function optionsframework_options() {
 		'type' => 'heading'
 	);
     
-    // Post types portfolio style
     $portfolio_styles= array(
 		'grid' => __( 'Grid', 'theme-textdomain' ),
 		'shuffle' => __( 'Shuffle', 'theme-textdomain' )
@@ -611,12 +546,10 @@ function optionsframework_options() {
 		'class' => 'mini', //mini, tiny, small
 		'options' => $portfolio_styles
 	);
-    
-    // Post types portfolio number
     $options[] = array(
 		'desc' => __( 'Max number of items to show for grid style. Leave empty for unlimited.', 'theme-textdomain' ),
 		'id' => 'portfolio-number',
-		'std' => '',
+		'std' => '8',
 		'type' => 'text',
 		'class' => 'mini'
 	);
@@ -744,7 +677,6 @@ function optionsframework_options() {
 		'type' => 'heading'
 	);
     
-    // Mise en forme automatique
 	$options[] = array(
 		'name' => __( 'Mise en forme automatique', 'theme-textdomain' ),
 		'desc' => __( 'Cocher pour <strong>désactiver</strong> la mise en forme automatique de l\'éditeur WordPress. Permet de garder le contrôle de votre code. ( Évite les br, p, et suppression de lignes vides, etc...)', 'theme-textdomain' ),
