@@ -43,8 +43,6 @@
         $bt_badge_background = of_get_option( 'button-badge-background' );
         $bt_badge_text = of_get_option( 'button-badge-text' );
 
-
-
         if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
             <meta name="viewport" content="width=device-width, initial-scale=1">
         <?php } ?>
@@ -57,19 +55,18 @@
     <style>
     body{
     <?php
-    if ( $background['color'] ) { ?>  background-color: <?php echo $background['color'] ?>;
+    if ( $background['color'] ) { ?>  background-color: <?= $background['color'] ?>;
     <?php }
-    if ( $background['image'] ) { ?>  background-image: url(<?php echo $background['image'] ?>);
+    if ( $background['image'] ) { ?>  background-image: url(<?= $background['image'] ?>);
     <?php }
-    if ( $background['repeat'] && $background['image'] ) { ?>  background-repeat: <?php echo $background['repeat'] ?>;
+    if ( $background['repeat'] && $background['image'] ) { ?>  background-repeat: <?= $background['repeat'] ?>;
     <?php }
-    if ( $background['position'] && $background['image'] ) { ?>  background-position: <?php echo $background['position'] ?>;
+    if ( $background['position'] && $background['image'] ) { ?>  background-position: <?= $background['position'] ?>;
     <?php }
-    if ( $background['attachment'] && $background['image'] ) { ?>  background-attachment: <?php echo $background['attachment'] ?>;
+    if ( $background['attachment'] && $background['image'] ) { ?>  background-attachment: <?= $background['attachment'] ?>;
     <?php }
     if ( $cover && $background['image']) { ?>  background-size: cover;
-    <?php }
-    ?>
+    <?php } ?>
     }
     <?php
     // On définit le padding-top du body en fonction des options choisies
@@ -80,7 +77,7 @@
     }
     if  ( $navbar_position == 'navbar-fixed-bottom' ){ ?>
     body{
-      padding-bottom: <?php echo $navbar_height; ?>px;
+      padding-bottom: <?= $navbar_height ?>px;
     }
     <?php }
     if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
@@ -93,38 +90,19 @@
     if ($left_panel_on){
         if ($left_panel_color){ ?>
             #left-panel.mm-menu{
-                background: <?php echo $left_panel_color ?>;
+                background: <?= $left_panel_color ?>;
             }
         <?php }
     }    
     if ($right_panel_on){
         if ($right_panel_color){ ?>
             #right-panel.mm-menu{
-                background: <?php echo $right_panel_color ?>;
+                background: <?= $right_panel_color ?>;
             }
         <?php }
-    }  
-        
-        
-        
-        
-    ?>
-        
-    
-        
+    } ?>
+   
     /* Custom buttons */
-/*
-        $bt_radius = of_get_option( 'button-radius' );
-        $bt_background = of_get_option( 'button-background' );
-        $bt_text = of_get_option( 'button-text' );
-        $bt_hover_background = of_get_option( 'button-hover-background' );
-        $bt_hover_text = of_get_option( 'button-hover-text' );
-        $bt_disabled_background = of_get_option( 'button-disabled-background' );
-        $bt_badge_background = of_get_option( 'button-badge-background' );
-        $bt_badge_text = of_get_option( 'button-badge-text' );
-*/
-        
-        
     .btn{
         border-radius: <?= $bt_radius ?>px !important;
     }    
@@ -182,7 +160,7 @@
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', '<?php echo $ga; ?>', 'auto');
+            ga('create', '<?= $ga; ?>', 'auto');
             ga('send', 'pageview');
         </script>
     <?php endif ?>
@@ -282,7 +260,7 @@
 <body <?php body_class( $unresponsive ); if ( is_front_page() ) { echo ' style="padding-top:' . $body_padding . 'px"'; } ?>>
     <?php if( $left_panel_on || $right_panel_on ) { ?><div class="panel-page-container"><?php } ?>
         <?php if( $page_transition ) { ?>
-            <div class="animsition" data-animsition-in="<?php echo $page_transition_in; ?>" data-animsition-out="<?php echo $page_transition_out; ?>">
+            <div class="animsition" data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>">
         <?php } ?>
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
             <?php if( $left_panel_on ){ require get_template_directory() . '/inc/left-panel.php'; } ?>

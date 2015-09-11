@@ -20,7 +20,7 @@ $right_panel_on = of_get_option( 'right-panel-on' );
         <footer id="colophon" class="container site-footer" role="contentinfo">
             <div class="row site-info">
                 <div class="col-xs-12">
-                <?php echo $footer ; ?>
+                <?= $footer ?>
                 </div>
             </div><!-- .site-info -->
         </footer><!-- #colophon -->
