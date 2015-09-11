@@ -6,7 +6,7 @@
                         $navbar_menu_position = of_get_option( 'navbar-menu-position' );
                         $navbar_inverse = of_get_option( 'navbar-inverse' );
                         $navbar_transparent = of_get_option( 'navbar-transparent' );
-                        $navbar_background_color = of_get_option( 'primary-color' );
+//                        $navbar_background_color = of_get_option( 'primary-color' );
                         $boxed = of_get_option( 'general-boxed' );
                     ?>
                     
@@ -16,7 +16,7 @@
 
                     
                     
-                            <nav id="site-navigation" class="navbar navbar-default <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; ?> <?php /*if ($navbar_inverse == 1) {*/ echo 'navbar-inverse'/*; };*/ ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
+                            <nav id="site-navigation" class="navbar navbar-default <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; ?> <?php if ($navbar_inverse) { echo 'navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
                         <!– Brand and toggle get grouped for better mobile display –>
                         <div class="container">
                             <div class="navbar-header <?php echo $navbar_logo_position; ?>-sm">

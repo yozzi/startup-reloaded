@@ -22,6 +22,7 @@
         $navbar_position = of_get_option( 'navbar-position' );
         $navbar_height = of_get_option( 'navbar-height' );
         $navbar_transparent = of_get_option( 'navbar-transparent' );
+        $navbar_color = of_get_option( 'navbar-color' );
         $left_panel_on = of_get_option( 'left-panel-on' );
         $left_panel_color = of_get_option( 'left-panel-color' );
         $left_panel_theme = of_get_option( 'left-panel-theme' );
@@ -42,6 +43,7 @@
         $bt_disabled_background = of_get_option( 'button-disabled-background' );
         $bt_badge_background = of_get_option( 'button-badge-background' );
         $bt_badge_text = of_get_option( 'button-badge-text' );
+        $custom_css = of_get_option( 'custom-css' );
 
         if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -101,6 +103,11 @@
             }
         <?php }
     } ?>
+        
+    /* Navbar */
+    .navbar{
+        background: <?= $navbar_color ?>;
+    }
    
     /* Custom buttons */
     .btn{
@@ -150,8 +157,12 @@
       color: <?= $bt_badge_text ?>;
       background-color: <?= $bt_badge_background ?>;
     }
+    
+    <?php if ($custom_css) {echo $custom_css;}?>
         
-        
+    body.home #site-navigation.navbar.top-nav-collapse {
+    background-color: <?= $navbar_color ?> !important;
+}
     </style>
 
     <?php if ( $ga ) : ?>

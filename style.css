@@ -661,10 +661,6 @@ body.home #site-navigation.navbar-transparent {
     transition: background 300ms linear, padding 300ms linear;
 }
 
-body.home #site-navigation.navbar.top-nav-collapse {
-    background-color: #323232 !important;
-}
-
 @media (min-width: 768px) {
     body.home #site-navigation.navbar-transparent {
         padding-top: 15px;
@@ -679,9 +675,16 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 /* Style clair */
 
-.navbar .navbar-brand,
-.navbar .navbar-nav>li>a {
-    color: #222;
+.navbar-nav>li>a {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand {
+    color: #000;
+}
+
+.navbar-brand:hover {
+    color: rgba(0, 0, 0, 0.7);
 }
 /* Style foncé (inverse) */
 
@@ -695,6 +698,11 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 
 .navbar-inverse .navbar-brand:hover {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-toggle, .navbar-toggle:hover{
+    background: transparent !important;
+    border: none !important;
 }
 
 /*--------------------------------------------------------------

@@ -295,6 +295,12 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
+    $options[] = array(
+		'name' => __( 'Custom CSS', 'theme-textdomain' ),
+		'id' => 'custom-css',
+		'type' => 'textarea'
+	);
+    
     // Navigation
     $options[] = array(
 		'name' => __( 'Navigation', 'theme-textdomain' ),
@@ -333,6 +339,12 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+		'id' => 'navbar-color',
+		'std' => '#323232',
+		'type' => 'color'
+	);
+    
+    $options[] = array(
         'desc' => __( 'Height in px. Required for fixed-top position to prevent content overlapping. Should be left blank or set to 0 for other navbar positions.', 'theme-textdomain' ),
 		'id' => 'navbar-height',
 		'std' => '50',
@@ -363,14 +375,12 @@ function optionsframework_options() {
 		'options' => $navbar_item_positions
 	);
 
-//    // Navigation Navbar style
-//	$options[] = array(
-//		'name' => __( 'Style', 'theme-textdomain' ),
-//		'desc' => __( 'Inverse.', 'theme-textdomain' ),
-//		'id' => 'navbar-inverse',
-//		'std' => '',
-//		'type' => 'checkbox'
-//	);
+	$options[] = array(
+		'desc' => __( 'Inverse style', 'theme-textdomain' ),
+		'id' => 'navbar-inverse',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
     
 	$options[] = array(
 		'name' => __( 'Left panel', 'theme-textdomain' ),
