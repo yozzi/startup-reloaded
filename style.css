@@ -929,17 +929,6 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 ## Pricing table
 --------------------------------------------------------------*/
 
-.btn-custom {
-    color: #ccc;
-    font-size: 18px;
-    border: 1px solid #ccc;
-}
-
-.btn-custom:hover {
-    color: #ffffff;
-    border: 1px solid #ffffff;
-}
-
 #pricing .pricing-table {
     padding-bottom: 30px;
 }
