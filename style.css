@@ -609,11 +609,6 @@ section {
     padding-bottom: 30px
 }
 
-#secondary-bg,
-#colophon-bg {
-    background-color: #323232;
-}
-
 #secondary a,
 #colophon a {
     color: #ccc

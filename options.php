@@ -296,6 +296,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+		'name' => __( 'Footer', 'theme-textdomain' ),
+		'id' => 'footer-color',
+		'std' => '#323232',
+		'type' => 'color'
+	);
+    
+    $options[] = array(
 		'name' => __( 'Custom CSS', 'theme-textdomain' ),
 		'id' => 'custom-css',
 		'type' => 'textarea'

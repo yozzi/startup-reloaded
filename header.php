@@ -44,6 +44,7 @@
         $bt_badge_background = of_get_option( 'button-badge-background' );
         $bt_badge_text = of_get_option( 'button-badge-text' );
         $custom_css = of_get_option( 'custom-css' );
+        $footer_color = of_get_option( 'footer-color' );
 
         if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,50 +83,50 @@
     if ($left_panel_on){
         if ($left_panel_color){ ?>
             #left-panel.mm-menu{
-                background: <?= $left_panel_color ?>;
+              background: <?= $left_panel_color ?>;
             }
         <?php }
     }    
     if ($right_panel_on){
         if ($right_panel_color){ ?>
             #right-panel.mm-menu{
-                background: <?= $right_panel_color ?>;
+              background: <?= $right_panel_color ?>;
             }
         <?php }
     } ?>
         
     /* Navbar */
     .navbar{
-        background: <?= $navbar_color ?>;
+      background: <?= $navbar_color ?>;
     }
         
     /* Navbar Padding */
         
     body.startup-nav-navbar-fixed-top #content{
-        padding-top: <?= $navbar_height ?>px;
+      padding-top: <?= $navbar_height ?>px;
     }
 
     body.home #content{
-        padding-top: 0;
+      padding-top: 0;
     }
 
     body.home.startup-nav-transparent.startup-nav-navbar-fixed-top{
-        padding-top: <?= $navbar_height ?>px;
+      padding-top: <?= $navbar_height ?>px;
     }
 
     body.startup-nav-navbar-fixed-bottom{
-        padding-bottom: <?= $navbar_height ?>px;        
+      padding-bottom: <?= $navbar_height ?>px;        
     }
         
     @media (max-width: 767px){
-        body.home.startup-nav-transparent1.startup-nav-navbar-fixed-top{
-            padding-top:<?= $navbar_height ?>px;
-        }
+      body.home.startup-nav-transparent1.startup-nav-navbar-fixed-top{
+        padding-top:<?= $navbar_height ?>px;
+      }
     }
    
     /* Custom buttons */
     .btn{
-        border-radius: <?= $bt_radius ?>px !important;
+      border-radius: <?= $bt_radius ?>px !important;
     }    
         
     .btn-custom {
@@ -175,8 +176,14 @@
     <?php if ($custom_css) {echo $custom_css;}?>
         
     body.home #site-navigation.navbar.top-nav-collapse {
-    background-color: <?= $navbar_color ?> !important;
-}
+      background-color: <?= $navbar_color ?> !important;
+    }
+        
+    /* Footer & colophon */
+    #secondary-bg,
+    #colophon-bg {
+      background-color: <?= $footer_color ?>;
+    }
     </style>
 
     <?php if ( $ga ) : ?>
