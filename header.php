@@ -71,17 +71,7 @@
     <?php } ?>
     }
     <?php
-    // On définit le padding-top du body en fonction des options choisies
-    if ( $navbar_position == 'navbar-fixed-top' && $navbar_transparent != 1 ){
-    $body_padding = $navbar_height;
-    } else {
-    $body_padding = '0';
-    }
-    if  ( $navbar_position == 'navbar-fixed-bottom' ){ ?>
-    body{
-      padding-bottom: <?= $navbar_height ?>px;
-    }
-    <?php }
+    // On définit l'opacité de la navbar
     if ( $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
     @media (min-width: 768px){
       body.home #site-navigation.navbar{
@@ -107,6 +97,24 @@
     /* Navbar */
     .navbar{
         background: <?= $navbar_color ?>;
+    }
+        
+    /* Navbar Padding */
+        
+    body.startup-nav-navbar-fixed-top #content{
+        padding-top: <?= $navbar_height ?>px;
+    }
+
+    body.home #content{
+        padding-top: 0;
+    }
+
+    body.home.startup-nav-transparent.startup-nav-navbar-fixed-top{
+        padding-top: <?= $navbar_height ?>px;
+    }
+
+    body.startup-nav-navbar-fixed-bottom{
+        padding-bottom: <?= $navbar_height ?>px;        
     }
    
     /* Custom buttons */
@@ -332,7 +340,7 @@
     
 </head>
 <?php if ( $responsive != 1 ) { $unresponsive = 'ur'; } else { $unresponsive = ''; } ?>
-<body <?php body_class( $unresponsive ); if ( is_front_page() ) { echo ' style="padding-top:' . $body_padding . 'px"'; } ?>>
+<body <?php body_class( array( $unresponsive, 'startup-nav-transparent'. $navbar_transparent, 'startup-nav-'. $navbar_position));?>>
     <?php if( $left_panel_on || $right_panel_on ) { ?><div class="panel-page-container"><?php } ?>
         <?php if( $page_transition ) { ?>
             <div class="animsition" data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>">
@@ -346,4 +354,4 @@
 
             <?php if( $navbar_on ){ require get_template_directory() . '/inc/navbar-primary.php'; } ?>
 
-            <div id="content" class="site-content"<?php if ( !is_front_page() && $navbar_position != 'navbar-fixed-bottom'){echo ' style="padding-top:' . $navbar_height . 'px"'; }?>>
+            <div id="content" class="site-content">
