@@ -116,6 +116,12 @@
     body.startup-nav-navbar-fixed-bottom{
         padding-bottom: <?= $navbar_height ?>px;        
     }
+        
+    @media (max-width: 767px){
+        body.home.startup-nav-transparent1.startup-nav-navbar-fixed-top{
+            padding-top:<?= $navbar_height ?>px;
+        }
+    }
    
     /* Custom buttons */
     .btn{
