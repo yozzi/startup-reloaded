@@ -7,6 +7,8 @@
         $navbar_inverse = of_get_option( 'navbar-inverse' );
         $navbar_transparent = of_get_option( 'navbar-transparent' );
         $boxed = of_get_option( 'general-boxed' );
+        $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
+        $fullscreen_panel_hamburger = of_get_option( 'fullscreen-panel-hamburger' );
     ?>
                     
                     
@@ -27,20 +29,22 @@
                         <span class="icon-bar bottom-bar"></span>
                     </button>
                 <?php } ?>
+                <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
+                    <button type="button" class="navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
+                        <span class="sr-only">Toggle fullscreen panel</span>
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </button>
+                <?php } ?>
                 <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
                     <?php bloginfo('name'); ?>
                 </a>
+                
             </div>
-
             <!– Collect the nav links, forms, and other content for toggling –>
             <div class="<?php if ($responsive == 1) { ?>collapse navbar-collapse navbar-sur-collapse <?php } ?><?php echo $navbar_menu_position; ?>-sm">
                 <?php wp_nav_menu(array( 'menu'=> 'navbar-primary', 'theme_location' => 'navbar-primary', 'depth' => 2, 'container' => false, 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_page_menu', 'walker' => new wp_bootstrap_navwalker()) ); ?>
-            </div>
-            
-            <div>
-                <ul>
-                    <li><a data-toggle="modal" data-target="#fullscreen-panel" href="#"><i class="fa fa-bars"></i></a></li>
-                </ul>
             </div>
             <!– /.navbar-collapse –>
         </div>
