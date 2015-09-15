@@ -389,6 +389,14 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
+    $options[] = array(
+		'name' => __( 'Fullscreen panel', 'theme-textdomain' ),
+        'desc' => __( 'Activate. Use <strong>#fullscreen-panel</strong> on any button / link / menu item to make the magic go on.', 'theme-textdomain' ),
+		'id' => 'fullscreen-panel-on',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
 	$options[] = array(
 		'name' => __( 'Left panel', 'theme-textdomain' ),
         'desc' => __( 'Activate. Use <strong>#left-panel</strong> on any button / link / menu item to make the magic happen.', 'theme-textdomain' ),

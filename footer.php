@@ -11,7 +11,8 @@ $page_transition = of_get_option( 'page-transition' );
 $back_to_top = of_get_option( 'general-back-to-top' );
 $footer = of_get_option( 'general-footer' );
 $portfolio_style = of_get_option( 'portfolio-style' );
-$left_panel_on = of_get_option( 'left-panel-on' );
+$fullscreen_panel_on = of_get_option( 'right-panel-on' );
+$left_panel_on = of_get_option( 'fullscreen-panel-on' );
 $right_panel_on = of_get_option( 'right-panel-on' );
 ?>
                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#menuModal"> TEST BUTTON </button>
@@ -27,27 +28,7 @@ $right_panel_on = of_get_option( 'right-panel-on' );
     </div>
 </div><!-- #page -->
 
-
- <!-- FULLSCREEN MODAL CODE (.fullscreen) -->
-<div class="modal fade fullscreen" id="menuModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="color:#fff;">
-            <div class="modal-header" style="border:0;">
-                <button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-lg" style="color:#999;"></i></button> 
-                <h4 class="modal-title text-center"><span class="sr-only">main navigation</span></h4>
-            </div>
-            <div class="modal-body text-center">
-                <ul style="list-style-type:none;">
-                    <li><a href="#" class="big">Hello</a></li>
-                    <li><a href="#" class="big">A Menu Item</a></li>
-                    <li><a href="#" class="big">Another Item</a></li>
-                    <li><a href="#" class="big">This One Too!!</a></li>
-                    <li><a href="http://meagency.com" class="big">me.agency</a></li>
-                </ul>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.fullscreen -->
+<?php if( $fullscreen_panel_on ){ require get_template_directory() . '/inc/fullscreen-panel.php'; } ?>
 
 <?php wp_footer(); ?>
 
