@@ -21,6 +21,7 @@ $right_panel_on = of_get_option( 'right-panel-on' );
             <div class="row site-info">
                 <div class="col-xs-12">
                 <?= $footer ?>
+                <button type="button" class="btn btn-link navbar-toggle collapsed" data-toggle="modal" data-target="#menuModal"> ... </button>
                 </div>
             </div><!-- .site-info -->
         </footer><!-- #colophon -->
