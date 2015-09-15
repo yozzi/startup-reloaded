@@ -700,6 +700,14 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     background: transparent !important;
     border: none !important;
 }
+/* Navbar jump fix (modal issue) */
+body.modal-open {
+/*
+  overflow: inherit;
+  padding-right: 0 !important;
+*/
+}
+
 /*--------------------------------------------------------------
 ## mmenu
 --------------------------------------------------------------*/
@@ -717,9 +725,13 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 #right-panel.mm-menu {
     background: #323232;
 }
+
 /*--------------------------------------------------------------
 ## Fullscreen modal menu
 --------------------------------------------------------------*/
+#menuModal{
+     padding-right: 0 !important;   
+}
 
 .fullscreen .modal-dialog {
     margin: 0 0 0 0;
