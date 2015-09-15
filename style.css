@@ -741,7 +741,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     width: 12px;
 }
 
-style="width: 12px;display:block !important" #fullscreen-panel {
+#fullscreen-panel {
     padding-right: 0 !important;
 }
 
