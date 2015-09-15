@@ -346,6 +346,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+		'desc' => __( 'Translucent background on hover. For transparent navbar only.', 'theme-textdomain' ),
+		'id' => 'navbar-translucent',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
 		'id' => 'navbar-color',
 		'std' => '#323232',
 		'type' => 'color'
@@ -386,6 +393,14 @@ function optionsframework_options() {
 		'desc' => __( 'Inverse style', 'theme-textdomain' ),
 		'id' => 'navbar-inverse',
 		'std' => '1',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
+		'name' => __( 'Fullscreen panel', 'theme-textdomain' ),
+        'desc' => __( 'Activate. Use <strong>#fullscreen-panel</strong> on any button / link / menu item to make the magic go on.', 'theme-textdomain' ),
+		'id' => 'fullscreen-panel-on',
+		'std' => '0',
 		'type' => 'checkbox'
 	);
     

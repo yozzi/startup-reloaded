@@ -22,6 +22,7 @@
         $navbar_position = of_get_option( 'navbar-position' );
         $navbar_height = of_get_option( 'navbar-height' );
         $navbar_transparent = of_get_option( 'navbar-transparent' );
+        $navbar_translucent = of_get_option( 'navbar-translucent' );
         $navbar_color = of_get_option( 'navbar-color' );
         $left_panel_on = of_get_option( 'left-panel-on' );
         $left_panel_color = of_get_option( 'left-panel-color' );
@@ -78,6 +79,11 @@
       body.home #site-navigation.navbar{
         background-color: transparent !important;
       }
+      <?php if ( $navbar_translucent ){ ?>
+          body.home #site-navigation.navbar:hover{
+            background-color: rgba(0, 0, 0, 0.1) !important;
+          }
+      <?php } ?>
     }
     <?php }
     if ($left_panel_on){
