@@ -1516,7 +1516,7 @@ header.page-header h4.boxed {
     visibility: hidden;
     overflow: hidden;
     text-align: center;
-    z-index: 99999999;
+    z-index: 999;
     background-color: rgba(0, 0, 0, 0.5);
     color: #ccc;
     width: 36px;
