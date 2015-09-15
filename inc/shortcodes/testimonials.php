@@ -1,5 +1,5 @@
 <?php
-$args=array( 'post_type'=>'testimonials', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
+$args=array( 'post_type'=>'testimonials', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
 $testimonials = get_posts( $args );
 $total_testimonials = count($testimonials);
 ?>

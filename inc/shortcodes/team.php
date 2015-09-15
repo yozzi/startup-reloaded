@@ -1,5 +1,5 @@
 <?php
-$args=array( 'post_type'=>'team', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
+$args=array( 'post_type'=>'team', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
 $team = get_posts( $args );
 $total_team = count($team);
 ?>

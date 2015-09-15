@@ -1,7 +1,7 @@
 <?php
     $number = of_get_option( 'portfolio-number' );
     $style = of_get_option( 'portfolio-style' );
-    if (($number) && ($style != 'shuffle')) {$max = $number;} else {$max = 10000;};
+    if (($number) && ($style != 'shuffle')) {$max = $number;} else {$max = -1;};
     $args = array( 'post_type'=>'portfolio', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => $max );
     $portfolio = get_posts( $args );
     $total_portfolio = count($portfolio);

@@ -1,5 +1,5 @@
 <?php
-    $args=array( 'post_type'=>'products', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 10000 );
+    $args=array( 'post_type'=>'products', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
     $products = get_posts( $args );
     $total_products = count($products);
     $slider_arrows_hover    = of_get_option( 'slider-arrows-hover' );

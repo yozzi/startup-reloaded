@@ -1,5 +1,5 @@
 <?php
-$args=array( 'post_type'=>'milestones', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
+$args=array( 'post_type'=>'milestones', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
 $milestones = get_posts( $args );
 //$total_milestones = count($milestones);
 ?>

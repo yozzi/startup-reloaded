@@ -1,5 +1,5 @@
 <?php
-$args=array( 'post_type'=>'projects', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
+$args=array( 'post_type'=>'projects', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
 $projects = get_posts( $args );
 $total_projects = count($projects);
 ?>

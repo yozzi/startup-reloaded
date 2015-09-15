@@ -1,5 +1,5 @@
 <?php
-$args=array( 'post_type'=>'pricing', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
+$args=array( 'post_type'=>'pricing', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
 $pricing = get_posts( $args );
 $total_pricing = count($pricing);
 ?>

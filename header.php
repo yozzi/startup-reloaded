@@ -81,7 +81,7 @@
       }
       <?php if ( $navbar_translucent ){ ?>
           body.home #site-navigation.navbar:hover{
-            background-color: rgba(0, 0, 0, 0.1) !important;
+            background-color: rgba(0, 0, 0, 0.25) !important;
           }
       <?php } ?>
     }
