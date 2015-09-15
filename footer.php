@@ -27,6 +27,28 @@ $right_panel_on = of_get_option( 'right-panel-on' );
     </div>
 </div><!-- #page -->
 
+
+ <!-- FULLSCREEN MODAL CODE (.fullscreen) -->
+<div class="modal fade fullscreen" id="menuModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="color:#fff;">
+            <div class="modal-header" style="border:0;">
+                <button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-lg" style="color:#999;"></i></button> 
+                <h4 class="modal-title text-center"><span class="sr-only">main navigation</span></h4>
+            </div>
+            <div class="modal-body text-center">
+                <ul style="list-style-type:none;">
+                    <li><a href="#" class="big">Hello</a></li>
+                    <li><a href="#" class="big">A Menu Item</a></li>
+                    <li><a href="#" class="big">Another Item</a></li>
+                    <li><a href="#" class="big">This One Too!!</a></li>
+                    <li><a href="http://meagency.com" class="big">me.agency</a></li>
+                </ul>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.fullscreen -->
+
 <?php wp_footer(); ?>
 
 <?php  if( $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){ ?>
