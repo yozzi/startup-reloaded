@@ -346,6 +346,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+		'desc' => __( 'Translucent background on hover. For transparent navbar only.', 'theme-textdomain' ),
+		'id' => 'navbar-translucent',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
 		'id' => 'navbar-color',
 		'std' => '#323232',
 		'type' => 'color'
