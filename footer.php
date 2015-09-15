@@ -14,14 +14,13 @@ $portfolio_style = of_get_option( 'portfolio-style' );
 $left_panel_on = of_get_option( 'left-panel-on' );
 $right_panel_on = of_get_option( 'right-panel-on' );
 ?>
-
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#menuModal"> TEST BUTTON </button>
 	</div><!-- #content -->
     <div id="colophon-bg">
         <footer id="colophon" class="container site-footer" role="contentinfo">
             <div class="row site-info">
                 <div class="col-xs-12">
                 <?= $footer ?>
-                <button type="button" class="btn btn-link navbar-toggle collapsed" data-toggle="modal" data-target="#menuModal"> ... </button>
                 </div>
             </div><!-- .site-info -->
         </footer><!-- #colophon -->
