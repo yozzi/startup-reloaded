@@ -405,7 +405,7 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
-        'desc' => __( 'Activate navbar hamburger.', 'theme-textdomain' ),
+        'desc' => __( 'Activate navbar hamburger. En developpement.', 'theme-textdomain' ),
 		'id' => 'fullscreen-panel-hamburger',
 		'std' => '0',
 		'type' => 'checkbox'
