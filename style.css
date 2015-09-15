@@ -670,9 +670,8 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 
 .navbar a:focus {
-    outline-style:none !important;
+    outline-style: none !important;
 }
-
 /* Style clair */
 
 .navbar-nav>li>a {
@@ -705,14 +704,6 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     background: transparent !important;
     border: none !important;
 }
-/* Navbar jump fix (modal issue) */
-body.modal-open {
-/*
-  overflow: inherit;
-  padding-right: 0 !important;
-*/
-}
-
 /*--------------------------------------------------------------
 ## mmenu
 --------------------------------------------------------------*/
@@ -730,12 +721,28 @@ body.modal-open {
 #right-panel.mm-menu {
     background: #323232;
 }
-
 /*--------------------------------------------------------------
 ## Fullscreen modal menu
 --------------------------------------------------------------*/
-#fullscreen-panel{
-     padding-right: 0 !important;   
+
+#fullscreen-hamburger {
+    display: block;
+    float: left;
+    padding-left: 15px;
+}
+
+@media (max-width: 767px) {
+    #fullscreen-hamburger {
+        margin-left: 15px;
+    }
+}
+
+#fullscreen-hamburger .bottom-bar {
+    width: 12px;
+}
+
+style="width: 12px;display:block !important" #fullscreen-panel {
+    padding-right: 0 !important;
 }
 
 .fullscreen .modal-dialog {

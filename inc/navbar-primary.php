@@ -30,7 +30,7 @@
                     </button>
                 <?php } ?>
                 <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
-                    <button type="button" class="navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
+                    <button id="fullscreen-hamburger" type="button" class="navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
                         <span class="sr-only">Toggle fullscreen panel</span>
                         <span class="icon-bar top-bar"></span>
                         <span class="icon-bar middle-bar"></span>
