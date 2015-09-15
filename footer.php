@@ -11,11 +11,11 @@ $page_transition = of_get_option( 'page-transition' );
 $back_to_top = of_get_option( 'general-back-to-top' );
 $footer = of_get_option( 'general-footer' );
 $portfolio_style = of_get_option( 'portfolio-style' );
-$fullscreen_panel_on = of_get_option( 'right-panel-on' );
+$fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
 $left_panel_on = of_get_option( 'fullscreen-panel-on' );
 $right_panel_on = of_get_option( 'right-panel-on' );
 ?>
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#menuModal"> TEST BUTTON </button>
+
 	</div><!-- #content -->
     <div id="colophon-bg">
         <footer id="colophon" class="container site-footer" role="contentinfo">

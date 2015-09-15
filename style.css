@@ -668,6 +668,11 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     padding-bottom: 0;
     border: 0
 }
+
+.navbar-nav>li>a:focus {
+    outline-style:none !important;
+}
+
 /* Style clair */
 
 .navbar-nav>li>a {
@@ -729,7 +734,7 @@ body.modal-open {
 /*--------------------------------------------------------------
 ## Fullscreen modal menu
 --------------------------------------------------------------*/
-#menuModal{
+#fullscreen-panel{
      padding-right: 0 !important;   
 }
 

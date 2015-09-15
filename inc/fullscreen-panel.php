@@ -1,4 +1,4 @@
-<div class="modal fade fullscreen" id="menuModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade fullscreen" id="fullscreen-panel"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" style="color:#fff;">
             <div class="modal-header" style="border:0;">

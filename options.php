@@ -398,15 +398,22 @@ function optionsframework_options() {
     
     $options[] = array(
 		'name' => __( 'Fullscreen panel', 'theme-textdomain' ),
-        'desc' => __( 'Activate. Use <strong>#fullscreen-panel</strong> on any button / link / menu item to make the magic go on.', 'theme-textdomain' ),
+        'desc' => __( 'Activate. Use <strong>data-toggle="modal" data-target="#fullscreen-panel"</strong> on any button / link or activate navbar hamburger below to make the magic happen.', 'theme-textdomain' ),
 		'id' => 'fullscreen-panel-on',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Activate navbar hamburger.', 'theme-textdomain' ),
+		'id' => 'fullscreen-panel-hamburger',
 		'std' => '0',
 		'type' => 'checkbox'
 	);
     
 	$options[] = array(
 		'name' => __( 'Left panel', 'theme-textdomain' ),
-        'desc' => __( 'Activate. Use <strong>#left-panel</strong> on any button / link / menu item to make the magic happen.', 'theme-textdomain' ),
+        'desc' => __( 'Activate. Use <strong>#left-panel</strong> on any button / link / menu item to make the magic go on.', 'theme-textdomain' ),
 		'id' => 'left-panel-on',
 		'std' => '0',
 		'type' => 'checkbox'
