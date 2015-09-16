@@ -140,5 +140,5 @@ $.fn.modal.Constructor.prototype.resetScrollbar = function () {
 
 // Ajouter une class aux éléments d'un menu (pour hover.css)
 $(document).ready(function () {
-    $('#menu-fullscreen > li > a').addClass('hvr-grow');
+    $('#fullscreen-panel li > a').addClass('hvr-grow');
 });
