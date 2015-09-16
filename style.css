@@ -641,7 +641,7 @@ section {
 ## Navigation
 --------------------------------------------------------------*/
 
-.navbar-toggle{
+.navbar-toggle {
     margin-top: 7px;
 }
 
@@ -713,6 +713,44 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     background: transparent !important;
     border: none !important;
 }
+/* Non-collapsing icons */
+
+@media (max-width: 767px) {
+    #site-navigation .navbar-right {
+        float: right;
+        padding-right: 15px;
+    }
+    #site-navigation .nav.navbar-nav.navbar-right li {
+        float: right;
+    }
+    #site-navigation .nav.navbar-nav.navbar-right li > a {
+        padding: 8px 5px;
+    }
+    #site-navigation .navbar-toggle {
+        float: left
+    }
+    #site-navigation .navbar-header {
+        float: left;
+        width: auto!important;
+    }
+    #site-navigation .navbar-collapse {
+        clear: both;
+        float: none;
+    }
+}
+@media (max-width: 767px) {
+    .non-collapsing li.icon{
+        margin-top:-10px;
+        margin-bottom:-10px;
+    }
+}
+
+.non-collapsing button{
+    margin-right:0;
+    padding-left:10px;
+}
+
+
 /*--------------------------------------------------------------
 ## mmenu
 --------------------------------------------------------------*/
@@ -730,7 +768,6 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 #right-panel.mm-menu {
     background: #323232;
 }
-
 /*--------------------------------------------------------------
 ## Fullscreen Modal
 --------------------------------------------------------------*/
@@ -818,6 +855,7 @@ hr.star-primary:after {
 ## Fullscreen modal menu
 --------------------------------------------------------------*/
 /* Hamburger */
+
 #fullscreen-hamburger {
     display: block;
     float: left;
@@ -833,30 +871,29 @@ hr.star-primary:after {
 #fullscreen-hamburger .bottom-bar {
     width: 12px;
 }
-
 /* Modal */
-#fullscreen-panel ul{
+
+#fullscreen-panel ul {
     margin: 0;
     padding: 0;
 }
 
-#fullscreen-panel ul li{
+#fullscreen-panel ul li {
     text-transform: uppercase;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#fullscreen-panel ul li a{
+#fullscreen-panel ul li a {
     color: #ccc;
     font-size: 45px;
 }
 
-#fullscreen-panel ul li a:hover{
+#fullscreen-panel ul li a:hover {
     color: #999;
     text-decoration: none;
 }
-
 /*--------------------------------------------------------------
 ## Slider
 --------------------------------------------------------------*/
@@ -1026,7 +1063,6 @@ hr.star-primary:after {
     margin-left: -25px;
     bottom: 10px;
 }
-
 /*--------------------------------------------------------------
 ## Milestones
 --------------------------------------------------------------*/
@@ -1257,7 +1293,6 @@ hr.star-primary:after {
     border-left: 5px solid #fff;
     margin: 0;
 }
-
 /*--------------------------------------------------------------
 ## Products
 --------------------------------------------------------------*/
@@ -1524,7 +1559,7 @@ header.page-header h4.boxed {
     opacity: 1.0;
 }
 
-.scroll-top-inner{
+.scroll-top-inner {
     color: #fff;
     display: inline-block;
     font-size: 8px;
