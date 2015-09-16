@@ -641,6 +641,15 @@ section {
 ## Navigation
 --------------------------------------------------------------*/
 
+.navbar-toggle{
+    margin-top: 7px;
+}
+
+.navbar-toggle .icon-bar {
+    height: 3px;
+    border-radius: 0;
+}
+
 .navbar {
     margin-bottom: 0;
     background: #323232;
