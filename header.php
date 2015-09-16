@@ -106,6 +106,11 @@
       background: <?= $navbar_color ?>;
     }
         
+    /* Navbar hamburgers */
+    #site-navigation .navbar-toggle {
+        float: left
+    }
+        
     /* Navbar Padding */
         
     body.startup-nav-navbar-fixed-top #content{

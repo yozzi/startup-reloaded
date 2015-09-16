@@ -726,9 +726,6 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     #site-navigation .nav.navbar-nav.navbar-right li > a {
         padding: 8px 5px;
     }
-    #site-navigation .navbar-toggle {
-        float: left
-    }
     #site-navigation .navbar-header {
         float: left;
         width: auto!important;
@@ -740,8 +737,8 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
 }
 @media (max-width: 767px) {
     .non-collapsing li.icon{
-        margin-top:-10px;
-        margin-bottom:-10px;
+        margin-top:-7.5px;
+        margin-bottom:-7.5px;
     }
 }
 
