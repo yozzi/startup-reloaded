@@ -203,44 +203,27 @@
         </script>
     <?php endif ?>
 
-    <?php if( $left_panel_on ){ ?>
+    
     
     
     <?php
-        $locations = get_registered_nav_menus();
-        $menus = wp_get_nav_menus();
-        $menu_locations = get_nav_menu_locations();
-
-        $location_left_id = 'left-panel';
-        if (isset($menu_locations[ $location_left_id ])) {
-            foreach ($menus as $menu) {
-                // If the ID of this menu is the ID associated with the location we're searching for
-                if ($menu->term_id == $menu_locations[ $location_left_id ]) {
-                    // This is the correct menu
-
-                    // Get the items for this menu
-                    $left_panel_title = $menu->name;
-
-                    // Now do something with them here.
-                    //
-                    //
-                    break;
-                }
-            }
-        } else {
-            // The location that you're trying to search doesn't exist
-            $left_panel_title = 'menu';
+        if( $left_panel_on || $right_panel_on ){
+            $locations = get_registered_nav_menus();
+            $menus = wp_get_nav_menus();
+            $menu_locations = get_nav_menu_locations();
         }
 
-        $location_right_id = 'right-panel';
-            if (isset($menu_locations[ $location_right_id ])) {
+
+        if( $left_panel_on ){
+            $location_left_id = 'left-panel';
+            if (isset($menu_locations[ $location_left_id ])) {
                 foreach ($menus as $menu) {
                     // If the ID of this menu is the ID associated with the location we're searching for
-                    if ($menu->term_id == $menu_locations[ $location_right_id ]) {
+                    if ($menu->term_id == $menu_locations[ $location_left_id ]) {
                         // This is the correct menu
 
                         // Get the items for this menu
-                        $right_panel_title = $menu->name;
+                        $left_panel_title = $menu->name;
 
                         // Now do something with them here.
                         //
@@ -250,13 +233,8 @@
                 }
             } else {
                 // The location that you're trying to search doesn't exist
-                $right_panel_title = 'menu';
-        } 
-    
-    
-    
-    
-    ?>
+                $left_panel_title = 'menu';
+            } ?>
     
         <script type="text/javascript">
             jQuery(function() {
@@ -282,9 +260,29 @@
                 });
             });
         </script>
-    <?php } ?>
+    <?php }
 
-    <?php if( $right_panel_on ){ ?>
+        if( $right_panel_on ){
+                $location_right_id = 'right-panel';
+                if (isset($menu_locations[ $location_right_id ])) {
+                    foreach ($menus as $menu) {
+                        // If the ID of this menu is the ID associated with the location we're searching for
+                        if ($menu->term_id == $menu_locations[ $location_right_id ]) {
+                            // This is the correct menu
+
+                            // Get the items for this menu
+                            $right_panel_title = $menu->name;
+
+                            // Now do something with them here.
+                            //
+                            //
+                            break;
+                        }
+                    }
+                } else {
+                    // The location that you're trying to search doesn't exist
+                    $right_panel_title = 'menu';
+                } ?>
         <script type="text/javascript">
             jQuery(function() {
                 jQuery('nav#right-panel').mmenu({
