@@ -388,6 +388,15 @@ function optionsframework_options() {
 		'class' => 'mini', //mini, tiny, small
 		'options' => $navbar_item_positions
 	);
+    
+    $options[] = array(
+		'desc' => __( 'Hamburger Position', 'theme-textdomain' ),
+		'id' => 'navbar-hamburger-position',
+		'std' => 'navbar-right',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => $navbar_item_positions
+	);
 
 	$options[] = array(
 		'desc' => __( 'Inverse style', 'theme-textdomain' ),

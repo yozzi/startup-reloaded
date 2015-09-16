@@ -655,6 +655,14 @@ section {
     background: #323232;
     border: none
 }
+
+#site-navigation .navbar-toggle.left-toggle {
+    float: left
+}
+
+#site-navigation .navbar-toggle.right-toggle {
+    margin-right: 0;
+}
 /* Pour navbar transparent */
 
 body.home #site-navigation.navbar-transparent {

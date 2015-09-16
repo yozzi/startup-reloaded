@@ -4,6 +4,7 @@
         $navbar_position = of_get_option( 'navbar-position' );
         $navbar_logo_position = of_get_option( 'navbar-logo-position' );
         $navbar_menu_position = of_get_option( 'navbar-menu-position' );
+        $navbar_hamburger_position = of_get_option( 'navbar-hamburger-position' );
         $navbar_inverse = of_get_option( 'navbar-inverse' );
         $navbar_transparent = of_get_option( 'navbar-transparent' );
         $boxed = of_get_option( 'general-boxed' );
@@ -17,7 +18,7 @@
         <div class="container">
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
                     <?php if ($responsive == 1) { ?>
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-sur-collapse">
+                        <button type="button" class="navbar-toggle <?php if ($navbar_hamburger_position == 'navbar-left') {echo 'left-toggle';} else {echo 'right-toggle';}?>" data-toggle="collapse" data-target=".navbar-sur-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar top-bar"></span>
                             <span class="icon-bar middle-bar"></span>
