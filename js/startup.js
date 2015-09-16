@@ -137,3 +137,8 @@ $.fn.modal.Constructor.prototype.resetScrollbar = function () {
     oldRSB.apply(this);
     $(fixedCls).css('padding-right', '');
 };
+
+// Ajouter une class aux éléments d'un menu (pour hover.css)
+$(document).ready(function () {
+    $('#menu-fullscreen > li > a').addClass('hvr-grow');
+});

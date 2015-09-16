@@ -168,7 +168,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>     
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times fa-2x"></i></span></button>
                                 </div>
                             </div>
                             <div class="row">

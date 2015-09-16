@@ -67,7 +67,7 @@ $right_panel_on = of_get_option( 'right-panel-on' );
 <?php if ( $back_to_top ) { ?>
     <div class="scroll-top-wrapper ">
         <span class="scroll-top-inner">
-            <i class="fa fa-2x fa-angle-up"></i>
+            <i class="fa fa-chevron-up fa-lg"></i>
         </span>
     </div>
 <?php } ?>
