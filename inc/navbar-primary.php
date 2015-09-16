@@ -67,7 +67,7 @@ $right_panel_on = of_get_option( 'right-panel-on' );
                         </li>
                      <?php } else { ?>
                         <li class="icon">
-                            <button type="button" class="custom-hamburger navbar-toggle" onclick='jQuery("#left-panel").show();'>
+                            <button id="left-panel-button" type="button" class="custom-hamburger navbar-toggle">
                                 <span class="sr-only">Toggle left panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
@@ -87,7 +87,7 @@ $right_panel_on = of_get_option( 'right-panel-on' );
                         </li>
                      <?php } else { ?>
                         <li class="icon">
-                            <button type="button" class="custom-hamburger navbar-toggle navbar-toggle" data-toggle="modal" data-target="#right-panel">
+                            <button id="right-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle">
                                 <span class="sr-only">Toggle right panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>

@@ -258,6 +258,11 @@
                         }
                     ]
                 });
+                var API = jQuery("nav#left-panel").data( "mmenu" );
+      
+                  jQuery("#left-panel-button").click(function() {
+                     API.open();
+                  });
             });
         </script>
     <?php }
@@ -309,6 +314,11 @@
                         }
                     ]
                 });
+                var API = jQuery("nav#right-panel").data( "mmenu" );
+      
+                  jQuery("#right-panel-button").click(function() {
+                     API.open();
+                  });
             });
         </script>
     <?php } ?>
