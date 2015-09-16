@@ -1,5 +1,5 @@
 <header id="masthead" class="site-header" role="banner">
-                      
+
     <?php
         $navbar_position = of_get_option( 'navbar-position' );
         $navbar_logo_position = of_get_option( 'navbar-logo-position' );
@@ -9,14 +9,9 @@
         $boxed = of_get_option( 'general-boxed' );
         $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
         $fullscreen_panel_hamburger = of_get_option( 'fullscreen-panel-hamburger' );
+        $fullscreen_panel_hamburger_text = of_get_option( 'fullscreen-panel-hamburger-text' );
     ?>
-                    
-                    
-                    
 
-
-                    
-                    
     <nav id="site-navigation" class="navbar navbar-default <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
         <!– Brand and toggle get grouped for better mobile display –>
         <div class="container">
@@ -31,7 +26,9 @@
                         </button>
                     <?php } ?>
                 <?php } ?>
-                <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
+                <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger && $fullscreen_panel_hamburger_text ){ ?>
+                    <a id="fullscreen-hamburger" data-toggle="modal" data-target="#fullscreen-panel" href="#"><?= $fullscreen_panel_hamburger_text ?></a>
+                <?php } elseif ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
                     <button id="fullscreen-hamburger" type="button" class="navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
                         <span class="sr-only">Toggle fullscreen panel</span>
                         <span class="icon-bar top-bar"></span>

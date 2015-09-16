@@ -405,10 +405,17 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
-        'desc' => __( 'Activate navbar hamburger. En developpement.', 'theme-textdomain' ),
+        'desc' => __( 'Activate navbar hamburger.', 'theme-textdomain' ),
 		'id' => 'fullscreen-panel-hamburger',
 		'std' => '0',
 		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Override hamburger with a text.', 'theme-textdomain' ),
+		'id' => 'fullscreen-panel-hamburger-text',
+        'type' => 'text',
+        'class' => 'mini'
 	);
     
 	$options[] = array(
