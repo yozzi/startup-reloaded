@@ -16,7 +16,7 @@
         <!– Brand and toggle get grouped for better mobile display –>
         <div class="container">
             <div class="navbar-header <?php echo $navbar_logo_position; ?>-sm">
-                <?php if (wp_nav_menu( array( 'theme_location' => 'navbar-primary', 'echo' => false )) !== false) { ?>
+                <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
                     <?php if ($responsive == 1) { ?>
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-sur-collapse">
                             <span class="sr-only">Toggle navigation</span>
