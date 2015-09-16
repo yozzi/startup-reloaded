@@ -367,14 +367,14 @@ function optionsframework_options() {
 	);
     
     $navbar_item_positions = array(
-		'pull-left' => __( 'Left', 'theme-textdomain' ),
-		'pull-right' => __( 'Right', 'theme-textdomain' )
+		'navbar-left' => __( 'Left', 'theme-textdomain' ),
+		'navbar-right' => __( 'Right', 'theme-textdomain' )
 	);
     
 	$options[] = array(
 		'desc' => __( 'Logo Position', 'theme-textdomain' ),
 		'id' => 'navbar-logo-position',
-		'std' => 'pull-left',
+		'std' => 'navbar-left',
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
 		'options' => $navbar_item_positions
@@ -383,7 +383,7 @@ function optionsframework_options() {
     $options[] = array(
 		'desc' => __( 'Menu Position', 'theme-textdomain' ),
 		'id' => 'navbar-menu-position',
-		'std' => 'pull-right',
+		'std' => 'navbar-right',
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
 		'options' => $navbar_item_positions
