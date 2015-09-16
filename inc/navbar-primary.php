@@ -11,6 +11,12 @@
         $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
         $fullscreen_panel_hamburger = of_get_option( 'fullscreen-panel-hamburger' );
         $fullscreen_panel_hamburger_text = of_get_option( 'fullscreen-panel-hamburger-text' );
+$left_panel_on = of_get_option( 'left-panel-on' );
+        $left_panel_hamburger = of_get_option( 'left-panel-hamburger' );
+        $left_panel_hamburger_text = of_get_option( 'left-panel-hamburger-text' );
+$right_panel_on = of_get_option( 'right-panel-on' );
+        $right_panel_hamburger = of_get_option( 'right-panel-hamburger' );
+        $right_panel_hamburger_text = of_get_option( 'right-panel-hamburger-text' );
     ?>
 
     <nav id="site-navigation" class="navbar navbar-default <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
@@ -32,7 +38,7 @@
                 </a>
             </div>
             
-            <!-- Non-collapsing right-side icons -->
+            <!-- Non-collapsing fullscreen panel menu item -->
              <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
                 <ul class="nav navbar-nav navbar-right non-collapsing">
                     <?php if ( $fullscreen_panel_hamburger_text ){ ?>
@@ -41,8 +47,48 @@
                         </li>
                      <?php } else { ?>
                         <li class="icon">
-                            <button id="fullscreen-hamburger" type="button" class="navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
+                            <button type="button" class="custom-hamburger navbar-toggle navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
                                 <span class="sr-only">Toggle fullscreen panel</span>
+                                <span class="icon-bar top-bar"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                            </button>
+                        </li>
+                       <?php } ?>    
+                </ul>
+            <?php } ?>
+            
+             <!-- Non-collapsing left panel menu item -->
+             <?php if ( $left_panel_on && $left_panel_hamburger ){ ?>
+                <ul class="nav navbar-nav navbar-right non-collapsing">
+                    <?php if ( $left_panel_hamburger_text ){ ?>
+                        <li>
+                            <a href="#left-panel"><?= $left_panel_hamburger_text ?></a>
+                        </li>
+                     <?php } else { ?>
+                        <li class="icon">
+                            <button type="button" class="custom-hamburger navbar-toggle" data-toggle="modal" data-target="#left-panel">
+                                <span class="sr-only">Toggle left panel</span>
+                                <span class="icon-bar top-bar"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                            </button>
+                        </li>
+                       <?php } ?>    
+                </ul>
+            <?php } ?>
+            
+            <!-- Non-collapsing right panel menu item -->
+             <?php if ( $right_panel_on && $right_panel_hamburger ){ ?>
+                <ul class="nav navbar-nav navbar-right non-collapsing">
+                    <?php if ( $right_panel_hamburger_text ){ ?>
+                        <li>
+                            <a href="#right-panel"><?= $right_panel_hamburger_text ?></a>
+                        </li>
+                     <?php } else { ?>
+                        <li class="icon">
+                            <button type="button" class="custom-hamburger navbar-toggle navbar-toggle" data-toggle="modal" data-target="#right-panel">
+                                <span class="sr-only">Toggle right panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
                                 <span class="icon-bar bottom-bar"></span>

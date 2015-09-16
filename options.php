@@ -436,6 +436,20 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+        'desc' => __( 'Activate navbar hamburger.', 'theme-textdomain' ),
+		'id' => 'left-panel-hamburger',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Override hamburger with a text.', 'theme-textdomain' ),
+		'id' => 'left-panel-hamburger-text',
+        'type' => 'text',
+        'class' => 'mini'
+	);
+    
+    $options[] = array(
 		'id' => 'left-panel-color',
         'std' => '#323232',
 		'type' => 'color'
@@ -471,6 +485,20 @@ function optionsframework_options() {
 		'id' => 'right-panel-on',
 		'std' => '0',
 		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Activate navbar hamburger.', 'theme-textdomain' ),
+		'id' => 'right-panel-hamburger',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Override hamburger with a text.', 'theme-textdomain' ),
+		'id' => 'right-panel-hamburger-text',
+        'type' => 'text',
+        'class' => 'mini'
 	);
     
     $options[] = array(

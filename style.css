@@ -861,19 +861,19 @@ hr.star-primary:after {
 --------------------------------------------------------------*/
 /* Hamburger */
 
-#fullscreen-hamburger {
+.custom-hamburger {
     display: block;
     float: left;
     padding-left: 15px;
 }
 
 @media (max-width: 767px) {
-    #fullscreen-hamburger {
+    .custom-hamburger {
         margin-left: 15px;
     }
 }
 
-#fullscreen-hamburger .bottom-bar {
+.custom-hamburger .bottom-bar {
     width: 12px;
 }
 /* Modal */
