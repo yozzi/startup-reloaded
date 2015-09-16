@@ -15,8 +15,7 @@
     <nav id="site-navigation" class="navbar navbar-default <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
         <!– Brand and toggle get grouped for better mobile display –>
         <div class="container">
-            <div class="navbar-header <?php echo $navbar_logo_position; ?>">
-                <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
+            <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
                     <?php if ($responsive == 1) { ?>
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-sur-collapse">
                             <span class="sr-only">Toggle navigation</span>
@@ -26,21 +25,31 @@
                         </button>
                     <?php } ?>
                 <?php } ?>
-                <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger && $fullscreen_panel_hamburger_text ){ ?>
-                    <a id="fullscreen-hamburger" data-toggle="modal" data-target="#fullscreen-panel" href="#"><?= $fullscreen_panel_hamburger_text ?></a>
-                <?php } elseif ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
-                    <button id="fullscreen-hamburger" type="button" class="navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
-                        <span class="sr-only">Toggle fullscreen panel</span>
-                        <span class="icon-bar top-bar"></span>
-                        <span class="icon-bar middle-bar"></span>
-                        <span class="icon-bar bottom-bar"></span>
-                    </button>
-                <?php } ?>
+            <div class="navbar-header <?php echo $navbar_logo_position; ?>">
                 <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
                     <?php bloginfo('name'); ?>
                 </a>
-                
             </div>
+            
+            <!-- Non-collapsing right-side icons -->
+             <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
+                <ul class="nav navbar-nav navbar-right non-collapsing">
+                    <?php if ( $fullscreen_panel_hamburger_text ){ ?>
+                        <li>
+                            <a data-toggle="modal" data-target="#fullscreen-panel" href="#"><?= $fullscreen_panel_hamburger_text ?></a>
+                        </li>
+                     <?php } else { ?>
+                        <li class="icon">
+                            <button id="fullscreen-hamburger" type="button" class="navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
+                                <span class="sr-only">Toggle fullscreen panel</span>
+                                <span class="icon-bar top-bar"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                            </button>
+                        </li>
+                       <?php } ?>    
+                </ul>
+            <?php } ?>  
             
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
             <!– Collect the nav links, forms, and other content for toggling –>
