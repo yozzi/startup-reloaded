@@ -99,13 +99,19 @@
                 </ul>
             <?php } ?>
             
-            <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
-            <!– Collect the nav links, forms, and other content for toggling –>
-            <div class="<?php if ($responsive == 1) { ?>collapse navbar-collapse navbar-sur-collapse <?php } ?><?php echo $navbar_menu_position; ?>">
-                <?php wp_nav_menu(array( 'menu'=> 'navbar-primary', 'theme_location' => 'navbar-primary', 'depth' => 2, 'container' => false, 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_page_menu', 'walker' => new wp_bootstrap_navwalker()) ); ?>
-            </div>
-            <!– /.navbar-collapse –>
+            <?php if ( has_nav_menu( 'navbar-primary-non-collapsing' ) ) { ?>
+                <?php wp_nav_menu(array( 'menu'=> 'navbar-primary-non-collapsing', 'theme_location' => 'navbar-primary-non-collapsing', 'depth' => 2, 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right non-collapsing', 'fallback_cb' => 'wp_page_menu', 'walker' => new wp_bootstrap_navwalker()) ); ?>
             <?php } ?>
+            
+            
+            <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
+                <!– Collect the nav links, forms, and other content for toggling –>
+                <div class="<?php if ($responsive == 1) { ?>collapse navbar-collapse navbar-sur-collapse <?php } ?><?php echo $navbar_menu_position; ?>">
+                    <?php wp_nav_menu(array( 'menu'=> 'navbar-primary', 'theme_location' => 'navbar-primary', 'depth' => 2, 'container' => false, 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_page_menu', 'walker' => new wp_bootstrap_navwalker()) ); ?>
+                </div>
+                <!– /.navbar-collapse –>
+            <?php } ?>
+            
         </div>
         <!– /.container –>
     </nav>

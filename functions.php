@@ -46,6 +46,7 @@ function startup_reloaded_setup() {
 	// This theme uses wp_nav_menu() in three locations.
 	register_nav_menus( array(
 		'navbar-primary' => esc_html__( 'Navbar Primary', 'startup-reloaded' ),
+        'navbar-primary-non-collapsing' => esc_html__( 'Navbar Primary non-collapsing', 'startup-reloaded' ),
         'navbar-secondary' => esc_html__( 'Navbar Secondary', 'startup-reloaded' ),
         'left-panel' => esc_html__( 'Left Panel', 'startup-reloaded' ),
         'right-panel' => esc_html__( 'Right Panel', 'startup-reloaded' ),
