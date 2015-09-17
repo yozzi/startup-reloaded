@@ -1595,7 +1595,8 @@ header.page-header h4.boxed {
 ## TML
 --------------------------------------------------------------*/
 
-.tml-action-links{
+.tml-action-links,
+.tml-user-links{
     padding-left: 0px;
     list-style: outside none none;
 }
