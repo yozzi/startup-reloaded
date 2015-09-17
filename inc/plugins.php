@@ -187,6 +187,11 @@ function startup_reloaded_register_required_plugins() {
             'slug'      => 'polylang',
             'required'  => false,
         ),
+        array(
+            'name'      => 'Theme My Login',
+            'slug'      => 'theme-my-login',
+            'required'  => false,
+        ),
  
     );
  
