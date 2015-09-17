@@ -243,7 +243,7 @@
                         close: true
                     },
                     slidingSubmenus : false,
-                    extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
+                    extensions	: [ 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbar 		: {
 						title		: '<?= $left_panel_title ?>'
 					},
@@ -256,7 +256,10 @@
 								'close'
                             ]
                         }
-                    ]
+                    ],
+                    "offCanvas": {
+                  "zposition": "front"
+               }
                 });
                 var API = jQuery("nav#left-panel").data( "mmenu" );
       
@@ -292,14 +295,15 @@
             jQuery(function() {
                 jQuery('nav#right-panel').mmenu({
                     offCanvas: {
-                        position: "right"
+                        position: "right",
+                        "zposition": "front"
                      },
                     onClick: {
                         close: true
                     },
                     slidingSubmenus : false,
                     
-                    extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
+                    extensions	: [ 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbar 		: {
 						title		: '<?= $right_panel_title ?>'
 					},
