@@ -116,7 +116,7 @@
       padding-top: 0;
     }
 
-    body.home.startup-nav-transparent.startup-nav-navbar-fixed-top{
+    body.home.startup-nav-transparent.startup-nav-navbar-fixed-top .panel-page-container{
       padding-top: <?= $navbar_height ?>px;
     }
 
@@ -125,7 +125,7 @@
     }
         
     @media (max-width: 767px){
-      body.home.startup-nav-transparent1.startup-nav-navbar-fixed-top{
+      body.home.startup-nav-transparent1.startup-nav-navbar-fixed-top .panel-page-container{
         padding-top:<?= $navbar_height ?>px;
       }
     }

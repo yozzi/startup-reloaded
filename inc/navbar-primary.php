@@ -11,15 +11,15 @@
         $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
         $fullscreen_panel_hamburger = of_get_option( 'fullscreen-panel-hamburger' );
         $fullscreen_panel_hamburger_text = of_get_option( 'fullscreen-panel-hamburger-text' );
-$left_panel_on = of_get_option( 'left-panel-on' );
+        $left_panel_on = of_get_option( 'left-panel-on' );
         $left_panel_hamburger = of_get_option( 'left-panel-hamburger' );
         $left_panel_hamburger_text = of_get_option( 'left-panel-hamburger-text' );
-$right_panel_on = of_get_option( 'right-panel-on' );
+        $right_panel_on = of_get_option( 'right-panel-on' );
         $right_panel_hamburger = of_get_option( 'right-panel-hamburger' );
         $right_panel_hamburger_text = of_get_option( 'right-panel-hamburger-text' );
     ?>
 
-    <nav id="site-navigation" class="navbar navbar-default <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
+    <nav id="site-navigation" class="Fixed navbar navbar-default <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
         <!– Brand and toggle get grouped for better mobile display –>
         <div class="container">
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
