@@ -755,6 +755,14 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     padding-left:10px;
 }
 
+/* Non-collapsing links */
+@media (max-width: 767px) {
+    .non-collapsing li a{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 
 /*--------------------------------------------------------------
 ## mmenu
