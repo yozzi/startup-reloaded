@@ -743,31 +743,29 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
         float: none;
     }
 }
+
 @media (max-width: 767px) {
-    .non-collapsing li.icon{
-        margin-top:-7.5px;
-        margin-bottom:-7.5px;
+    .non-collapsing li.icon {
+        margin-top: -7.5px;
+        margin-bottom: -7.5px;
     }
 }
 
-.non-collapsing button{
-    margin-right:0;
-    padding-left:10px;
+.non-collapsing button {
+    margin-right: 0;
+    padding-left: 10px;
 }
-
 /* Non-collapsing links */
+
 @media (max-width: 767px) {
-    .non-collapsing li a{
+    .non-collapsing li a {
         margin-left: 10px;
         margin-right: 10px;
     }
 }
-
-
 /*--------------------------------------------------------------
 ## mmenu
 --------------------------------------------------------------*/
-
 /* Hide mmenu flickering */
 
 #page #left-panel,
@@ -891,7 +889,7 @@ hr.star-primary:after {
 }
 
 .custom-hamburger#fullscreen-panel-button .top-bar,
-.custom-hamburger#fullscreen-panel-button .bottom-bar{
+.custom-hamburger#fullscreen-panel-button .bottom-bar {
     width: 18px;
     margin-left: 2px;
 }
