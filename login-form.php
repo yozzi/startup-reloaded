@@ -22,12 +22,10 @@ Theme My Login will always look in your theme's directory first, before using th
 		<div class="forgetmenot checkbox">
 			<label for="rememberme<?php $template->the_instance(); ?>"><input name="rememberme" type="checkbox" id="rememberme<?php $template->the_instance(); ?>" value="forever" /><?php esc_attr_e( 'Remember Me', 'theme-my-login' ); ?></label>
 		</div>
-		<div class="submit form-group">
-			<input class="form-control" type="submit" name="wp-submit" id="wp-submit<?php $template->the_instance(); ?>" value="<?php esc_attr_e( 'Log In', 'theme-my-login' ); ?>" />
-			<input class="form-control" type="hidden" name="redirect_to" value="<?php $template->the_redirect_url( 'login' ); ?>" />
-			<input class="form-control" type="hidden" name="instance" value="<?php $template->the_instance(); ?>" />
-			<input class="form-control" type="hidden" name="action" value="login" />
-		</div>
+			<input class="btn btn-info" type="submit" name="wp-submit" id="wp-submit<?php $template->the_instance(); ?>" value="<?php esc_attr_e( 'Log In', 'theme-my-login' ); ?>" />
+			<input type="hidden" name="redirect_to" value="<?php $template->the_redirect_url( 'login' ); ?>" />
+			<input type="hidden" name="instance" value="<?php $template->the_instance(); ?>" />
+			<input type="hidden" name="action" value="login" />
 	</form>
 	<?php $template->the_action_links( array( 'login' => false ) ); ?>
 </div>
