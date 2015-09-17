@@ -47,28 +47,8 @@ $right_panel_on = of_get_option( 'right-panel-on' );
                         </li>
                      <?php } else { ?>
                         <li class="icon">
-                            <button type="button" class="custom-hamburger navbar-toggle navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
+                            <button id="fullscreen-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle hvr-push" data-toggle="modal" data-target="#fullscreen-panel">
                                 <span class="sr-only">Toggle fullscreen panel</span>
-                                <span class="icon-bar top-bar"></span>
-                                <span class="icon-bar middle-bar"></span>
-                                <span class="icon-bar bottom-bar"></span>
-                            </button>
-                        </li>
-                       <?php } ?>    
-                </ul>
-            <?php } ?>
-            
-             <!-- Non-collapsing left panel menu item -->
-             <?php if ( $left_panel_on && $left_panel_hamburger ){ ?>
-                <ul class="nav navbar-nav navbar-right non-collapsing">
-                    <?php if ( $left_panel_hamburger_text ){ ?>
-                        <li>
-                            <a href="#left-panel"><?= $left_panel_hamburger_text ?></a>
-                        </li>
-                     <?php } else { ?>
-                        <li class="icon">
-                            <button id="left-panel-button" type="button" class="custom-hamburger navbar-toggle">
-                                <span class="sr-only">Toggle left panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
                                 <span class="icon-bar bottom-bar"></span>
@@ -87,7 +67,7 @@ $right_panel_on = of_get_option( 'right-panel-on' );
                         </li>
                      <?php } else { ?>
                         <li class="icon">
-                            <button id="right-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle">
+                            <button id="right-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle hvr-push">
                                 <span class="sr-only">Toggle right panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
@@ -96,7 +76,27 @@ $right_panel_on = of_get_option( 'right-panel-on' );
                         </li>
                        <?php } ?>    
                 </ul>
-            <?php } ?>  
+            <?php } ?>
+            
+             <!-- Non-collapsing left panel menu item -->
+             <?php if ( $left_panel_on && $left_panel_hamburger ){ ?>
+                <ul class="nav navbar-nav navbar-right non-collapsing">
+                    <?php if ( $left_panel_hamburger_text ){ ?>
+                        <li>
+                            <a href="#left-panel"><?= $left_panel_hamburger_text ?></a>
+                        </li>
+                     <?php } else { ?>
+                        <li class="icon">
+                            <button id="left-panel-button" type="button" class="custom-hamburger navbar-toggle hvr-push">
+                                <span class="sr-only">Toggle left panel</span>
+                                <span class="icon-bar top-bar"></span>
+                                <span class="icon-bar middle-bar"></span>
+                                <span class="icon-bar bottom-bar"></span>
+                            </button>
+                        </li>
+                       <?php } ?>    
+                </ul>
+            <?php } ?>
             
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
             <!– Collect the nav links, forms, and other content for toggling –>

@@ -242,7 +242,7 @@
                     onClick: {
                         close: true
                     },
-                    slidingSubmenus : true,
+                    slidingSubmenus : false,
                     extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbar 		: {
 						title		: '<?= $left_panel_title ?>'
@@ -297,7 +297,7 @@
                     onClick: {
                         close: true
                     },
-                    slidingSubmenus : true,
+                    slidingSubmenus : false,
                     
                     extensions	: [ 'effect-slide-menu', 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbar 		: {

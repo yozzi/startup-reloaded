@@ -857,9 +857,8 @@ hr.star-primary:after {
     text-align: center;
 }
 /*--------------------------------------------------------------
-## Fullscreen modal menu
+## Custom Hamburgers
 --------------------------------------------------------------*/
-/* Hamburger */
 
 .custom-hamburger {
     display: block;
@@ -873,10 +872,23 @@ hr.star-primary:after {
     }
 }
 
-.custom-hamburger .bottom-bar {
+.custom-hamburger#left-panel-button .bottom-bar {
     width: 12px;
 }
-/* Modal */
+
+.custom-hamburger#right-panel-button .bottom-bar {
+    width: 12px;
+    margin-left: 10px;
+}
+
+.custom-hamburger#fullscreen-panel-button .top-bar,
+.custom-hamburger#fullscreen-panel-button .bottom-bar{
+    width: 18px;
+    margin-left: 2px;
+}
+/*--------------------------------------------------------------
+## Fullscreen modal menu
+--------------------------------------------------------------*/
 
 #fullscreen-panel ul {
     margin: 0;

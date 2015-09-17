@@ -421,7 +421,7 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
-        'desc' => __( 'Override hamburger with a text.', 'theme-textdomain' ),
+        'desc' => __( 'Override hamburger icon with a text.', 'theme-textdomain' ),
 		'id' => 'fullscreen-panel-hamburger-text',
         'type' => 'text',
         'class' => 'mini'
@@ -429,7 +429,7 @@ function optionsframework_options() {
     
 	$options[] = array(
 		'name' => __( 'Left panel', 'theme-textdomain' ),
-        'desc' => __( 'Activate. Use <strong>#left-panel</strong> on any button / link / menu item to make the magic go on.', 'theme-textdomain' ),
+        'desc' => __( 'Activate. Use <strong>#left-panel</strong> on any link / menu item or activate navbar hamburger below to make the magic go on.', 'theme-textdomain' ),
 		'id' => 'left-panel-on',
 		'std' => '0',
 		'type' => 'checkbox'
@@ -443,7 +443,7 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
-        'desc' => __( 'Override hamburger with a text.', 'theme-textdomain' ),
+        'desc' => __( 'Override hamburger icon with a text.', 'theme-textdomain' ),
 		'id' => 'left-panel-hamburger-text',
         'type' => 'text',
         'class' => 'mini'
@@ -481,7 +481,7 @@ function optionsframework_options() {
      
 	$options[] = array(
 		'name' => __( 'Right panel', 'theme-textdomain' ),
-        'desc' => __( 'Activate. Use <strong>#right-panel</strong> on any button / link / menu item to make the fantasy happen.', 'theme-textdomain' ),
+        'desc' => __( 'Activate. Use <strong>#right-panel</strong> on any link / menu item or activate navbar hamburger below to make the fantasy happen.', 'theme-textdomain' ),
 		'id' => 'right-panel-on',
 		'std' => '0',
 		'type' => 'checkbox'
@@ -495,7 +495,7 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
-        'desc' => __( 'Override hamburger with a text.', 'theme-textdomain' ),
+        'desc' => __( 'Override hamburger icon with a text.', 'theme-textdomain' ),
 		'id' => 'right-panel-hamburger-text',
         'type' => 'text',
         'class' => 'mini'
