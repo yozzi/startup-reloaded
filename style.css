@@ -1590,3 +1590,12 @@ header.page-header h4.boxed {
     font-size: 8px;
     line-height: 36px;
 }
+
+/*--------------------------------------------------------------
+## TML
+--------------------------------------------------------------*/
+
+.tml-action-links{
+    padding-left: 0px;
+    list-style: outside none none;
+}
