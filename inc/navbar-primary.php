@@ -46,8 +46,8 @@ $right_panel_on = of_get_option( 'right-panel-on' );
                             <a data-toggle="modal" data-target="#fullscreen-panel" href="#"><?= $fullscreen_panel_hamburger_text ?></a>
                         </li>
                      <?php } else { ?>
-                        <li class="icon">
-                            <button id="fullscreen-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle hvr-push" data-toggle="modal" data-target="#fullscreen-panel">
+                        <li class="icon hvr-push">
+                            <button id="fullscreen-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
                                 <span class="sr-only">Toggle fullscreen panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
@@ -66,8 +66,8 @@ $right_panel_on = of_get_option( 'right-panel-on' );
                             <a href="#right-panel"><?= $right_panel_hamburger_text ?></a>
                         </li>
                      <?php } else { ?>
-                        <li class="icon">
-                            <button id="right-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle hvr-push">
+                        <li class="icon hvr-push">
+                            <button id="right-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle">
                                 <span class="sr-only">Toggle right panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
@@ -86,8 +86,8 @@ $right_panel_on = of_get_option( 'right-panel-on' );
                             <a href="#left-panel"><?= $left_panel_hamburger_text ?></a>
                         </li>
                      <?php } else { ?>
-                        <li class="icon">
-                            <button id="left-panel-button" type="button" class="custom-hamburger navbar-toggle hvr-push">
+                        <li class="icon hvr-push">
+                            <button id="left-panel-button" type="button" class="custom-hamburger navbar-toggle">
                                 <span class="sr-only">Toggle left panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
