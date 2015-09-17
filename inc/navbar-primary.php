@@ -1,6 +1,7 @@
 <header id="masthead" class="site-header" role="banner">
 
     <?php
+        $responsive = of_get_option( 'general-responsive' );
         $navbar_position = of_get_option( 'navbar-position' );
         $navbar_logo_position = of_get_option( 'navbar-logo-position' );
         $navbar_menu_position = of_get_option( 'navbar-menu-position' );
