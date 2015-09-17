@@ -546,7 +546,8 @@ body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
 --------------------------------------------------------------*/
 
 a,
-button {
+button,
+input[type="submit"]{
     -webkit-transition: 300ms;
     -moz-transition: 300ms;
     -o-transition: 300ms;
