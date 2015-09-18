@@ -35,7 +35,7 @@
                     <?php } ?>
                 <?php } ?>
             <div class="navbar-header <?php echo $navbar_logo_position; ?>">
-                <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+                <a class="navbar-brand<?php if($logo){echo ' logo';} ?>" href="<?php bloginfo('url'); ?>">
                     <?php if ( $logo ) {?>
                     <img src="<?= $logo ?>" alt="<?php bloginfo('name'); ?>" />
                     <?php } else {?>
