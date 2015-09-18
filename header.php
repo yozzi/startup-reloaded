@@ -202,9 +202,19 @@
             ga('send', 'pageview');
         </script>
     <?php endif ?>
-
     
-    
+    <?php if ( $navbar_on ) : ?>
+        <script>
+        //jQuery to collapse the navbar on scroll
+        jQuery(window).scroll(function () {
+            if (jQuery(".navbar").offset().top > 80) {
+                jQuery(".navbar-fixed-top").addClass("top-nav-collapse");
+            } else {
+                jQuery(".navbar-fixed-top").removeClass("top-nav-collapse");
+            }
+        });
+        </script>
+    <?php endif ?>
     
     <?php
         if( $left_panel_on || $right_panel_on ){
