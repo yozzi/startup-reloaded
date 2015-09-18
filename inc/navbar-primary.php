@@ -1,6 +1,7 @@
 <header id="masthead" class="site-header" role="banner">
 
     <?php
+        $logo = of_get_option( 'general-logo' );
         $responsive = of_get_option( 'general-responsive' );
         $navbar_position = of_get_option( 'navbar-position' );
         $navbar_logo_position = of_get_option( 'navbar-logo-position' );
@@ -35,7 +36,11 @@
                 <?php } ?>
             <div class="navbar-header <?php echo $navbar_logo_position; ?>">
                 <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+                    <?php if ( $logo ) {?>
+                    <img src="<?= $logo ?>" alt="<?php bloginfo('name'); ?>" />
+                    <?php } else {?>
                     <?php bloginfo('name'); ?>
+                    <?php } ?>
                 </a>
             </div>
             

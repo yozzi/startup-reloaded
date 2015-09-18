@@ -19,6 +19,12 @@ function optionsframework_options() {
 		'type' => 'text'
 	);
     
+    $options[] = array(
+		'name' => __( 'Image Logo', 'theme-textdomain' ),
+		'id' => 'general-logo',
+		'type' => 'upload'
+	);
+    
 	$options[] = array(
 		'name' => __( 'Layout', 'theme-textdomain' ),
 		'type' => 'info'
@@ -312,12 +318,6 @@ function optionsframework_options() {
     $options[] = array(
 		'name' => __( 'Navigation', 'theme-textdomain' ),
 		'type' => 'heading'
-	);
-    
-    $options[] = array(
-		'name' => __( 'Image Logo', 'theme-textdomain' ),
-		'id' => 'general-logo',
-		'type' => 'upload'
 	);
     
 	$options[] = array(
