@@ -1,0 +1,23 @@
+.product-thumbnail{
+-webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+#products #shuffle .item .product {
+    background: #f1f1f1;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.product-price{
+    background: #fff;
+}
+
+a {
+    color: #000;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d6263d;
+}
