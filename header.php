@@ -215,7 +215,7 @@
             });
         </script>
     <?php endif ?>
-    
+        
     <?php
         if( $left_panel_on || $right_panel_on ){
             $locations = get_registered_nav_menus();

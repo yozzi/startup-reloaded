@@ -14,6 +14,14 @@ $portfolio_style = of_get_option( 'portfolio-style' );
 $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
 $left_panel_on = of_get_option( 'fullscreen-panel-on' );
 $right_panel_on = of_get_option( 'right-panel-on' );
+$navbar_height = of_get_option( 'navbar-height' );
+
+if ( $navbar_height ) {
+    $scroll_offset = $navbar_height;
+} else {
+    $scroll_offset = 0;
+}
+
 ?>
 
 	</div><!-- #content -->
@@ -31,6 +39,23 @@ $right_panel_on = of_get_option( 'right-panel-on' );
 <?php if( $fullscreen_panel_on ){ require get_template_directory() . '/inc/fullscreen-panel.php'; } ?>
 
 <?php wp_footer(); ?>
+
+<script type="text/javascript">
+    // Smooth Scroll to anchor
+    
+    jQuery(".scroll").on('click', function (e) {
+        // prevent default anchor click behavior
+        e.preventDefault();
+        // animate
+        jQuery('html, body').animate({
+            scrollTop: jQuery(this.hash).offset().top - <?= $scroll_offset ?>
+        }, 400, function () {
+            // when done, add hash to url
+            // (default click behaviour)
+            //window.location.hash = this.hash;
+        });
+    });
+</script>
 
 <?php  if( $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){ ?>
     <script type="text/javascript">
