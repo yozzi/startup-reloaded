@@ -193,7 +193,7 @@
     </style>
 
     <?php if ( $ga ) : ?>
-        <script>
+        <script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -204,15 +204,15 @@
     <?php endif ?>
     
     <?php if ( $navbar_on ) : ?>
-        <script>
-        //jQuery to collapse the navbar on scroll
-        jQuery(window).scroll(function () {
-            if (jQuery(".navbar").offset().top > 80) {
-                jQuery(".navbar-fixed-top").addClass("top-nav-collapse");
-            } else {
-                jQuery(".navbar-fixed-top").removeClass("top-nav-collapse");
-            }
-        });
+        <script type="text/javascript">
+            //jQuery to collapse the navbar on scroll
+            jQuery(window).scroll(function () {
+                if (jQuery(".navbar").offset().top > 80) {
+                    jQuery(".navbar-fixed-top").addClass("top-nav-collapse");
+                } else {
+                    jQuery(".navbar-fixed-top").removeClass("top-nav-collapse");
+                }
+            });
         </script>
     <?php endif ?>
     
