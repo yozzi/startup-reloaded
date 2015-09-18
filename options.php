@@ -314,6 +314,12 @@ function optionsframework_options() {
 		'type' => 'heading'
 	);
     
+    $options[] = array(
+		'name' => __( 'Image Logo', 'theme-textdomain' ),
+		'id' => 'general-logo',
+		'type' => 'upload'
+	);
+    
 	$options[] = array(
 		'name' => __( 'Navbar', 'theme-textdomain' ),
         'desc' => __( 'Activate', 'theme-textdomain' ),
