@@ -53,7 +53,7 @@
                         </li>
                      <?php } else { ?>
                         <li class="icon hvr-push">
-                            <button id="fullscreen-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
+                            <button id="fullscreen-panel-button" type="button" class="custom-hamburger navbar-toggle" data-toggle="modal" data-target="#fullscreen-panel">
                                 <span class="sr-only">Toggle fullscreen panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
