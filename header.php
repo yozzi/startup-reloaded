@@ -56,7 +56,7 @@
 
     <?php wp_head(); ?>
 
-    <style>
+<style>
     body{
     <?php
     if ( $background['color'] ) { ?>  background-color: <?= $background['color'] ?>;
@@ -190,9 +190,9 @@
     #colophon-bg {
       background-color: <?= $footer_color ?>;
     }
-    </style>
+</style>
 
-    <?php if ( $ga ) : ?>
+    <?php if ($ga){ ?>
         <script type="text/javascript">
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -201,9 +201,9 @@
             ga('create', '<?= $ga; ?>', 'auto');
             ga('send', 'pageview');
         </script>
-    <?php endif ?>
+    <?php } ?>
     
-    <?php if ( $navbar_on ) : ?>
+    <?php if ($navbar_on){ ?>
         <script type="text/javascript">
             //jQuery to collapse the navbar on scroll
             jQuery(window).scroll(function () {
@@ -214,7 +214,7 @@
                 }
             });
         </script>
-    <?php endif ?>
+    <?php } ?>
         
     <?php
         if( $left_panel_on || $right_panel_on ){

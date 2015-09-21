@@ -50,12 +50,12 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <div class="carousel-content <?php if ( $position ) { echo $position; } ?>">
-                                            <h2 <?php if ( $boxed ) { echo 'class="boxed"'; } ?> data-animation="animated <?php echo $title_animation ?>" style="-webkit-animation-delay: <?php echo $title_delay ?>ms;-moz-animation-delay: <?php echo $title_delay ?>ms;animation-delay: <?php echo $title_delay ?>ms;">
+                                            <h2 class="hvr-grow<?php if ( $boxed ) { echo ' boxed'; } ?>" data-animation="animated <?php echo $title_animation ?>" style="-webkit-animation-delay: <?php echo $title_delay ?>ms;-moz-animation-delay: <?php echo $title_delay ?>ms;animation-delay: <?php echo $title_delay ?>ms;">
                                                 <?php echo $slider->post_title ?>
                                             </h2>
                                             <?php if( $slider->post_content ) { ?>
                                             <br />
-                                            <p <?php if ( $boxed ) { echo 'class="boxed"'; } ?> data-animation="animated <?php echo $content_animation ?>" style="-webkit-animation-delay: <?php echo $content_delay ?>ms;-moz-animation-delay: <?php echo $content_delay ?>ms;animation-delay: <?php echo $content_delay ?>ms;">
+                                            <p class="hvr-grow<?php if ( $boxed ) { echo ' boxed'; } ?>" data-animation="animated <?php echo $content_animation ?>" style="-webkit-animation-delay: <?php echo $content_delay ?>ms;-moz-animation-delay: <?php echo $content_delay ?>ms;animation-delay: <?php echo $content_delay ?>ms;">
                                                 <?php echo do_shortcode( $slider->post_content ) ?>
                                             </p>
                                             <?php } ?>

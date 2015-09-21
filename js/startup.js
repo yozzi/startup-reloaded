@@ -100,3 +100,13 @@ function scrollToTop() {
 $(document).ready(function () {
     $('#fullscreen-panel li > a').addClass('hvr-grow');
 });
+
+// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
+  $('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).fadeIn();
+  });
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).fadeOut();
+  });

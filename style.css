@@ -641,23 +641,43 @@ section {
 /*--------------------------------------------------------------
 ## Navigation
 --------------------------------------------------------------*/
-.navbar-brand.logo {
-  padding: 5px;
-    height: 80px;
+@media (min-width: 768px){
+    .navbar.logo .navbar-brand > img {
+        height: 120px;
+    }
+
+    .navbar.logo .navbar-brand {
+        height: 100%;
+    }
+
+    .navbar.logo .navbar-nav {
+        padding-top: 50px;
+    }
 }
 
-.home .navbar-brand.logo {
-  padding: 0;
-}
-.home .top-nav-collapse .navbar-brand.logo {
-  padding: 5px;
+@media (max-width: 767px){
+    .navbar.logo .navbar-brand > img {
+        height: 80px;
+    }
+
+    .navbar.logo .navbar-brand {
+        height: 100%;
+        padding: 5px;
+    }
+
+    .navbar.logo .navbar-nav {
+        padding-top: 20px;
+    }
+    
+    .navbar.logo .navbar-toggle {
+        padding-top: 30px;
+    }
 }
 
-.navbar-brand.logo > img {
-  object-fit: contain;
-  max-height: 100%;
-  height: 100%;
-}
+
+
+
+
 
 .navbar-toggle {
     margin-top: 7px;
@@ -695,6 +715,15 @@ body.home #site-navigation.navbar-transparent {
     body.home #site-navigation.navbar-transparent {
         padding-top: 15px;
         padding-bottom: 15px;
+    }
+    
+    body.home #site-navigation.logo.navbar-transparent {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    body.home #site-navigation.logo.navbar-transparent .navbar-brand > img{
+        height: 60px;
     }
 }
 
@@ -1034,6 +1063,7 @@ hr.star-primary:after {
     color: #fff;
     padding: 10px 15px;
     display: inline-block;
+    cursor: default;
 }
 /* Boxed style */
 

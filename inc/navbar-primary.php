@@ -21,7 +21,7 @@
         $right_panel_hamburger_text = of_get_option( 'right-panel-hamburger-text' );
     ?>
 
-    <nav id="site-navigation" class="navbar navbar-default <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
+    <nav id="site-navigation" class="navbar navbar-default<?php if($logo){echo ' logo';} ?> <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
         <!– Brand and toggle get grouped for better mobile display –>
         <div class="container">
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
@@ -35,7 +35,7 @@
                     <?php } ?>
                 <?php } ?>
             <div class="navbar-header <?php echo $navbar_logo_position; ?>">
-                <a class="navbar-brand<?php if($logo){echo ' logo';} ?>" href="<?php bloginfo('url'); ?>">
+                <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
                     <?php if ( $logo ) {?>
                     <img src="<?= $logo ?>" alt="<?php bloginfo('name'); ?>" />
                     <?php } else {?>
