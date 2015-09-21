@@ -1774,6 +1774,10 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     }
 }
 
+
+
+/**************** Transitions ****************/
+
 body.home #site-navigation.navbar-transparent {
     -webkit-transition: background 300ms linear, padding 300ms linear;
     -moz-transition: background 300ms linear, padding 300ms linear;
@@ -1782,9 +1786,21 @@ body.home #site-navigation.navbar-transparent {
     transition: background 300ms linear, padding 300ms linear;
 }
 
+.logo .navbar-brand > img {
+    -webkit-transition: height 300ms linear, padding 300ms linear;
+    -moz-transition: height 300ms linear, padding 300ms linear;
+    -ms-transition: height 300ms linear, padding 300ms linear;
+    -o-transition: height 300ms linear, padding 300ms linear;
+    transition: height 300ms linear, padding 300ms linear;
+}
 
-
-
+.logo .navbar-nav {
+    -webkit-transition: padding 300ms linear;
+    -moz-transition: padding 300ms linear;
+    -ms-transition: padding 300ms linear;
+    -o-transition: padding 300ms linear;
+    transition: padding 300ms linear;
+}
 
 /**************** Padding ****************/
 
