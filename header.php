@@ -13,6 +13,7 @@
 
     <?php
         //Charger les variables d'Option Framework
+        $logo = of_get_option( 'general-logo' );
         $responsive = of_get_option( 'general-responsive' );
         $ga = of_get_option( 'general-ga' ); //Code utilisateur Google Analyics
         $page_transition = of_get_option( 'page-transition' );
@@ -20,7 +21,6 @@
         $page_transition_out = of_get_option( 'page-transition-out' );
         $navbar_on = of_get_option( 'navbar-on' );
         $navbar_position = of_get_option( 'navbar-position' );
-        $navbar_height = of_get_option( 'navbar-height' );
         $navbar_transparent = of_get_option( 'navbar-transparent' );
         $navbar_translucent = of_get_option( 'navbar-translucent' );
         $navbar_color = of_get_option( 'navbar-color' );
@@ -46,6 +46,15 @@
         $bt_badge_text = of_get_option( 'button-badge-text' );
         $custom_css = of_get_option( 'custom-css' );
         $footer_color = of_get_option( 'footer-color' );
+
+        
+        if ($logo){$body_logo = 'logo-on';} else {$body_logo = 'logo-off';};
+        if ($navbar_transparent){$body_transparent = 'transparent-on';} else {$body_transparent = 'transparent-off';};
+        if ($navbar_position == 'navbar-static-top'){$body_position = 'static-top';};
+        if ($navbar_position == 'navbar-fixed-top'){$body_position = 'fixed-top';};
+        if ($navbar_position == 'navbar-fixed-bottom'){$body_position = 'fixed-bottom';};
+        
+
 
         if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -107,28 +116,8 @@
     }
         
     /* Navbar Padding */
-        
-    body.startup-nav-navbar-fixed-top #content{
-      padding-top: <?= $navbar_height ?>px;
-    }
-
-    body.home #content{
-      padding-top: 0;
-    }
-
-    body.home.startup-nav-transparent.startup-nav-navbar-fixed-top .panel-page-container{
-      padding-top: <?= $navbar_height ?>px;
-    }
-
-    body.startup-nav-navbar-fixed-bottom{
-      padding-bottom: <?= $navbar_height ?>px;        
-    }
-        
-    @media (max-width: 767px){
-      body.home.startup-nav-transparent1.startup-nav-navbar-fixed-top .panel-page-container{
-        padding-top:<?= $navbar_height ?>px;
-      }
-    }
+    
+   
    
     /* Custom buttons */
     .btn{
@@ -381,8 +370,8 @@
     
 </head>
 <?php if ( $responsive != 1 ) { $unresponsive = 'ur'; } else { $unresponsive = ''; } ?>
-<body <?php body_class( array( $unresponsive, 'startup-nav-transparent'. $navbar_transparent, 'startup-nav-'. $navbar_position));?>>
-    <?php if( $left_panel_on || $right_panel_on ) { ?><div class="panel-page-container"><?php } ?>
+<body <?php body_class( array( $unresponsive, $body_transparent, $body_position, $body_logo));?>>
+    <div class="panel-page-container">
         <?php if( $page_transition ) { ?>
             <div class="animsition" data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>">
         <?php } ?>

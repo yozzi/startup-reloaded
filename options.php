@@ -365,14 +365,6 @@ function optionsframework_options() {
 		'type' => 'color'
 	);
     
-    $options[] = array(
-        'desc' => __( 'Height in px. Required for fixed-top position to prevent content overlapping. Should be left blank or set to 0 for other navbar positions.', 'theme-textdomain' ),
-		'id' => 'navbar-height',
-		'std' => '50',
-		'type' => 'text',
-        'class' => 'mini'
-	);
-    
     $navbar_item_positions = array(
 		'navbar-left' => __( 'Left', 'theme-textdomain' ),
 		'navbar-right' => __( 'Right', 'theme-textdomain' )
