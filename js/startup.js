@@ -110,3 +110,61 @@ $('.dropdown').on('show.bs.dropdown', function(e){
 $('.dropdown').on('hide.bs.dropdown', function(e){
     $(this).find('.dropdown-menu').first().stop(true, true).fadeOut();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//animate.css		
+//jQuery(document).ready(function() {		
+//		
+//jQuery('.st_bounceInLeft').addClass("bt_hidden").viewportChecker({		
+//classToAdd: 'bt_visible animated bounceInLeft', 		
+//offset: 0, 		
+//repeat: true, 		
+//callbackFunction: function(elem, action){},		
+//scrollHorizontal: false 		
+//});		
+//		
+//		
+//jQuery('.st_fadeIn').addClass("bt_hidden").viewportChecker({		
+//classToAdd: 'bt_visible animated fadeIn', 		
+//offset: 0, 		
+//repeat: true, 		
+//callbackFunction: function(elem, action){},		
+//scrollHorizontal: false 		
+//});		
+//		
+//jQuery('.st_zoomIn').addClass("bt_hidden").viewportChecker({		
+//classToAdd: 'bt_visible animated zoomIn', 		
+//offset: 0, 		
+//repeat: true, 		
+//callbackFunction: function(elem, action){},		
+//scrollHorizontal: false 		
+//});		
+//		
+//jQuery('.st_rotateIn').addClass("bt_hidden").viewportChecker({		
+//classToAdd: 'bt_visible animated rotateIn', 		
+//offset: 0, 		
+//repeat: true, 		
+//callbackFunction: function(elem, action){},		
+//scrollHorizontal: false 		
+//});		
+//		
+//		
+//		
+//});		
