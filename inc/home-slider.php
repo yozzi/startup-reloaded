@@ -96,9 +96,11 @@
 
         <!-- Goto content -->
         <?php if ( $slider_navigation == 'slider_content_arrow' ) { ?>
-            <a href="#primary" class="slider-down-arrow hvr-<?php echo $slider_arrows_hover ?> scroll">
-                <i class="fa fa-chevron-down fa-lg"></i>
-            </a>
+            <div class="hvr-<?php echo $slider_arrows_hover ?>">
+                <a href="#primary" class="slider-down-arrow scroll">
+                    <i class="fa fa-chevron-down fa-lg"></i>
+                </a>
+            </div>
         <?php } ?>
     </div>
 <?php } ?>
