@@ -72,9 +72,9 @@ function startup_reloaded_scripts() {
     
     if (is_plugin_active('startup-cpt-milestones/startup-cpt-milestones.php')){
         wp_enqueue_script( 'startup-reloaded-counterup', get_template_directory_uri() . '/js/jquery.counterup.js', array( ), false, 'all' );
+        
+        wp_enqueue_script( 'startup-reloaded-waypoint', get_template_directory_uri() . '/js/waypoint.js', array( ), false, 'all' );
     }
-    
-    wp_enqueue_script( 'startup-reloaded-waypoint', get_template_directory_uri() . '/js/waypoint.js', array( ), false, 'all' );
     
     wp_enqueue_script( 'startup-reloaded-parallax', get_template_directory_uri() . '/js/parallax.min.js', array( ), false, 'all' );
     
