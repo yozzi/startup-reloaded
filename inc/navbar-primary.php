@@ -73,7 +73,7 @@
                         </li>
                      <?php } else { ?>
                         <li class="icon hvr-push">
-                            <button id="right-panel-button" type="button" class="custom-hamburger navbar-toggle navbar-toggle">
+                            <button id="right-panel-button" type="button" class="custom-hamburger navbar-toggle">
                                 <span class="sr-only">Toggle right panel</span>
                                 <span class="icon-bar top-bar"></span>
                                 <span class="icon-bar middle-bar"></span>
