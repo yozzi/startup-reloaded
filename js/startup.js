@@ -130,15 +130,15 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
 
 
 //animate.css		
-//jQuery(document).ready(function() {		
-//		
-//jQuery('.st_bounceInLeft').addClass("bt_hidden").viewportChecker({		
-//classToAdd: 'bt_visible animated bounceInLeft', 		
-//offset: 0, 		
-//repeat: true, 		
-//callbackFunction: function(elem, action){},		
-//scrollHorizontal: false 		
-//});		
+jQuery(document).ready(function() {		
+		
+    jQuery('.st_bounceInLeft').addClass("bt_hidden").viewportChecker({		
+        classToAdd: 'bt_visible animated bounceInLeft', 		
+        offset: 0, 		
+        repeat: true, 		
+        callbackFunction: function(elem, action){},		
+        scrollHorizontal: false 		
+    });		
 //		
 //		
 //jQuery('.st_fadeIn').addClass("bt_hidden").viewportChecker({		
@@ -167,4 +167,4 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
 //		
 //		
 //		
-//});		
+});		
