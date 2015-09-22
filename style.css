@@ -643,7 +643,8 @@ section {
 --------------------------------------------------------------*/
 
 .navbar-toggle {
-    margin-top: 7px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
 }
 
 .navbar-toggle .icon-bar {
@@ -708,7 +709,7 @@ section {
         float: right;
     }
     #site-navigation .nav.navbar-nav.navbar-right li > a {
-        padding: 8px 5px;
+        padding: 7.5px 5px;
     }
     #site-navigation .navbar-header {
         float: left;
@@ -1702,13 +1703,13 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     }
 
     .logo.navbar-static-top .navbar-nav {
-        padding-top: 22px;
+        padding-top: 22.5px;
     }
 }
 
 @media (max-width: 767px){
     .logo.navbar-static-top .navbar-brand > img {
-        height: 50px;
+        height: 40px;
     }
 
     .logo.navbar-static-top .navbar-brand {
@@ -1718,11 +1719,11 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     }
 
     .logo.navbar-static-top .navbar-nav {
-        padding-top: 5px;
+/*        padding-top: 5px;*/
     }
     
     .logo.navbar-static-top .navbar-toggle {
-        padding-top: 15px;
+/*        padding-top: 15px;*/
     }
 }
 
@@ -1738,7 +1739,7 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
     }
 
     .logo.navbar-fixed-top .navbar-nav {
-        padding-top: 22px;
+        padding-top: 22.5px;
     }
     
     

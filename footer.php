@@ -15,8 +15,9 @@ $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
 $left_panel_on = of_get_option( 'fullscreen-panel-on' );
 $right_panel_on = of_get_option( 'right-panel-on' );
 $navbar_position = of_get_option( 'navbar-position' );
+$navbar_transparent = of_get_option( 'navbar-transparent' );
 
-if ( $navbar_height && $navbar_position == 'navbar-fixed-top' ) {
+if ( $navbar_position == 'navbar-fixed-top' ) {
     $scroll_offset = 50;
 } else {
     $scroll_offset = 0;
