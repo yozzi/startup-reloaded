@@ -100,6 +100,8 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 <?php if( $page_transition ) { ?>
         </div>
 <?php } ?>
-</div>
+<?php if( $left_panel_on || $right_panel_on ){ ?>
+    </div>
+<?php } ?>
 </body>
 </html>

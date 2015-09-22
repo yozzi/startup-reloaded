@@ -371,7 +371,9 @@
 </head>
 <?php if ( $responsive != 1 ) { $unresponsive = 'ur'; } else { $unresponsive = ''; } ?>
 <body <?php body_class( array( $unresponsive, $body_transparent, $body_position, $body_logo));?>>
-    <div class="panel-page-container">
+    <?php if( $left_panel_on || $right_panel_on ){ ?>
+        <div class="panel-page-container">
+            <?php } ?>
         <?php if( $page_transition ) { ?>
             <div class="animsition" data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>">
         <?php } ?>
