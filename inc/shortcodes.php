@@ -6,6 +6,13 @@ add_shortcode( 'home', function( $atts, $content= null ){
     return ob_get_clean();
 });
 
+// Blog
+add_shortcode( 'blog', function( $atts, $content= null ){
+    ob_start();
+    require get_template_directory() . '/inc/shortcodes/blog.php';
+    return ob_get_clean();
+});
+
 // Milestones
 add_shortcode( 'milestones', function( $atts, $content= null ){
     ob_start();
