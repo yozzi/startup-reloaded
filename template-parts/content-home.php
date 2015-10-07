@@ -5,7 +5,8 @@
 ?>
 
 <?php $hasposts = get_posts('post_type=home');
-    if ( is_plugin_active('startup-cpt-home/startup-cpt-home.php') && !empty ( $hasposts ) ) {
+      $home_type = of_get_option( 'home-type' );
+    if ( is_plugin_active('startup-cpt-home/startup-cpt-home.php') && !empty ( $hasposts ) && $home_type ) {
 
         require get_template_directory() . '/inc/shortcodes/home.php';
 
