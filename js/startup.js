@@ -111,13 +111,13 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
     $(this).find('.dropdown-menu').first().stop(true, true).fadeOut();
 });
 
-//animate.css		
-jQuery(document).ready(function() {
-    jQuery('#products .product').viewportChecker({
-        classToAdd: 'animated bounceIn',
-        offset: 0,
-        repeat: true,
-        callbackFunction: function(elem, action){},
-        scrollHorizontal: false
-    });
-});
+////animate.css		
+//jQuery(document).ready(function() {
+//    jQuery('#products .product-thumbnail').viewportChecker({
+//        classToAdd: 'animated bounceIn',
+//        offset: 100,
+//        repeat: true,
+//        callbackFunction: function(elem, action){},
+//        scrollHorizontal: false
+//    });
+//});
