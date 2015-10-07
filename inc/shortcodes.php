@@ -1,4 +1,11 @@
 <?php
+// Home
+add_shortcode( 'home', function( $atts, $content= null ){
+    ob_start();
+    require get_template_directory() . '/inc/shortcodes/home.php';
+    return ob_get_clean();
+});
+
 // Milestones
 add_shortcode( 'milestones', function( $atts, $content= null ){
     ob_start();
