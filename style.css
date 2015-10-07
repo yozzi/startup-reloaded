@@ -1478,25 +1478,25 @@ hr.star-primary:after {
     margin: 0;
 }
 /*--------------------------------------------------------------
-## Products
+## Blog
 --------------------------------------------------------------*/
 
-#products #shuffle {
+#blog #shuffle {
     margin-top: 20px;
 }
 
-#products #shuffle > .item {
+#blog #shuffle > .item {
     margin-bottom: 30px;
 }
 
-#products #shuffle .item .product {
+#blog #shuffle .item .post {
     background: #f0f0f0;
     -webkit-border-radius: 4px;
     border-radius: 4px;
     height: auto;
 }
 
-.product-thumbnail {
+#blog #shuffle .post-thumbnail {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -1504,36 +1504,17 @@ hr.star-primary:after {
     border-radius: 4px 4px 0 0;
 }
 
-.product-thumbnail img {
+#blog #shuffle .post-thumbnail img {
     width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-.product-thumbnail .label {
-    font-size: 15px;
-    font-weight: 400;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.product-details {
+#blog #shuffle .post-details {
     padding: 15px;
 }
 
-.product-price {
-    font-weight: bolder;
-    font-size: 20px;
-    margin-top: 30px;
-    text-align: center;
-}
-
-.modal-body .carousel .item img {
-    width: 100%;
-    height: auto;
-}
 /*--------------------------------------------------------------
 ## Portfolio
 --------------------------------------------------------------*/
@@ -1624,6 +1605,64 @@ hr.star-primary:after {
     margin-top: -35px;
     text-align: center;
     color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+## Products
+--------------------------------------------------------------*/
+
+#products #shuffle {
+    margin-top: 20px;
+}
+
+#products #shuffle > .item {
+    margin-bottom: 30px;
+}
+
+#products #shuffle .item .product {
+    background: #f0f0f0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    height: auto;
+}
+
+.product-thumbnail {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.product-thumbnail img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-thumbnail .label {
+    font-size: 15px;
+    font-weight: 400;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-price {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.modal-body .carousel .item img {
+    width: 100%;
+    height: auto;
 }
 /*--------------------------------------------------------------
 ## Services

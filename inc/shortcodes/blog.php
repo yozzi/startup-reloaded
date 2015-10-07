@@ -20,6 +20,7 @@
 <!--    <div class="container">-->
         <div id="shuffle" class="row">
             <?php foreach ($blog as $key=> $post) {
+                $categories = get_the_terms( $post->ID, 'category' );
                 $image = get_the_post_thumbnail($post->ID, 'grid_thumb');
             ?>
                 <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
