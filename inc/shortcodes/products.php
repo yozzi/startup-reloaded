@@ -41,7 +41,7 @@
                             else { $image = 'Il manque une image'; } ?>
                             
                             
-                            <? echo $image ;?>
+                            <?= $image ?>
                             
                             
                             <?php if ( $status == 'Available') { ?><span class="label label-success"><?php _e( $status, 'startup-reloaded-products' ) ?></span><?php }
