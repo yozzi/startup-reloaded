@@ -620,7 +620,22 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    $portfolio_styles= array(
+    $blog_filters = array(
+		'buttons' => __( 'Buttons', 'theme-textdomain' ),
+		'dropdown' => __( 'Dropdown', 'theme-textdomain' )
+	);
+    
+    $options[] = array(
+		'name' => __( 'Blog', 'theme-textdomain' ),
+        'desc' => __( 'Filter type', 'theme-textdomain' ),
+		'id' => 'blog-filter',
+		'std' => 'dropdown',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => $blog_filters
+	);
+    
+    $portfolio_styles = array(
 		'grid' => __( 'Grid', 'theme-textdomain' ),
 		'shuffle' => __( 'Shuffle', 'theme-textdomain' )
 	);
