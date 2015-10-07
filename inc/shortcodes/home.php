@@ -1,31 +1,32 @@
 <?php
-$args=array( 'post_type'=>'milestones', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
-$milestones = get_posts( $args );
-//$total_milestones = count($milestones);
+$args=array( 'post_type'=>'home', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
+$home_sections = get_posts( $args );
+$counter = 0;
+
 ?>
-<section id="milestones">
+<section id="home">
     <div class="container">
         <div class="row">
-            <?php foreach ($milestones as $key=> $milestone) {
-                $milestone_icon    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_icon', true );
-                $milestone_value    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_value', true );
-                $milestone_unit   = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_unit', true );
+            <?php foreach ($home_sections as $key=> $home_section) {
+                //$milestone_icon    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_icon', true );
+                //$milestone_value    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_value', true );
+                //$milestone_unit   = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_unit', true );
             ?>
-                <div class="col-xs-6 col-sm-3">
-                    <div class="milestone">
-                        <i class="fa fa-<?php echo $milestone_icon; ?> fa-5x"></i>
-                        <span class="milestone-data">
-                            <span class="milestone-count"><?php echo $milestone_value; ?></span><span>
-                            <?php echo $milestone_unit; ?>
-                        </span>
-                        </span>
-                        <div class="milestone-details">
-                            <?php echo $milestone->post_title ?>
-                        </div>
+                <?php if ( $counter == 0 ) {?>
+                    <div class="col-xs-12">
+                <?php } else { ?>
+                    <div class="col-xs-12 col-sm-6">
+                <?php } ?>
+                    <div class="home-section">
+                                             
+                        <h3><?php echo $home_section->post_title ?></h3>
+                        <p><?php echo $home_section->post_content ?></p>
 
                     </div>
                 </div>
-            <?php } // endforeach ?>
+            <?php 
+                $counter ++;
+                } // endforeach ?>
         </div>
     </div>
 </section>
