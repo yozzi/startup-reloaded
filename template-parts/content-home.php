@@ -5,11 +5,11 @@
 ?>
 
 <?php $hasposts = get_posts('post_type=home');
-    if ( is_plugin_active('startup-cpt-home/startup-cpt-home.php') && !empty ( $hasposts ) ) { ?>
+    if ( is_plugin_active('startup-cpt-home/startup-cpt-home.php') && !empty ( $hasposts ) ) {
 
-    coucou
+        require get_template_directory() . '/inc/shortcodes/home.php';
 
-<?php } else { ?>
+    } else { ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="entry-content">
             <?php
