@@ -47,7 +47,7 @@
                             <?php if ( $thumbnail ) { $image = $thumbnail; }
                             elseif ( $main_pic ) { $image = $main_pic; }
                             else { $image = 'Il manque une image'; } ?>
-                            <? echo $image ;?>
+                            <?= $image ?>
                         </div>
                         <div class="portfolio-item-details">
                             <h4><?= $portfolio_item->post_title ?></h4>
