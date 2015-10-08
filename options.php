@@ -648,7 +648,7 @@ function optionsframework_options() {
     
     $options[] = array(
 		'name' => __( 'Home', 'theme-textdomain' ),
-        'desc' => __( 'Gnerate home content with Home plugin custom post sections. If not, use a classic page with the Home template.', 'theme-textdomain' ),
+        'desc' => __( 'Generate home content with Home plugin custom post sections. If not, use a classic page with the Home template.', 'theme-textdomain' ),
 		'id' => 'home-type',
 		'std' => '0',
 		'type' => 'checkbox'
