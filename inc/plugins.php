@@ -15,6 +15,16 @@ function startup_reloaded_register_required_plugins() {
             'force_deactivation' => false,
             'external_url'       => 'https://github.com/yozzi/startup',
         ),
+         array(
+            'name'               => 'StartUp Home',
+            'slug'               => 'startup-cpt-home',
+            'source'             => 'https://github.com/yozzi/startup-cpt-home/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-home',
+        ),
         array(
             'name'               => 'StartUp Milestones',
             'slug'               => 'startup-cpt-milestones',
@@ -198,7 +208,7 @@ function startup_reloaded_register_required_plugins() {
     $config = array(
         'default_path' => '',                      // Default absolute path to pre-packaged plugins.
         'menu'         => 'tgmpa-install-plugins', // Menu slug.
-        'has_notices'  => true,                    // Show admin notices or not.
+        'has_notices'  => false,                    // Show admin notices or not.
         'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
         'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
         'is_automatic' => true,                   // Automatically activate plugins after installation or not.
