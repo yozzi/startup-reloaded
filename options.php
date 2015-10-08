@@ -263,7 +263,7 @@ function optionsframework_options() {
 	);
     
 	$options[] = array(
-		'name' => __( 'Page header', 'theme-textdomain' ),
+		'name' => __( 'Pages & posts header', 'theme-textdomain' ),
         'desc' => __( 'Hide the header. Or not. Overrides individual page setting if ckecked.', 'theme-textdomain' ),
 		'id' => 'page-header-hidden',
 		'std' => '0',
