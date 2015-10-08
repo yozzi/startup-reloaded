@@ -50,6 +50,18 @@ function startup_reloaded_metabox_pages() {
 	) );
     
     $cmb_box->add_field( array(
+		'name'             => __( 'Background image position', 'cmb2' ),
+		'id'               => $prefix . 'header_background_position',
+		'type'             => 'select',
+        'default'          => 'center',
+		'options'          => array(
+			'top' => __( 'Top', 'cmb2' ),
+			'center' => __( 'Center', 'cmb2' ),
+			'bottom' => __( 'Bottom', 'cmb2' )
+		)
+	) );
+    
+    $cmb_box->add_field( array(
 		'name'       => __( 'Padding', 'cmb2' ),
         'desc'             => __( 'Padding of page header in px', 'cmb2' ),
 		'id'         => $prefix . 'header_padding',
