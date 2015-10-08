@@ -32,4 +32,12 @@
                 </div>
             </div>
         </header><!-- .entry-header -->
-<?php } ?>
+    <?php } else { ?>
+        <header class="entry-header">
+            <?php the_title( '<h4 class="entry-title">', '</h4>' ); ?>
+
+            <div class="entry-meta">
+                <?php startup_reloaded_posted_on(); ?>
+            </div><!-- .entry-meta -->
+	   </header><!-- .entry-header -->
+    <?php } ?>
