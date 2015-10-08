@@ -5,8 +5,14 @@ function optionsframework_option_name() {
 }
 
 function optionsframework_options() {
-    
+    //*****************************************************************************
+    //*****************************************************************************
+    //
     // Général
+    //
+    //*****************************************************************************
+    //*****************************************************************************
+    
     $options[] = array(
 		'name' => __( 'Général', 'theme-textdomain' ),
 		'type' => 'heading'
@@ -125,7 +131,14 @@ function optionsframework_options() {
 		'type' => 'text'
 	);
     
+    //*****************************************************************************
+    //*****************************************************************************
+    //
     // Style
+    //
+    //*****************************************************************************
+    //*****************************************************************************
+    
     $options[] = array(
 		'name' => __( 'Style', 'theme-textdomain' ),
 		'type' => 'heading'
@@ -314,7 +327,14 @@ function optionsframework_options() {
 		'type' => 'textarea'
 	);
     
+    //*****************************************************************************
+    //*****************************************************************************
+    //
     // Navigation
+    //
+    //*****************************************************************************
+    //*****************************************************************************
+    
     $options[] = array(
 		'name' => __( 'Navigation', 'theme-textdomain' ),
 		'type' => 'heading'
@@ -530,7 +550,14 @@ function optionsframework_options() {
         )
 	);	
     
+    //*****************************************************************************
+    //*****************************************************************************
+    //
     // Slider
+    //
+    //*****************************************************************************
+    //*****************************************************************************
+    
 	$options[] = array(
 		'name' => __( 'Slider', 'theme-textdomain' ),
 		'type' => 'heading'
@@ -606,7 +633,14 @@ function optionsframework_options() {
 		'options' => $slider_navigation
 	);
     
+    //*****************************************************************************
+    //*****************************************************************************
+    //
     // Post types
+    //
+    //*****************************************************************************
+    //*****************************************************************************
+    
 	$options[] = array(
 		'name' => __( 'Post types', 'theme-textdomain' ),
 		'type' => 'heading'
@@ -620,19 +654,41 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
+    $blog_styles = array(
+		'grid' => __( 'Grid', 'theme-textdomain' ),
+		'shuffle' => __( 'Shuffle', 'theme-textdomain' )
+	);
+    
+	$options[] = array(
+		'name' => __( 'Blog', 'theme-textdomain' ),
+        'desc' => __( 'Style', 'theme-textdomain' ),
+		'id' => 'blog-style',
+		'std' => 'shuffle',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => $blog_styles
+	);
+    
     $blog_filters = array(
 		'buttons' => __( 'Buttons', 'theme-textdomain' ),
 		'dropdown' => __( 'Dropdown', 'theme-textdomain' )
 	);
     
     $options[] = array(
-		'name' => __( 'Blog', 'theme-textdomain' ),
-        'desc' => __( 'Filter type', 'theme-textdomain' ),
+        'desc' => __( 'Shuffle filter type', 'theme-textdomain' ),
 		'id' => 'blog-filter',
 		'std' => 'dropdown',
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
 		'options' => $blog_filters
+	);
+    
+    $options[] = array(
+		'desc' => __( 'Max number of items to show for grid style. Leave empty for unlimited.', 'theme-textdomain' ),
+		'id' => 'blog-number',
+		'std' => '8',
+		'type' => 'text',
+		'class' => 'mini'
 	);
     
     $portfolio_styles = array(
@@ -649,6 +705,7 @@ function optionsframework_options() {
 		'class' => 'mini', //mini, tiny, small
 		'options' => $portfolio_styles
 	);
+    
     $options[] = array(
 		'desc' => __( 'Max number of items to show for grid style. Leave empty for unlimited.', 'theme-textdomain' ),
 		'id' => 'portfolio-number',
@@ -774,7 +831,14 @@ function optionsframework_options() {
 //
 //add_action( 'wp_enqueue_scripts', 'options_typography_google_fonts' );
 
+    //*****************************************************************************
+    //*****************************************************************************
+    //
     // Advanced
+    //
+    //*****************************************************************************
+    //*****************************************************************************
+    
 	$options[] = array(
 		'name' => __( 'Advanced', 'theme-textdomain' ),
 		'type' => 'heading'

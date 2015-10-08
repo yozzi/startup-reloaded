@@ -37,29 +37,6 @@ function startup_reloaded_scripts() {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /* js */
     
     wp_enqueue_script( 'jquery' );
@@ -88,7 +65,7 @@ function startup_reloaded_scripts() {
         wp_enqueue_script( 'startup-reloaded-ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/jquery.mb.YTPlayer.min.js', array( ), false, 'all' );
     }
     
-    if( of_get_option( 'portfolio-style' ) == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){
+    if( of_get_option( 'blog-style' ) == 'shuffle' || of_get_option( 'portfolio-style' ) == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){
         wp_enqueue_script( 'startup-reloaded-shuffle', get_template_directory_uri() . '/js/jquery.shuffle.modernizr.min.js', array( ), false, 'all' );
         wp_enqueue_script( 'startup-reloaded-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array( ), false, 'all' );
     }

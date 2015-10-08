@@ -10,6 +10,7 @@
 $page_transition = of_get_option( 'page-transition' );
 $back_to_top = of_get_option( 'general-back-to-top' );
 $footer = of_get_option( 'general-footer' );
+$blog_style = of_get_option( 'blog-style' );
 $portfolio_style = of_get_option( 'portfolio-style' );
 $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
 $left_panel_on = of_get_option( 'fullscreen-panel-on' );
@@ -58,7 +59,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
     });
 </script>
 
-<?php  if( $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){ ?>
+<?php  if( $blog_style == 'shuffle' || $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){ ?>
     <script type="text/javascript">
        //On utilise imagesloaded pour que Shuffle ne fasse pas de bug d'overlapping avec les tailles d'images responsives
 
