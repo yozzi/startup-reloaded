@@ -116,59 +116,23 @@
       background: <?= $navbar_color ?>;
     }
         
-    /* Navbar Padding */
-    
-   
-   
     /* Custom buttons */
     .btn{
-      border-radius: <?= $bt_radius ?>px !important;
+      border-radius: <?= $bt_radius ?>px;
     }    
         
     .btn-custom {
       color: <?= $bt_text ?>;
       background-color: <?= $bt_background ?>;
-      border: none;
     }
     .btn-custom:hover,
     .btn-custom:focus,
     .btn-custom:active,
-    .btn-custom.active,
-    .open .dropdown-toggle.btn-custom {
+    .btn-custom.active{
       color: <?= $bt_hover_text ?>;
       background-color: <?= $bt_hover_background ?>;
-      border: none;
-      outline: none;
     }
-    .btn-custom:active,
-    .btn-custom.active,
-    .open .dropdown-toggle.btn-custom {
-      background-image: none;
-    }
-    .btn-custom.disabled,
-    .btn-custom[disabled],
-    fieldset[disabled] .btn-custom,
-    .btn-custom.disabled:hover,
-    .btn-custom[disabled]:hover,
-    fieldset[disabled] .btn-custom:hover,
-    .btn-custom.disabled:focus,
-    .btn-custom[disabled]:focus,
-    fieldset[disabled] .btn-custom:focus,
-    .btn-custom.disabled:active,
-    .btn-custom[disabled]:active,
-    fieldset[disabled] .btn-custom:active,
-    .btn-custom.disabled.active,
-    .btn-custom[disabled].active,
-    fieldset[disabled] .btn-custom.active {
-      background-color: <?= $bt_disabled_background ?>;
-      border: none;
-      outline: none;
-    }
-    .btn-custom .badge {
-      color: <?= $bt_badge_text ?>;
-      background-color: <?= $bt_badge_background ?>;
-    }
-    
+
     <?php if ($custom_css) {echo $custom_css;}?>
         
     body.home #site-navigation.navbar.top-nav-collapse {

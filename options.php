@@ -241,27 +241,6 @@ function optionsframework_options() {
 		'type' => 'color'
 	);
     
-    $options[] = array(
-        'desc' => __( 'Disabled background', 'theme-textdomain' ),
-		'id' => 'button-disabled-background',
-		'std' => '#2a2a2a',
-		'type' => 'color'
-	);
-    
-    $options[] = array(
-        'desc' => __( 'Badge background', 'theme-textdomain' ),
-		'id' => 'button-badge-background',
-		'std' => '#ffffff',
-		'type' => 'color'
-	);
-    
-    $options[] = array(
-        'desc' => __( 'Badge text', 'theme-textdomain' ),
-		'id' => 'button-badge-text',
-		'std' => '#000000',
-		'type' => 'color'
-	);
-    
 	$options[] = array(
 		'name' => __( 'Pages & posts header', 'theme-textdomain' ),
         'desc' => __( 'Hide the header. Or not. Overrides individual page setting if ckecked.', 'theme-textdomain' ),
