@@ -37,18 +37,18 @@
             </div>
             
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
-
+            <div class="col-lg-4">
+                
                 <!-- Blog Search Well -->
                 <div class="well">
                     <h4>Blog Search</h4>
                     
                     <form class="form-horizontal" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
                         <div class="form-group">
-                            <div class="col-sm-9">
+                            <div class="col-xs-9">
                                 <input class="form-control" type="text" value="" name="s" id="s" />
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-xs-3">
                                 <button class="btn btn-custom btn-block" type="submit" id="searchsubmit">
                                     <span class="glyphicon glyphicon-search"></span>
                                 </button>
@@ -57,6 +57,8 @@
                     </form>
                     <!-- /.input-group -->
                 </div>
+                
+                
 
                 <!-- Blog Categories Well -->
                 <div class="well">
