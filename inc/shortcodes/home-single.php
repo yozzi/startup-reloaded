@@ -3,7 +3,7 @@ $home_id=258;
 $home_post = get_post( $home_id );
 ?>
 <section id="home-<?= $home_id ?>">
-    <div class="container">
+<!--    <div class="container">-->
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <div class="home-section">
@@ -12,5 +12,5 @@ $home_post = get_post( $home_id );
                 </div>
             </div>
         </div>
-    </div>
+<!--    </div>-->
 </section>
