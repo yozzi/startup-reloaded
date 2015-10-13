@@ -63,7 +63,7 @@
                 
 
                 <!-- Blog Categories -->
-                <div class="panel panel-default">
+                <div id="blog-categories" class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title"><a href="#collapse-categories" data-toggle="collapse">Blog Categories</a></h3>
                     </div>
@@ -87,7 +87,7 @@
  
                 
                 <!-- Blog Archives -->
-                <div class="panel panel-default">
+                <div id="blog-archives" class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title"><a href="#collapse-archives" data-toggle="collapse">Blog Archives</a></h3>
                     </div>
