@@ -1801,12 +1801,13 @@ header.page-header h4.boxed {
 }
 
 .post .panel-title a:after {
-    font-family:'Glyphicons Halflings';
-    content:"\e114";
+    font-family:'FontAwesome';
+    content:"\f068";
     float: right;
+    color: #aaa;
 }
 .post .panel-title a.collapsed:after {
-    content:"\e080";
+    content:"\f067";
 }
 
 /*--------------------------------------------------------------

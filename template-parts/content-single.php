@@ -51,7 +51,7 @@
                                     <input class="form-control" type="text" value="" name="s" id="s" />
                                     <span class="input-group-btn">
                                         <button class="btn btn-custom" type="submit" id="searchsubmit">
-                                            <span class="glyphicon glyphicon-search"></span>
+                                            <i class="fa fa-search"></i>
                                         </button>
                                     </span>
                                 </div>
