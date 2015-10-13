@@ -65,21 +65,23 @@
                 <!-- Blog Categories -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Blog Categories</h3>
+                        <h3 class="panel-title"><a href="#collapse-categories" data-toggle="collapse">Blog Categories</a></h3>
                     </div>
-                    <div class="panel-body">
-                        <?php $args = array(
-                                  'taxonomy'     => 'category',
-                                  'orderby'      => 'name',
-                                  'show_count'   => 0,
-                                  'pad_counts'   => 0,
-                                  'hierarchical' => 0,
-                                  'title_li'     => ''
-                                );
-                            ?>
-                            <ul class="list-unstyled">
-                                <?php wp_list_categories( $args ); ?>
-                            </ul>
+                    <div id="collapse-categories" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <?php $args = array(
+                                      'taxonomy'     => 'category',
+                                      'orderby'      => 'name',
+                                      'show_count'   => 0,
+                                      'pad_counts'   => 0,
+                                      'hierarchical' => 0,
+                                      'title_li'     => ''
+                                    );
+                                ?>
+                                <ul class="list-unstyled">
+                                    <?php wp_list_categories( $args ); ?>
+                                </ul>
+                        </div>
                     </div>
                 </div>
  
@@ -87,24 +89,26 @@
                 <!-- Blog Archives -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Blog Archives</h3>
+                        <h3 class="panel-title"><a href="#collapse-archives" data-toggle="collapse">Blog Archives</a></h3>
                     </div>
-                    <div class="panel-body">
-                        <?php $args = array(
-                                    'type'            => 'monthly',
-                                    'limit'           => '',
-                                    'format'          => 'html', 
-                                    'before'          => '',
-                                    'after'           => '',
-                                    'show_post_count' => false,
-                                    'echo'            => 1,
-                                    'order'           => 'DESC'
-                                );
-                            ?>
-                            <ul class="list-unstyled">
-                                <?php wp_get_archives( $args ); ?>
-                            </ul>
-                        
+                    <div id="collapse-archives" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <?php $args = array(
+                                        'type'            => 'monthly',
+                                        'limit'           => '',
+                                        'format'          => 'html', 
+                                        'before'          => '',
+                                        'after'           => '',
+                                        'show_post_count' => false,
+                                        'echo'            => 1,
+                                        'order'           => 'DESC'
+                                    );
+                                ?>
+                                <ul class="list-unstyled">
+                                    <?php wp_get_archives( $args ); ?>
+                                </ul>
+
+                        </div>
                     </div>
                 </div>
 

@@ -1791,10 +1791,23 @@ header.page-header h4.boxed {
 }
 
 /*--------------------------------------------------------------
-## Page
+## Posts
 --------------------------------------------------------------*/
 
 .post header{margin-bottom: 15px}
+
+.post .panel-title a {
+    text-decoration: none;
+}
+
+.post .panel-title a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+}
+.post .panel-title a.collapsed:after {
+    content:"\e080";
+}
 
 /*--------------------------------------------------------------
 ## Scroll to top
