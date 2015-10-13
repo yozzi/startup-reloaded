@@ -123,7 +123,7 @@ function startup_reloaded_entry_footer() {
 		echo '</span>';
 	}
 
-	edit_post_link( esc_html__( 'Edit', 'startup-reloaded' ), '<span class="edit-link">', '</span>' );
+	//edit_post_link( esc_html__( 'Edit', 'startup-reloaded' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
