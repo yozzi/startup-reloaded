@@ -69,15 +69,14 @@
                     </div>
                     <div class="panel-body">
                         <?php $args = array(
-                                      'taxonomy'     => 'category',
-                                      'orderby'      => 'name',
-                                      'show_count'   => 0,
-                                      'pad_counts'   => 0,
-                                      'hierarchical' => 0,
-                                      'title_li'     => ''
-                                    );
+                                  'taxonomy'     => 'category',
+                                  'orderby'      => 'name',
+                                  'show_count'   => 0,
+                                  'pad_counts'   => 0,
+                                  'hierarchical' => 0,
+                                  'title_li'     => ''
+                                );
                             ?>
-
                             <ul class="list-unstyled">
                                 <?php wp_list_categories( $args ); ?>
                             </ul>
