@@ -39,33 +39,36 @@
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-lg-4">
                 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    
-                    <form class="form-horizontal" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-                        <div class="form-group">
-                            <div class="col-xs-9">
-                                <input class="form-control" type="text" value="" name="s" id="s" />
-                            </div>
-                            <div class="col-xs-3">
-                                <button class="btn btn-custom btn-block" type="submit" id="searchsubmit">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                            </div>
-                        </div>   
-                    </form>
-                    <!-- /.input-group -->
+                <!-- Blog Search -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Blog Search</h3>
+                    </div>
+                    <div class="panel-body">
+                         <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" value="" name="s" id="s" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-custom" type="submit" id="searchsubmit">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>   
+                        </form>
+                    </div>
                 </div>
                 
                 
 
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <?php $args = array(
+                <!-- Blog Categories -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Blog Categories</h3>
+                    </div>
+                    <div class="panel-body">
+                        <?php $args = array(
                                       'taxonomy'     => 'category',
                                       'orderby'      => 'name',
                                       'show_count'   => 0,
@@ -78,17 +81,17 @@
                             <ul class="list-unstyled">
                                 <?php wp_list_categories( $args ); ?>
                             </ul>
-                        </div>
                     </div>
-                    <!-- /.row -->
                 </div>
+ 
                 
-                 <!-- Blog Archives Well -->
-                <div class="well">
-                    <h4>Blog Archives</h4>
-                    <div class="row">
-                        <div class="col-lg-12">
-                           <?php $args = array(
+                <!-- Blog Archives -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Blog Archives</h3>
+                    </div>
+                    <div class="panel-body">
+                        <?php $args = array(
                                     'type'            => 'monthly',
                                     'limit'           => '',
                                     'format'          => 'html', 
@@ -102,9 +105,8 @@
                             <ul class="list-unstyled">
                                 <?php wp_get_archives( $args ); ?>
                             </ul>
-                        </div>
+                        
                     </div>
-                    <!-- /.row -->
                 </div>
 
 
