@@ -1,17 +1,36 @@
 <?php
 // Home
-add_shortcode( 'home', function( $atts, $content= null ){
-    ob_start();
-    require get_template_directory() . '/inc/shortcodes/home.php';
-    return ob_get_clean();
-});
+function startup_reloaded_shortcode_home_single( $atts ) {
 
-// Home Single
-add_shortcode( 'home-single', function( $atts, $content= null ){
-    ob_start();
-    require get_template_directory() . '/inc/shortcodes/home-single.php';
-    return ob_get_clean();
-});
+	// Attributes
+    $atts = shortcode_atts(array(
+            'id' => 'none',
+        ), $atts);
+    
+	// Code
+    if ($atts['id'] != "none"){
+    // Si attribut
+        $home_post = get_post( $atts['id'] );
+        ob_start();  
+        echo '<section id="home-' . $atts['id'] . '">';
+        echo '    <div class="row">';
+        echo '        <div class="col-xs-12 col-sm-6">';
+        echo '            <div class="home-section">';
+        echo '                <h3>' . $home_post->post_title . '</h3>';
+        echo '                <p>' . $home_post->post_content . '</p>';
+        echo '            </div>';
+        echo '        </div>';
+        echo '    </div>';
+        echo '</section>';       
+        return ob_get_clean();  
+    } else {
+    // Si pas d'attribut
+        ob_start();
+        require get_template_directory() . '/inc/shortcodes/home.php';
+        return ob_get_clean();       
+    }
+}
+add_shortcode( 'home', 'startup_reloaded_shortcode_home_single' );
 
 // Blog
 add_shortcode( 'blog', function( $atts, $content= null ){
