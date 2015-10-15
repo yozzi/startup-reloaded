@@ -1,6 +1,6 @@
 <?php
 // Home
-function startup_reloaded_shortcode_home_single( $atts ) {
+function startup_reloaded_shortcode_home( $atts ) {
 
 	// Attributes
     $atts = shortcode_atts(array(
@@ -11,18 +11,18 @@ function startup_reloaded_shortcode_home_single( $atts ) {
     if ($atts['id'] != "none"){
     // Si attribut
         $home_post = get_post( $atts['id'] );
-        ob_start();  
-        echo '<section id="home-' . $atts['id'] . '">';
-        echo '    <div class="row">';
-        echo '        <div class="col-xs-12 col-sm-6">';
-        echo '            <div class="home-section">';
-        echo '                <h3>' . $home_post->post_title . '</h3>';
-        echo '                <p>' . $home_post->post_content . '</p>';
-        echo '            </div>';
-        echo '        </div>';
-        echo '    </div>';
-        echo '</section>';       
-        return ob_get_clean();  
+        ob_start(); ?>
+            <section id="home-<?= $atts['id'] ?>">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="home-section">
+                            <h3><?= $home_post->post_title ?></h3>
+                            <p><?= $home_post->post_content ?></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php return ob_get_clean();  
     } else {
     // Si pas d'attribut
         ob_start();
@@ -30,7 +30,38 @@ function startup_reloaded_shortcode_home_single( $atts ) {
         return ob_get_clean();       
     }
 }
-add_shortcode( 'home', 'startup_reloaded_shortcode_home_single' );
+add_shortcode( 'home', 'startup_reloaded_shortcode_home' );
+
+// Sections
+function startup_reloaded_shortcode_sections( $atts ) {
+
+	// Attributes
+    $atts = shortcode_atts(array(
+            'id' => 'none',
+        ), $atts);
+    
+	// Code
+    if ($atts['id'] != "none"){
+    // Si attribut
+        $section = get_post( $atts['id'] );
+        ob_start(); ?>
+            <section id="section-<?= $atts['id'] ?>">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="section">
+                            <h3><?= $section->post_title ?></h3>
+                            <p><?= $section->post_content ?></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php return ob_get_clean();  
+    } else {
+    // Si pas d'attribut
+        return 'Vous devez renseigner l\'ID du post dans le shortcode';
+    }
+}
+add_shortcode( 'section', 'startup_reloaded_shortcode_sections' );
 
 // Blog
 add_shortcode( 'blog', function( $atts, $content= null ){
