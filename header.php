@@ -339,9 +339,7 @@
     <?php if( $left_panel_on || $right_panel_on ){ ?>
         <div class="panel-page-container">
             <?php } ?>
-        <?php if( $page_transition ) { ?>
-            <div class="animsition" data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>">
-        <?php } ?>
+            <div class="page-container<?php if( $page_transition ) { ?> animsition<?php } ?>"<?php if( $page_transition ) { ?> data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>"<?php } ?>>
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
             <?php if( $left_panel_on ){ require get_template_directory() . '/inc/left-panel.php'; } ?>
             <?php if( $right_panel_on ){ require get_template_directory() . '/inc/right-panel.php'; } ?>
