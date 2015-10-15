@@ -61,15 +61,20 @@ function startup_reloaded_shortcode_sections( $atts ) {
         ob_start(); ?>
             <section id="section-<?= $atts['id'] ?>" class="section <?php echo $position ?>"  style="<?php if ( $color ){ echo 'color:' . $color . ';'; }; if ( $background && $parallax == '' ){  echo 'background: url(' . $background[0] . '); background-size:cover; background-position: center ' . $background_position . ';';} elseif ( $background_color && $parallax == '' ) { echo 'background: ' . $background_color . ';';} ?>" <?php if ( $parallax ){ echo 'data-parallax="scroll" data-image-src="' . $background[0] . '"'; } ?>>
                 <div class="effect <?php echo $effect; ?>" style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>">
-                    <?php if ( $boxed ){ ?>
-                        <h3 class="boxed"><?= $section->post_title ?></h3><br />
-                        <p class="boxed"><?= $section->post_content ?></p>
-                    <?php } else{ ?>
-                        <h3><?= $section->post_title ?></h3>
-                        <p><?= $section->post_content ?></p>
-                    <?php } ?>
+                    <?php if ( $background_video ) {?><div class="video"><?php } ?>
+                        <?php if ( $boxed ){ ?>
+                            <?php if ( $title ){ ?><h3 class="boxed"><?= $section->post_title ?></h3><br /><?php } ?>
+                            <p class="boxed"><?= $section->post_content ?></p>
+                        <?php } else{ ?>
+                            <?php if ( $title ){ ?><h3><?= $section->post_title ?></h3><?php } ?>
+                            <p><?= $section->post_content ?></p>
+                        <?php } ?>
+                    <?php if ( $background_video ) {?></div><?php } ?>
                 </div>
             </section>
+            <?php if ( $background_video ) {?>
+                <div class="player" id="section-background-video-<?= $atts['id'] ?>" data-property="{videoURL:'http://youtu.be/<?php echo $background_video ?>', containment:'#section-<?= $atts['id'] ?> .video', mute:true, loop:true, opacity:1, showControls:false}"></div>
+            <?php } ?>
         <?php return ob_get_clean();  
     } else {
     // Si pas d'attribut
