@@ -69,6 +69,14 @@ function startup_reloaded_shortcode_sections( $atts ) {
                             <?php if ( $title ){ ?><h3><?= $section->post_title ?></h3><?php } ?>
                             <p><?= $section->post_content ?></p>
                         <?php } ?>
+                    
+                         <?php if ( $button_text ) { ?>
+                            <br />
+                            <a class="btn btn-custom btn-lg" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
+                                <?php echo $button_text ?>
+                            </a>
+                        <?php } ?>
+                    
                     <?php if ( $background_video ) {?></div><?php } ?>
                 </div>
             </section>
