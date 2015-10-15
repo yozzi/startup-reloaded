@@ -44,21 +44,36 @@ function startup_reloaded_shortcode_sections( $atts ) {
     if ($atts['id'] != "none"){
     // Si attribut
         $section = get_post( $atts['id'] );
+        $title = get_post_meta( $section->ID, '_startup_reloaded_sections_title', true );
+        $position = get_post_meta( $section->ID, '_startup_reloaded_sections_position', true );
+        $effect = get_post_meta( $section->ID, '_startup_reloaded_sections_effect', true );
+        $background_color = get_post_meta( $section->ID, '_startup_reloaded_sections_background_color', true );
+        $color = get_post_meta( $section->ID, '_startup_reloaded_sections_color', true );
+        $background = wp_get_attachment_image_src( get_post_meta( $section->ID, '_startup_reloaded_sections_background_id', 1 ), 'large' );
+        $background_position = get_post_meta( $section->ID, '_startup_reloaded_sections_background_position', true );
+        $background_video = get_post_meta( $section->ID, '_startup_reloaded_sections_background_video', true );
+        $padding = get_post_meta( $section->ID, '_startup_reloaded_sections_padding', true );
+        $boxed = get_post_meta( $section->ID, '_startup_reloaded_sections_boxed', true );
+        $parallax = get_post_meta( $section->ID, '_startup_reloaded_sections_parallax', true );
+        $button_text = get_post_meta( $section->ID, '_startup_reloaded_sections_button_text', true );
+        $button_url = get_post_meta( $section->ID, '_startup_reloaded_sections_button_url', true );
+        $blank = get_post_meta( $section->ID, '_startup_reloaded_sections_blank', true );
         ob_start(); ?>
-            <section id="section-<?= $atts['id'] ?>">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <div class="section">
-                            <h3><?= $section->post_title ?></h3>
-                            <p><?= $section->post_content ?></p>
-                        </div>
-                    </div>
+            <section id="section-<?= $atts['id'] ?>" class="section <?php echo $position ?>"  style="<?php if ( $color ){ echo 'color:' . $color . ';'; }; if ( $background && $parallax == '' ){  echo 'background: url(' . $background[0] . '); background-size:cover; background-position: center ' . $background_position . ';';} elseif ( $background_color && $parallax == '' ) { echo 'background: ' . $background_color . ';';} ?>" <?php if ( $parallax ){ echo 'data-parallax="scroll" data-image-src="' . $background[0] . '"'; } ?>>
+                <div class="effect <?php echo $effect; ?>" style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>">
+                    <?php if ( $boxed ){ ?>
+                        <h3 class="boxed"><?= $section->post_title ?></h3><br />
+                        <p class="boxed"><?= $section->post_content ?></p>
+                    <?php } else{ ?>
+                        <h3><?= $section->post_title ?></h3>
+                        <p><?= $section->post_content ?></p>
+                    <?php } ?>
                 </div>
             </section>
         <?php return ob_get_clean();  
     } else {
     // Si pas d'attribut
-        return 'Vous devez renseigner l\'ID du post dans le shortcode';
+        return 'Vous devez renseigner l\'ID de la section dans le shortcode';
     }
 }
 add_shortcode( 'section', 'startup_reloaded_shortcode_sections' );
