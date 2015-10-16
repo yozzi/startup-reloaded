@@ -60,8 +60,8 @@ function startup_reloaded_shortcode_sections( $atts ) {
         $blank = get_post_meta( $section->ID, '_startup_reloaded_sections_blank', true );
         ob_start(); ?>
             <section id="section-<?= $atts['id'] ?>" class="section <?php echo $position ?>"  style="<?php if ( $color ){ echo 'color:' . $color . ';'; }; if ( $background && $parallax == '' ){  echo 'background: url(' . $background[0] . '); background-size:cover; background-position: center ' . $background_position . ';';} elseif ( $background_color && $parallax == '' ) { echo 'background: ' . $background_color . ';';} ?>" <?php if ( $parallax ){ echo 'data-parallax="scroll" data-image-src="' . $background[0] . '"'; } ?>>
-                <div class="effect <?php echo $effect; ?>" style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>">
-                    <?php if ( $background_video ) {?><div class="video"><?php } ?>
+                <div class="effect <?php echo $effect; ?>" <?php if (!$background_video) { ?>style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>"<?php } ?>>
+                    <?php if ( $background_video ) {?><div class="video" style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>"><?php } ?>
                         <div class="container">
                             <?php if ( $boxed ){ ?>
                                 <?php if ( $title ){ ?><h3 class="boxed"><?= $section->post_title ?></h3><br /><?php } ?>
