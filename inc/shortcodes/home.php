@@ -8,9 +8,10 @@ $counter = 0;
     <div class="container">
         <div class="row">
             <?php foreach ($home_sections as $key=> $home_section) {
-                //$milestone_icon    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_icon', true );
-                //$milestone_value    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_value', true );
-                //$milestone_unit   = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_unit', true );
+                $title = get_post_meta( $home_section->ID, '_startup_reloaded_home_title', true );
+                $button_text = get_post_meta( $home_section->ID, '_startup_reloaded_home_button_text', true );
+                $button_url = get_post_meta( $home_section->ID, '_startup_reloaded_home_button_url', true );
+                $blank = get_post_meta( $home_section->ID, '_startup_reloaded_home_blank', true );
             ?>
                 <?php if ( $counter == 0 ) {?>
                     <div class="col-xs-12">
@@ -18,10 +19,14 @@ $counter = 0;
                     <div class="col-xs-12 col-sm-6">
                 <?php } ?>
                     <div class="home-section">
-                                             
-                        <h3><?php echo $home_section->post_title ?></h3>
-                        <p><?php echo $home_section->post_content ?></p>
-
+                        <?php if ( $title ){ ?><h3><?= $home_section->post_title ?></h3><?php } ?>                     
+                        <p><?= $home_section->post_content ?></p>
+                        <?php if ( $button_text ) { ?>
+                        <br />
+                        <a class="btn btn-custom" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
+                            <?php echo $button_text ?>
+                        </a>
+                        <?php } ?>
                     </div>
                 </div>
             <?php 
