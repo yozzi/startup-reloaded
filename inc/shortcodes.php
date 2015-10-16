@@ -62,21 +62,22 @@ function startup_reloaded_shortcode_sections( $atts ) {
             <section id="section-<?= $atts['id'] ?>" class="section <?php echo $position ?>"  style="<?php if ( $color ){ echo 'color:' . $color . ';'; }; if ( $background && $parallax == '' ){  echo 'background: url(' . $background[0] . '); background-size:cover; background-position: center ' . $background_position . ';';} elseif ( $background_color && $parallax == '' ) { echo 'background: ' . $background_color . ';';} ?>" <?php if ( $parallax ){ echo 'data-parallax="scroll" data-image-src="' . $background[0] . '"'; } ?>>
                 <div class="effect <?php echo $effect; ?>" style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>">
                     <?php if ( $background_video ) {?><div class="video"><?php } ?>
-                        <?php if ( $boxed ){ ?>
-                            <?php if ( $title ){ ?><h3 class="boxed"><?= $section->post_title ?></h3><br /><?php } ?>
-                            <p class="boxed"><?= $section->post_content ?></p>
-                        <?php } else{ ?>
-                            <?php if ( $title ){ ?><h3><?= $section->post_title ?></h3><?php } ?>
-                            <p><?= $section->post_content ?></p>
-                        <?php } ?>
-                    
-                         <?php if ( $button_text ) { ?>
-                            <br />
-                            <a class="btn btn-custom btn-lg" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
-                                <?php echo $button_text ?>
-                            </a>
-                        <?php } ?>
-                    
+                        <div class="container">
+                            <?php if ( $boxed ){ ?>
+                                <?php if ( $title ){ ?><h3 class="boxed"><?= $section->post_title ?></h3><br /><?php } ?>
+                                <p class="boxed"><?= $section->post_content ?></p>
+                            <?php } else{ ?>
+                                <?php if ( $title ){ ?><h3><?= $section->post_title ?></h3><?php } ?>
+                                <p><?= $section->post_content ?></p>
+                            <?php } ?>
+
+                             <?php if ( $button_text ) { ?>
+                                <br />
+                                <a class="btn btn-custom btn-lg" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
+                                    <?php echo $button_text ?>
+                                </a>
+                            <?php } ?>
+                        </div>
                     <?php if ( $background_video ) {?></div><?php } ?>
                 </div>
             </section>
