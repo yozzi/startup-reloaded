@@ -146,6 +146,17 @@ function startup_reloaded_register_required_plugins() {
             'force_deactivation' => false,
             'external_url'       => 'https://github.com/yozzi/startup-cpt-products',
         ),
+        
+        array(
+            'name'               => 'StartUp Partners',
+            'slug'               => 'startup-cpt-partners',
+            'source'             => 'https://github.com/yozzi/startup-cpt-partners/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-partners',
+        ),
 
         array(
             'name'      => 'Bootstrap Shortcodes for WordPress',
