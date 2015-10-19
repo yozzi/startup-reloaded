@@ -24,6 +24,16 @@ function startup_reloaded_register_required_plugins() {
             'force_activation'   => false,
             'force_deactivation' => false,
             'external_url'       => 'https://github.com/yozzi/startup-cpt-home',
+        ),     
+        array(
+            'name'               => 'StartUp Sections',
+            'slug'               => 'startup-cpt-sections',
+            'source'             => 'https://github.com/yozzi/startup-cpt-sections/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-sections',
         ),
         array(
             'name'               => 'StartUp Milestones',
