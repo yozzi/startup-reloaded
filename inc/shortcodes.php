@@ -76,10 +76,10 @@ function startup_reloaded_shortcode_sections( $atts ) {
                     <?php if ( $background_video ) {?><div class="video" style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>"><?php } ?>
                         <div class="container">
                             <?php if ( $boxed ){ ?>
-                                <?php if ( $title ){ ?><h3 class="boxed"><?= $section->post_title ?></h3><br /><?php } ?>
+                                <?php if ( $title ){ ?><h2 class="boxed"><?= $section->post_title ?></h2><br /><?php } ?>
                                 <p class="boxed"><?= $section->post_content ?></p>
                             <?php } else{ ?>
-                                <?php if ( $title ){ ?><h3><?= $section->post_title ?></h3><?php } ?>
+                                <?php if ( $title ){ ?><h2><?= $section->post_title ?></h2><?php } ?>
                                 <p><?= $section->post_content ?></p>
                             <?php } ?>
 
@@ -164,6 +164,13 @@ add_shortcode( 'products', function( $atts, $content= null ){
 add_shortcode( 'portfolio', function( $atts, $content= null ){
     ob_start();
     require get_template_directory() . '/inc/shortcodes/portfolio.php';
+    return ob_get_clean();
+});
+
+// Partners
+add_shortcode( 'partners', function( $atts, $content= null ){
+    ob_start();
+    require get_template_directory() . '/inc/shortcodes/partners.php';
     return ob_get_clean();
 });
 ?>

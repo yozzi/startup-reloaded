@@ -1831,12 +1831,7 @@ section.section{
     text-align: right
 }
 
-.section .effect {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.section h3.boxed,
+.section h2.boxed,
 .section p.boxed {
     padding: 10px 15px;
     display: inline-block;
