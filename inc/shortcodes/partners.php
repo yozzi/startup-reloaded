@@ -13,14 +13,15 @@ $total_partners = count($partners);
                             <div class="item<?php if ($count == 1){ echo ' active';} ?>">
                                 <?php foreach ($partners as $key=> $partner) {
                                     $title = get_post_meta( $partner->ID, '_startup_reloaded_partners_title', true );
-                                    $logo  = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_reloaded_partners_logo_id', 1 ), 'thumbnail' );?>
+                                    $logo  = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_reloaded_partners_logo_id', 1 ), 'partners' );
+                                    $url  = get_post_meta( $partner->ID, '_startup_reloaded_partners_url', true ); ?>
                                     <div class="col-sm-3 col-xs-6">
                                         <div class="partner">
                                             <?php if ($logo) { ?>
-                                                <a href="<?php //echo esc_url( get_permalink($project->ID) ) ?>"><? echo $logo ;?></a>
+                                                <?php if ($url) { ?><a href="<?= $url ?>" target="_blank"><?php } ?><?= $logo ;?><?php if ($url) { ?></a><?php } ?>
                                             <?php }?>
                                             <?php if ($title) { ?>
-                                                <small><?php echo $partner->post_title ?></small>
+                                            <h5><?= $partner->post_title ?></h5>
                                             <?php }?>
                                         </div>
                                     </div>

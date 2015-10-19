@@ -15,6 +15,7 @@ function startup_reloaded_custom_theme_features()  {
     add_image_size( 'shuffle_main', 480, 220, true);
     add_image_size( 'grid_thumb', 480, 480, true);
     add_image_size( 'grid_main', 720, 0, false);
+    add_image_size( 'partners', 140, 140, false);
     
 //    // Add theme support for Custom Header
 //	$header_args = array(
