@@ -4,7 +4,7 @@ $partners = get_posts( $args );
 $total_partners = count($partners);
 ?>
 <section id="partners">
-    <div class="container">
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">            
             <?php if ($total_partners > 4){ ?>
                 <div id="partners-carousel" class="carousel slide" data-interval="4000" data-ride="carousel">
@@ -12,17 +12,17 @@ $total_partners = count($partners);
                         <?php }  $count = 1; ?>
                             <div class="item<?php if ($count == 1){ echo ' active';} ?>">
                                 <?php foreach ($partners as $key=> $partner) {
-                                    $title = get_post_meta( $partner->ID, '_startup_reloaded_partners_title', true );
                                     $logo  = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_reloaded_partners_logo_id', 1 ), 'partners' );
                                     $url  = get_post_meta( $partner->ID, '_startup_reloaded_partners_url', true ); ?>
                                     <div class="col-sm-3 col-xs-6">
                                         <div class="partner">
-                                            <?php if ($logo) { ?>
-                                                <?php if ($url) { ?><a href="<?= $url ?>" target="_blank"><?php } ?><?= $logo ;?><?php if ($url) { ?></a><?php } ?>
-                                            <?php }?>
-                                            <?php if ($title) { ?>
-                                            <h5><?= $partner->post_title ?></h5>
-                                            <?php }?>
+                                            <div class="partner-inner">
+                                                <?php if ($logo) { ?>
+                                                    <?php if ($url) { ?><a href="<?= $url ?>" target="_blank"><?php } ?><?= $logo ?><?php if ($url) { ?></a><?php } ?>
+                                                <?php } else { ?>
+                                                <h4><?php if ($url) { ?><a href="<?= $url ?>" target="_blank"><?php } ?><?= $partner->post_title ?><?php if ($url) { ?></a><?php } ?></h4>
+                                                <?php } ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <?php if (($count % 4) == 0 && ($count < $total_partners )){ ?>
@@ -36,5 +36,5 @@ $total_partners = count($partners);
                 </div>
             <?php } ?>
         </div>
-    </div>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>
