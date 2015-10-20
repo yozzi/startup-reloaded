@@ -848,6 +848,32 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
         padding-bottom: 5px;
     }
 }
+/* Static-slider */
+
+@media (min-width: 768px) {
+    .logo.navbar-static-slider .navbar-brand > img {
+        height: 65px;
+    }
+    .logo.navbar-static-slider .navbar-brand {
+        height: 100%;
+    }
+    .logo.navbar-static-slider .navbar-nav {
+        padding-top: 22.5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo.navbar-static-slider .navbar-brand > img {
+        height: 40px;
+    }
+    .logo.navbar-static-slider .navbar-brand {
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+
 /**************** Transitions ****************/
 
 body.home #site-navigation.navbar-transparent {
