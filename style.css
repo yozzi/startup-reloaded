@@ -929,6 +929,34 @@ body.logo-on.fixed-bottom {
     padding-bottom: 95px;
 }
 /******** Under slider ********/
+body.static-slider #content {
+    padding-top: 50px;
+}
+
+body.logo-on.static-slider #content {
+    padding-top: 95px;
+}
+
+@media (max-width: 767px) {
+    body.logo-on.static-slider #content {
+        padding-top: 50px;
+    }
+}
+/* Home */
+body.home.static-slider #content {
+    padding-top: 0;
+}
+
+body.home.logo-on.static-slider #content {
+    padding-top: 0;
+}
+
+@media (max-width: 767px) {
+    body.home.logo-on.static-slider #content {
+        padding-top: 0;
+    }
+}
+
 /*--------------------------------------------------------------
 ## Custom Hamburgers
 --------------------------------------------------------------*/
