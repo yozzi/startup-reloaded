@@ -4,7 +4,7 @@ $pricing = get_posts( $args );
 $total_pricing = count($pricing);
 ?>
 <section id="pricing">
-    <div class="container">
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($pricing as $key=> $pricing) {
                 $pricing_currency    = get_post_meta($pricing->ID, '_startup_reloaded_pricing_currency', true );
@@ -48,5 +48,5 @@ $total_pricing = count($pricing);
                 </div>
             <?php } // endforeach ?>
         </div>
-    </div>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>

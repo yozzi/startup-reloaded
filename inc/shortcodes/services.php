@@ -4,7 +4,7 @@ $services = get_posts( $args );
 $total_services = count($services);
 ?>
 <section id="services">
-    <div class="container">
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($services as $key=> $service) {
                 $service_icon    = get_post_meta($service->ID, '_startup_reloaded_services_icon', true );
@@ -22,5 +22,5 @@ $total_services = count($services);
                 </div>
             <?php } // endforeach ?>
         </div>
-    </div>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>

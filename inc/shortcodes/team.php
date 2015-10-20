@@ -4,7 +4,7 @@ $team = get_posts( $args );
 $total_team = count($team);
 ?>
 <section id="team">
-    <div class="container">
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">            
             <?php if ($total_team > 4){ ?>
                 <div id="team-carousel" class="carousel slide">
@@ -61,5 +61,5 @@ $total_team = count($team);
                             </div>
                         <?php } ?>
         </div>
-    </div>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>

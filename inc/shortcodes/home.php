@@ -5,7 +5,7 @@ $counter = 0;
 
 ?>
 <section id="home">
-    <div class="container">
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($home_sections as $key=> $home_section) {
                 $title = get_post_meta( $home_section->ID, '_startup_reloaded_home_title', true );
@@ -33,5 +33,5 @@ $counter = 0;
                 $counter ++;
                 } // endforeach ?>
         </div>
-    </div>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>

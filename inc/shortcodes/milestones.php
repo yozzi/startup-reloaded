@@ -4,7 +4,7 @@ $milestones = get_posts( $args );
 //$total_milestones = count($milestones);
 ?>
 <section id="milestones">
-    <div class="container">
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($milestones as $key=> $milestone) {
                 $milestone_icon    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_icon', true );
@@ -27,5 +27,5 @@ $milestones = get_posts( $args );
                 </div>
             <?php } // endforeach ?>
         </div>
-    </div>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>

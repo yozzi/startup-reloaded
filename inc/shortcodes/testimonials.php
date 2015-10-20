@@ -4,7 +4,7 @@ $testimonials = get_posts( $args );
 $total_testimonials = count($testimonials);
 ?>
 <section id="testimonials">
-    <div class="container">
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">            
             <?php if ($total_testimonials > 1){ ?>
                 <div id="testimonials-carousel" class="carousel slide" data-interval="4000" data-ride="carousel">
@@ -27,5 +27,5 @@ foreach ($testimonials as $key=> $testimonial) { ?>
                 </div>
             <?php } ?>
         </div>
-    </div>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>

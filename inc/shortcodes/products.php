@@ -7,21 +7,19 @@
 ?>
 
 <section id="products">
-
-    <ul id="filter" class="nav nav-pills">
-        <li><a class="active" href="#" data-group="all">Tous</a></li>
-        <?php 
-            $args = array( 'hide_empty' => 0 );
-            $myterms = get_terms( 'product-category', $args );
-            if ( ! empty( $myterms ) && ! is_wp_error( $myterms ) ){
-                foreach ( $myterms as $myterms ) {
-                    echo '<li><a href="#" data-group="' . $myterms->slug . '">' . $myterms->name . '</a></li>';
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
+        <ul id="filter" class="nav nav-pills">
+            <li><a class="active" href="#" data-group="all">Tous</a></li>
+            <?php 
+                $args = array( 'hide_empty' => 0 );
+                $myterms = get_terms( 'product-category', $args );
+                if ( ! empty( $myterms ) && ! is_wp_error( $myterms ) ){
+                    foreach ( $myterms as $myterms ) {
+                        echo '<li><a href="#" data-group="' . $myterms->slug . '">' . $myterms->name . '</a></li>';
+                    }
                 }
-            }
-        ?>
-    </ul>
-
-<!--    <div class="container">-->
+            ?>
+        </ul>
         <div id="shuffle" class="row">
             <?php foreach ($products as $key=> $product) {
                 $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_main_pic_id', 1 ), 'shuffle_thumb' );
@@ -121,5 +119,5 @@
             
             <?php } // endforeach ?>
         </div>
-<!--    </div>-->
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>

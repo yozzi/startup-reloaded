@@ -4,7 +4,7 @@ $projects = get_posts( $args );
 $total_projects = count($projects);
 ?>
 <section id="projects">
-    <div class="container">
+    <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($projects as $key=> $project) {
                 $thumbnail  = wp_get_attachment_image( get_post_meta( $project->ID, '_startup_reloaded_projects_thumbnail_id', 1 ), 'thumbnail' );
@@ -55,5 +55,5 @@ $total_projects = count($projects);
                 </div>
             <?php } // endforeach ?>
         </div>
-    </div>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>
