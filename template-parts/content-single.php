@@ -3,10 +3,13 @@
  * @package StartUp Reloaded
  */
 ?>
+
+<?php $boxed = of_get_option( 'general-boxed' ); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php require get_template_directory() . '/inc/post-header.php';  ?>
     
-    <div class="container">
+    <?php if(!$boxed) { ?><div class="container"><?php } ?>
         <div class="row">
             
             <!-- Blog Post Content Column -->
@@ -116,6 +119,6 @@
             </div>
             
         </div>
-    </div>
+    <?php if(!$boxed) { ?></div><?php } ?>
     
 </article><!-- #post-## -->
