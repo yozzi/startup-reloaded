@@ -53,6 +53,7 @@
         if ($navbar_transparent){$body_transparent = 'transparent-on';} else {$body_transparent = 'transparent-off';};
         if ($navbar_position == 'navbar-static-top'){$body_position = 'static-top';};
         if ($navbar_position == 'navbar-fixed-top'){$body_position = 'fixed-top';};
+        if ($navbar_position == 'navbar-static-slider'){$body_position = 'static-slider';};
         if ($navbar_position == 'navbar-fixed-bottom'){$body_position = 'fixed-bottom';};
         
 
