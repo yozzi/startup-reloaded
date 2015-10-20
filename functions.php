@@ -51,6 +51,7 @@ function startup_reloaded_setup() {
         'left-panel' => esc_html__( 'Left Panel', 'startup-reloaded' ),
         'right-panel' => esc_html__( 'Right Panel', 'startup-reloaded' ),
         'fullscreen-panel' => esc_html__( 'Fullscreen Panel', 'startup-reloaded' ),
+        'navbar-bottom' => esc_html__( 'Navbar Bottom', 'startup-reloaded' ),
 	) );
 
 	/*

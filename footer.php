@@ -31,6 +31,14 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 	</div><!-- #content -->
     <div id="colophon-bg">
         <footer id="colophon" class="container site-footer" role="contentinfo">
+            <?php if ( has_nav_menu( 'navbar-bottom' ) ) { ?>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <?php require get_template_directory() . '/inc/navbar-bottom.php' ?>
+                    </div>
+                </div>
+            <?php } ?>
+            
             <div class="row site-info">
                 <div class="col-xs-12">
                 <?= $footer ?>
