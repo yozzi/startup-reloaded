@@ -1,25 +1,32 @@
-<header id="masthead" class="site-header" role="banner">
+<?php
+    $logo = of_get_option( 'general-logo' );
+    $responsive = of_get_option( 'general-responsive' );
+    $navbar_position = of_get_option( 'navbar-position' );
+    $navbar_logo_position = of_get_option( 'navbar-logo-position' );
+    $navbar_menu_position = of_get_option( 'navbar-menu-position' );
+    $navbar_hamburger_position = of_get_option( 'navbar-hamburger-position' );
+    $navbar_inverse = of_get_option( 'navbar-inverse' );
+    $navbar_transparent = of_get_option( 'navbar-transparent' );
+    $boxed = of_get_option( 'general-boxed' );
+    $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
+    $fullscreen_panel_hamburger = of_get_option( 'fullscreen-panel-hamburger' );
+    $fullscreen_panel_hamburger_text = of_get_option( 'fullscreen-panel-hamburger-text' );
+    $left_panel_on = of_get_option( 'left-panel-on' );
+    $left_panel_hamburger = of_get_option( 'left-panel-hamburger' );
+    $left_panel_hamburger_text = of_get_option( 'left-panel-hamburger-text' );
+    $right_panel_on = of_get_option( 'right-panel-on' );
+    $right_panel_hamburger = of_get_option( 'right-panel-hamburger' );
+    $right_panel_hamburger_text = of_get_option( 'right-panel-hamburger-text' );
+    $slider_height = of_get_option( 'slider-height' );
+    $navbar_offset = $slider_height + 36;
+?>
 
-    <?php
-        $logo = of_get_option( 'general-logo' );
-        $responsive = of_get_option( 'general-responsive' );
-        $navbar_position = of_get_option( 'navbar-position' );
-        $navbar_logo_position = of_get_option( 'navbar-logo-position' );
-        $navbar_menu_position = of_get_option( 'navbar-menu-position' );
-        $navbar_hamburger_position = of_get_option( 'navbar-hamburger-position' );
-        $navbar_inverse = of_get_option( 'navbar-inverse' );
-        $navbar_transparent = of_get_option( 'navbar-transparent' );
-        $boxed = of_get_option( 'general-boxed' );
-        $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
-        $fullscreen_panel_hamburger = of_get_option( 'fullscreen-panel-hamburger' );
-        $fullscreen_panel_hamburger_text = of_get_option( 'fullscreen-panel-hamburger-text' );
-        $left_panel_on = of_get_option( 'left-panel-on' );
-        $left_panel_hamburger = of_get_option( 'left-panel-hamburger' );
-        $left_panel_hamburger_text = of_get_option( 'left-panel-hamburger-text' );
-        $right_panel_on = of_get_option( 'right-panel-on' );
-        $right_panel_hamburger = of_get_option( 'right-panel-hamburger' );
-        $right_panel_hamburger_text = of_get_option( 'right-panel-hamburger-text' );
-    ?>
+<?php if ($navbar_position == 'navbar-static-slider') { ?>
+    <div id="navbar-spacer" style="min-height:50px">
+        <header id="masthead" class="site-header" role="banner"<?php if (is_front_page()){?> data-spy="affix" data-offset-top="<?= $navbar_offset ?>"<?php } else { ?> data-spy="affix" data-offset-top="36"<?php } ?>>
+<?php } else { ?>
+    <header id="masthead" class="site-header" role="banner">    
+<?php } ?>
 
     <nav id="site-navigation" class="navbar navbar-default<?php if($logo){echo ' logo';} ?> <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
         <!– Brand and toggle get grouped for better mobile display –>
@@ -116,12 +123,12 @@
                 </div>
                 <!– /.navbar-collapse –>
             <?php } ?>
-            
         </div>
         <!– /.container –>
     </nav>
 <!– #site-navigation –>
-                        
-                        
 
-            </header>
+</header>
+<?php if ($navbar_position == 'navbar-static-slider') { ?>
+    </div>
+<?php } ?>
