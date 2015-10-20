@@ -653,7 +653,8 @@ section {
 /*--------------------------------------------------------------
 ## Navigation
 --------------------------------------------------------------*/
-#masthead.affix{
+
+#masthead.affix {
     position: fixed;
     top: 0;
     width: 100%;
@@ -874,7 +875,6 @@ body.home #site-navigation.navbar-transparent {
 }
 /**************** Padding ****************/
 /******** Static top ********/
-
 /******** Fixed top ********/
 
 body.fixed-top #content {
@@ -929,7 +929,6 @@ body.logo-on.fixed-bottom {
     padding-bottom: 95px;
 }
 /******** Under slider ********/
-
 /*--------------------------------------------------------------
 ## Custom Hamburgers
 --------------------------------------------------------------*/
@@ -1798,32 +1797,33 @@ header.page-header h4.boxed {
 .home .entry-content {
     margin: 0;
 }
-
 /*--------------------------------------------------------------
 ## Posts
 --------------------------------------------------------------*/
 
-.post header{margin-bottom: 15px}
+.post header {
+    margin-bottom: 15px
+}
 
 .post .panel-title a {
     text-decoration: none;
 }
 
 .post .panel-title a:after {
-    font-family:'FontAwesome';
-    content:"\f068";
+    font-family: 'FontAwesome';
+    content: "\f068";
     float: right;
     color: #aaa;
 }
-.post .panel-title a.collapsed:after {
-    content:"\f067";
-}
 
+.post .panel-title a.collapsed:after {
+    content: "\f067";
+}
 /*--------------------------------------------------------------
 ## Sections
 --------------------------------------------------------------*/
 
-section.section{
+section.section {
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -1846,7 +1846,6 @@ section.section{
     display: inline-block;
     clear: both;
 }
-
 /*--------------------------------------------------------------
 ## Partners
 --------------------------------------------------------------*/
@@ -1860,7 +1859,7 @@ section.section{
     width: 100%;
 }
 
-.partner-inner{
+.partner-inner {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -1868,13 +1867,12 @@ section.section{
     width: 100%;
 }
 
-.partner img{
+.partner img {
     width: 100%;
     height: auto;
     max-width: 140px;
     max-height: 140px;
 }
-
 /*--------------------------------------------------------------
 ## Scroll to top
 --------------------------------------------------------------*/
