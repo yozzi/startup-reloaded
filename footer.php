@@ -20,6 +20,8 @@ $navbar_transparent = of_get_option( 'navbar-transparent' );
 
 if ( $navbar_position == 'navbar-fixed-top' ) {
     $scroll_offset = 50;
+} elseif ( $navbar_position == 'navbar-static-slider' ){
+    $scroll_offset = 50;
 } else {
     $scroll_offset = 0;
 }
