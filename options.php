@@ -331,7 +331,7 @@ function optionsframework_options() {
         //'' => __( 'Float', 'theme-textdomain' ),
 		'navbar-static-top' => __( 'Static top', 'theme-textdomain' ),
 		'navbar-fixed-top' => __( 'Fixed top', 'theme-textdomain' ),
-        'navbar-static-slider' => __( 'Under slider', 'theme-textdomain' ),
+        'navbar-fixed-slider' => __( 'Under slider', 'theme-textdomain' ),
 		'navbar-fixed-bottom' => __( 'Fixed bottom', 'theme-textdomain' )
 	);
     

@@ -20,14 +20,14 @@
     $slider_height = of_get_option( 'slider-height' );
 ?>
 
-<?php if (is_front_page() && $navbar_position == 'navbar-static-slider') { ?>
+<?php if (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>
     <div id="navbar-spacer" style="min-height:<?php if ($logo) { ?>95px<?php } else { ?>50px<?php } ?>">
         <header id="masthead" class="site-header" role="banner" data-spy="affix" data-offset-top="<?= $slider_height ?>">
 <?php } else { ?>
     <header id="masthead" class="site-header" role="banner">    
 <?php } ?>
 
-    <nav id="site-navigation" class="navbar navbar-default<?php if($logo){echo ' logo';} ?> <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; if ($navbar_position == 'navbar-static-slider' && !is_front_page()) { echo ' navbar-fixed-top'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
+    <nav id="site-navigation" class="navbar navbar-default<?php if($logo){echo ' logo';} ?> <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; if ($navbar_position == 'navbar-fixed-slider' && !is_front_page()) { echo ' navbar-fixed-top'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
         <!– Brand and toggle get grouped for better mobile display –>
         <div class="container">
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
@@ -128,6 +128,6 @@
 <!– #site-navigation –>
 
 </header>
-<?php if ($navbar_position == 'navbar-static-slider') { ?>
+<?php if ($navbar_position == 'navbar-fixed-slider') { ?>
     </div>
 <?php } ?>

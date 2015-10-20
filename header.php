@@ -53,7 +53,7 @@
         if ($navbar_transparent){$body_transparent = 'transparent-on';} else {$body_transparent = 'transparent-off';};
         if ($navbar_position == 'navbar-static-top'){$body_position = 'static-top';};
         if ($navbar_position == 'navbar-fixed-top'){$body_position = 'fixed-top';};
-        if ($navbar_position == 'navbar-static-slider'){$body_position = 'static-slider';};
+        if ($navbar_position == 'navbar-fixed-slider'){$body_position = 'fixed-slider';};
         if ($navbar_position == 'navbar-fixed-bottom'){$body_position = 'fixed-bottom';};
         
 
@@ -348,7 +348,7 @@
             <a class="skip-link screen-reader-text" href="#content">
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
             </a>
-            <?php if( ($navbar_on && $navbar_position != 'navbar-static-slider') || ( $navbar_on && !is_front_page()) ){ require get_template_directory() . '/inc/navbar-primary.php'; } ?>
+            <?php if( ($navbar_on && $navbar_position != 'navbar-fixed-slider') || ( $navbar_on && !is_front_page()) ){ require get_template_directory() . '/inc/navbar-primary.php'; } ?>
             
 
             <div id="content" class="site-content">
