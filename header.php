@@ -339,9 +339,7 @@
     <?php if( $left_panel_on || $right_panel_on ){ ?>
         <div class="panel-page-container">
             <?php } ?>
-            <div class="page-container<?php if( $page_transition ) { ?> animsition<?php } ?>"<?php if( $page_transition ) { ?> data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>"<?php } ?>>
-                
-                <?php if( ($navbar_on && $navbar_position == 'navbar-static-slider' && !is_front_page()) ){ require get_template_directory() . '/inc/navbar-primary.php'; } ?>        
+            <div class="page-container<?php if( $page_transition ) { ?> animsition<?php } ?>"<?php if( $page_transition ) { ?> data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>"<?php } ?>>   
                 
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
             <?php if( $left_panel_on ){ require get_template_directory() . '/inc/left-panel.php'; } ?>
