@@ -550,7 +550,7 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
-		'desc' => __( 'Height in px', 'theme-textdomain' ),
+		'desc' => __( 'Height in px. "100%" for full viewport height', 'theme-textdomain' ),
 		'id' => 'slider-height',
 		'std' => '400',
 		'type' => 'text',
@@ -580,7 +580,7 @@ function optionsframework_options() {
 	);
     
 	$options[] = array(
-		'desc' => __( 'Show arrows', 'theme-textdomain' ),
+		'desc' => __( 'Show arrows if more than one slide', 'theme-textdomain' ),
 		'id' => 'slider-arrows',
 		'std' => '1',
 		'type' => 'checkbox'
