@@ -19,6 +19,8 @@ $navbar_position = of_get_option( 'navbar-position' );
 $navbar_transparent = of_get_option( 'navbar-transparent' );
 $slider_on = of_get_option( 'slider-on' );
 $slider_height = of_get_option( 'slider-height' );
+$navbar_transparent = of_get_option( 'navbar-transparent' );
+$logo = of_get_option( 'general-logo' );
 
 if ( $navbar_position == 'navbar-fixed-top' ) {
     $scroll_offset = 50;
@@ -72,9 +74,27 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 </script>
 <?php if ($slider_on && $slider_height == '100%') { ?>
     <script type="text/javascript">
+        <?php
+            if(($navbar_position == 'navbar-static-top') || ($navbar_position == 'navbar-fixed-top' && !$navbar_transparent) || ($navbar_position == 'navbar-fixed-bottom') || ($navbar_position == 'navbar-fixed-slider')){
+                if($logo){
+                    $slider_offset = 95;
+                } else {
+                    $slider_offset = 50;
+                };
+            } else {
+                $slider_offset = 0;
+            }
+        ?>
         function showViewportSize() {
-            var the_height = jQuery(window).height();                   
+            var the_height = jQuery(window).height() - <?= $slider_offset ?>;                   
             jQuery('#slider .item').css("height",the_height);
+            <?php if ( $navbar_position == 'navbar-fixed-slider' ) { ?>
+                jQuery('#masthead').affix({
+                  offset: {
+                    top: function() { return jQuery('#slider').height(); }
+                  }
+                }); 
+            <?php } ?>
         }
         jQuery(document).ready(function(e) {
             showViewportSize();    
