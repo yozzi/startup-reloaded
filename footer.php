@@ -17,6 +17,8 @@ $left_panel_on = of_get_option( 'fullscreen-panel-on' );
 $right_panel_on = of_get_option( 'right-panel-on' );
 $navbar_position = of_get_option( 'navbar-position' );
 $navbar_transparent = of_get_option( 'navbar-transparent' );
+$slider_on = of_get_option( 'slider-on' );
+$slider_height = of_get_option( 'slider-height' );
 
 if ( $navbar_position == 'navbar-fixed-top' ) {
     $scroll_offset = 50;
@@ -68,6 +70,20 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
         });
     });
 </script>
+<?php if ($slider_on && $slider_height == '100%') { ?>
+    <script type="text/javascript">
+        function showViewportSize() {
+            var the_height = jQuery(window).height();                   
+            jQuery('#slider .item').css("height",the_height);
+        }
+        jQuery(document).ready(function(e) {
+            showViewportSize();    
+        });
+        jQuery(window).resize(function(e) {
+            showViewportSize();
+        });
+    </script>
+<?php } ?>
 
 <?php  if( $blog_style == 'shuffle' || $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){ ?>
     <script type="text/javascript">
