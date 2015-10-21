@@ -22,7 +22,7 @@
 
 <?php if (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>
     <div id="navbar-spacer" style="min-height:<?php if ($logo) { ?>95px<?php } else { ?>50px<?php } ?>">
-        <header id="masthead" class="site-header" role="banner" data-spy="affix" data-offset-top="<?= $slider_height ?>">
+        <header id="masthead" class="site-header" role="banner" data-spy="affix" <?php if ($slider_height !='100%') { ?>data-offset-top="<?= $slider_height ?>"<?php } ?>>
 <?php } else { ?>
     <header id="masthead" class="site-header" role="banner">    
 <?php } ?>
