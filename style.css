@@ -686,6 +686,29 @@ section {
 #site-navigation .navbar-toggle.right-toggle {
     margin-right: 0;
 }
+
+/* Under Slider */
+/* Mettre une condition : si la navbar est à plus de 50% du top de la page */
+/*
+.navbar-fixed-slider .dropdown .caret {
+  content: "";
+  border-top: 0;
+  border-bottom: 4px solid;
+}
+.navbar-fixed-slider .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+.navbar-fixed-slider .navbar-nav > li > .dropdown-menu {
+  margin-bottom: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+*/
+
 /* Style clair */
 
 .navbar-nav>li>a {
@@ -1168,6 +1191,7 @@ hr.star-primary:after {
         line-height: 50px;
     }
 }
+
 /*--------------------------------------------------------------
 ## Slider
 --------------------------------------------------------------*/
