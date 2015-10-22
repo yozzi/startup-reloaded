@@ -8,6 +8,11 @@ $total_testimonials = count($testimonials);
         <div class="row">            
             <?php if ($total_testimonials > 1){ ?>
                 <div id="testimonials-carousel" class="carousel slide">
+                    <ol class="carousel-indicators">
+            <?php for($i=0 ; $i<$total_testimonials; $i++){ ?>
+                <li data-target="#testimonials-carousel" data-slide-to="<?php echo $i ?>" class="<?php echo ($i==0)?'active':'' ?>"></li>
+            <?php } ?>
+        </ol>
                     <div class="carousel-inner">
                         <?php }  $count = 1;
 foreach ($testimonials as $key=> $testimonial) { ?>

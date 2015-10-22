@@ -161,7 +161,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 <?php  if( is_plugin_active('startup-cpt-testimonials/startup-cpt-testimonials.php')){ ?>
     <script type="text/javascript">
         jQuery('#testimonials-carousel').carousel({
-            interval: 5000
+            interval: 0
         }).on('slide.bs.carousel', function (e){
             var nextH = jQuery(e.relatedTarget).height();
             jQuery(this).find('.active.item').parent().animate({ height: nextH }, 500);
