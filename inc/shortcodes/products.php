@@ -50,6 +50,7 @@
                         </div>
                         <div class="product-details">
                             <h4><?php echo $product->post_title; ?></h4>
+                            <h4><?php if ( $categories ) { foreach( $categories as $category ) { print '<span class="label label-default">' . $category->name . '</span> '; unset($category); } } ?></h4>
 
                                 <?php if ( $short ) { echo '<p>' . esc_html( $short ) . '</p>'; } ?>
 
