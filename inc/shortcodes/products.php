@@ -110,7 +110,7 @@
                             <?php } else { echo 'Il manque une image'; } ?>
                           
                         <?php if ( $description ) { 
-                                if( $auto_format_off == 1 ){
+                                if( $auto_format_off ){
                                     echo '<p>' . $description . '</p>';
                                 } else {
                                     echo '<p>' . wpautop( $description ) . '</p>';
