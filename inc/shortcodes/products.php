@@ -73,6 +73,7 @@
                         <h2 class="modal-title" id="myModalLabel"><?php echo $product->post_title ?></h2>
                       </div>
                       <div class="modal-body">
+                          <?php $total_slides = count($gallery); ?>
                            <?php if ( $gallery ) { ?>
                             <div id="carousel-popup-<?php echo $product->ID; ?>" class="carousel slide" data-ride="carousel">
                                 <!-- Wrapper for slides -->
@@ -81,22 +82,30 @@
                                     foreach ( $gallery as $attachment_id => $img_product_main_url ) { ?>
                                         <div class="item <?php echo ( $x==1 ) ? 'active' : '' ?>">
                                             <?php $image = wp_get_attachment_image($attachment_id, 'shuffle_main'); ?>
-                                            <a href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next"><?php echo $image; ?></a>
+                                            <?php if ( $total_slides > 1 ) { ?>
+                                                <a href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next">
+                                            <?php } ?>  
+                                                    <?php echo $image; ?>
+                                            <?php if ( $total_slides > 1 ) { ?>    
+                                                </a>
+                                            <?php } ?>  
                                         </div>
                                     <?php $x++;
                                     } ?>                      
                                 </div>
                                     <!-- Controls -->
-                                    <div class="carousel-arrow left hvr-<?php echo $slider_arrows_hover ?> hidden-xs">                                       
-                                        <a class="left carousel-control" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="prev">
-                                            <i class="fa fa-chevron-left fa-lg"></i>
-                                        </a>                
-                                    </div>
-                                    <div class="carousel-arrow right hvr-<?php echo $slider_arrows_hover ?> hidden-xs">
-                                       <a class="right carousel-control" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next">
-                                            <i class="fa fa-chevron-right fa-lg"></i>
-                                        </a>
-                                    </div>
+                                    <?php if ( $total_slides > 1 ) { ?>
+                                        <div class="carousel-arrow left hvr-<?php echo $slider_arrows_hover ?> hidden-xs">                                       
+                                            <a class="left carousel-control" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="prev">
+                                                <i class="fa fa-chevron-left fa-lg"></i>
+                                            </a>                
+                                        </div>
+                                        <div class="carousel-arrow right hvr-<?php echo $slider_arrows_hover ?> hidden-xs">
+                                           <a class="right carousel-control" href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next">
+                                                <i class="fa fa-chevron-right fa-lg"></i>
+                                            </a>
+                                        </div>
+                                    <?php } ?>
                             </div>
                             <?php } else { echo 'Il manque une image'; } ?>
                           
