@@ -7,7 +7,7 @@ $total_testimonials = count($testimonials);
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">            
             <?php if ($total_testimonials > 1){ ?>
-                <div id="testimonials-carousel" class="carousel slide" data-interval="4000" data-ride="carousel">
+                <div id="testimonials-carousel" class="carousel slide">
                     <div class="carousel-inner">
                         <?php }  $count = 1;
 foreach ($testimonials as $key=> $testimonial) { ?>
