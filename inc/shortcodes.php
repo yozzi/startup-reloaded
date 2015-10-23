@@ -16,13 +16,13 @@ function startup_reloaded_shortcode_home( $atts ) {
         $button_url = get_post_meta( $home_post->ID, '_startup_reloaded_home_button_url', true );
         $blank = get_post_meta( $home_post->ID, '_startup_reloaded_home_blank', true );
         ob_start(); ?>
-            <section id="home-<?= $atts['id'] ?>">
+            <section id="home-<?php echo $atts['id'] ?>">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="home-section">
-                                <?php if ( $title ){ ?><h3><?= $home_post->post_title ?></h3><?php } ?>
-                                <p><?= $home_post->post_content ?></p>
+                                <?php if ( $title ){ ?><h3><?php echo $home_post->post_title ?></h3><?php } ?>
+                                <p><?php echo $home_post->post_content ?></p>
                                 <?php if ( $button_text ) { ?>
                                 <br />
                                 <a class="btn btn-custom" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
@@ -71,16 +71,16 @@ function startup_reloaded_shortcode_sections( $atts ) {
         $button_url = get_post_meta( $section->ID, '_startup_reloaded_sections_button_url', true );
         $blank = get_post_meta( $section->ID, '_startup_reloaded_sections_blank', true );
         ob_start(); ?>
-            <section id="section-<?= $atts['id'] ?>" class="section <?php echo $position ?>"  style="<?php if ( $color ){ echo 'color:' . $color . ';'; }; if ( $background && $parallax == '' ){  echo 'background: url(' . $background[0] . '); background-size:cover; background-position: center ' . $background_position . ';';} elseif ( $background_color && $parallax == '' ) { echo 'background: ' . $background_color . ';';} ?>" <?php if ( $parallax ){ echo 'data-parallax="scroll" data-image-src="' . $background[0] . '"'; } ?>>
+            <section id="section-<?php echo $atts['id'] ?>" class="section <?php echo $position ?>"  style="<?php if ( $color ){ echo 'color:' . $color . ';'; }; if ( $background && $parallax == '' ){  echo 'background: url(' . $background[0] . '); background-size:cover; background-position: center ' . $background_position . ';';} elseif ( $background_color && $parallax == '' ) { echo 'background: ' . $background_color . ';';} ?>" <?php if ( $parallax ){ echo 'data-parallax="scroll" data-image-src="' . $background[0] . '"'; } ?>>
                 <div class="effect <?php echo $effect; ?>" <?php if (!$background_video) { ?>style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>"<?php } ?>>
                     <?php if ( $background_video ) {?><div class="video" style="<?php if ( $padding ){ echo 'padding-top:' . $padding . 'px;padding-bottom:' . $padding . 'px;'; } ?>"><?php } ?>
                         <div class="container">
                             <?php if ( $boxed ){ ?>
-                                <?php if ( $title ){ ?><h2 class="boxed"><?= $section->post_title ?></h2><br /><?php } ?>
-                                <p class="boxed"><?= $section->post_content ?></p>
+                                <?php if ( $title ){ ?><h2 class="boxed"><?php echo $section->post_title ?></h2><br /><?php } ?>
+                                <p class="boxed"><?php echo $section->post_content ?></p>
                             <?php } else{ ?>
-                                <?php if ( $title ){ ?><h2><?= $section->post_title ?></h2><?php } ?>
-                                <p><?= $section->post_content ?></p>
+                                <?php if ( $title ){ ?><h2><?php echo $section->post_title ?></h2><?php } ?>
+                                <p><?php echo $section->post_content ?></p>
                             <?php } ?>
 
                              <?php if ( $button_text ) { ?>
@@ -94,7 +94,7 @@ function startup_reloaded_shortcode_sections( $atts ) {
                 </div>
             </section>
             <?php if ( $background_video ) {?>
-                <div class="player" id="section-background-video-<?= $atts['id'] ?>" data-property="{videoURL:'http://youtu.be/<?php echo $background_video ?>', containment:'#section-<?= $atts['id'] ?> .video', mute:true, loop:true, opacity:1, showControls:false}"></div>
+                <div class="player" id="section-background-video-<?php echo $atts['id'] ?>" data-property="{videoURL:'http://youtu.be/<?php echo $background_video ?>', containment:'#section-<?php echo $atts['id'] ?> .video', mute:true, loop:true, opacity:1, showControls:false}"></div>
             <?php } ?>
         <?php return ob_get_clean();  
     } else {

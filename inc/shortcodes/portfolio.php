@@ -47,21 +47,21 @@
                                 <?php if ( $thumbnail ) { $image = $thumbnail; }
                                 elseif ( $main_pic ) { $image = $main_pic; }
                                 else { $image = 'Il manque une image'; } ?>
-                                <?= $image ?>
+                                <?php echo $image ?>
                             </div>
                             <div class="portfolio-item-details">
-                                <h4><?= $portfolio_item->post_title ?></h4>
+                                <h4><?php echo $portfolio_item->post_title ?></h4>
 
                                     <?php if ( $short ) { echo '<p>' . esc_html( $short ) . '</p>'; } ?>
 
-                                    <a href="#" data-toggle="modal" data-target="#myModal-<?= $portfolio_item->ID ?>" class="btn btn-custom btn-lg btn-block" role="button">More information</a>
+                                    <a href="#" data-toggle="modal" data-target="#myModal-<?php echo $portfolio_item->ID ?>" class="btn btn-custom btn-lg btn-block" role="button">More information</a>
                             </div>
 
                         </div>
                     </div>
 
                     <!-- Modal -->
-                    <div class="modal fade simple" id="myModal-<?= $portfolio_item->ID ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal fade simple" id="myModal-<?php echo $portfolio_item->ID ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="container">
@@ -73,31 +73,31 @@
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
                                           <div class="modal-header">
-                                            <h2 class="modal-title" id="myModalLabel"><?= $portfolio_item->post_title ?></h2>
+                                            <h2 class="modal-title" id="myModalLabel"><?php echo $portfolio_item->post_title ?></h2>
                                             <hr class="star-primary" />
                                           </div>
                                           <div class="modal-body">
                                             <?php if ( $gallery ) { ?>
-                                                <div id="carousel-popup-<?= $portfolio_item->ID ?>" class="carousel slide" data-ride="carousel">
+                                                <div id="carousel-popup-<?php echo $portfolio_item->ID ?>" class="carousel slide" data-ride="carousel">
                                                     <!-- Wrapper for slides -->
                                                     <div class="carousel-inner">
                                                         <?php $x = 1;
                                                         foreach ( $gallery as $attachment_id => $img_portfolio_main_url ) { ?>
                                                             <div class="item <?php echo ( $x==1 ) ? 'active' : '' ?>">
                                                                 <?php $image = wp_get_attachment_image($attachment_id, 'shuffle_main'); ?>
-                                                                <a href="#carousel-popup-<?= $portfolio_item->ID ?>" role="button" data-slide="next"><?= $image ?></a>
+                                                                <a href="#carousel-popup-<?php echo $portfolio_item->ID ?>" role="button" data-slide="next"><?php echo $image ?></a>
                                                             </div>
                                                         <?php $x++;
                                                         } ?>                      
                                                     </div>
                                                         <!-- Controls -->
-                                                        <div class="carousel-arrow left hvr-<?= $slider_arrows_hover ?> hidden-xs">                                       
-                                                            <a class="left carousel-control" href="#carousel-popup-<?= $portfolio_item->ID ?>" role="button" data-slide="prev">
+                                                        <div class="carousel-arrow left hvr-<?php echo $slider_arrows_hover ?> hidden-xs">                                       
+                                                            <a class="left carousel-control" href="#carousel-popup-<?php echo $portfolio_item->ID ?>" role="button" data-slide="prev">
                                                                 <i class="fa fa-chevron-left fa-lg"></i>
                                                             </a>                
                                                         </div>
-                                                        <div class="carousel-arrow right hvr-<?= $slider_arrows_hover ?> hidden-xs">
-                                                           <a class="right carousel-control" href="#carousel-popup-<?= $portfolio_item->ID ?>" role="button" data-slide="next">
+                                                        <div class="carousel-arrow right hvr-<?php echo $slider_arrows_hover ?> hidden-xs">
+                                                           <a class="right carousel-control" href="#carousel-popup-<?php echo $portfolio_item->ID ?>" role="button" data-slide="next">
                                                                 <i class="fa fa-chevron-right fa-lg"></i>
                                                             </a>
                                                         </div>
@@ -105,7 +105,7 @@
                                                 <?php } elseif ( $detail_pic ) { $image = $detail_pic; }
                                                     elseif ( $detail_thumbnail ) { $image = $detail_thumbnail; }
                                                     else { $image = 'Il manque une image'; } ?>
-                                            <?= $image ?>
+                                            <?php echo $image ?>
 
                                             <div class="modal-description">  
                                             <?php if ( $description ) { 
@@ -153,16 +153,16 @@
                                 <?php if ( $thumbnail ) { $image = $thumbnail; }
                                 elseif ( $main_pic ) { $image = $main_pic; }
                                 else { $image = 'Il manque une image'; } ?>
-                                <?= $image ?>
+                                <?php echo $image ?>
                                 <div class="portfolio-item-details">
-                                    <a href="#" data-toggle="modal" data-target="#myModal-<?= $portfolio_item->ID ?>"><div class="caption"><i class="fa fa-plus-circle fa-5x"></i></div></a>
+                                    <a href="#" data-toggle="modal" data-target="#myModal-<?php echo $portfolio_item->ID ?>"><div class="caption"><i class="fa fa-plus-circle fa-5x"></i></div></a>
                                 </div>
                             </div>       
                         </div>
                     </div>
 
                     <!-- Modal -->
-                    <div class="modal fade simple" id="myModal-<?= $portfolio_item->ID ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal fade simple" id="myModal-<?php echo $portfolio_item->ID ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="container">
@@ -174,7 +174,7 @@
                                 <div class="row">
                                     <div class="col-sm-8 col-sm-offset-2">
                                           <div class="modal-header">
-                                            <h2 class="modal-title" id="myModalLabel"><?= $portfolio_item->post_title ?></h2>
+                                            <h2 class="modal-title" id="myModalLabel"><?php echo $portfolio_item->post_title ?></h2>
                                             <hr class="star-primary" />
                                           </div>
                                           <div class="modal-body">
@@ -182,7 +182,7 @@
                                             <?php if ( $detail_pic ) { $image = $detail_pic; }
                                                     elseif ( $detail_thumbnail ) { $image = $detail_thumbnail; }
                                                     else { $image = 'Il manque une image'; } ?>
-                                            <? echo $image ;?>
+                                            <?php echo $image ;?>
 
                                             <div class="modal-description">  
                                             <?php if ( $description ) { 

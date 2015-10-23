@@ -22,7 +22,7 @@
 
 <?php if (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>
     <div id="navbar-spacer" style="min-height:<?php if ($logo) { ?>95px<?php } else { ?>50px<?php } ?>">
-        <header id="masthead" class="site-header" role="banner" data-spy="affix" <?php if ($slider_height !='100%') { ?>data-offset-top="<?= $slider_height ?>"<?php } ?>>
+        <header id="masthead" class="site-header" role="banner" data-spy="affix" <?php if ($slider_height !='100%') { ?>data-offset-top="<?php echo $slider_height ?>"<?php } ?>>
 <?php } else { ?>
     <header id="masthead" class="site-header" role="banner">    
 <?php } ?>
@@ -41,9 +41,9 @@
                     <?php } ?>
                 <?php } ?>
             <div class="navbar-header <?php echo $navbar_logo_position; ?>">
-                <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+                <a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
                     <?php if ( $logo ) {?>
-                    <img src="<?= $logo ?>" alt="<?php bloginfo('name'); ?>" />
+                    <img src="<?php echo $logo ?>" alt="<?php bloginfo('name'); ?>" />
                     <?php } else {?>
                     <?php bloginfo('name'); ?>
                     <?php } ?>
@@ -55,7 +55,7 @@
                 <ul class="nav navbar-nav navbar-right non-collapsing">
                     <?php if ( $fullscreen_panel_hamburger_text ){ ?>
                         <li>
-                            <a data-toggle="modal" data-target="#fullscreen-panel" href="#"><?= $fullscreen_panel_hamburger_text ?></a>
+                            <a data-toggle="modal" data-target="#fullscreen-panel" href="#"><?php echo $fullscreen_panel_hamburger_text ?></a>
                         </li>
                      <?php } else { ?>
                         <li class="icon hvr-push">
@@ -75,7 +75,7 @@
                 <ul class="nav navbar-nav navbar-right non-collapsing">
                     <?php if ( $right_panel_hamburger_text ){ ?>
                         <li>
-                            <a href="#right-panel"><?= $right_panel_hamburger_text ?></a>
+                            <a href="#right-panel"><?php echo $right_panel_hamburger_text ?></a>
                         </li>
                      <?php } else { ?>
                         <li class="icon hvr-push">
@@ -95,7 +95,7 @@
                 <ul class="nav navbar-nav navbar-right non-collapsing">
                     <?php if ( $left_panel_hamburger_text ){ ?>
                         <li>
-                            <a href="#left-panel"><?= $left_panel_hamburger_text ?></a>
+                            <a href="#left-panel"><?php echo $left_panel_hamburger_text ?></a>
                         </li>
                      <?php } else { ?>
                         <li class="icon hvr-push">

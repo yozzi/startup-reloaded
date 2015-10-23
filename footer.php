@@ -45,7 +45,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
             
             <div class="row site-info">
                 <div class="col-xs-12">
-                <?= $footer ?>
+                <?php echo $footer ?>
                 </div>
             </div><!-- .site-info -->
         </footer><!-- #colophon -->
@@ -64,7 +64,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
         e.preventDefault();
         // animate
         jQuery('html, body').animate({
-            scrollTop: jQuery(this.hash).offset().top - <?= $scroll_offset ?>
+            scrollTop: jQuery(this.hash).offset().top - <?php echo $scroll_offset ?>
         }, 400, function () {
             // when done, add hash to url
             // (default click behaviour)
@@ -86,7 +86,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
             }
         ?>
         function showViewportSize() {
-            var the_height = jQuery(window).height() - <?= $slider_offset ?>;                   
+            var the_height = jQuery(window).height() - <?php echo $slider_offset ?>;                   
             jQuery('#slider .item').css("height",the_height);
             <?php if ( $navbar_position == 'navbar-fixed-slider' ) { ?>
                 jQuery('#masthead').affix({

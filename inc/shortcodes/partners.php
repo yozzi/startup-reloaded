@@ -18,9 +18,9 @@ $total_partners = count($partners);
                                         <div class="partner">
                                             <div class="partner-inner">
                                                 <?php if ($logo) { ?>
-                                                    <?php if ($url) { ?><a href="<?= $url ?>" target="_blank"><?php } ?><?= $logo ?><?php if ($url) { ?></a><?php } ?>
+                                                    <?php if ($url) { ?><a href="<?php echo $url ?>" target="_blank"><?php } ?><?php echo $logo ?><?php if ($url) { ?></a><?php } ?>
                                                 <?php } else { ?>
-                                                <h4><?php if ($url) { ?><a href="<?= $url ?>" target="_blank"><?php } ?><?= $partner->post_title ?><?php if ($url) { ?></a><?php } ?></h4>
+                                                <h4><?php if ($url) { ?><a href="<?php echo $url ?>" target="_blank"><?php } ?><?php echo $partner->post_title ?><?php if ($url) { ?></a><?php } ?></h4>
                                                 <?php } ?>
                                             </div>
                                         </div>

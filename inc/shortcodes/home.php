@@ -19,8 +19,8 @@ $counter = 0;
                     <div class="col-xs-12 col-sm-6">
                 <?php } ?>
                     <div class="home-section">
-                        <?php if ( $title ){ ?><h3><?= $home_section->post_title ?></h3><?php } ?>                     
-                        <p><?= $home_section->post_content ?></p>
+                        <?php if ( $title ){ ?><h3><?php echo $home_section->post_title ?></h3><?php } ?>                     
+                        <p><?php echo $home_section->post_content ?></p>
                         <?php if ( $button_text ) { ?>
                         <br />
                         <a class="btn btn-custom" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>

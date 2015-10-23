@@ -70,15 +70,15 @@
 <style>
     body{
     <?php
-    if ( $background['color'] ) { ?>  background-color: <?= $background['color'] ?>;
+    if ( $background['color'] ) { ?>  background-color: <?php echo $background['color'] ?>;
     <?php }
-    if ( $background['image'] ) { ?>  background-image: url(<?= $background['image'] ?>);
+    if ( $background['image'] ) { ?>  background-image: url(<?php echo $background['image'] ?>);
     <?php }
-    if ( $background['repeat'] && $background['image'] ) { ?>  background-repeat: <?= $background['repeat'] ?>;
+    if ( $background['repeat'] && $background['image'] ) { ?>  background-repeat: <?php echo $background['repeat'] ?>;
     <?php }
-    if ( $background['position'] && $background['image'] ) { ?>  background-position: <?= $background['position'] ?>;
+    if ( $background['position'] && $background['image'] ) { ?>  background-position: <?php echo $background['position'] ?>;
     <?php }
-    if ( $background['attachment'] && $background['image'] ) { ?>  background-attachment: <?= $background['attachment'] ?>;
+    if ( $background['attachment'] && $background['image'] ) { ?>  background-attachment: <?php echo $background['attachment'] ?>;
     <?php }
     if ( $cover && $background['image']) { ?>  background-size: cover;
     <?php } ?>
@@ -100,50 +100,50 @@
     if ($left_panel_on){
         if ($left_panel_color){ ?>
             #left-panel.mm-menu{
-              background: <?= $left_panel_color ?>;
+              background: <?php echo $left_panel_color ?>;
             }
         <?php }
     }    
     if ($right_panel_on){
         if ($right_panel_color){ ?>
             #right-panel.mm-menu{
-              background: <?= $right_panel_color ?>;
+              background: <?php echo $right_panel_color ?>;
             }
         <?php }
     } ?>
         
     /* Navbar */
     .navbar{
-      background: <?= $navbar_color ?>;
+      background: <?php echo $navbar_color ?>;
     }
         
     /* Custom buttons */
     .btn{
-      border-radius: <?= $bt_radius ?>px;
+      border-radius: <?php echo $bt_radius ?>px;
     }    
         
     .btn-custom {
-      color: <?= $bt_text ?>;
-      background-color: <?= $bt_background ?>;
+      color: <?php echo $bt_text ?>;
+      background-color: <?php echo $bt_background ?>;
     }
     .btn-custom:hover,
     .btn-custom:focus,
     .btn-custom:active,
     .btn-custom.active{
-      color: <?= $bt_hover_text ?>;
-      background-color: <?= $bt_hover_background ?>;
+      color: <?php echo $bt_hover_text ?>;
+      background-color: <?php echo $bt_hover_background ?>;
     }
 
     <?php if ($custom_css) {echo $custom_css;}?>
         
     body.home #site-navigation.navbar.top-nav-collapse {
-      background-color: <?= $navbar_color ?> !important;
+      background-color: <?php echo $navbar_color ?> !important;
     }
         
     /* Footer & colophon */
     #secondary-bg,
     #colophon-bg {
-      background-color: <?= $footer_color ?>;
+      background-color: <?php echo $footer_color ?>;
     }
 </style>
 
@@ -153,7 +153,7 @@
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', '<?= $ga; ?>', 'auto');
+            ga('create', '<?php echo $ga; ?>', 'auto');
             ga('send', 'pageview');
         </script>
     <?php } ?>
@@ -210,7 +210,7 @@
                     slidingSubmenus : false,
                     extensions	: [ 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbar 		: {
-						title		: '<?= $left_panel_title ?>'
+						title		: '<?php echo $left_panel_title ?>'
 					},
                     navbars		: [
                         {
@@ -270,7 +270,7 @@
                     
                     extensions	: [ 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                     navbar 		: {
-						title		: '<?= $right_panel_title ?>'
+						title		: '<?php echo $right_panel_title ?>'
 					},
                     navbars		: [
                         {
@@ -340,7 +340,7 @@
     <?php if( $left_panel_on || $right_panel_on ){ ?>
         <div class="panel-page-container">
             <?php } ?>
-            <div class="page-container<?php if( $page_transition ) { ?> animsition<?php } ?>"<?php if( $page_transition ) { ?> data-animsition-in="<?= $page_transition_in ?>" data-animsition-out="<?= $page_transition_out ?>"<?php } ?>>   
+            <div class="page-container<?php if( $page_transition ) { ?> animsition<?php } ?>"<?php if( $page_transition ) { ?> data-animsition-in="<?php echo $page_transition_in ?>" data-animsition-out="<?php echo $page_transition_out ?>"<?php } ?>>   
                 
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
             <?php if( $left_panel_on ){ require get_template_directory() . '/inc/left-panel.php'; } ?>

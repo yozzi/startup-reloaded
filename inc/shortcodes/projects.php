@@ -43,7 +43,7 @@ $total_projects = count($projects);
                             
                             } ?>
                             
-                                <a href="<?php echo esc_url( get_permalink($project->ID) ) ?>"><? echo $image ;?></a>
+                                <a href="<?php echo esc_url( get_permalink($project->ID) ) ?>"><?php echo $image ;?></a>
                             
                             <?php if ( $short ) { ?><h5><?php echo esc_html( $short ); ?></h5><?php } ?>
                             <?php if ( $status ) { ?><div><em><?php echo esc_html( $status ); ?></em></div><?php } ?>

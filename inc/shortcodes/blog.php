@@ -64,13 +64,13 @@
                         <div class="post">
                             <?php if ( $image ) { ?>
                                 <div class="post-thumbnail">  
-                                     <?= $image ?>
+                                     <?php echo $image ?>
                                 </div>
                             <?php } ?>
                             <div class="post-details">
-                                <h4><?= $post->post_title ?></h4>
-                                <p><?= $post->post_content ?></p>
-                                <a href="<?php echo esc_url( get_permalink($post->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button">More information</a>
+                                <h4><?php echo $post->post_title ?></h4>
+                                <p><?php echo $post->post_content ?></p>
+                                <a href="<?php echo esc_url( get_permalink($post->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button">Lire la suite</a>
                             </div>        
                         </div>
                     </div>
