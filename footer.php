@@ -166,6 +166,10 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
             var nextH = jQuery(e.relatedTarget).height();
             jQuery(this).find('.active.item').parent().animate({ height: nextH }, 500);
         });
+        
+        jQuery('#testimonials-carousel').on('slid.bs.carousel', function () {
+            jQuery(window).trigger('resize').trigger('scroll');
+        })
     </script>
 <?php } ?>
 
