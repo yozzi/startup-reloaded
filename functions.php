@@ -284,3 +284,11 @@ function startup_reloaded_page_priority_prepend_page_rewrite_rules( $rewrite_rul
 }
 
 add_filter( 'rewrite_rules_array', 'startup_reloaded_page_priority_prepend_page_rewrite_rules' );
+
+// Style de Tiny MCE
+function startup_reloaded_editor_styles() {
+    add_editor_style();
+    //add_editor_style( 'custom-editor-style.css' );
+}
+
+add_action( 'admin_init', 'startup_reloaded_editor_styles' );
