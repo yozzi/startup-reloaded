@@ -164,11 +164,6 @@ require get_template_directory() . '/lib/cmb2-field-slider/cmb2_field_slider.php
 require get_template_directory() . '/inc/metaboxes.php';
 
 /**
- * Charger les Shortcodes.
- */
-require get_template_directory() . '/inc/shortcodes.php';
-
-/**
  * Charger TGM pour inclure des plugins.
  */
 require get_template_directory() . '/inc/plugins.php';
