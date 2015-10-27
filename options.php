@@ -8,13 +8,13 @@ function optionsframework_options() {
     //*****************************************************************************
     //*****************************************************************************
     //
-    // Général
+    // General
     //
     //*****************************************************************************
     //*****************************************************************************
     
     $options[] = array(
-		'name' => __( 'Général', 'theme-textdomain' ),
+		'name' => __( 'General', 'theme-textdomain' ),
 		'type' => 'heading'
 	);
     
@@ -825,7 +825,7 @@ function optionsframework_options() {
     
 	$options[] = array(
 		'name' => __( 'Mise en forme automatique', 'theme-textdomain' ),
-		'desc' => __( 'Cocher pour <strong>désactiver</strong> la mise en forme automatique de l\'éditeur WordPress. Permet de garder le contrôle de votre code. ( Évite les br, p, et suppression de lignes vides, etc...)', 'theme-textdomain' ),
+		'desc' => __( 'Cocher pour <strong>désactiver</strong> la mise en forme automatique de l\'editeur WordPress. Permet de garder le controle de votre code. ( Evite les br, p, et suppression de lignes vides, etc...)', 'theme-textdomain' ),
 		'id' => 'auto-format-off',
 		'std' => '1',
 		'type' => 'checkbox'
