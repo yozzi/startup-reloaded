@@ -1,6 +1,6 @@
 <?php 
 // Metaboxes
-add_action( 'cmb2_init', 'startup_reloaded_metabox_pages' );
+add_action( 'cmb2_admin_init', 'startup_reloaded_metabox_pages' );
 
 function startup_reloaded_metabox_pages() {
 	// Start with an underscore to hide fields from custom fields list
@@ -123,7 +123,7 @@ function startup_reloaded_metabox_pages() {
 	) );
 }
 
-add_action( 'cmb2_init', 'startup_reloaded_metabox_posts' );
+add_action( 'cmb2_admin_init', 'startup_reloaded_metabox_posts' );
 
 function startup_reloaded_metabox_posts() {
 	// Start with an underscore to hide fields from custom fields list
