@@ -98,5 +98,5 @@
         <?php } ?>
     
     
-    <?php if (is_front_page()) { ?></div>div><?php } ?>
+    <?php if (is_front_page()) { ?></div><?php } ?>
 </section>
