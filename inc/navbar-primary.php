@@ -28,7 +28,7 @@
 <?php } ?>
 
     <nav id="site-navigation" class="navbar navbar-default<?php if($logo){echo ' logo';} ?> <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; if ($navbar_position == 'navbar-fixed-slider' && !is_front_page()) { echo ' navbar-fixed-top'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
-        <!– Brand and toggle get grouped for better mobile display –>
+        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container">
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
                     <?php if ($responsive == 1) { ?>
@@ -116,16 +116,16 @@
             
             
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
-                <!– Collect the nav links, forms, and other content for toggling –>
+                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="<?php if ($responsive == 1) { ?>collapse navbar-collapse navbar-sur-collapse <?php } ?><?php echo $navbar_menu_position; ?>">
                     <?php wp_nav_menu(array( 'menu'=> 'navbar-primary', 'theme_location' => 'navbar-primary', 'depth' => 2, 'container' => false, 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_page_menu', 'walker' => new wp_bootstrap_navwalker()) ); ?>
                 </div>
-                <!– /.navbar-collapse –>
+                <!-- /.navbar-collapse -->
             <?php } ?>
         </div>
-        <!– /.container –>
+        <!-- /.container -->
     </nav>
-<!– #site-navigation –>
+<!-- #site-navigation -->
 
 </header>
 <?php if ($navbar_position == 'navbar-fixed-slider') { ?>

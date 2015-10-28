@@ -106,7 +106,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 <?php } ?>
 
 <?php if ($navbar_position == 'navbar-fixed-slider') { ?>
-<!-- À finir
+<!-- A finir
     <script type="text/javascript">
         var midHeight = jQuery(window).height() / 2 //Splits screen in half
         var scrollTop = jQuery(window).scrollTop(),
