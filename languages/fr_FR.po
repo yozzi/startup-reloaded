@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"PO-Revision-Date: Wed Oct 28 2015 15:48:36 GMT-0400 (Est (heure d’été))\n"
+"PO-Revision-Date: Wed Oct 28 2015 16:34:59 GMT-0400 (Est (heure d’été))\n"
 "Last-Translator: yann <ycaplain@croisieresaml.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: French (France)\n"
@@ -21,10 +21,6 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Loco-Target-Locale: fr_FR\n"
 "X-Generator: Loco - https://localise.biz/"
-
-#: ../404.php:15
-msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
 
 #: ../404.php:19
 msgid ""
@@ -1050,29 +1046,13 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: ../inc/shortcodes/products.php:43
-msgid "Available"
-msgstr "Disponible"
+#: ../inc/shortcodes/portfolio.php:201
+msgid "Client"
+msgstr "Client"
 
-#: ../inc/shortcodes/products.php:44
-msgid "Sold out soon"
-msgstr ""
-
-#: ../inc/shortcodes/products.php:45
-msgid "Back order"
-msgstr ""
-
-#: ../inc/shortcodes/products.php:46
-msgid "Sold out"
-msgstr ""
-
-#: ../inc/shortcodes/products.php:47
-msgid "Unavailable"
-msgstr "Indisponible"
-
-#: ../inc/shortcodes/products.php:122
-msgid "Buy it now!"
-msgstr ""
+#: ../inc/shortcodes/portfolio.php:201
+msgid "Date"
+msgstr "Date"
 
 #: ../lib/class-tgm-plugin-activation.php:333
 msgid "Install Required Plugins"
@@ -1788,9 +1768,9 @@ msgstr ""
 msgid "Yann Caplain"
 msgstr ""
 
-#: ../inc/shortcodes/products.php:48
-msgid "Sale closed"
-msgstr "Vente terminée"
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Cette page est introuvable."
 
 #: ../404.php:27
 msgid "Most Used Categories"
@@ -1812,3 +1792,43 @@ msgstr "par %s"
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Publié dans %1$s"
+
+#: ../inc/shortcodes/portfolio.php:57 ../inc/shortcodes/products.php:60
+msgid "More information"
+msgstr "En savoir plus"
+
+#: ../inc/shortcodes/portfolio.php:204
+msgid "Visit"
+msgstr "Visiter"
+
+#: ../inc/shortcodes/products.php:12
+msgid "All"
+msgstr "Tous"
+
+#: ../inc/shortcodes/products.php:43
+msgid "Available"
+msgstr "Disponible"
+
+#: ../inc/shortcodes/products.php:44
+msgid "Sold out soon"
+msgstr "Bientôt épuisé"
+
+#: ../inc/shortcodes/products.php:45
+msgid "Back order"
+msgstr "Sur commande"
+
+#: ../inc/shortcodes/products.php:46
+msgid "Sold out"
+msgstr "Épuisé"
+
+#: ../inc/shortcodes/products.php:47
+msgid "Unavailable"
+msgstr "Indisponible"
+
+#: ../inc/shortcodes/products.php:48
+msgid "Sale closed"
+msgstr "Vente terminée"
+
+#: ../inc/shortcodes/products.php:122
+msgid "Buy it now!"
+msgstr "J'achète !"

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"POT-Revision-Date: Wed Oct 28 2015 15:39:41 GMT-0400 (Est (heure d’été))\n"
+"POT-Revision-Date: Wed Oct 28 2015 16:32:19 GMT-0400 (Est (heure d’été))\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: yann <ycaplain@croisieresaml.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1072,6 +1072,26 @@ msgstr ""
 
 #: ../inc/template-tags.php:181
 msgid "Archives"
+msgstr ""
+
+#: ../inc/shortcodes/portfolio.php:57 ../inc/shortcodes/products.php:60
+msgid "More information"
+msgstr ""
+
+#: ../inc/shortcodes/portfolio.php:201
+msgid "Client"
+msgstr ""
+
+#: ../inc/shortcodes/portfolio.php:201
+msgid "Date"
+msgstr ""
+
+#: ../inc/shortcodes/portfolio.php:204
+msgid "Visit"
+msgstr ""
+
+#: ../inc/shortcodes/products.php:12
+msgid "All"
 msgstr ""
 
 #: ../inc/shortcodes/products.php:43

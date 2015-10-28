@@ -9,7 +9,7 @@
 <section id="products">
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <ul id="filter" class="nav nav-pills">
-            <li><a class="active" href="#" data-group="all">Tous</a></li>
+            <li><a class="active" href="#" data-group="all"><?php _e( 'All', 'startup-reloaded' ) ?></a></li>
             <?php 
                 $args = array( 'hide_empty' => 0 );
                 $myterms = get_terms( 'product-category', $args );
@@ -57,7 +57,7 @@
                             elseif ( $price != '0, 00' ) { echo '<div class="product-price well well-sm">' . esc_html( $price ) . ' $</div>'; } ?>
 <!--                            <a href="<?php echo esc_url( get_permalink($product->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button">More information</a>-->
                             
-                            <button type="button" class="btn btn-custom btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $product->ID; ?>">Voir les d&eacute;tails</button>
+                            <button type="button" class="btn btn-custom btn-lg btn-block" data-toggle="modal" data-target="#myModal-<?php echo $product->ID; ?>"><?php _e( 'More information', 'startup-reloaded' ) ?></button>
                         </div>  
                                 
                     </div>
