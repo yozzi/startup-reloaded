@@ -991,21 +991,18 @@ body.logo-on.fixed-slider #content {
         padding-top: 50px;
     }
 }
-/* Home or Template page-slider.php */
+/* Home */
 
-body.home.fixed-slider #content,
-body.page-template-page-slider.fixed-slider #content {
+body.home.fixed-slider #content {
     padding-top: 0;
 }
 
-body.home.logo-on.fixed-slider #content,
-body.page-template-page-slider.logo-on.fixed-slider #content {
+body.home.logo-on.fixed-slider #content {
     padding-top: 0;
 }
 
 @media (max-width: 767px) {
-    body.home.logo-on.fixed-slider #content,
-    body.page-template-page-slider.logo-on.fixed-slider #content {
+    body.home.logo-on.fixed-slider #content {
         padding-top: 0;
     }
 }

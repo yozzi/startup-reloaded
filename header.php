@@ -348,12 +348,8 @@
             <a class="skip-link screen-reader-text" href="#content">
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
             </a>
-            <?php // Corriger ici pour le Template Page Slider 
-            if( ($navbar_on && $navbar_position != 'navbar-fixed-slider') || ( $navbar_on && !is_front_page())){
-                    if (!is_page_template( 'page-slider.php' )) {
-                        require get_template_directory() . '/inc/navbar-primary.php';
-                    }
-            } ?>
-            
+
+            <?php if( ($navbar_on && $navbar_position != 'navbar-fixed-slider') || ( $navbar_on && !is_front_page()) ){ require get_template_directory() . '/inc/navbar-primary.php'; } ?>
+        
 
             <div id="content" class="site-content">
