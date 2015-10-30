@@ -139,11 +139,6 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/lib/wp_bootstrap_navwalker.php';
 
 /**
- * Charger les Custom Post Types.
- */
-//require get_template_directory() . '/inc/cpt.php';
-
-/**
  * Charger CMB2.
  */
 require get_template_directory() . '/lib/CMB2/init.php';
@@ -189,11 +184,6 @@ load_template( $optionsfile );
 if( of_get_option( 'auto-format-off' ) == 1 ){
     remove_filter('the_content', 'wpautop');
 }
-
-/**
- * Enqueue Google Fonts
- */
-//require get_template_directory() . '/inc/google-fonts.php';
 
  /* 
  * The CSS file selected in the options panel 'stylesheet' option

@@ -13,16 +13,16 @@ $total_team = count($team);
                         $count = 1;
 
                         foreach ($team as $key=> $team) {
-                            $team_image_url       = wp_get_attachment_url( get_post_thumbnail_id($team->ID) );
-                            $team_capacity          = get_post_meta($team->ID, '_startup_reloaded_team_capacity', true );
-                            $team_social_icon_1    = get_post_meta($team->ID, '_startup_reloaded_team_icon_1', true );
-                            $team_social_link_1    = get_post_meta($team->ID, '_startup_reloaded_team_link_1', true );
-                            $team_social_icon_2    = get_post_meta($team->ID, '_startup_reloaded_team_icon_2', true );
-                            $team_social_link_2    = get_post_meta($team->ID, '_startup_reloaded_team_link_2', true );
-                            $team_social_icon_3    = get_post_meta($team->ID, '_startup_reloaded_team_icon_3', true );
-                            $team_social_link_3    = get_post_meta($team->ID, '_startup_reloaded_team_link_3', true );
-                            $team_social_icon_4    = get_post_meta($team->ID, '_startup_reloaded_team_icon_4', true );
-                            $team_social_link_4    = get_post_meta($team->ID, '_startup_reloaded_team_link_4', true );
+                            $team_image_url     = wp_get_attachment_url( get_post_thumbnail_id($team->ID) );
+                            $team_capacity      = get_post_meta($team->ID, '_startup_reloaded_team_capacity', true );
+                            $team_social_icon_1 = get_post_meta($team->ID, '_startup_reloaded_team_icon_1', true );
+                            $team_social_link_1 = get_post_meta($team->ID, '_startup_reloaded_team_link_1', true );
+                            $team_social_icon_2 = get_post_meta($team->ID, '_startup_reloaded_team_icon_2', true );
+                            $team_social_link_2 = get_post_meta($team->ID, '_startup_reloaded_team_link_2', true );
+                            $team_social_icon_3 = get_post_meta($team->ID, '_startup_reloaded_team_icon_3', true );
+                            $team_social_link_3 = get_post_meta($team->ID, '_startup_reloaded_team_link_3', true );
+                            $team_social_icon_4 = get_post_meta($team->ID, '_startup_reloaded_team_icon_4', true );
+                            $team_social_link_4 = get_post_meta($team->ID, '_startup_reloaded_team_link_4', true );
 
                             if ($count%4 == 1){ ?>
                                 <div class="item<?php if ($count == 1){ echo ' active';} ?>">
