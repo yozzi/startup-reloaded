@@ -1,6 +1,4 @@
 <?php
-/**
-* Template Name: Home */
 
 $navbar_on = of_get_option( 'navbar-on' );
 $navbar_position = of_get_option( 'navbar-position' );
@@ -16,7 +14,7 @@ require get_template_directory() . '/inc/home-slider.php';
 
         <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php get_template_part( 'template-parts/content-home', 'page' ); ?>
+        <?php get_template_part( 'template-parts/content', 'home' ); ?>
 
         <?php endwhile; // end of the loop. ?>
 
