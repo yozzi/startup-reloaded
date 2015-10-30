@@ -36,7 +36,7 @@
                     <div class="product">
                         <div class="product-thumbnail">  
                             <?php if ( $main_pic ) { $image = $main_pic; }
-                            else { $image = 'Il manque une image'; } ?>                       
+                            else { $image = __( 'Image missing!', 'startup-reloaded' ); } ?>                       
                             
                             <?php echo $image ?>
                                                         
@@ -106,7 +106,7 @@
                                         </div>
                                     <?php } ?>
                             </div>
-                            <?php } else { echo 'Il manque une image'; } ?>
+                            <?php } else { _e( 'Image missing!', 'startup-reloaded' ); } ?>
                           
                         <?php if ( $description ) { 
                                 if( $auto_format_off ){

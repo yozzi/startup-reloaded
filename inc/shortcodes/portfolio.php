@@ -13,7 +13,7 @@
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <?php if ($style == 'shuffle'){ ?>
             <ul id="filter" class="nav nav-pills">
-                <li><a class="active" href="#" data-group="all">All</a></li>
+                <li><a class="active" href="#" data-group="all"><?php _e( 'All', 'startup-reloaded' ) ?></a></li>
                 <?php 
                     $args = array( 'hide_empty' => 0 );
                     $myterms = get_terms( 'portfolio-category', $args );
@@ -46,7 +46,7 @@
                             <div class="portfolio-item-thumbnail">  
                                 <?php if ( $thumbnail ) { $image = $thumbnail; }
                                 elseif ( $main_pic ) { $image = $main_pic; }
-                                else { $image = 'Il manque une image'; } ?>
+                                else { $image = __( 'Image missing!', 'startup-reloaded' ); } ?>
                                 <?php echo $image ?>
                             </div>
                             <div class="portfolio-item-details">
@@ -104,7 +104,7 @@
                                                 </div>
                                                 <?php } elseif ( $detail_pic ) { $image = $detail_pic; }
                                                     elseif ( $detail_thumbnail ) { $image = $detail_thumbnail; }
-                                                    else { $image = 'Il manque une image'; } ?>
+                                                    else { $image = __( 'Image missing!', 'startup-reloaded' ); } ?>
                                             <?php echo $image ?>
 
                                             <div class="modal-description">  
@@ -121,10 +121,10 @@
                                           <div class="modal-footer">
                                             <?php if ($client || $date){ ?>
                                                 <div class="well well-sm">
-                                                    <?php if($client) {echo 'Client: <strong>' . $client . '</strong>';}?> <?php if($date) {echo 'Date: <strong>' . gmdate("m/Y", $date) . '</strong>';}?>
+                                                    <?php if($client) { ?><?php _e( 'Client', 'startup-reloaded' ) ?>: <strong><?php echo $client ?></strong><?php } ?> <?php if($date) { ?><?php _e( 'Date', 'startup-reloaded' ) ?>: <strong><?php echo gmdate("m/Y", $date) ?></strong><?php } ?>
                                                 </div>
                                             <?php } ?>
-                                            <?php if($url) {echo '<a href="' . $url . '"class="btn btn-custom" target="_blank">Visit</a>';}?>
+                                            <?php if($url) { ?><a href="<?php echo $url ?>" class="btn btn-custom" target="_blank"><?php _e( 'Visit', 'startup-reloaded' ) ?></a><?php }?>
                                           </div>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@
                             <div class="portfolio-item-thumbnail">  
                                 <?php if ( $thumbnail ) { $image = $thumbnail; }
                                 elseif ( $main_pic ) { $image = $main_pic; }
-                                else { $image = 'Il manque une image'; } ?>
+                                else { $image = __( 'Image missing!', 'startup-reloaded' ); } ?>
                                 <?php echo $image ?>
                                 <div class="portfolio-item-details">
                                     <a href="#" data-toggle="modal" data-target="#myModal-<?php echo $portfolio_item->ID ?>"><div class="caption"><i class="fa fa-plus-circle fa-5x"></i></div></a>
@@ -181,7 +181,7 @@
 
                                             <?php if ( $detail_pic ) { $image = $detail_pic; }
                                                     elseif ( $detail_thumbnail ) { $image = $detail_thumbnail; }
-                                                    else { $image = 'Il manque une image'; } ?>
+                                                    else { $image = __( 'Image missing!', 'startup-reloaded' ); } ?>
                                             <?php echo $image ;?>
 
                                             <div class="modal-description">  

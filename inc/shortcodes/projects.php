@@ -39,15 +39,15 @@ $total_projects = count($projects);
                             
                             } else {
                             
-                                $image = 'Il manque une image';
+                                $image = __( 'Image missing!', 'startup-reloaded' );
                             
                             } ?>
                             
                                 <a href="<?php echo esc_url( get_permalink($project->ID) ) ?>"><?php echo $image ;?></a>
                             
                             <?php if ( $short ) { ?><h5><?php echo esc_html( $short ); ?></h5><?php } ?>
-                            <?php if ( $status ) { ?><div><em><?php echo esc_html( $status ); ?></em></div><?php } ?>
-                            <a href="<?php echo esc_url( get_permalink($project->ID) ) ?>">Visiter ce projet</a>
+                            <?php if ( $status ) { ?><div><em><?php echo esc_html( $status ) ?></em></div><?php } ?>
+                            <a href="<?php echo esc_url( get_permalink($project->ID) ) ?>"><?php _e( 'Visit project', 'startup-reloaded' ) ?></a>
                    
                    
                         </div>

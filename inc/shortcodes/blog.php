@@ -11,7 +11,7 @@
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <?php if ( $blog_style == 'shuffle' && $blog_filter == 'buttons' ) { ?>
             <ul id="filter" class="nav nav-pills">
-                <li><a class="active" href="#" data-group="all">All</a></li>
+                <li><a class="active" href="#" data-group="all"><?php _e( 'All', 'startup-reloaded' ) ?></a></li>
                 <?php 
                     $args = array( 'hide_empty' => 0 );
                     $myterms = get_terms( 'category', $args );
@@ -29,11 +29,11 @@
 
         <div class="dropdown">
           <button class="btn btn-custom dropdown-toggle" type="button" id="filter-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Filter
+            <?php _e( 'Filter', 'startup-reloaded' ) ?>
             <span class="caret"></span>
           </button>
           <ul id="filter" class="dropdown-menu" aria-labelledby="filter-btn">
-            <li><a class="active" href="#" data-group="all">All</a></li>
+            <li><a class="active" href="#" data-group="all"><?php _e( 'All', 'startup-reloaded' ) ?></a></li>
             <?php 
                 $args = array( 'hide_empty' => 0 );
                 $myterms = get_terms( 'category', $args );
@@ -70,7 +70,7 @@
                             <div class="post-details">
                                 <h4><?php echo $post->post_title ?></h4>
                                 <p><?php echo $post->post_content ?></p>
-                                <a href="<?php echo esc_url( get_permalink($post->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button">Lire la suite</a>
+                                <a href="<?php echo esc_url( get_permalink($post->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button"><?php _e( 'Lire la suite', 'startup-reloaded' ) ?></a>
                             </div>        
                         </div>
                     </div>
