@@ -537,6 +537,8 @@ function optionsframework_options() {
     //*****************************************************************************
     //*****************************************************************************
     
+    if (is_plugin_active('startup-cpt-slider/startup-cpt-slider.php')){
+    
 	$options[] = array(
 		'name' => __( 'Slider', 'startup-reloaded' ),
 		'type' => 'heading'
@@ -612,6 +614,7 @@ function optionsframework_options() {
 		'options' => $slider_navigation
 	);
     
+    }
     //*****************************************************************************
     //*****************************************************************************
     //
@@ -625,6 +628,7 @@ function optionsframework_options() {
 		'type' => 'heading'
 	);
     
+    if (is_plugin_active('startup-cpt-home/startup-cpt-home.php')){
     $options[] = array(
 		'name' => __( 'Home', 'startup-reloaded' ),
         'desc' => __( 'Generate home content with Home plugin custom post sections. If not, use a classic page with the Home template.', 'startup-reloaded' ),
@@ -632,7 +636,8 @@ function optionsframework_options() {
 		'std' => '0',
 		'type' => 'checkbox'
 	);
-    
+    }
+        
     $blog_styles = array(
 		'grid' => __( 'Grid', 'startup-reloaded' ),
 		'shuffle' => __( 'Shuffle', 'startup-reloaded' )
@@ -670,6 +675,7 @@ function optionsframework_options() {
 		'class' => 'mini'
 	);
     
+    if (is_plugin_active('startup-cpt-portfolio/startup-cpt-portfolio.php')){
     $portfolio_styles = array(
 		'grid' => __( 'Grid', 'startup-reloaded' ),
 		'shuffle' => __( 'Shuffle', 'startup-reloaded' )
@@ -692,6 +698,7 @@ function optionsframework_options() {
 		'type' => 'text',
 		'class' => 'mini'
 	);
+    }
 
 //    // Fonts
 //	$options[] = array(
