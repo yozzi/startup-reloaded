@@ -70,7 +70,7 @@
                             <div class="post-details">
                                 <h4><?php echo $post->post_title ?></h4>
                                 <p><?php echo $post->post_content ?></p>
-                                <a href="<?php echo esc_url( get_permalink($post->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button"><?php _e( 'Lire la suite', 'startup-reloaded' ) ?></a>
+                                <a href="<?php echo esc_url( get_permalink($post->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button"><?php _e( 'Read more', 'startup-reloaded' ) ?></a>
                             </div>        
                         </div>
                     </div>

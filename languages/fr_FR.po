@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"PO-Revision-Date: Wed Oct 28 2015 16:34:59 GMT-0400 (Est (heure d’été))\n"
-"Last-Translator: yann <ycaplain@croisieresaml.com>\n"
+"PO-Revision-Date: Fri Oct 30 2015 19:15:22 GMT-0400 (EDT)\n"
+"Last-Translator: yann <yozz.online@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: French (France)\n"
 "Plural-Forms: nplurals=2; plural=n > 1\n"
@@ -22,11 +22,19 @@ msgstr ""
 "X-Loco-Target-Locale: fr_FR\n"
 "X-Generator: Loco - https://localise.biz/"
 
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Cette page est introuvable."
+
 #: ../404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+
+#: ../404.php:27
+msgid "Most Used Categories"
+msgstr "Catégories récentes"
 
 #. translators: %1$s: smiley
 #: ../404.php:44
@@ -36,7 +44,6 @@ msgstr ""
 
 #: ../comments.php:29
 #, php-format
-msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
@@ -86,15 +93,15 @@ msgstr ""
 msgid "Navbar Bottom"
 msgstr ""
 
-#: ../functions.php:258
+#: ../functions.php:248
 msgid "Shuffle thumbnail"
 msgstr ""
 
-#: ../functions.php:259
+#: ../functions.php:249
 msgid "Shuffle main"
 msgstr ""
 
-#: ../functions.php:260
+#: ../functions.php:250
 msgid "Grid thumbnail"
 msgstr ""
 
@@ -146,7 +153,7 @@ msgstr ""
 msgid "Responsive"
 msgstr ""
 
-#: ../options.php:47 ../inc/metaboxes.php:106 ../inc/metaboxes.php:206
+#: ../options.php:47 ../inc/metaboxes.php:99 ../inc/metaboxes.php:199
 msgid "Boxed"
 msgstr ""
 
@@ -262,7 +269,7 @@ msgstr ""
 msgid "Provided by Google in the form UA-XXXXXXX-XX"
 msgstr ""
 
-#: ../options.php:143 ../options.php:643 ../options.php:680
+#: ../options.php:143 ../options.php:648 ../options.php:686
 msgid "Style"
 msgstr ""
 
@@ -311,25 +318,25 @@ msgid "Padding in px"
 msgstr ""
 
 #: ../options.php:275 ../options.php:368 ../inc/metaboxes.php:78 ../inc/metaboxes.
-#: php:185
+#: php:178
 msgid "Left"
 msgstr ""
 
 #: ../options.php:276 ../inc/metaboxes.php:59 ../inc/metaboxes.php:79 ..
-#: inc/metaboxes.php:166 ../inc/metaboxes.php:186
+#: inc/metaboxes.php:159 ../inc/metaboxes.php:179
 msgid "Center"
 msgstr ""
 
 #: ../options.php:277 ../options.php:369 ../inc/metaboxes.php:80 ../inc/metaboxes.
-#: php:187
+#: php:180
 msgid "Right"
 msgstr ""
 
-#: ../options.php:281 ../inc/metaboxes.php:72 ../inc/metaboxes.php:179
+#: ../options.php:281 ../inc/metaboxes.php:72 ../inc/metaboxes.php:172
 msgid "Content position"
 msgstr ""
 
-#: ../options.php:290 ../inc/metaboxes.php:107 ../inc/metaboxes.php:207
+#: ../options.php:290 ../inc/metaboxes.php:100 ../inc/metaboxes.php:200
 msgid "Put the text inside a box"
 msgstr ""
 
@@ -427,12 +434,12 @@ msgid "Theme"
 msgstr ""
 
 #: ../options.php:463 ../options.php:515 ../inc/metaboxes.php:91 ../inc/metaboxes.
-#: php:198
+#: php:191
 msgid "Light"
 msgstr ""
 
 #: ../options.php:464 ../options.php:516 ../inc/metaboxes.php:92 ../inc/metaboxes.
-#: php:199
+#: php:192
 msgid "Dark"
 msgstr ""
 
@@ -458,126 +465,118 @@ msgid ""
 "activate navbar hamburger below to make the fantasy happen."
 msgstr ""
 
-#: ../options.php:541
+#: ../options.php:543
 msgid "Slider"
 msgstr ""
 
-#: ../options.php:546
+#: ../options.php:548
 msgid "Activate on homepage"
 msgstr ""
 
-#: ../options.php:553
+#: ../options.php:555
 msgid "Height in px. \"100%\" for full viewport height"
 msgstr ""
 
-#: ../options.php:561
+#: ../options.php:563
 msgid "Interval in ms or false"
 msgstr ""
 
-#: ../options.php:569
+#: ../options.php:571
 msgid "Slide"
 msgstr ""
 
-#: ../options.php:570
+#: ../options.php:572
 msgid "Fade"
 msgstr ""
 
-#: ../options.php:574
+#: ../options.php:576
 msgid "Transition"
 msgstr ""
 
-#: ../options.php:583
+#: ../options.php:585
 msgid "Show arrows if more than one slide"
 msgstr ""
 
-#: ../options.php:592
+#: ../options.php:594
 msgid "Arrows hover effect"
 msgstr ""
 
-#: ../options.php:601 ../lib/CMB2/includes/CMB2_Field.php:978 ..
+#: ../options.php:603 ../lib/CMB2/includes/CMB2_Field.php:978 ..
 #: lib/CMB2/includes/CMB2_Field.php:982
 msgid "None"
 msgstr ""
 
-#: ../options.php:602
+#: ../options.php:604
 msgid "Pagination"
 msgstr ""
 
-#: ../options.php:603
+#: ../options.php:605
 msgid "Content arrow"
 msgstr ""
 
-#: ../options.php:607
+#: ../options.php:609
 msgid "Navigation type"
 msgstr ""
 
-#: ../options.php:624
+#: ../options.php:627
 msgid "Post types"
 msgstr ""
 
-#: ../options.php:629
+#: ../options.php:633
 msgid "Home"
 msgstr ""
 
-#: ../options.php:630
+#: ../options.php:634
 msgid ""
 "Generate home content with Home plugin custom post sections. If not, use a "
 "classic page with the Home template."
 msgstr ""
 
-#: ../options.php:637 ../options.php:674
+#: ../options.php:642 ../options.php:680
 msgid "Grid"
 msgstr ""
 
-#: ../options.php:638 ../options.php:675
+#: ../options.php:643 ../options.php:681
 msgid "Shuffle"
 msgstr ""
 
-#: ../options.php:642
+#: ../options.php:647
 msgid "Blog"
 msgstr ""
 
-#: ../options.php:652
+#: ../options.php:657
 msgid "Buttons"
 msgstr ""
 
-#: ../options.php:653
+#: ../options.php:658
 msgid "Dropdown"
 msgstr ""
 
-#: ../options.php:657
+#: ../options.php:662
 msgid "Shuffle filter type"
 msgstr ""
 
-#: ../options.php:666 ../options.php:689
+#: ../options.php:671 ../options.php:695
 msgid "Max number of items to show for grid style. Leave empty for unlimited."
 msgstr ""
 
-#: ../options.php:679
+#: ../options.php:685
 msgid "Portfolio"
 msgstr ""
 
-#: ../options.php:822
+#: ../options.php:829
 msgid "Advanced"
 msgstr ""
 
-#: ../options.php:827
+#: ../options.php:834
 msgid "Mise en forme automatique"
 msgstr ""
 
-#: ../options.php:828
+#: ../options.php:835
 msgid ""
 "Cocher pour <strong>desactiver</strong> la mise en forme automatique de "
 "l'editeur WordPress. Permet de garder le controle de votre code. ( Evite les "
 "br, p, et suppression de lignes vides, etc...)"
-msgstr ""
-
-#. Name of the template
-msgid "Products"
-msgstr ""
-
-#. Name of the template
-msgid "Projects"
 msgstr ""
 
 #: ../profile-form.php:18
@@ -693,23 +692,27 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: ../inc/metaboxes.php:11 ../inc/metaboxes.php:134
+#: ../inc/fullscreen-panel.php:12
+msgid "Main navigation"
+msgstr ""
+
+#: ../inc/metaboxes.php:11 ../inc/metaboxes.php:127
 msgid "Header"
 msgstr ""
 
-#: ../inc/metaboxes.php:16 ../inc/metaboxes.php:139
+#: ../inc/metaboxes.php:16 ../inc/metaboxes.php:132
 msgid "Hidden"
 msgstr ""
 
-#: ../inc/metaboxes.php:17 ../inc/metaboxes.php:140
+#: ../inc/metaboxes.php:17 ../inc/metaboxes.php:133
 msgid "Hide the header. Or not."
 msgstr ""
 
-#: ../inc/metaboxes.php:23 ../inc/metaboxes.php:146
+#: ../inc/metaboxes.php:23 ../inc/metaboxes.php:139
 msgid "Background color"
 msgstr ""
 
-#: ../inc/metaboxes.php:30 ../inc/metaboxes.php:153
+#: ../inc/metaboxes.php:30 ../inc/metaboxes.php:146
 msgid "Text color"
 msgstr ""
 
@@ -721,56 +724,72 @@ msgstr ""
 msgid "Background image"
 msgstr ""
 
-#: ../inc/metaboxes.php:53 ../inc/metaboxes.php:160
+#: ../inc/metaboxes.php:53 ../inc/metaboxes.php:153
 msgid "Background image position"
 msgstr ""
 
-#: ../inc/metaboxes.php:58 ../inc/metaboxes.php:165
+#: ../inc/metaboxes.php:58 ../inc/metaboxes.php:158
 msgid "Top"
 msgstr ""
 
-#: ../inc/metaboxes.php:60 ../inc/metaboxes.php:167
+#: ../inc/metaboxes.php:60 ../inc/metaboxes.php:160
 msgid "Bottom"
 msgstr ""
 
-#: ../inc/metaboxes.php:65 ../inc/metaboxes.php:172
+#: ../inc/metaboxes.php:65 ../inc/metaboxes.php:165
 msgid "Padding"
 msgstr ""
 
-#: ../inc/metaboxes.php:66 ../inc/metaboxes.php:173
+#: ../inc/metaboxes.php:66 ../inc/metaboxes.php:166
 msgid "Padding of page header in px"
 msgstr ""
 
-#: ../inc/metaboxes.php:85 ../inc/metaboxes.php:192
+#: ../inc/metaboxes.php:85 ../inc/metaboxes.php:185
 msgid "Effect"
 msgstr ""
 
-#: ../inc/metaboxes.php:93 ../inc/metaboxes.php:200
+#: ../inc/metaboxes.php:93 ../inc/metaboxes.php:193
 msgid "Trame 1"
 msgstr ""
 
-#: ../inc/metaboxes.php:94 ../inc/metaboxes.php:201
+#: ../inc/metaboxes.php:94 ../inc/metaboxes.php:194
 msgid "Trame 2"
 msgstr ""
 
-#: ../inc/metaboxes.php:113 ../inc/metaboxes.php:213
+#: ../inc/metaboxes.php:106 ../inc/metaboxes.php:206
 msgid "No"
 msgstr ""
 
-#: ../inc/metaboxes.php:114 ../inc/metaboxes.php:214
+#: ../inc/metaboxes.php:107 ../inc/metaboxes.php:207
 msgid "Yes"
 msgstr ""
 
-#: ../inc/metaboxes.php:119 ../inc/metaboxes.php:219
+#: ../inc/metaboxes.php:112 ../inc/metaboxes.php:212
 msgid "Parallax"
 msgstr ""
 
-#: ../inc/metaboxes.php:120 ../inc/metaboxes.php:220
+#: ../inc/metaboxes.php:113 ../inc/metaboxes.php:213
 msgid "Add parallax effect to the background"
 msgstr ""
 
+#: ../inc/navbar-primary.php:36
+msgid "Toggle navigation"
+msgstr ""
+
+#: ../inc/navbar-primary.php:63
+msgid "Toggle fullscreen panel"
+msgstr ""
+
+#: ../inc/navbar-primary.php:83
+msgid "Toggle right panel"
+msgstr ""
+
+#: ../inc/navbar-primary.php:103
+msgid "Toggle left panel"
+msgstr ""
+
 #: ../inc/plugins.php:238
-msgid "Plugins additionnels"
+msgid "Additional Plugins"
 msgstr ""
 
 #: ../inc/plugins.php:239
@@ -918,10 +937,27 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
+#: ../inc/template-tags.php:86
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Publié le %s"
+
+#: ../inc/template-tags.php:91
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "par %s"
+
 #. translators: used between list items, there is a space after the comma
 #: ../inc/template-tags.php:108 ../inc/template-tags.php:114
 msgid ", "
 msgstr ""
+
+#: ../inc/template-tags.php:110
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publié dans %1$s"
 
 #: ../inc/template-tags.php:116
 #, php-format
@@ -1044,15 +1080,75 @@ msgstr ""
 
 #: ../inc/template-tags.php:181
 msgid "Archives"
-msgstr ""
+msgstr "Archives"
 
-#: ../inc/shortcodes/portfolio.php:201
+#: ../inc/shortcodes/blog.php:14 ../inc/shortcodes/blog.php:36 ..
+#: inc/shortcodes/portfolio.php:16 ../inc/shortcodes/products.php:12
+msgid "All"
+msgstr "Tous"
+
+#: ../inc/shortcodes/blog.php:32
+msgid "Filter"
+msgstr "Filtre"
+
+#: ../inc/shortcodes/blog.php:73
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: ../inc/shortcodes/portfolio.php:49 ../inc/shortcodes/portfolio.php:107 ..
+#: inc/shortcodes/portfolio.php:155 ../inc/shortcodes/portfolio.php:184 ..
+#: inc/shortcodes/products.php:39 ../inc/shortcodes/products.php:109 ..
+#: inc/shortcodes/projects.php:42
+msgid "Image missing!"
+msgstr "Il manque une image !"
+
+#: ../inc/shortcodes/portfolio.php:57 ../inc/shortcodes/products.php:60
+msgid "More information"
+msgstr "En savoir plus"
+
+#: ../inc/shortcodes/portfolio.php:124 ../inc/shortcodes/portfolio.php:201
 msgid "Client"
 msgstr "Client"
 
-#: ../inc/shortcodes/portfolio.php:201
+#: ../inc/shortcodes/portfolio.php:124 ../inc/shortcodes/portfolio.php:201
 msgid "Date"
 msgstr "Date"
+
+#: ../inc/shortcodes/portfolio.php:127 ../inc/shortcodes/portfolio.php:204
+msgid "Visit"
+msgstr "Visiter"
+
+#: ../inc/shortcodes/products.php:43
+msgid "Available"
+msgstr "Disponible"
+
+#: ../inc/shortcodes/products.php:44
+msgid "Sold out soon"
+msgstr "Bientôt épuisé"
+
+#: ../inc/shortcodes/products.php:45
+msgid "Back order"
+msgstr "Sur commande"
+
+#: ../inc/shortcodes/products.php:46
+msgid "Sold out"
+msgstr "Épuisé"
+
+#: ../inc/shortcodes/products.php:47
+msgid "Unavailable"
+msgstr "Indisponible"
+
+#: ../inc/shortcodes/products.php:48
+msgid "Sale closed"
+msgstr "Vente terminée"
+
+#: ../inc/shortcodes/products.php:122
+msgid "Buy it now!"
+msgstr "J'achète !"
+
+#: ../inc/shortcodes/projects.php:50
+msgid "Visit project"
+msgstr "Visiter le projet"
 
 #: ../lib/class-tgm-plugin-activation.php:333
 msgid "Install Required Plugins"
@@ -1751,84 +1847,3 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-
-#. Name of the theme
-msgid "StartUp Reloaded"
-msgstr ""
-
-#. Theme URI of the theme
-msgid "http://yozz.net"
-msgstr ""
-
-#. Description of the theme
-msgid "Second version of StartUp developper theme, re-build from ground up"
-msgstr ""
-
-#. Author of the theme
-msgid "Yann Caplain"
-msgstr ""
-
-#: ../404.php:15
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Cette page est introuvable."
-
-#: ../404.php:27
-msgid "Most Used Categories"
-msgstr "Catégories récentes"
-
-#: ../inc/template-tags.php:86
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Publié le %s"
-
-#: ../inc/template-tags.php:91
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "par %s"
-
-#: ../inc/template-tags.php:110
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Publié dans %1$s"
-
-#: ../inc/shortcodes/portfolio.php:57 ../inc/shortcodes/products.php:60
-msgid "More information"
-msgstr "En savoir plus"
-
-#: ../inc/shortcodes/portfolio.php:204
-msgid "Visit"
-msgstr "Visiter"
-
-#: ../inc/shortcodes/products.php:12
-msgid "All"
-msgstr "Tous"
-
-#: ../inc/shortcodes/products.php:43
-msgid "Available"
-msgstr "Disponible"
-
-#: ../inc/shortcodes/products.php:44
-msgid "Sold out soon"
-msgstr "Bientôt épuisé"
-
-#: ../inc/shortcodes/products.php:45
-msgid "Back order"
-msgstr "Sur commande"
-
-#: ../inc/shortcodes/products.php:46
-msgid "Sold out"
-msgstr "Épuisé"
-
-#: ../inc/shortcodes/products.php:47
-msgid "Unavailable"
-msgstr "Indisponible"
-
-#: ../inc/shortcodes/products.php:48
-msgid "Sale closed"
-msgstr "Vente terminée"
-
-#: ../inc/shortcodes/products.php:122
-msgid "Buy it now!"
-msgstr "J'achète !"
