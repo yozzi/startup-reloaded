@@ -16,8 +16,25 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
+                <?php get_template_part( 'template-parts/title', 'page' ); ?>
+				<?php $boxed = of_get_option( 'general-boxed' ); ?>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <div class="entry-content">
+                        <?php if(!$boxed) { ?><div class="container"><?php } ?>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <?php the_content();
+                                        wp_link_pages( array(
+                                            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'startup-reloaded' ),
+                                            'after'  => '</div>',
+                                        ) );
+                                    ?>
+                                </div>
+                            </div>
+                        <?php if(!$boxed) { ?></div><?php } ?>
+                    </div><!-- .entry-content -->
+                </article><!-- #post-## -->
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template

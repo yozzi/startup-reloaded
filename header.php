@@ -343,13 +343,15 @@
             <div class="page-container<?php if( $page_transition ) { ?> animsition<?php } ?>"<?php if( $page_transition ) { ?> data-animsition-in="<?php echo $page_transition_in ?>" data-animsition-out="<?php echo $page_transition_out ?>"<?php } ?>>   
                 
         <div id="page" class="hfeed site<?php if ( $boxed ){ echo ' container'; } ?>" <?php if ( $boxed ){ echo ' style="padding:0"'; } ?>>
-            <?php if( $left_panel_on ){ require get_template_directory() . '/inc/left-panel.php'; } ?>
-            <?php if( $right_panel_on ){ require get_template_directory() . '/inc/right-panel.php'; } ?>
+            
+            <?php if( $left_panel_on ){ get_template_part( 'template-parts/panel', 'left' ); } ?>
+            <?php if( $right_panel_on ){ get_template_part( 'template-parts/panel', 'right' ); } ?>
+            
             <a class="skip-link screen-reader-text" href="#content">
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
             </a>
 
-            <?php if( ($navbar_on && $navbar_position != 'navbar-fixed-slider') || ( $navbar_on && !is_front_page()) ){ require get_template_directory() . '/inc/navbar-primary.php'; } ?>
+            <?php if( ($navbar_on && $navbar_position != 'navbar-fixed-slider') || ( $navbar_on && !is_front_page()) ){ get_template_part( 'template-parts/navbar', 'primary' ); } ?>
         
 
             <div id="content" class="site-content">

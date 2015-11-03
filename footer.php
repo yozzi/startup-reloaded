@@ -38,7 +38,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
             <?php if ( has_nav_menu( 'navbar-bottom' ) ) { ?>
                 <div class="row">
                     <div class="col-xs-12">
-                        <?php require get_template_directory() . '/inc/navbar-bottom.php' ?>
+                        <?php get_template_part( 'template-parts/navbar', 'bottom' ) ?>
                     </div>
                 </div>
             <?php } ?>
@@ -52,7 +52,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
     </div>
 </div><!-- #page -->
 
-<?php if( $fullscreen_panel_on ){ require get_template_directory() . '/inc/fullscreen-panel.php'; } ?>
+<?php if( $fullscreen_panel_on ){ get_template_part( 'template-parts/panel', 'fullscreen' ); } ?>
 
 <?php wp_footer(); ?>
 
