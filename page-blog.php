@@ -16,7 +16,7 @@ get_header(); ?>
                         <?php if(!$boxed) { ?><div class="container"><?php } ?>
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <?php require get_template_directory() . '/inc/shortcodes/blog.php'; ?>
+                                    <?php get_template_part( 'template-parts/content', 'blog' ); ?>
                                 </div>
                             </div>
                         <?php if(!$boxed) { ?></div><?php } ?>
