@@ -21,7 +21,7 @@ if ($slider_on == 1) {
               $home_type = of_get_option( 'home-type' );
             if ( is_plugin_active('startup-cpt-home/startup-cpt-home.php') && !empty ( $hasposts ) && $home_type ) {
 
-                require get_template_directory() . '/inc/shortcodes/home.php';
+                get_template_part( 'template-parts/content', 'home' );
 
             } else { ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
