@@ -1,7 +1,8 @@
 <?php
 
-$navbar_on = of_get_option( 'navbar-on' );
-$navbar_position = of_get_option( 'navbar-position' );
+$navbar_on          = of_get_option( 'navbar-on' );
+$navbar_position    = of_get_option( 'navbar-position' );
+$slider_on          = of_get_option( 'slider-on' );
 
 get_header();
 

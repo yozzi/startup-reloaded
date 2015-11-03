@@ -2,7 +2,6 @@
     $args                   = array( 'post_type'=>'slider', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
     $sliders                = get_posts( $args );
     $total_sliders          = count( $sliders );
-    $slider_on              = of_get_option( 'slider-on' );
     $slider_height          = of_get_option( 'slider-height' );
     $slider_interval        = of_get_option( 'slider-interval' );
     $slider_transition      = of_get_option( 'slider-transition' );
