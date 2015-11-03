@@ -9,8 +9,6 @@
     $slider_arrows          = of_get_option( 'slider-arrows' );
     $slider_arrows_hover    = of_get_option( 'slider-arrows-hover' );
     $slider_navigation      = of_get_option( 'slider-navigation' );
-
-    if ($slider_on == 1) { 
 ?>
 
     <div id="slider" class="carousel slide <?php echo $slider_transition ?>" data-interval="<?php echo $slider_interval ?>">
@@ -104,4 +102,3 @@
             </div>
         <?php } ?>
     </div>
-<?php } ?>

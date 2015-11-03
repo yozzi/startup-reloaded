@@ -5,7 +5,9 @@ $navbar_position = of_get_option( 'navbar-position' );
 
 get_header();
 
-require get_template_directory() . '/inc/home-slider.php';
+if ($slider_on == 1) {
+    require get_template_directory() . '/inc/home-slider.php';
+}
 ?>
 <?php if( ($navbar_on && $navbar_position == 'navbar-fixed-slider' ) ){ require get_template_directory() . '/inc/navbar-primary.php'; } ?>
 
