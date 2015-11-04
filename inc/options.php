@@ -722,6 +722,29 @@ function optionsframework_options() {
 	);
     }
 
+    if (is_plugin_active('startup-cpt-partners/startup-cpt-partners.php')){
+    $options[] = array(
+		'name' => __( 'Partners', 'startup-reloaded' ),
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'partners-order',
+		'std' => 'menu_order',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
+    $options[] = array(
+		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
+		'id' => 'partners-number',
+		'std' => '',
+		'type' => 'text',
+		'class' => 'mini'
+	);
+    }
+
+    
 //    // Fonts
 //	$options[] = array(
 //		'name' => __( 'Fonts', 'startup-reloaded' ),

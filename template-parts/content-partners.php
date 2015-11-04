@@ -1,5 +1,8 @@
 <?php
-$args=array( 'post_type'=>'partners', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
+$order = of_get_option( 'partners-order' );
+$number = of_get_option( 'partners-number' );
+if ( $number ) { $max = $number; } else {$max = -1;};
+$args=array( 'post_type'=>'partners', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
 $partners = get_posts( $args );
 $total_partners = count($partners);
 ?>
