@@ -1,5 +1,8 @@
 <?php
-$args=array( 'post_type'=>'team', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
+$order = of_get_option( 'team-order' );
+$number = of_get_option( 'team-number' );
+if ( $number ) { $max = $number; } else {$max = -1;};
+$args=array( 'post_type'=>'team', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
 $team = get_posts( $args );
 $total_team = count($team);
 ?>
@@ -23,6 +26,7 @@ $total_team = count($team);
                             $team_social_link_3 = get_post_meta($team->ID, '_startup_reloaded_team_link_3', true );
                             $team_social_icon_4 = get_post_meta($team->ID, '_startup_reloaded_team_icon_4', true );
                             $team_social_link_4 = get_post_meta($team->ID, '_startup_reloaded_team_link_4', true );
+                            $team_page          = get_post_meta($team->ID, '_startup_reloaded_team_page', true );
 
                             if ($count%4 == 1){ ?>
                                 <div class="item<?php if ($count == 1){ echo ' active';} ?>">
@@ -36,6 +40,9 @@ $total_team = count($team);
                                         <strong class="name"><?php echo $team->post_title ?></strong>
                                         <p class="small text-muted designation"><?php echo $team_capacity ?></p>
                                         <p class="desc"><?php echo $team->post_content ?></p>
+                                        <?php if ( $team_page ) { ?>
+                                            <a href="<?php  echo site_url() . '/' . $team_page ?>" class="btn btn-custom btn-lg btn-block" role="button"><?php _e( 'Profile', 'startup-reloaded' ) ?></a>
+                                        <?php } ?>
                                         <ul class="social">
                                             <li class="facebook"><a target="_blank" href="<?php echo $team_social_link_1; ?>"><i class="fa fa-<?php echo $team_social_icon_1; ?>"></i></a></li>
                                             <li class="twitter"><a target="_blank" href="<?php echo $team_social_link_2; ?>"><i class="fa fa-<?php echo $team_social_icon_2; ?>"></i></a></li>

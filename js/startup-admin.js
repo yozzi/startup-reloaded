@@ -11,6 +11,7 @@ jQuery( document ).ready(function() {
     jQuery('#_startup_reloaded_team_icon_2').select2();
     jQuery('#_startup_reloaded_team_icon_3').select2();
     jQuery('#_startup_reloaded_team_icon_4').select2();
+    jQuery('#_startup_reloaded_team_page').select2();
     jQuery('#_startup_reloaded_pricing_icon_1').select2();
     jQuery('#_startup_reloaded_pricing_icon_2').select2();
     jQuery('#_startup_reloaded_pricing_icon_3').select2();
