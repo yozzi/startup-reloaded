@@ -7,7 +7,7 @@ get_header(); ?>
 	<div id="primary" class="container content-area">
 		<main id="main" class="row site-main" role="main">
             <?php get_template_part( 'template-parts/title', 'page' ); ?>
-			<?php require get_template_directory() . '/inc/shortcodes/projects.php'; ?>
+			<?php get_template_part( 'template-parts/content', 'projects' ); ?>
             
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -41,7 +41,7 @@ $page_header_boxed = of_get_option( 'page-header-boxed' );
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <?php require get_template_directory() . '/inc/shortcodes/products.php'; ?>
+                            <?php get_template_part( 'template-parts/content', 'products' ); ?>
                         </div>
                     </div>
                 </div>
