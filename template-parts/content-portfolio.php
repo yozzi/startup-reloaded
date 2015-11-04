@@ -1,8 +1,9 @@
 <?php
+    $order = of_get_option( 'portfolio-order' );
     $number = of_get_option( 'portfolio-number' );
     $style = of_get_option( 'portfolio-style' );
     if (($number) && ($style != 'shuffle')) {$max = $number;} else {$max = -1;};
-    $args = array( 'post_type'=>'portfolio', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => $max );
+    $args = array( 'post_type'=>'portfolio', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
     $portfolio = get_posts( $args );
     $total_portfolio = count($portfolio);
     $slider_arrows_hover = of_get_option( 'slider-arrows-hover' );

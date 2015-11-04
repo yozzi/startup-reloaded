@@ -1,5 +1,8 @@
 <?php
-$args=array( 'post_type'=>'services', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
+$order = of_get_option( 'services-order' );
+$number = of_get_option( 'services-number' );
+if ( $number ) { $max = $number; } else {$max = -1;};
+$args=array( 'post_type'=>'services', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
 $services = get_posts( $args );
 $total_services = count($services);
 ?>

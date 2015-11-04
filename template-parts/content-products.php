@@ -1,5 +1,8 @@
 <?php
-    $args=array( 'post_type'=>'products', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => -1 );
+    $order = of_get_option( 'products-order' );
+    $number = of_get_option( 'products-number' );
+if ( $number ) { $max = $number; } else {$max = -1;};
+    $args=array( 'post_type'=>'products', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
     $products = get_posts( $args );
     $total_products = count($products);
     $slider_arrows_hover    = of_get_option( 'slider-arrows-hover' );

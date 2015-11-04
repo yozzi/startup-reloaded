@@ -1,5 +1,8 @@
 <?php
-    $args                   = array( 'post_type'=>'slider', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
+    $order                  = of_get_option( 'slider-order' );
+    $number                 = of_get_option( 'slider-number' );
+    if ( $number ) { $max = $number; } else {$max = -1;};
+    $args                   = array( 'post_type'=>'slider', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
     $sliders                = get_posts( $args );
     $total_sliders          = count( $sliders );
     $slider_on              = of_get_option( 'slider-on' );

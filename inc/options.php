@@ -550,6 +550,26 @@ function optionsframework_options() {
 		'std' => '1',
 		'type' => 'checkbox'
 	);
+        
+    $options[] = array(
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'slider-order',
+		'std' => 'menu_order',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
+        
+    $options[] = array(
+		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
+		'id' => 'slider-number',
+		'std' => '',
+		'type' => 'text',
+		'class' => 'mini'
+	);
     
     $options[] = array(
 		'desc' => __( 'Height in px. "100%" for full viewport height', 'startup-reloaded' ),
@@ -690,6 +710,18 @@ function optionsframework_options() {
 		'class' => 'mini', //mini, tiny, small
 		'options' => $portfolio_styles
 	);
+        
+    $options[] = array(
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'portfolio-order',
+		'std' => 'menu_order',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
     
     $options[] = array(
 		'desc' => __( 'Max number of items to show for grid style. Leave empty for unlimited.', 'startup-reloaded' ),
@@ -738,6 +770,116 @@ function optionsframework_options() {
     $options[] = array(
 		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
 		'id' => 'partners-number',
+		'std' => '',
+		'type' => 'text',
+		'class' => 'mini'
+	);
+    }
+    
+    if (is_plugin_active('startup-cpt-milestones/startup-cpt-milestones.php')){
+    $options[] = array(
+		'name' => __( 'Milestones', 'startup-reloaded' ),
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'milestones-order',
+		'std' => 'menu_order',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
+    $options[] = array(
+		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
+		'id' => 'milestones-number',
+		'std' => '',
+		'type' => 'text',
+		'class' => 'mini'
+	);
+    }
+    
+    if (is_plugin_active('startup-cpt-products/startup-cpt-products.php')){
+    $options[] = array(
+		'name' => __( 'Products', 'startup-reloaded' ),
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'products-order',
+		'std' => 'menu_order',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
+    $options[] = array(
+		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
+		'id' => 'products-number',
+		'std' => '',
+		'type' => 'text',
+		'class' => 'mini'
+	);
+    }
+    
+    if (is_plugin_active('startup-cpt-projects/startup-cpt-projects.php')){
+    $options[] = array(
+		'name' => __( 'Projects', 'startup-reloaded' ),
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'projects-order',
+		'std' => 'menu_order',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
+    $options[] = array(
+		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
+		'id' => 'projects-number',
+		'std' => '',
+		'type' => 'text',
+		'class' => 'mini'
+	);
+    }
+    
+    if (is_plugin_active('startup-cpt-services/startup-cpt-services.php')){
+    $options[] = array(
+		'name' => __( 'Services', 'startup-reloaded' ),
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'services-order',
+		'std' => 'menu_order',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
+    $options[] = array(
+		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
+		'id' => 'services-number',
+		'std' => '',
+		'type' => 'text',
+		'class' => 'mini'
+	);
+    }
+    
+    if (is_plugin_active('startup-cpt-team/startup-cpt-team.php')){
+    $options[] = array(
+		'name' => __( 'Team', 'startup-reloaded' ),
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'team-order',
+		'std' => 'menu_order',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
+    $options[] = array(
+		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
+		'id' => 'team-number',
 		'std' => '',
 		'type' => 'text',
 		'class' => 'mini'
