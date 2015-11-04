@@ -699,6 +699,28 @@ function optionsframework_options() {
 		'class' => 'mini'
 	);
     }
+    
+    if (is_plugin_active('startup-cpt-testimonials/startup-cpt-testimonials.php')){
+    $options[] = array(
+		'name' => __( 'Testimonials', 'startup-reloaded' ),
+        'desc' => __( 'Display order', 'startup-reloaded' ),
+		'id' => 'testimonials-order',
+		'std' => 'rand',
+		'type' => 'select',
+        'class' => 'mini',
+        'options' => array(
+		  'rand' => __( 'Random', 'startup-reloaded' ),
+		  'menu_order' => __( 'Menu order', 'startup-reloaded' )
+            )
+	);
+    $options[] = array(
+		'desc' => __( 'Max number of items to show. Leave empty for unlimited.', 'startup-reloaded' ),
+		'id' => 'testimonials-number',
+		'std' => '',
+		'type' => 'text',
+		'class' => 'mini'
+	);
+    }
 
 //    // Fonts
 //	$options[] = array(
