@@ -173,9 +173,15 @@ require get_template_directory() . '/inc/plugins.php';
  *
  */
 
+add_filter('options_framework_location','startup_reloaded_options_framework_location_override');
+
+function startup_reloaded_options_framework_location_override() {
+	return array('/inc/options.php');
+}
+
 define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/lib/options-framework/' );
 require_once dirname( __FILE__ ) . '/lib/options-framework/options-framework.php';
-$optionsfile = locate_template( 'options.php' );
+$optionsfile = locate_template( '/inc/options.php' );
 load_template( $optionsfile );
 
 /**

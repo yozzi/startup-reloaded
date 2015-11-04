@@ -840,3 +840,9 @@ function optionsframework_options() {
     
 	return $options;
 }
+
+function exampletheme_options_after() { ?>
+    <p>Content after the options panel!</p>
+<?php }
+
+add_action('optionsframework_after','exampletheme_options_after', 100);
