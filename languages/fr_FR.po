@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"PO-Revision-Date: Fri Oct 30 2015 19:15:22 GMT-0400 (EDT)\n"
-"Last-Translator: yann <yozz.online@gmail.com>\n"
+"PO-Revision-Date: Wed Nov 04 2015 11:12:16 GMT-0500 (Est)\n"
+"Last-Translator: yann <ycaplain@croisieresaml.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: French (France)\n"
 "Plural-Forms: nplurals=2; plural=n > 1\n"
@@ -22,19 +22,11 @@ msgstr ""
 "X-Loco-Target-Locale: fr_FR\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: ../404.php:15
-msgid "Oops! That page can&rsquo;t be found."
-msgstr "Oops! Cette page est introuvable."
-
 #: ../404.php:19
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-
-#: ../404.php:27
-msgid "Most Used Categories"
-msgstr "Catégories récentes"
 
 #. translators: %1$s: smiley
 #: ../404.php:44
@@ -44,6 +36,7 @@ msgstr ""
 
 #: ../comments.php:29
 #, php-format
+msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
@@ -63,6 +56,16 @@ msgstr ""
 
 #: ../comments.php:75
 msgid "Comments are closed."
+msgstr ""
+
+#. translators: %s: Name of current post
+#: ../front-page.php:32
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../front-page.php:39 ../page.php:29 ../single.php:31
+msgid "Pages:"
 msgstr ""
 
 #: ../functions.php:48
@@ -105,32 +108,8 @@ msgstr ""
 msgid "Grid thumbnail"
 msgstr ""
 
-#: ../header.php:349
+#: ../header.php:351
 msgid "Skip to content"
-msgstr ""
-
-#: ../login-form.php:13 ../profile-form.php:37 ../register-form.php:13
-msgid "Username"
-msgstr ""
-
-#: ../login-form.php:17
-msgid "Password"
-msgstr ""
-
-#: ../login-form.php:24
-msgid "Remember Me"
-msgstr ""
-
-#: ../login-form.php:26
-msgid "Log In"
-msgstr ""
-
-#: ../lostpassword-form.php:13
-msgid "Username or E-mail:"
-msgstr ""
-
-#: ../lostpassword-form.php:19
-msgid "Get New Password"
 msgstr ""
 
 #: ../options.php:17
@@ -579,107 +558,12 @@ msgid ""
 "br, p, et suppression de lignes vides, etc...)"
 msgstr ""
 
-#: ../profile-form.php:18
-msgid "Personal Options"
+#. Name of the template
+msgid "Products"
 msgstr ""
 
-#: ../profile-form.php:22
-msgid "Toolbar"
-msgstr ""
-
-#: ../profile-form.php:25
-msgid "Show Toolbar when viewing site"
-msgstr ""
-
-#: ../profile-form.php:33
-msgid "Name"
-msgstr ""
-
-#: ../profile-form.php:38
-msgid "Your username cannot be changed."
-msgstr ""
-
-#: ../profile-form.php:42
-msgid "First Name"
-msgstr ""
-
-#: ../profile-form.php:47
-msgid "Last Name"
-msgstr ""
-
-#: ../profile-form.php:52
-msgid "Nickname"
-msgstr ""
-
-#: ../profile-form.php:52 ../profile-form.php:97
-msgid "(required)"
-msgstr ""
-
-#: ../profile-form.php:57
-msgid "Display name publicly as"
-msgstr ""
-
-#: ../profile-form.php:93
-msgid "Contact Info"
-msgstr ""
-
-#: ../profile-form.php:97 ../register-form.php:18
-msgid "E-mail"
-msgstr ""
-
-#: ../profile-form.php:102
-msgid "Website"
-msgstr ""
-
-#: ../profile-form.php:118
-msgid "About Yourself"
-msgstr ""
-
-#: ../profile-form.php:122
-msgid "Biographical Info"
-msgstr ""
-
-#: ../profile-form.php:124
-msgid ""
-"Share a little biographical information to fill out your profile. This may "
-"be shown publicly."
-msgstr ""
-
-#: ../profile-form.php:132
-msgid "New Password"
-msgstr ""
-
-#: ../profile-form.php:133
-msgid ""
-"If you would like to change the password type a new one. Otherwise leave "
-"this blank."
-msgstr ""
-
-#: ../profile-form.php:134
-msgid "Type your new password again."
-msgstr ""
-
-#: ../profile-form.php:135
-msgid "Strength indicator"
-msgstr ""
-
-#: ../profile-form.php:136
-msgid ""
-"Hint: The password should be at least seven characters long. To make it "
-"stronger, use upper and lower case letters, numbers and symbols like ! \" ? $ "
-"% ^ &amp; )."
-msgstr ""
-
-#: ../profile-form.php:148
-msgid "Update Profile"
-msgstr ""
-
-#: ../register-form.php:24
-msgid "A password will be e-mailed to you."
-msgstr ""
-
-#: ../register-form.php:26
-msgid "Register"
+#. Name of the template
+msgid "Projects"
 msgstr ""
 
 #: ../search.php:16
@@ -690,10 +574,6 @@ msgstr ""
 #: ../inc/extras.php:52
 #, php-format
 msgid "Page %s"
-msgstr ""
-
-#: ../inc/fullscreen-panel.php:12
-msgid "Main navigation"
 msgstr ""
 
 #: ../inc/metaboxes.php:11 ../inc/metaboxes.php:127
@@ -770,22 +650,6 @@ msgstr ""
 
 #: ../inc/metaboxes.php:113 ../inc/metaboxes.php:213
 msgid "Add parallax effect to the background"
-msgstr ""
-
-#: ../inc/navbar-primary.php:36
-msgid "Toggle navigation"
-msgstr ""
-
-#: ../inc/navbar-primary.php:63
-msgid "Toggle fullscreen panel"
-msgstr ""
-
-#: ../inc/navbar-primary.php:83
-msgid "Toggle right panel"
-msgstr ""
-
-#: ../inc/navbar-primary.php:103
-msgid "Toggle left panel"
 msgstr ""
 
 #: ../inc/plugins.php:238
@@ -937,27 +801,10 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: ../inc/template-tags.php:86
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr "Publié le %s"
-
-#: ../inc/template-tags.php:91
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "par %s"
-
 #. translators: used between list items, there is a space after the comma
 #: ../inc/template-tags.php:108 ../inc/template-tags.php:114
 msgid ", "
 msgstr ""
-
-#: ../inc/template-tags.php:110
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Publié dans %1$s"
 
 #: ../inc/template-tags.php:116
 #, php-format
@@ -1077,78 +924,6 @@ msgstr ""
 #, php-format
 msgid "%1$s: %2$s"
 msgstr ""
-
-#: ../inc/template-tags.php:181
-msgid "Archives"
-msgstr "Archives"
-
-#: ../inc/shortcodes/blog.php:14 ../inc/shortcodes/blog.php:36 ..
-#: inc/shortcodes/portfolio.php:16 ../inc/shortcodes/products.php:12
-msgid "All"
-msgstr "Tous"
-
-#: ../inc/shortcodes/blog.php:32
-msgid "Filter"
-msgstr "Filtre"
-
-#: ../inc/shortcodes/blog.php:73
-msgid "Read more"
-msgstr "Lire la suite"
-
-#: ../inc/shortcodes/portfolio.php:49 ../inc/shortcodes/portfolio.php:107 ..
-#: inc/shortcodes/portfolio.php:155 ../inc/shortcodes/portfolio.php:184 ..
-#: inc/shortcodes/products.php:39 ../inc/shortcodes/products.php:109 ..
-#: inc/shortcodes/projects.php:42
-msgid "Image missing!"
-msgstr "Il manque une image !"
-
-#: ../inc/shortcodes/portfolio.php:57 ../inc/shortcodes/products.php:60
-msgid "More information"
-msgstr "En savoir plus"
-
-#: ../inc/shortcodes/portfolio.php:124 ../inc/shortcodes/portfolio.php:201
-msgid "Client"
-msgstr "Client"
-
-#: ../inc/shortcodes/portfolio.php:124 ../inc/shortcodes/portfolio.php:201
-msgid "Date"
-msgstr "Date"
-
-#: ../inc/shortcodes/portfolio.php:127 ../inc/shortcodes/portfolio.php:204
-msgid "Visit"
-msgstr "Visiter"
-
-#: ../inc/shortcodes/products.php:43
-msgid "Available"
-msgstr "Disponible"
-
-#: ../inc/shortcodes/products.php:44
-msgid "Sold out soon"
-msgstr "Bientôt épuisé"
-
-#: ../inc/shortcodes/products.php:45
-msgid "Back order"
-msgstr "Sur commande"
-
-#: ../inc/shortcodes/products.php:46
-msgid "Sold out"
-msgstr "Épuisé"
-
-#: ../inc/shortcodes/products.php:47
-msgid "Unavailable"
-msgstr "Indisponible"
-
-#: ../inc/shortcodes/products.php:48
-msgid "Sale closed"
-msgstr "Vente terminée"
-
-#: ../inc/shortcodes/products.php:122
-msgid "Buy it now!"
-msgstr "J'achète !"
-
-#: ../inc/shortcodes/projects.php:50
-msgid "Visit project"
-msgstr "Visiter le projet"
 
 #: ../lib/class-tgm-plugin-activation.php:333
 msgid "Install Required Plugins"
@@ -1816,17 +1591,6 @@ msgstr ""
 msgid "Bold Italic"
 msgstr ""
 
-#. translators: %s: Name of current post
-#: ../template-parts/content-home.php:19 ../template-parts/content.php:22
-#, php-format
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: ../template-parts/content-home.php:26 ../template-parts/content-page.php:19 ..
-#: template-parts/content-single.php:24 ../template-parts/content.php:29
-msgid "Pages:"
-msgstr ""
-
 #: ../template-parts/content-none.php:19
 msgid "Nothing Found"
 msgstr ""
@@ -1847,3 +1611,269 @@ msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+
+#: ../template-parts/navbar-primary.php:36
+msgid "Toggle navigation"
+msgstr "Activer / désactiver la navigation"
+
+#: ../template-parts/navbar-primary.php:63
+msgid "Toggle fullscreen panel"
+msgstr "Activer / désactiver le menu plein écran"
+
+#: ../template-parts/navbar-primary.php:83
+msgid "Toggle right panel"
+msgstr "Activer / désactiver le panneau de droite"
+
+#: ../template-parts/navbar-primary.php:103
+msgid "Toggle left panel"
+msgstr "Activer / désactiver le panneau de gauche"
+
+#: ../template-parts/panel-fullscreen.php:12
+msgid "Main navigation"
+msgstr "Navigation principale"
+
+#: ../theme-my-login/login-form.php:13 ../theme-my-login/profile-form.php:37 ..
+#: theme-my-login/register-form.php:13
+msgid "Username"
+msgstr ""
+
+#: ../theme-my-login/login-form.php:17
+msgid "Password"
+msgstr ""
+
+#: ../theme-my-login/login-form.php:24
+msgid "Remember Me"
+msgstr ""
+
+#: ../theme-my-login/login-form.php:26
+msgid "Log In"
+msgstr ""
+
+#: ../theme-my-login/lostpassword-form.php:13
+msgid "Username or E-mail:"
+msgstr ""
+
+#: ../theme-my-login/lostpassword-form.php:19
+msgid "Get New Password"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:18
+msgid "Personal Options"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:22
+msgid "Toolbar"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:25
+msgid "Show Toolbar when viewing site"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:33
+msgid "Name"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:38
+msgid "Your username cannot be changed."
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:42
+msgid "First Name"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:47
+msgid "Last Name"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:52
+msgid "Nickname"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:52 ../theme-my-login/profile-form.php:97
+msgid "(required)"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:57
+msgid "Display name publicly as"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:93
+msgid "Contact Info"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:97 ../theme-my-login/register-form.php:18
+msgid "E-mail"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:102
+msgid "Website"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:118
+msgid "About Yourself"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:122
+msgid "Biographical Info"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:124
+msgid ""
+"Share a little biographical information to fill out your profile. This may "
+"be shown publicly."
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:132
+msgid "New Password"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:133
+msgid ""
+"If you would like to change the password type a new one. Otherwise leave "
+"this blank."
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:134
+msgid "Type your new password again."
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:135
+msgid "Strength indicator"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:136
+msgid ""
+"Hint: The password should be at least seven characters long. To make it "
+"stronger, use upper and lower case letters, numbers and symbols like ! \" ? $ "
+"% ^ &amp; )."
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:148
+msgid "Update Profile"
+msgstr ""
+
+#: ../theme-my-login/register-form.php:24
+msgid "A password will be e-mailed to you."
+msgstr ""
+
+#: ../theme-my-login/register-form.php:26
+msgid "Register"
+msgstr ""
+
+#. Name of the theme
+msgid "StartUp Reloaded"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "http://yozz.net"
+msgstr ""
+
+#. Description of the theme
+msgid "Second version of StartUp developper theme, re-build from ground up"
+msgstr ""
+
+#. Author of the theme
+msgid "Yann Caplain"
+msgstr ""
+
+#: ../404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Cette page est introuvable."
+
+#: ../404.php:27
+msgid "Most Used Categories"
+msgstr "Catégories récentes"
+
+#: ../inc/template-tags.php:86
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Publié le %s"
+
+#: ../inc/template-tags.php:91
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "par %s"
+
+#: ../inc/template-tags.php:110
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Publié dans %1$s"
+
+#: ../inc/template-tags.php:181
+msgid "Archives"
+msgstr "Archives"
+
+#: ../template-parts/content-blog.php:14 ../template-parts/content-blog.php:36 ..
+#: template-parts/content-portfolio.php:16 ../template-parts/content-products.
+#: php:12
+msgid "All"
+msgstr "Tous"
+
+#: ../template-parts/content-blog.php:32
+msgid "Filter"
+msgstr "Filtre"
+
+#: ../template-parts/content-blog.php:73
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: ../template-parts/content-portfolio.php:49 ../template-parts/content-portfolio.
+#: php:107 ../template-parts/content-portfolio.php:155 ../template-parts/content-
+#: portfolio.php:184 ../template-parts/content-products.php:39 ../template-
+#: parts/content-products.php:109 ../template-parts/content-projects.php:42
+msgid "Image missing!"
+msgstr "Il manque une image !"
+
+#: ../template-parts/content-portfolio.php:57 ../template-parts/content-products.
+#: php:60
+msgid "More information"
+msgstr "En savoir plus"
+
+#: ../template-parts/content-portfolio.php:124 ../template-parts/content-
+#: portfolio.php:201
+msgid "Client"
+msgstr "Client"
+
+#: ../template-parts/content-portfolio.php:124 ../template-parts/content-
+#: portfolio.php:201
+msgid "Date"
+msgstr "Date"
+
+#: ../template-parts/content-portfolio.php:127 ../template-parts/content-
+#: portfolio.php:204
+msgid "Visit"
+msgstr "Visiter"
+
+#: ../template-parts/content-products.php:43
+msgid "Available"
+msgstr "Disponible"
+
+#: ../template-parts/content-products.php:44
+msgid "Sold out soon"
+msgstr "Bientôt épuisé"
+
+#: ../template-parts/content-products.php:45
+msgid "Back order"
+msgstr "Sur commande"
+
+#: ../template-parts/content-products.php:46
+msgid "Sold out"
+msgstr "Épuisé"
+
+#: ../template-parts/content-products.php:47
+msgid "Unavailable"
+msgstr "Indisponible"
+
+#: ../template-parts/content-products.php:48
+msgid "Sale closed"
+msgstr "Vente terminée"
+
+#: ../template-parts/content-products.php:122
+msgid "Buy it now!"
+msgstr "J'achète !"
+
+#: ../template-parts/content-projects.php:50
+msgid "Visit project"
+msgstr "Visiter le projet"
