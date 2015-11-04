@@ -2,6 +2,7 @@
     $args                   = array( 'post_type'=>'slider', 'orderby' => 'menu_order','order' => 'ASC', 'numberposts' => 0 );
     $sliders                = get_posts( $args );
     $total_sliders          = count( $sliders );
+    $slider_on              = of_get_option( 'slider-on' );
     $slider_height          = of_get_option( 'slider-height' );
     $slider_interval        = of_get_option( 'slider-interval' );
     $slider_transition      = of_get_option( 'slider-transition' );
@@ -93,7 +94,7 @@
         <?php } ?>
 
         <!-- Goto content -->
-        <?php if ( $slider_navigation == 'slider_content_arrow' ) { ?>
+        <?php if ( $slider_navigation == 'slider_content_arrow' && $slider_on ) { ?>
             <div class="slider-down hvr-<?php echo $slider_arrows_hover ?>">
                 <a href="#primary" class="slider-down-arrow scroll">
                     <i class="fa fa-chevron-down fa-lg"></i>
