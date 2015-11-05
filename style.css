@@ -1058,8 +1058,6 @@ body.home.logo-on.fixed-slider #content {
 --------------------------------------------------------------*/
 
 .modal.fade.simple {
-    /*    padding-right: 0 !important;*/
-    
     background-color: #fff;
 }
 
@@ -1330,8 +1328,6 @@ hr.star-primary:after {
 }
 
 .carousel-control {
-    /*    top: 50%;*/
-    
     width: 50px;
     height: 50px;
     text-shadow: none;
@@ -1870,7 +1866,6 @@ hr.star-primary:after {
 .page-header {
     padding-top: 0;
     padding-bottom: 0;
-    /*    color: #fff*/
 }
 
 .entry-header .effect,
