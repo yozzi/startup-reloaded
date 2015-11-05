@@ -866,7 +866,13 @@ function optionsframework_options() {
     
     if (is_plugin_active('startup-cpt-team/startup-cpt-team.php')){
     $options[] = array(
-		'name' => __( 'Team', 'startup-reloaded' ),
+        'name' => __( 'Team', 'startup-reloaded' ),
+		'desc' => __( 'Carousel if more than 4', 'startup-reloaded' ),
+		'id' => 'team-slider',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+    $options[] = array(
         'desc' => __( 'Display order', 'startup-reloaded' ),
 		'id' => 'team-order',
 		'std' => 'menu_order',
