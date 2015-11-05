@@ -1569,7 +1569,7 @@ hr.star-primary:after {
 
 .team-desc {
     padding: 15px;
-    border: 1px solid #ccc;
+    cursor: default;
 }
 
 .team-member:hover .team-desc {

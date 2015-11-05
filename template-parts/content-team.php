@@ -40,15 +40,19 @@ $total_team = count($team);
                                         <strong class="name"><?php echo $team->post_title ?></strong>
                                         <p class="small text-muted designation"><?php echo $team_capacity ?></p>
                                         <p class="desc"><?php echo $team->post_content ?></p>
+                                        <p>
+                                            <ul class="social">
+                                                <li class="facebook"><a target="_blank" href="<?php echo $team_social_link_1; ?>"><i class="fa fa-<?php echo $team_social_icon_1; ?>"></i></a></li>
+                                                <li class="twitter"><a target="_blank" href="<?php echo $team_social_link_2; ?>"><i class="fa fa-<?php echo $team_social_icon_2; ?>"></i></a></li>
+                                                <li class="plusone"><a target="_blank" href="<?php echo $team_social_link_3; ?>"><i class="fa fa-<?php echo $team_social_icon_3; ?>"></i></a></li>
+                                                <li class="pinterest"><a target="_blank" href="<?php echo $team_social_link_4; ?>"><i class="fa fa-<?php echo $team_social_icon_4; ?>"></i></a></li>
+                                            </ul>
+                                        </p>
                                         <?php if ( $team_page ) { ?>
-                                            <a href="<?php  echo site_url() . '/' . $team_page ?>" class="btn btn-custom btn-lg btn-block" role="button"><?php _e( 'Profile', 'startup-reloaded' ) ?></a>
+                                            <p>
+                                                <a href="<?php  echo site_url() . '/' . $team_page ?>" class="btn btn-custom btn-sm" role="button"><?php _e( 'Profile', 'startup-reloaded' ) ?></a>
+                                            </p>
                                         <?php } ?>
-                                        <ul class="social">
-                                            <li class="facebook"><a target="_blank" href="<?php echo $team_social_link_1; ?>"><i class="fa fa-<?php echo $team_social_icon_1; ?>"></i></a></li>
-                                            <li class="twitter"><a target="_blank" href="<?php echo $team_social_link_2; ?>"><i class="fa fa-<?php echo $team_social_icon_2; ?>"></i></a></li>
-                                            <li class="plusone"><a target="_blank" href="<?php echo $team_social_link_3; ?>"><i class="fa fa-<?php echo $team_social_icon_3; ?>"></i></a></li>
-                                            <li class="pinterest"><a target="_blank" href="<?php echo $team_social_link_4; ?>"><i class="fa fa-<?php echo $team_social_icon_4; ?>"></i></a></li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>        
