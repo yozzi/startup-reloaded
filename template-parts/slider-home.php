@@ -97,11 +97,13 @@
         <?php } ?>
 
         <!-- Goto content -->
-        <?php if ( $slider_navigation == 'slider_content_arrow' && $slider_on ) { ?>
-            <div class="slider-down hvr-<?php echo $slider_arrows_hover ?>">
-                <a href="#primary" class="slider-down-arrow scroll">
-                    <i class="fa fa-chevron-down fa-lg"></i>
-                </a>
-            </div>
-        <?php } ?>
+        <?php if ( !isset ( $atts['shortcode'] ) ) {
+                if ( $slider_navigation == 'slider_content_arrow' ) { ?>
+                    <div class="slider-down hvr-<?php echo $slider_arrows_hover ?>">
+                        <a href="#primary" class="slider-down-arrow scroll">
+                            <i class="fa fa-chevron-down fa-lg"></i>
+                        </a>
+                    </div>
+            <?php }
+                } ?>
     </div>
