@@ -4,9 +4,8 @@ $number = of_get_option( 'milestones-number' );
 if ( $number ) { $max = $number; } else {$max = -1;};
 $args=array( 'post_type'=>'milestones', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
 $milestones = get_posts( $args );
-//$total_milestones = count($milestones);
 ?>
-<section id="milestones">
+<section id="milestones" style="background:<?php echo $atts['bg'] ?>">
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($milestones as $key=> $milestone) {
