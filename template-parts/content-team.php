@@ -3,11 +3,29 @@ $slider = of_get_option( 'team-slider' );
 $order = of_get_option( 'team-order' );
 $number = of_get_option( 'team-number' );
 if ( $number ) { $max = $number; } else {$max = -1;};
-$args=array( 'post_type'=>'team', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+if ( $atts['cat'] ) {
+    $args=array(
+        'post_type'=>'team',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'team-category',
+                'field' => 'ID',
+                'terms' => $atts['cat']
+                )
+           ),
+        'orderby' => $order,
+        'order' => 'ASC',
+        'numberposts' => $max
+    );
+} elseif ( $atts['id'] ) {
+    //Fiche unique ici
+} else {
+    $args=array( 'post_type'=>'team', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+}
 $team = get_posts( $args );
 $total_team = count($team);
 ?>
-<section id="team">
+<section id="team<?php if ( $atts['cat'] ) { echo '-' . $atts['cat']; } ?>" style="background:<?php echo $atts['bg'] ?>">
     <?php if ( is_front_page() ) { ?><div class="container"><?php } ?>
         <?php if ( $slider ) { ?><div class="row"><?php } ?>
             <?php if ( $total_team > 4 && $slider ) { ?>
@@ -17,7 +35,9 @@ $total_team = count($team);
                         $count = 1;
 
                         foreach ( $team as $key=> $team ) {
-                            $team_image_url     = wp_get_attachment_url( get_post_thumbnail_id($team->ID) );
+                            //$team_image_url     = wp_get_attachment_url( get_post_thumbnail_id($team->ID) );
+                            $team_image_url     = wp_get_attachment_image_src( get_post_thumbnail_id($team->ID), 'grid_thumb' );
+                            
                             $team_capacity      = get_post_meta($team->ID, '_startup_reloaded_team_capacity', true );
                             $team_social_icon_1 = get_post_meta($team->ID, '_startup_reloaded_team_icon_1', true );
                             $team_social_link_1 = get_post_meta($team->ID, '_startup_reloaded_team_link_1', true );
@@ -39,7 +59,7 @@ $total_team = count($team);
                             <div class="col-xs-12 col-sm-6 col-md-3">
                                 <div class="team-member">
                                     <div class="team-image">
-                                        <img width="400" height="400" src="<?php echo $team_image_url ?>" class="img-responsive wp-post-image" alt="<?php echo $team->post_title ?>">
+                                        <img src="<?php echo $team_image_url[0] ?>" class="img-responsive wp-post-image" alt="<?php echo $team->post_title ?>">
                                     </div>
                                     <div class="team-desc">                     
                                         <strong class="name"><?php echo $team->post_title ?></strong>
