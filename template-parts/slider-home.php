@@ -97,7 +97,7 @@
         <?php } ?>
 
         <!-- Goto content -->
-        <?php if ( !isset ( $atts['shortcode'] ) ) {
+        <?php if ( empty( $atts['shortcode'] ) ) {
                 if ( $slider_navigation == 'slider_content_arrow' ) { ?>
                     <div class="slider-down hvr-<?php echo $slider_arrows_hover ?>">
                         <a href="#primary" class="slider-down-arrow scroll">
@@ -105,5 +105,5 @@
                         </a>
                     </div>
             <?php }
-                } ?>
+            } ?>
     </div>
