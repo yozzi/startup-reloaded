@@ -3,7 +3,7 @@ $args=array( 'post_type'=>'pricing', 'orderby' => 'menu_order','order' => 'ASC',
 $pricing = get_posts( $args );
 $total_pricing = count($pricing);
 ?>
-<section id="pricing">
+<section id="pricing"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($pricing as $key=> $pricing) {

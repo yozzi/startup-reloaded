@@ -6,7 +6,7 @@ $args=array( 'post_type'=>'partners', 'orderby' => $order,'order' => 'ASC', 'num
 $partners = get_posts( $args );
 $total_partners = count($partners);
 ?>
-<section id="partners">
+<section id="partners"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">            
             <?php if ($total_partners > 4){ ?>

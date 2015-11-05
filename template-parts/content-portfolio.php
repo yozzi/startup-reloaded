@@ -10,7 +10,7 @@
     $auto_format_off = of_get_option( 'auto-format-off' );
 ?>
 
-<section id="portfolio">
+<section id="portfolio"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <?php if ($style == 'shuffle'){ ?>
             <ul id="filter" class="nav nav-pills">

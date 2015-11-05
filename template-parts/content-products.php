@@ -9,7 +9,7 @@ if ( $number ) { $max = $number; } else {$max = -1;};
     $auto_format_off = of_get_option( 'auto-format-off' );
 ?>
 
-<section id="products">
+<section id="products"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <ul id="filter" class="nav nav-pills">
             <li><a class="active" href="#" data-group="all"><?php _e( 'All', 'startup-reloaded' ) ?></a></li>

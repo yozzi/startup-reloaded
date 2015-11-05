@@ -25,7 +25,7 @@ if ( $atts['cat'] ) {
 $team = get_posts( $args );
 $total_team = count($team);
 ?>
-<section id="team<?php if ( $atts['cat'] ) { echo '-' . $atts['cat']; } ?>" style="background:<?php echo $atts['bg'] ?>">
+<section id="team<?php if ( $atts['cat'] ) { echo '-' . $atts['cat']; } ?>"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if ( is_front_page() ) { ?><div class="container"><?php } ?>
         <?php if ( $slider ) { ?><div class="row"><?php } ?>
             <?php if ( $total_team > 4 && $slider ) { ?>

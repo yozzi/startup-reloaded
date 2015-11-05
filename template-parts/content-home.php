@@ -4,7 +4,7 @@ $home_sections = get_posts( $args );
 $counter = 0;
 
 ?>
-<section id="home">
+<section id="home"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($home_sections as $key=> $home_section) {

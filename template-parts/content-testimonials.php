@@ -6,7 +6,7 @@ $args=array( 'post_type'=>'testimonials', 'orderby' => $order,'order' => 'ASC', 
 $testimonials = get_posts( $args );
 $total_testimonials = count($testimonials);
 ?>
-<section id="testimonials">
+<section id="testimonials"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">            
             <?php if ($total_testimonials > 1){ ?>

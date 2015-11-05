@@ -6,7 +6,7 @@ $args=array( 'post_type'=>'projects', 'orderby' => $order,'order' => 'ASC', 'num
 $projects = get_posts( $args );
 $total_projects = count($projects);
 ?>
-<section id="projects">
+<section id="projects"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($projects as $key=> $project) {

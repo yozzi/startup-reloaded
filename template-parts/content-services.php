@@ -6,7 +6,7 @@ $args=array( 'post_type'=>'services', 'orderby' => $order,'order' => 'ASC', 'num
 $services = get_posts( $args );
 $total_services = count($services);
 ?>
-<section id="services">
+<section id="services"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($services as $key=> $service) {
