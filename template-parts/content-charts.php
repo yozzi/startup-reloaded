@@ -8,18 +8,19 @@ $total_charts = count($charts);
         <div class="row">
             <?php foreach ($charts as $key=> $chart) {
                 $type = get_post_meta( $chart->ID, '_startup_cpt_charts_type', true );
+                $ratio = get_post_meta( $chart->ID, '_startup_cpt_charts_ratio', true );
                 $height = get_post_meta( $chart->ID, '_startup_cpt_charts_height', true );
                 $data = get_post_meta( $chart->ID, '_startup_cpt_charts_data', true );
             ?>
-            <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 col-sm-4">
                 <div class="chart">
                     <h3 class="media-heading"><?php echo $chart->post_title ?></h3>
-                    
+                    <div id="<?php echo $chart->post_name ?>"<?php if ( $type == 'bar' ) { ?> style="height: <?php echo $height ?>px;"<?php } ?>></div>
                     
                     <?php if ( $type == 'bar' ) { ?>
                         <ul data-bar-id="<?php echo $chart->post_name ?>">
                     <?php } elseif ( ( $type == 'donut' ) ) { ?>
-                        <ul data-pie-id="<?php echo $chart->post_name ?>" data-options='{"donut": "true"}'>
+                        <ul data-pie-id="<?php echo $chart->post_name ?>" data-options='{"donut": "true", "donut_inner_ratio":<?php echo $ratio ?>}'>
                     <?php } else { ?>
                         <ul data-pie-id="<?php echo $chart->post_name ?>">
                     <?php } ?>
@@ -29,7 +30,6 @@ $total_charts = count($charts);
                                 <?php }    
                             } ?>
                         </ul>
-                    <div id="<?php echo $chart->post_name ?>"<?php if ( $type == 'bar' ) { ?> style="height: <?php echo $height ?>px;"<?php } ?>></div>
                     
                     
                 </div> 
