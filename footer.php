@@ -173,6 +173,14 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
     </script>
 <?php } ?>
 
+<?php  if( is_plugin_active('startup-cpt-charts/startup-cpt-charts.php')){ ?>
+    <script type="text/javascript">
+        jQuery(window).load(function() {
+            Pizza.init();
+        });
+    </script>
+<?php } ?>
+
 <?php if ( $back_to_top ) { ?>
     <div class="scroll-top-wrapper">
         <span class="scroll-top-inner">
