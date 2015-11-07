@@ -300,17 +300,6 @@
         </script>
     <?php } ?>
     
-    <?php if (is_plugin_active('startup-cpt-milestones/startup-cpt-milestones.php')){ ?>
-        <script type="text/javascript">
-            jQuery(document).ready(function( $ ) {
-                jQuery('.milestone-count').counterUp({
-                    delay: 50, // the delay time in ms
-                    time: 3500 // the speed time in ms
-                });
-            });
-        </script>
-    <?php } ?>
-    
     <?php if( $page_transition ){ ?>
         <script type="text/javascript">
             jQuery( document ).ready(function() {

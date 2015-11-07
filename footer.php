@@ -158,21 +158,6 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
     </script>
 <?php } ?>
 
-<?php  if( is_plugin_active('startup-cpt-testimonials/startup-cpt-testimonials.php')){ ?>
-    <script type="text/javascript">
-        jQuery('#testimonials-carousel').carousel({
-            interval: 0
-        }).on('slide.bs.carousel', function (e){
-            var nextH = jQuery(e.relatedTarget).height();
-            jQuery(this).find('.active.item').parent().animate({ height: nextH }, 500);
-        });
-        
-        jQuery('#testimonials-carousel').on('slid.bs.carousel', function () {
-            jQuery(window).trigger('resize').trigger('scroll');
-        })
-    </script>
-<?php } ?>
-
 <?php if ( $back_to_top ) { ?>
     <div class="scroll-top-wrapper">
         <span class="scroll-top-inner">
