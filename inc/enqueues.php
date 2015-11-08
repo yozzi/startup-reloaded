@@ -4,7 +4,7 @@
  */
 function startup_reloaded_scripts() {
 
-    /* css */
+    /************************************************************************* css */
     wp_enqueue_style( 'startup-reloaded-bootstrap', get_template_directory_uri() . '/lib/bootstrap/css/bootstrap.min.css', array( ), false, 'all' );
     
     wp_enqueue_style( 'startup-reloaded-font-awesome', get_template_directory_uri() . '/lib/font-awesome/css/font-awesome.min.css' );
@@ -26,19 +26,8 @@ function startup_reloaded_scripts() {
     }
     
     wp_enqueue_style( 'startup-reloaded-style', get_stylesheet_uri() );
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /* js */
-    
+
+    /************************************************************************* js */
     wp_enqueue_script( 'jquery' );
     
     wp_enqueue_script( 'startup-reloaded-bootstrap', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js', array( ), false, 'all' );
@@ -77,26 +66,14 @@ function startup_reloaded_scripts() {
 	}
 }
 
-
-
-
-
-
 add_action( 'wp_enqueue_scripts', 'startup_reloaded_scripts' );
 
-
-// Pour l'admin, mais a modifier, il faudrait plutot utilser admin_enqueue_scripts
-add_action('admin_head', 'startup_reloaded_admin_enqueues');
-
-
-
+// Pour l'admin, mais a modifier, il faudrait plutot utiliser admin_enqueue_scripts
 function startup_reloaded_admin_enqueues() {
   echo '<link rel="stylesheet" href="' . get_template_directory_uri() . '/lib/select2/css/select2.min.css' . '" type="text/css" media="all">';
   echo '<script type="text/javascript" src="' . get_template_directory_uri() . '/lib/select2/js/select2.min.js' . '"></script>';
   echo '<script type="text/javascript" src="' . get_template_directory_uri() . '/js/startup-admin.js' . '"></script>';
 }
 
-
-
-
+add_action('admin_head', 'startup_reloaded_admin_enqueues');
 ?>
