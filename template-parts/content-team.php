@@ -1,6 +1,10 @@
 <?php
 $slider = of_get_option( 'team-slider' );
-$order = of_get_option( 'team-order' );
+if ( $atts['order'] == 'shuffle' ) {
+    $order = 'rand';
+} else {
+    $order = of_get_option( 'team-order' );
+}
 $number = of_get_option( 'team-number' );
 if ( $number ) { $max = $number; } else {$max = -1;};
 if ( $atts['cat'] ) {
