@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: StartUp Reloaded
 Theme URI: http://yozz.net
@@ -17,36 +18,101 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
-.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
+/* line 21, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
 
-.screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-size: 0.875rem; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; /* Above WP toolbar. */ }
+/* line 29, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.alignleft { display: inline; float: left; margin-right: 1.5em; }
+/* line 53, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em; }
 
-.alignright { display: inline; float: right; margin-left: 1.5em; }
+/* line 59, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em; }
 
-.aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto; }
+/* line 65, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before, .clear:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after { content: ""; display: table; }
+/* line 86, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table; }
 
-.clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after { clear: both; }
+/* line 96, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both; }
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget { margin: 0 0 1.5em; }
+/* line 103, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.widget {
+  margin: 0 0 1.5em; }
 
 /* Make sure select elements fit in widgets. */
-.widget select { max-width: 100%; }
+/* line 108, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.widget select {
+  max-width: 100%; }
 
 /* Search widget. */
-.widget_search .search-submit { display: none; }
+/* line 113, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.widget_search .search-submit {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Content
@@ -54,723 +120,1881 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.sticky { display: block; }
+/* line 123, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.sticky {
+  display: block; }
 
-.hentry { margin: 0 0 1.5em; }
+/* line 127, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.hentry {
+  margin: 0 0 1.5em; }
 
-.byline, .updated:not(.published) { display: none; }
+/* line 132, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.byline,
+.updated:not(.published) {
+  display: none; }
 
-.single .byline, .group-blog .byline { display: inline; }
+/* line 137, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.single .byline,
+.group-blog .byline {
+  display: inline; }
 
-.page-content, .entry-content, .entry-summary { margin: 1.5em 0 0; }
+/* line 143, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0; }
 
-.page-links { clear: both; margin: 0 0 1.5em; }
+/* line 147, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
 
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
-.blog .format-aside .entry-title, .archive .format-aside .entry-title { display: none; }
+/* line 156, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none; }
 
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.comment-content a { word-wrap: break-word; }
+/* line 163, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.comment-content a {
+  word-wrap: break-word; }
 
-.bypostauthor { display: block; }
+/* line 167, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.bypostauthor {
+  display: block; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */ display: none; }
+/* line 178, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none; }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer { display: block; }
+/* line 185, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.infinity-end.neverending .site-footer {
+  display: block; }
 
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-.page-content .wp-smiley, .entry-content .wp-smiley, .comment-content .wp-smiley { border: none; margin-bottom: 0; margin-top: 0; padding: 0; }
+/* line 194, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
 
 /* Make sure embeds and iframes fit their containers. */
-embed, iframe, object { max-width: 100%; }
+/* line 204, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+embed,
+iframe,
+object {
+  max-width: 100%; }
 
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-.wp-caption { margin-bottom: 1.5em; max-width: 100%; }
+/* line 211, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%; }
 
-.wp-caption img[class*="wp-image-"] { display: block; margin: 0 auto; }
+/* line 216, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin: 0 auto; }
 
-.wp-caption-text { text-align: center; }
+/* line 221, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.wp-caption-text {
+  text-align: center; }
 
-.wp-caption .wp-caption-text { margin: 0.8075em 0; }
+/* line 225, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0; }
 
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-.gallery { margin-bottom: 1.5em; }
+/* line 232, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery {
+  margin-bottom: 1.5em; }
 
-.gallery-item { display: inline-block; text-align: center; vertical-align: top; width: 100%; }
+/* line 236, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%; }
 
-.gallery-columns-2 .gallery-item { max-width: 50%; }
+/* line 243, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%; }
 
-.gallery-columns-3 .gallery-item { max-width: 33.33%; }
+/* line 247, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%; }
 
-.gallery-columns-4 .gallery-item { max-width: 25%; }
+/* line 251, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%; }
 
-.gallery-columns-5 .gallery-item { max-width: 20%; }
+/* line 255, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%; }
 
-.gallery-columns-6 .gallery-item { max-width: 16.66%; }
+/* line 259, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%; }
 
-.gallery-columns-7 .gallery-item { max-width: 14.28%; }
+/* line 263, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%; }
 
-.gallery-columns-8 .gallery-item { max-width: 12.5%; }
+/* line 267, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%; }
 
-.gallery-columns-9 .gallery-item { max-width: 11.11%; }
+/* line 271, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%; }
 
-.gallery-caption { display: block; }
+/* line 275, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.gallery-caption {
+  display: block; }
 
 /*--------------------------------------------------------------
 ## Unresponsive
 --------------------------------------------------------------*/
-body.ur { min-width: 970px; }
+/* line 282, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur {
+  min-width: 970px; }
 
-body.ur .container { max-width: none !important; width: 970px !important; }
+/* line 286, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .container {
+  max-width: none !important;
+  width: 970px !important; }
 
-body.ur [class^="col-"] { float: left; }
+/* line 291, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur [class^="col-"] {
+  float: left; }
 
-body.ur .col-sm-1, body.ur .col-md-1, body.ur .col-lg-1 { width: 8.33333333% !important; }
+/* line 297, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-1,
+body.ur .col-md-1,
+body.ur .col-lg-1 {
+  width: 8.33333333% !important; }
 
-body.ur .col-sm-2, body.ur .col-md-2, body.ur .col-lg-2 { width: 16.66666667% !important; }
+/* line 303, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-2,
+body.ur .col-md-2,
+body.ur .col-lg-2 {
+  width: 16.66666667% !important; }
 
-body.ur .col-sm-3, body.ur .col-md-3, body.ur .col-lg-3 { width: 25% !important; }
+/* line 309, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-3,
+body.ur .col-md-3,
+body.ur .col-lg-3 {
+  width: 25% !important; }
 
-body.ur .col-sm-4, body.ur .col-md-4, body.ur .col-lg-4 { width: 33.33333333% !important; }
+/* line 315, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-4,
+body.ur .col-md-4,
+body.ur .col-lg-4 {
+  width: 33.33333333% !important; }
 
-body.ur .col-sm-5, body.ur .col-md-5, body.ur .col-lg-5 { width: 41.66666667% !important; }
+/* line 321, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-5,
+body.ur .col-md-5,
+body.ur .col-lg-5 {
+  width: 41.66666667% !important; }
 
-body.ur .col-sm-6, body.ur .col-md-6, body.ur .col-lg-6 { width: 50% !important; }
+/* line 327, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-6,
+body.ur .col-md-6,
+body.ur .col-lg-6 {
+  width: 50% !important; }
 
-body.ur .col-sm-7, body.ur .col-md-7, body.ur .col-lg-7 { width: 58.33333333% !important; }
+/* line 333, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-7,
+body.ur .col-md-7,
+body.ur .col-lg-7 {
+  width: 58.33333333% !important; }
 
-body.ur .col-sm-8, body.ur .col-md-8, body.ur .col-lg-8 { width: 66.66666667% !important; }
+/* line 339, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-8,
+body.ur .col-md-8,
+body.ur .col-lg-8 {
+  width: 66.66666667% !important; }
 
-body.ur .col-sm-9, body.ur .col-md-9, body.ur .col-lg-9 { width: 75% !important; }
+/* line 345, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-9,
+body.ur .col-md-9,
+body.ur .col-lg-9 {
+  width: 75% !important; }
 
-body.ur .col-sm-10, body.ur .col-md-10, body.ur .col-lg-10 { width: 83.33333333% !important; }
+/* line 351, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-10,
+body.ur .col-md-10,
+body.ur .col-lg-10 {
+  width: 83.33333333% !important; }
 
-body.ur .col-sm-11, body.ur .col-md-11, body.ur .col-lg-11 { width: 91.66666667% !important; }
+/* line 357, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-11,
+body.ur .col-md-11,
+body.ur .col-lg-11 {
+  width: 91.66666667% !important; }
 
-body.ur .col-sm-12, body.ur .col-md-12, body.ur .col-lg-12 { width: 100% !important; }
+/* line 363, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-12,
+body.ur .col-md-12,
+body.ur .col-lg-12 {
+  width: 100% !important; }
 
-body.ur .col-sm-offset-0, body.ur .col-md-offset-0, body.ur .col-lg-offset-0 { margin-left: 0 !important; }
+/* line 369, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-0,
+body.ur .col-md-offset-0,
+body.ur .col-lg-offset-0 {
+  margin-left: 0 !important; }
 
-body.ur .col-sm-offset-1, body.ur .col-md-offset-1, body.ur .col-lg-offset-1 { margin-left: 8.33333333% !important; }
+/* line 375, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-1,
+body.ur .col-md-offset-1,
+body.ur .col-lg-offset-1 {
+  margin-left: 8.33333333% !important; }
 
-body.ur .col-sm-offset-2, body.ur .col-md-offset-2, body.ur .col-lg-offset-2 { margin-left: 16.66666667% !important; }
+/* line 381, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-2,
+body.ur .col-md-offset-2,
+body.ur .col-lg-offset-2 {
+  margin-left: 16.66666667% !important; }
 
-body.ur .col-sm-offset-3, body.ur .col-md-offset-3, body.ur .col-lg-offset-3 { margin-left: 25% !important; }
+/* line 387, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-3,
+body.ur .col-md-offset-3,
+body.ur .col-lg-offset-3 {
+  margin-left: 25% !important; }
 
-body.ur .col-sm-offset-4, body.ur .col-md-offset-4, body.ur .col-lg-offset-4 { margin-left: 33.33333333% !important; }
+/* line 393, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-4,
+body.ur .col-md-offset-4,
+body.ur .col-lg-offset-4 {
+  margin-left: 33.33333333% !important; }
 
-body.ur .col-sm-offset-5, body.ur .col-md-offset-5, body.ur .col-lg-offset-5 { margin-left: 41.66666667% !important; }
+/* line 399, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-5,
+body.ur .col-md-offset-5,
+body.ur .col-lg-offset-5 {
+  margin-left: 41.66666667% !important; }
 
-body.ur .col-sm-offset-6, body.ur .col-md-offset-6, body.ur .col-lg-offset-6 { margin-left: 50% !important; }
+/* line 405, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-6,
+body.ur .col-md-offset-6,
+body.ur .col-lg-offset-6 {
+  margin-left: 50% !important; }
 
-body.ur .col-sm-offset-7, body.ur .col-md-offset-7, body.ur .col-lg-offset-7 { margin-left: 58.33333333% !important; }
+/* line 411, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-7,
+body.ur .col-md-offset-7,
+body.ur .col-lg-offset-7 {
+  margin-left: 58.33333333% !important; }
 
-body.ur .col-sm-offset-8, body.ur .col-md-offset-8, body.ur .col-lg-offset-8 { margin-left: 66.66666667% !important; }
+/* line 417, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-8,
+body.ur .col-md-offset-8,
+body.ur .col-lg-offset-8 {
+  margin-left: 66.66666667% !important; }
 
-body.ur .col-sm-offset-9, body.ur .col-md-offset-9, body.ur .col-lg-offset-9 { margin-left: 75% !important; }
+/* line 423, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-9,
+body.ur .col-md-offset-9,
+body.ur .col-lg-offset-9 {
+  margin-left: 75% !important; }
 
-body.ur .col-sm-offset-10, body.ur .col-md-offset-10, body.ur .col-lg-offset-10 { margin-left: 83.33333333% !important; }
+/* line 429, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-10,
+body.ur .col-md-offset-10,
+body.ur .col-lg-offset-10 {
+  margin-left: 83.33333333% !important; }
 
-body.ur .col-sm-offset-11, body.ur .col-md-offset-11, body.ur .col-lg-offset-11 { margin-left: 91.66666667% !important; }
+/* line 435, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-11,
+body.ur .col-md-offset-11,
+body.ur .col-lg-offset-11 {
+  margin-left: 91.66666667% !important; }
 
-body.ur .col-sm-offset-12, body.ur .col-md-offset-12, body.ur .col-lg-offset-12 { margin-left: 100% !important; }
+/* line 441, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .col-sm-offset-12,
+body.ur .col-md-offset-12,
+body.ur .col-lg-offset-12 {
+  margin-left: 100% !important; }
 
-body.ur .visible-xs, body.ur .visible-xs-block, body.ur .visible-sm, body.ur .visible-sm-block { display: block !important; }
+/* line 448, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .visible-xs,
+body.ur .visible-xs-block,
+body.ur .visible-sm,
+body.ur .visible-sm-block {
+  display: block !important; }
 
-body.ur .visible-xs-inline, body.ur .visible-sm-inline { display: inline !important; }
+/* line 453, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .visible-xs-inline,
+body.ur .visible-sm-inline {
+  display: inline !important; }
 
-body.ur .visible-xs-inline-block, body.ur .visible-sm-inline-block { display: inline-block !important; }
+/* line 458, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .visible-xs-inline-block,
+body.ur .visible-sm-inline-block {
+  display: inline-block !important; }
 
-body.ur .hidden-xs, body.ur .hidden-sm { display: block !important; }
+/* line 463, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .hidden-xs,
+body.ur .hidden-sm {
+  display: block !important; }
 
-body.ur .container .navbar-header, body.ur .container .navbar-collapse { margin-right: 0; margin-left: 0; }
+/* line 468, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .container .navbar-header,
+body.ur .container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0; }
 
-body.ur .navbar-header { float: left; }
+/* line 473, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-header {
+  float: left; }
 
-body.ur .navbar-collapse { display: block !important; height: auto !important; padding-bottom: 0; overflow: visible !important; }
+/* line 477, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important; }
 
-body.ur .navbar-toggle { display: none; }
+/* line 484, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-toggle {
+  display: none; }
 
-body.ur .navbar-collapse { border-top: 0; }
+/* line 488, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-collapse {
+  border-top: 0; }
 
-body.ur .navbar-brand { margin-left: -15px; }
+/* line 492, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-brand {
+  margin-left: -15px; }
 
-body.ur .navbar-nav { float: left; margin: 0; }
+/* line 496, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-nav {
+  float: left;
+  margin: 0; }
 
-body.ur .navbar-nav > li { float: left; }
+/* line 501, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-nav > li {
+  float: left; }
 
-body.ur .navbar-nav > li > a { padding: 15px; }
+/* line 505, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-nav > li > a {
+  padding: 15px; }
 
-body.ur .navbar-nav.navbar-right { float: right; }
+/* line 509, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-nav.navbar-right {
+  float: right; }
 
-body.ur .navbar .navbar-nav .open .dropdown-menu { position: absolute; float: left; background-color: #fff; border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0); border-width: 0 1px 1px; border-radius: 0 0 4px 4px; -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0); box-shadow: 0 6px 12px rgba(0, 0, 0, 0); }
+/* line 513, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
 
-body.ur .navbar-default .navbar-nav .open .dropdown-menu > li > a { color: #333; }
+/* line 525, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333; }
 
-body.ur .navbar .navbar-nav .open .dropdown-menu > li > a:hover, body.ur .navbar .navbar-nav .open .dropdown-menu > li > a:focus, body.ur .navbar .navbar-nav .open .dropdown-menu > .active > a, body.ur .navbar .navbar-nav .open .dropdown-menu > .active > a:hover, body.ur .navbar .navbar-nav .open .dropdown-menu > .active > a:focus { color: #fff !important; background-color: #428bca !important; }
+/* line 533, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+body.ur .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+body.ur .navbar .navbar-nav .open .dropdown-menu > .active > a,
+body.ur .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+body.ur .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important; }
 
-body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a, body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover, body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus { color: #999 !important; background-color: transparent !important; }
+/* line 540, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+body.ur .navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important; }
 
 /*--------------------------------------------------------------
 ## Général
 --------------------------------------------------------------*/
-a, button, input[type="submit"] { -webkit-transition: 300ms; -moz-transition: 300ms; -o-transition: 300ms; transition: 300ms; }
+/* line 550, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+a,
+button,
+input[type="submit"] {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
 
-@media (min-width: 1200px) { .pull-right-lg { float: right; }
-  .pull-left-lg { float: left; } }
-@media (min-width: 992px) { .pull-right-md { float: right; }
-  .pull-left-md { float: left; } }
-@media (min-width: 768px) { .pull-right-sm { float: right; }
-  .pull-left-sm { float: left; } }
-section { padding-top: 50px; padding-bottom: 50px; }
+@media (min-width: 1200px) {
+  /* line 558, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .pull-right-lg {
+    float: right; }
+  /* line 561, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .pull-left-lg {
+    float: left; } }
 
-.hentry { margin: 0; }
+@media (min-width: 992px) {
+  /* line 567, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .pull-right-md {
+    float: right; }
+  /* line 570, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .pull-left-md {
+    float: left; } }
 
-.well { border: none; -webkit-box-shadow: none; box-shadow: none; }
+@media (min-width: 768px) {
+  /* line 576, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .pull-right-sm {
+    float: right; }
+  /* line 579, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .pull-left-sm {
+    float: left; } }
+
+/* line 584, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+/* line 589, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.hentry {
+  margin: 0; }
+
+/* line 593, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.well {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
 
 /* Footer */
-#secondary, #colophon { color: #999999; }
+/* line 601, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#secondary,
+#colophon {
+  color: #999; }
 
-#secondary { padding-top: 50px; }
+/* line 605, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#secondary {
+  padding-top: 50px; }
 
-#colophon { padding-bottom: 30px; }
+/* line 609, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#colophon {
+  padding-bottom: 30px; }
 
-#secondary a, #colophon a { color: #cccccc; }
+/* line 614, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#secondary a,
+#colophon a {
+  color: #ccc; }
 
-#secondary a:focus, #secondary a:hover, #colophon a:focus, #colophon a:hover { color: #ddd; text-decoration: none; }
+/* line 621, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#secondary a:focus,
+#secondary a:hover,
+#colophon a:focus,
+#colophon a:hover {
+  color: #ddd;
+  text-decoration: none; }
 
 /* Overlays Effects */
-.effect.light { background: rgba(255, 255, 255, 0); }
+/* line 627, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.effect.light {
+  background: rgba(255, 255, 255, 0.5); }
 
-.effect.dark { background: rgba(0, 0, 0, 0); }
+/* line 631, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.effect.dark {
+  background: rgba(0, 0, 0, 0.75); }
 
-.effect.trame-01 { background: url(img/textures/grid.png); }
+/* line 635, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.effect.trame-01 {
+  background: url(img/textures/grid.png); }
 
-.effect.trame-02 { background: url(img/textures/squares.png); }
+/* line 639, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.effect.trame-02 {
+  background: url(img/textures/squares.png); }
 
 /* No gutters grid */
-.row.no-gutters { margin-right: 0; margin-left: 0; }
+/* line 644, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
 
-.row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] { padding-right: 0; padding-left: 0; }
+/* line 650, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0; }
 
 /*--------------------------------------------------------------
 ## Navigation
 --------------------------------------------------------------*/
-#masthead.affix { position: fixed; top: 0; width: 100%; z-index: 999; }
+/* line 658, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#masthead.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; }
 
-.navbar-toggle { margin-top: 7.5px; margin-bottom: 7.5px; }
+/* line 665, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-toggle {
+  margin-top: 7.5px;
+  margin-bottom: 7.5px; }
 
-.navbar-toggle .icon-bar { height: 3px; border-radius: 0; }
+/* line 670, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-toggle .icon-bar {
+  height: 3px;
+  border-radius: 0; }
 
-.navbar { margin-bottom: 0; background: #323232; border: none; border-radius: 0; }
+/* line 675, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar {
+  margin-bottom: 0;
+  background: #323232;
+  border: none;
+  border-radius: 0; }
 
-#site-navigation .navbar-toggle.left-toggle { float: left; }
+/* line 682, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#site-navigation .navbar-toggle.left-toggle {
+  float: left; }
 
-#site-navigation .navbar-toggle.right-toggle { margin-right: 0; }
+/* line 686, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#site-navigation .navbar-toggle.right-toggle {
+  margin-right: 0; }
 
 /* Under Slider */
 /* Mettre une condition : si la navbar est à plus de 50% du top de la page */
 /*
-.navbar-fixed-slider .dropdown .caret { content: ""; border-top: 0; border-bottom: 4px solid;
+.navbar-fixed-slider .dropdown .caret {
+  content: "";
+  border-top: 0;
+  border-bottom: 4px solid;
 }
-.navbar-fixed-slider .dropdown .dropdown-menu { top: auto; bottom: 100%; margin-bottom: 2px;
+.navbar-fixed-slider .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
 }
-.navbar-fixed-slider .navbar-nav > li > .dropdown-menu { margin-bottom: 0; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 0; border-bottom-left-radius: 0;
+.navbar-fixed-slider .navbar-nav > li > .dropdown-menu {
+  margin-bottom: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 */
 /* Style clair */
-.navbar-nav > li > a { color: rgba(0, 0, 0, 0); }
+/* line 714, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-nav > li > a {
+  color: rgba(0, 0, 0, 0.7); }
 
-.navbar-brand { color: #000; }
+/* line 718, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-brand {
+  color: #000; }
 
-.navbar-brand:hover { color: rgba(0, 0, 0, 0); }
+/* line 722, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-brand:hover {
+  color: rgba(0, 0, 0, 0.7); }
 
 /* Style foncé (inverse) */
-.navbar-inverse .navbar-nav > li > a { color: rgba(255, 255, 255, 0); }
+/* line 727, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-inverse .navbar-nav > li > a {
+  color: rgba(255, 255, 255, 0.7); }
 
-.navbar-inverse .navbar-brand { color: #fff; }
+/* line 731, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-inverse .navbar-brand {
+  color: #fff; }
 
-.navbar-inverse .navbar-brand:hover { color: rgba(255, 255, 255, 0); }
+/* line 735, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-inverse .navbar-brand:hover {
+  color: rgba(255, 255, 255, 0.7); }
 
-.navbar-toggle, .navbar-toggle:hover { background: transparent !important; border: none !important; }
+/* line 740, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar-toggle,
+.navbar-toggle:hover {
+  background: transparent !important;
+  border: none !important; }
 
 /* Non-collapsing icons */
-@media (max-width: 767px) { #site-navigation .navbar-right { float: right; padding-right: 15px; }
-  #site-navigation .nav.navbar-nav.navbar-right li { float: right; }
-  #site-navigation .nav.navbar-nav.navbar-right li > a { padding: 7.5px 5px; }
-  #site-navigation .navbar-header { float: left; width: auto!important; }
-  #site-navigation .navbar-collapse { clear: both; float: none; } }
-@media (max-width: 767px) { .non-collapsing li.icon { margin-top: -7.5px; margin-bottom: -7.5px; } }
-.non-collapsing button { margin-right: 0; padding-left: 10px; }
+@media (max-width: 767px) {
+  /* line 747, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  #site-navigation .navbar-right {
+    float: right;
+    padding-right: 15px; }
+  /* line 751, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  #site-navigation .nav.navbar-nav.navbar-right li {
+    float: right; }
+  /* line 754, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  #site-navigation .nav.navbar-nav.navbar-right li > a {
+    padding: 7.5px 5px; }
+  /* line 757, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  #site-navigation .navbar-header {
+    float: left;
+    width: auto !important; }
+  /* line 761, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  #site-navigation .navbar-collapse {
+    clear: both;
+    float: none; } }
+
+@media (max-width: 767px) {
+  /* line 768, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .non-collapsing li.icon {
+    margin-top: -7.5px;
+    margin-bottom: -7.5px; } }
+
+/* line 774, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.non-collapsing button {
+  margin-right: 0;
+  padding-left: 10px; }
 
 /* Non-collapsing links */
-@media (max-width: 767px) { .non-collapsing li a { margin-left: 10px; margin-right: 10px; } }
+@media (max-width: 767px) {
+  /* line 781, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .non-collapsing li a {
+    margin-left: 10px;
+    margin-right: 10px; } }
+
 /**************** Styling ****************/
 /******** Transparent ********/
-@media (min-width: 768px) { body.home #site-navigation.navbar-transparent { padding-top: 15px; padding-bottom: 15px; }
-  body.home #site-navigation.logo.navbar-transparent { padding-top: 0; padding-bottom: 0; }
-  body.home #site-navigation.logo.navbar-transparent .navbar-brand > img { height: 65px; } }
-body.home #site-navigation.navbar-transparent.top-nav-collapse { padding-top: 0; padding-bottom: 0; border: 0; }
+@media (min-width: 768px) {
+  /* line 790, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.home #site-navigation.navbar-transparent {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  /* line 794, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.home #site-navigation.logo.navbar-transparent {
+    padding-top: 0;
+    padding-bottom: 0; }
+  /* line 798, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.home #site-navigation.logo.navbar-transparent .navbar-brand > img {
+    height: 65px; } }
 
-.navbar a:focus { outline-style: none !important; }
+/* line 803, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.home #site-navigation.navbar-transparent.top-nav-collapse {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0; }
+
+/* line 809, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.navbar a:focus {
+  outline-style: none !important; }
 
 /******** Logo ********/
 /* Static-top */
-@media (min-width: 768px) { .logo.navbar-static-top .navbar-brand > img { height: 65px; }
-  .logo.navbar-static-top .navbar-brand { height: 100%; }
-  .logo.navbar-static-top .navbar-nav { padding-top: 22.5px; } }
-@media (max-width: 767px) { .logo.navbar-static-top .navbar-brand > img { height: 40px; }
-  .logo.navbar-static-top .navbar-brand { height: 100%; padding-top: 5px; padding-bottom: 5px; } }
+@media (min-width: 768px) {
+  /* line 816, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-static-top .navbar-brand > img {
+    height: 65px; }
+  /* line 819, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-static-top .navbar-brand {
+    height: 100%; }
+  /* line 822, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-static-top .navbar-nav {
+    padding-top: 22.5px; } }
+
+@media (max-width: 767px) {
+  /* line 828, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-static-top .navbar-brand > img {
+    height: 40px; }
+  /* line 831, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-static-top .navbar-brand {
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px; } }
+
 /* Fixed-top */
-@media (min-width: 768px) { .logo.navbar-fixed-top .navbar-brand > img { height: 65px; }
-  .logo.navbar-fixed-top .navbar-brand { height: 100%; }
-  .logo.navbar-fixed-top .navbar-nav { padding-top: 22.5px; }
-  .logo.navbar-fixed-top.top-nav-collapse .navbar-brand > img { height: 40px; }
-  .logo.navbar-fixed-top.top-nav-collapse .navbar-brand { height: 100%; padding-top: 5px; padding-bottom: 5px; }
-  .logo.navbar-fixed-top.top-nav-collapse .navbar-nav { padding-top: 0; }
-  body.home #site-navigation.logo.navbar-transparent.top-nav-collapse .navbar-brand > img { height: 40px; } }
-@media (max-width: 767px) { .logo.navbar-fixed-top .navbar-brand > img { height: 40px; }
-  .logo.navbar-fixed-top .navbar-brand { height: 100%; padding-top: 5px; padding-bottom: 5px; } }
+@media (min-width: 768px) {
+  /* line 840, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-top .navbar-brand > img {
+    height: 65px; }
+  /* line 843, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-top .navbar-brand {
+    height: 100%; }
+  /* line 846, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-top .navbar-nav {
+    padding-top: 22.5px; }
+  /* line 849, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-top.top-nav-collapse .navbar-brand > img {
+    height: 40px; }
+  /* line 852, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-top.top-nav-collapse .navbar-brand {
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  /* line 857, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-top.top-nav-collapse .navbar-nav {
+    padding-top: 0; }
+  /* line 860, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.home #site-navigation.logo.navbar-transparent.top-nav-collapse .navbar-brand > img {
+    height: 40px; } }
+
+@media (max-width: 767px) {
+  /* line 866, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-top .navbar-brand > img {
+    height: 40px; }
+  /* line 869, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-top .navbar-brand {
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px; } }
+
 /* Fixed-slider */
-@media (min-width: 768px) { .logo.navbar-fixed-slider .navbar-brand > img { height: 65px; }
-  .logo.navbar-fixed-slider .navbar-brand { height: 100%; }
-  .logo.navbar-fixed-slider .navbar-nav { padding-top: 22.5px; } }
-@media (max-width: 767px) { .logo.navbar-fixed-slider .navbar-brand > img { height: 40px; }
-  .logo.navbar-fixed-slider .navbar-brand { height: 100%; padding-top: 5px; padding-bottom: 5px; } }
+@media (min-width: 768px) {
+  /* line 878, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-slider .navbar-brand > img {
+    height: 65px; }
+  /* line 881, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-slider .navbar-brand {
+    height: 100%; }
+  /* line 884, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-slider .navbar-nav {
+    padding-top: 22.5px; } }
+
+@media (max-width: 767px) {
+  /* line 890, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-slider .navbar-brand > img {
+    height: 40px; }
+  /* line 893, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .logo.navbar-fixed-slider .navbar-brand {
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px; } }
+
 /**************** Transitions ****************/
-body.home #site-navigation.navbar-transparent { -webkit-transition: background 300ms linear, padding 300ms linear; -moz-transition: background 300ms linear, padding 300ms linear; -ms-transition: background 300ms linear, padding 300ms linear; -o-transition: background 300ms linear, padding 300ms linear; transition: background 300ms linear, padding 300ms linear; }
+/* line 901, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.home #site-navigation.navbar-transparent {
+  -webkit-transition: background 300ms linear, padding 300ms linear;
+  -moz-transition: background 300ms linear, padding 300ms linear;
+  -ms-transition: background 300ms linear, padding 300ms linear;
+  -o-transition: background 300ms linear, padding 300ms linear;
+  transition: background 300ms linear, padding 300ms linear; }
 
-.logo .navbar-brand > img { -webkit-transition: height 300ms linear, padding 300ms linear; -moz-transition: height 300ms linear, padding 300ms linear; -ms-transition: height 300ms linear, padding 300ms linear; -o-transition: height 300ms linear, padding 300ms linear; transition: height 300ms linear, padding 300ms linear; }
+/* line 909, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.logo .navbar-brand > img {
+  -webkit-transition: height 300ms linear, padding 300ms linear;
+  -moz-transition: height 300ms linear, padding 300ms linear;
+  -ms-transition: height 300ms linear, padding 300ms linear;
+  -o-transition: height 300ms linear, padding 300ms linear;
+  transition: height 300ms linear, padding 300ms linear; }
 
-.logo .navbar-nav { -webkit-transition: padding 300ms linear; -moz-transition: padding 300ms linear; -ms-transition: padding 300ms linear; -o-transition: padding 300ms linear; transition: padding 300ms linear; }
+/* line 917, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.logo .navbar-nav {
+  -webkit-transition: padding 300ms linear;
+  -moz-transition: padding 300ms linear;
+  -ms-transition: padding 300ms linear;
+  -o-transition: padding 300ms linear;
+  transition: padding 300ms linear; }
 
 /**************** Padding ****************/
 /******** Static top ********/
 /******** Fixed top ********/
-body.fixed-top #content { padding-top: 50px; }
+/* line 928, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.fixed-top #content {
+  padding-top: 50px; }
 
-body.logo-on.fixed-top #content { padding-top: 95px; }
+/* line 932, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.logo-on.fixed-top #content {
+  padding-top: 95px; }
 
-@media (max-width: 767px) { body.logo-on.fixed-top #content { padding-top: 50px; } }
+@media (max-width: 767px) {
+  /* line 937, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.logo-on.fixed-top #content {
+    padding-top: 50px; } }
+
 /* Home */
-body.home.fixed-top #content { padding-top: 50px; }
+/* line 943, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.home.fixed-top #content {
+  padding-top: 50px; }
 
-body.logo-on.home.fixed-top #content { padding-top: 95px; }
+/* line 947, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.logo-on.home.fixed-top #content {
+  padding-top: 95px; }
 
-@media (max-width: 767px) { body.logo-on.home.fixed-top #content { padding-top: 50px; } }
+@media (max-width: 767px) {
+  /* line 952, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.logo-on.home.fixed-top #content {
+    padding-top: 50px; } }
+
 /* Home Transparent */
-body.home.fixed-top.transparent-on #content { padding-top: 0; }
+/* line 958, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.home.fixed-top.transparent-on #content {
+  padding-top: 0; }
 
-@media (max-width: 767px) { body.home.fixed-top.transparent-on #content { padding-top: 50px; }
-  body.logo-on.home.fixed-top.transparent-on #content { padding-top: 50px; } }
+@media (max-width: 767px) {
+  /* line 963, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.home.fixed-top.transparent-on #content {
+    padding-top: 50px; }
+  /* line 966, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.logo-on.home.fixed-top.transparent-on #content {
+    padding-top: 50px; } }
+
 /******** Fixed bottom ********/
-body.fixed-bottom { padding-bottom: 50px; }
+/* line 972, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.fixed-bottom {
+  padding-bottom: 50px; }
 
-body.logo-on.fixed-bottom { padding-bottom: 95px; }
+/* line 976, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.logo-on.fixed-bottom {
+  padding-bottom: 95px; }
 
 /******** Under slider ********/
-body.fixed-slider #content { padding-top: 50px; }
+/* line 981, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.fixed-slider #content {
+  padding-top: 50px; }
 
-body.logo-on.fixed-slider #content { padding-top: 95px; }
+/* line 985, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.logo-on.fixed-slider #content {
+  padding-top: 95px; }
 
-@media (max-width: 767px) { body.logo-on.fixed-slider #content { padding-top: 50px; } }
+@media (max-width: 767px) {
+  /* line 990, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.logo-on.fixed-slider #content {
+    padding-top: 50px; } }
+
 /* Home */
-body.home.fixed-slider #content { padding-top: 0; }
+/* line 996, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.home.fixed-slider #content {
+  padding-top: 0; }
 
-body.home.logo-on.fixed-slider #content { padding-top: 0; }
+/* line 1000, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+body.home.logo-on.fixed-slider #content {
+  padding-top: 0; }
 
-@media (max-width: 767px) { body.home.logo-on.fixed-slider #content { padding-top: 0; } }
+@media (max-width: 767px) {
+  /* line 1005, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  body.home.logo-on.fixed-slider #content {
+    padding-top: 0; } }
+
 /*--------------------------------------------------------------
 ## Custom Hamburgers
 --------------------------------------------------------------*/
-.custom-hamburger { display: block; float: left; padding-left: 15px; }
+/* line 1013, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.custom-hamburger {
+  display: block;
+  float: left;
+  padding-left: 15px; }
 
-@media (max-width: 767px) { .custom-hamburger { margin-left: 15px; } }
-.custom-hamburger#left-panel-button .bottom-bar { width: 12px; }
+@media (max-width: 767px) {
+  /* line 1020, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .custom-hamburger {
+    margin-left: 15px; } }
 
-.custom-hamburger#right-panel-button .bottom-bar { width: 12px; margin-left: 10px; }
+/* line 1025, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.custom-hamburger#left-panel-button .bottom-bar {
+  width: 12px; }
 
-.custom-hamburger#fullscreen-panel-button .top-bar, .custom-hamburger#fullscreen-panel-button .bottom-bar { width: 18px; margin-left: 2px; }
+/* line 1029, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.custom-hamburger#right-panel-button .bottom-bar {
+  width: 12px;
+  margin-left: 10px; }
+
+/* line 1035, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.custom-hamburger#fullscreen-panel-button .top-bar,
+.custom-hamburger#fullscreen-panel-button .bottom-bar {
+  width: 18px;
+  margin-left: 2px; }
 
 /*--------------------------------------------------------------
 ## mmenu
 --------------------------------------------------------------*/
 /* Hide mmenu flickering */
-#page #left-panel, #page #right-panel { display: none; }
+/* line 1045, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#page #left-panel,
+#page #right-panel {
+  display: none; }
 
-#left-panel.mm-menu { background: #323232; }
+/* line 1049, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#left-panel.mm-menu {
+  background: #323232; }
 
-#right-panel.mm-menu { background: #323232; }
+/* line 1053, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#right-panel.mm-menu {
+  background: #323232; }
 
 /*--------------------------------------------------------------
 ## Fullscreen Modal
 --------------------------------------------------------------*/
-.modal.fade.simple { background-color: #fff; }
+/* line 1060, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal.fade.simple {
+  background-color: #fff; }
 
-.modal.fade.simple .modal-dialog { -webkit-transform: none; -moz-transform: none; -ms-transform: none; transform: none; top: 0; opacity: 0; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; width: 100%; }
+/* line 1064, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal.fade.simple .modal-dialog {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%; }
 
-.modal.fade.in.simple .modal-dialog { -webkit-transform: none; -moz-transform: none; -ms-transform: none; transform: none; -webkit-transform: none; transform: none; opacity: 1; }
+/* line 1077, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal.fade.in.simple .modal-dialog {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1; }
 
-.modal.simple .modal-content { -webkit-box-shadow: none; box-shadow: none; border: none; border-radius: 0; }
+/* line 1087, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal.simple .modal-content {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0; }
 
-.modal.simple .modal-title { text-align: center; text-transform: uppercase; color: #555; font-weight: 700; font-size: 45px; }
+/* line 1094, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal.simple .modal-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 700;
+  font-size: 45px; }
 
-hr.star-primary { margin: 25px auto 30px; padding: 0; max-width: 250px; border: 0; border-top: solid 5px #555; text-align: center; }
+/* line 1102, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+hr.star-primary {
+  margin: 25px auto 30px;
+  padding: 0;
+  max-width: 250px;
+  border: 0;
+  border-top: solid 5px #555;
+  text-align: center; }
 
-hr.star-primary:after { color: #555; background: #fff; content: "\f005"; display: inline-block; position: relative; top: -0.8em; padding: 0 .25em; font-family: FontAwesome; font-size: 2em; }
+/* line 1111, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+hr.star-primary:after {
+  color: #555;
+  background: #fff;
+  content: "\f005";
+  display: inline-block;
+  position: relative;
+  top: -.8em;
+  padding: 0 0.25em;
+  font-family: FontAwesome;
+  font-size: 2em; }
 
-.modal.simple .modal-body img { width: 100%; height: auto; display: block; }
+/* line 1123, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal.simple .modal-body img {
+  width: 100%;
+  height: auto;
+  display: block; }
 
-.modal.simple .modal-header, .modal.simple .modal-footer { border: 0; }
+/* line 1130, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal.simple .modal-header,
+.modal.simple .modal-footer {
+  border: 0; }
 
-.modal.simple .modal-footer { text-align: center; }
+/* line 1134, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal.simple .modal-footer {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 ## Fullscreen modal menu
 --------------------------------------------------------------*/
-#fullscreen-panel ul { margin: 0; padding: 0; }
+/* line 1141, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#fullscreen-panel ul {
+  margin: 0;
+  padding: 0; }
 
-#fullscreen-panel ul li { text-transform: uppercase; list-style-type: none; margin: 0; padding: 0; }
+/* line 1146, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#fullscreen-panel ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
-#fullscreen-panel ul li a { color: #ccc; font-size: 45px; }
+/* line 1153, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#fullscreen-panel ul li a {
+  color: #ccc;
+  font-size: 45px; }
 
-#fullscreen-panel ul li a:hover { color: #999; text-decoration: none; }
+/* line 1158, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#fullscreen-panel ul li a:hover {
+  color: #999;
+  text-decoration: none; }
 
 /*--------------------------------------------------------------
 ## Navbar Bottom
 --------------------------------------------------------------*/
-#menu-bottom ul { text-align: left; padding-left: 0; list-style: none; padding-top: 20px; }
+/* line 1166, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#menu-bottom ul {
+  text-align: left;
+  padding-left: 0;
+  list-style: none;
+  padding-top: 20px; }
 
-#menu-bottom ul li a { height: 30px; line-height: 30px; }
+/* line 1173, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#menu-bottom ul li a {
+  height: 30px;
+  line-height: 30px; }
 
-@media (min-width: 768px) { #menu-bottom ul { margin-left: -10px; }
-  #menu-bottom ul li { display: inline; padding: 10px; }
-  #menu-bottom ul li a { height: 50px; line-height: 50px; } }
+@media (min-width: 768px) {
+  /* line 1179, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  #menu-bottom ul {
+    margin-left: -10px; }
+  /* line 1183, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  #menu-bottom ul li {
+    display: inline;
+    padding: 10px; }
+  /* line 1187, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  #menu-bottom ul li a {
+    height: 50px;
+    line-height: 50px; } }
+
 /*--------------------------------------------------------------
 ## Slider
 --------------------------------------------------------------*/
-#slider .item { height: 400px; background-position: 50%; background-repeat: no-repeat; background-size: cover; }
+/* line 1197, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .item {
+  height: 400px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /* Fade */
-.carousel-fade .carousel-inner .item { opacity: 0; transition-property: opacity; }
+/* line 1205, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity; }
 
-.carousel-fade .carousel-inner .active { opacity: 1; }
+/* line 1210, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-fade .carousel-inner .active {
+  opacity: 1; }
 
-.carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right { left: 0; opacity: 0; z-index: 1; }
+/* line 1215, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1; }
 
-.carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right { opacity: 1; }
+/* line 1222, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
 
-.carousel-fade .carousel-control { z-index: 2; }
+/* line 1226, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-fade .carousel-control {
+  z-index: 2; }
 
-@media all and (transform-3d), (-webkit-transform-3d) { .carousel-fade .carousel-inner > .item.next, .carousel-fade .carousel-inner > .item.active.right { opacity: 0; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-  .carousel-fade .carousel-inner > .item.prev, .carousel-fade .carousel-inner > .item.active.left { opacity: 0; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-  .carousel-fade .carousel-inner > .item.next.left, .carousel-fade .carousel-inner > .item.prev.right, .carousel-fade .carousel-inner > .item.active { opacity: 1; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); } }
+@media all and (transform-3d), (-webkit-transform-3d) {
+  /* line 1233, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  /* line 1239, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  /* line 1246, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
 /* Centrer le contenu du slider */
-#slider .item .effect .container { height: 100%; }
+/* line 1254, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .item .effect .container {
+  height: 100%; }
 
-#slider .item .effect .container .row { height: 100%; }
+/* line 1258, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .item .effect .container .row {
+  height: 100%; }
 
-#slider .item .effect .container .row .col-sm-12 { display: table; height: 100%; width: 100%; }
+/* line 1262, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .item .effect .container .row .col-sm-12 {
+  display: table;
+  height: 100%;
+  width: 100%; }
 
-#slider .item .effect .container .row .col-sm-12 .carousel-content { display: table-cell; height: 100%; vertical-align: middle; }
+/* line 1268, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .item .effect .container .row .col-sm-12 .carousel-content {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle; }
 
-.carousel-content.left { text-align: left; }
+/* line 1274, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-content.left {
+  text-align: left; }
 
-.carousel-content.center { text-align: center; }
+/* line 1278, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-content.center {
+  text-align: center; }
 
-.carousel-content.right { text-align: right; }
+/* line 1282, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-content.right {
+  text-align: right; }
 
-.carousel-content h2, .carousel-content p { color: #fff; padding: 10px 15px; display: inline-block; cursor: default; }
+/* line 1287, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-content h2,
+.carousel-content p {
+  color: #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  cursor: default; }
 
 /* Boxed style */
-.boxed { background-color: rgba(0, 0, 0, 0); }
+/* line 1295, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.boxed {
+  background-color: rgba(0, 0, 0, 0.8); }
 
 /* Effet */
-#slider .item .effect { display: block; width: 100%; height: 100%; }
+/* line 1300, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .item .effect {
+  display: block;
+  width: 100%;
+  height: 100%; }
 
 /* Video background */
-#slider .item .video { height: 100%; }
+/* line 1307, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .item .video {
+  height: 100%; }
 
 /* Controls */
-.carousel-arrow { display: inline-block; top: 50%; position: absolute; margin-top: -25px; z-index: 2; }
+/* line 1312, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-arrow {
+  display: inline-block;
+  top: 50%;
+  position: absolute;
+  margin-top: -25px;
+  z-index: 2; }
 
-.carousel-arrow.left { right: auto; left: auto; }
+/* line 1320, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-arrow.left {
+  right: auto;
+  left: auto; }
 
-.carousel-arrow.right { right: 0; left: auto; }
+/* line 1325, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-arrow.right {
+  right: 0;
+  left: auto; }
 
-.carousel-control { width: 50px; height: 50px; text-shadow: none; margin: 10px; }
+/* line 1330, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-control {
+  width: 50px;
+  height: 50px;
+  text-shadow: none;
+  margin: 10px; }
 
-.carousel-control.left, .carousel-control.right, #slider .slider-down-arrow { background: rgba(0, 0, 0, 0); color: #fff; display: inline-block; font-size: 12px; line-height: 50px; text-align: center; border-radius: 4px; }
+/* line 1339, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.carousel-control.left,
+.carousel-control.right,
+#slider .slider-down-arrow {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 4px; }
 
-#slider .slider-down { position: absolute; bottom: 10px; width: 100%; }
+/* line 1352, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .slider-down {
+  position: absolute;
+  bottom: 10px;
+  width: 100%; }
 
-#slider .slider-down-arrow { width: 50px; height: 50px; display: block; position: absolute; left: 50%; margin-left: -25px; bottom: 10px; }
+/* line 1358, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#slider .slider-down-arrow {
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -25px;
+  bottom: 10px; }
 
 /*--------------------------------------------------------------
 ## Home
 --------------------------------------------------------------*/
-#home { text-align: justify; }
+/* line 1371, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#home {
+  text-align: justify; }
 
 /*--------------------------------------------------------------
 ## Milestones
 --------------------------------------------------------------*/
-#milestones { text-align: center; }
+/* line 1378, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#milestones {
+  text-align: center; }
 
-#milestones i { color: #aaaaaa; }
+/* line 1382, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#milestones i {
+  color: #aaa; }
 
-.milestone-data { color: #111; padding: 20px 0; font-weight: bold; display: block; overflow: hidden; margin-bottom: 0; font-size: 32px; }
+/* line 1386, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.milestone-data {
+  color: #111;
+  padding: 20px 0;
+  font-weight: bold;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 0;
+  font-size: 32px; }
 
-.milestone-details { font-size: 18px; font-weight: 600; color: #777777; }
+/* line 1396, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.milestone-details {
+  font-size: 18px;
+  font-weight: 600;
+  color: #777; }
 
 /*--------------------------------------------------------------
 ## Pricing table
 --------------------------------------------------------------*/
-#pricing .pricing-table { padding-bottom: 30px; }
+/* line 1405, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-table {
+  padding-bottom: 30px; }
 
-#pricing .pricing-table .pricing-header { position: relative; background: #666; padding: 22px 22px; text-align: center; border-top-right-radius: 4px; border-top-left-radius: 4px; }
+/* line 1409, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-table .pricing-header {
+  position: relative;
+  background: #666;
+  padding: 22px 22px;
+  text-align: center;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px; }
 
-#pricing .featured.pricing-table .pricing-header { background: #3e3e3e; }
+/* line 1418, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .featured.pricing-table .pricing-header {
+  background: #3e3e3e; }
 
-#pricing .pricing-table .pricing-header .pricing-title { color: #ffffff; text-transform: uppercase; letter-spacing: 2px; font-size: 24px; text-align: center; font-weight: 700; cursor: default; }
+/* line 1422, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-table .pricing-header .pricing-title {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  cursor: default; }
 
-#pricing .pricing-table .pricing-header .pricing-rate { font-size: 70px; color: #ffffff; position: relative; text-align: center; cursor: default; }
+/* line 1432, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-table .pricing-header .pricing-rate {
+  font-size: 70px;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  cursor: default; }
 
-#pricing .pricing-table .pricing-header .pricing-rate sup { font-size: 24px; position: relative; top: -30px; color: #ccc; cursor: default; }
+/* line 1440, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-table .pricing-header .pricing-rate sup {
+  font-size: 24px;
+  position: relative;
+  top: -30px;
+  color: #ccc;
+  cursor: default; }
 
-#pricing .pricing-table .pricing-header .pricing-rate span { font-size: 16px; color: #ccc; text-transform: uppercase; cursor: default; }
+/* line 1448, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-table .pricing-header .pricing-rate span {
+  font-size: 16px;
+  color: #ccc;
+  text-transform: uppercase;
+  cursor: default; }
 
-#pricing .pricing-list { padding: 20px 0 40px 0; background: #ffffff; border: 1px solid #ccc; }
+/* line 1455, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-list {
+  padding: 20px 0 40px 0;
+  background: #ffffff;
+  border: 1px solid #ccc; }
 
-#pricing .pricing-list ul { padding: 0px; display: table; margin: 0px auto; }
+/* line 1461, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-list ul {
+  padding: 0px;
+  display: table;
+  margin: 0px auto; }
 
-#pricing .pricing-list ul li { list-style: none; border-bottom: 1px solid #ccc; color: #939393; font-size: 16px; line-height: 42px; -webkit-transition: 300ms; -moz-transition: 300ms; -o-transition: 300ms; transition: 300ms; cursor: default; }
+/* line 1467, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-list ul li {
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  color: #939393;
+  font-size: 16px;
+  line-height: 42px;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  cursor: default; }
 
-#pricing .pricing-list ul li:last-child { border: none; }
+/* line 1480, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-list ul li:last-child {
+  border: none; }
 
-#pricing .pricing-list ul li:hover { color: #323232; }
+/* line 1484, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-list ul li:hover {
+  color: #323232; }
 
-#pricing .pricing-list ul li i { margin-right: 12px; color: #ccc; }
+/* line 1488, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-list ul li i {
+  margin-right: 12px;
+  color: #ccc; }
 
-#pricing .pricing-list ul li span { color: #666; }
+/* line 1493, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#pricing .pricing-list ul li span {
+  color: #666; }
 
 /*--------------------------------------------------------------
 ## Team
 --------------------------------------------------------------*/
-#team-carousel .carousel-control { background: transparent; width: 20px; margin: 0; top: 40%; }
+/* line 1500, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#team-carousel .carousel-control {
+  background: transparent;
+  width: 20px;
+  margin: 0;
+  top: 40%; }
 
-#team-carousel .carousel-control i { width: 15px; line-height: 40px; background: rgba(148, 148, 148, 0); }
+/* line 1507, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#team-carousel .carousel-control i {
+  width: 15px;
+  line-height: 40px;
+  background: rgba(148, 148, 148, 0.61); }
 
-#team-carousel .carousel-control.left i { border-radius: 4px 0 0 4px; }
+/* line 1513, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#team-carousel .carousel-control.left i {
+  border-radius: 4px 0 0 4px; }
 
-#team-carousel .carousel-control.right i { border-radius: 0 4px 4px 0; }
+/* line 1517, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#team-carousel .carousel-control.right i {
+  border-radius: 0 4px 4px 0; }
 
-#team-carousel .carousel-control.left { left: -2px; }
+/* line 1521, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#team-carousel .carousel-control.left {
+  left: -2px; }
 
-#team-carousel .carousel-control.right { right: -2px; }
+/* line 1525, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#team-carousel .carousel-control.right {
+  right: -2px; }
 
-.team-member { overflow: hidden; text-align: center; background: #fff; margin-bottom: 30px; border-top-left-radius: 4px; border-top-right-radius: 4px; -webkit-transition: 300ms; -moz-transition: 300ms; -o-transition: 300ms; transition: 300ms; }
+/* line 1529, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member {
+  overflow: hidden;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 30px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
 
-.team-image img { width: 100% !important; }
+/* line 1542, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-image img {
+  width: 100% !important; }
 
-.team-member:hover { color: #fff; }
+/* line 1546, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member:hover {
+  color: #fff; }
 
-.team-member:hover ul.social li a { color: #fff; }
+/* line 1550, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member:hover ul.social li a {
+  color: #fff; }
 
-.team-member:hover .team-image img { opacity: .6; }
+/* line 1554, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member:hover .team-image img {
+  opacity: .6; }
 
-.team-member:hover { background: #666; }
+/* line 1558, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member:hover {
+  background: #666; }
 
-.team-desc { padding: 15px; cursor: default; }
+/* line 1562, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-desc {
+  padding: 15px;
+  cursor: default; }
 
-.team-member:hover .team-desc { border: 0; }
+/* line 1567, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member:hover .team-desc {
+  border: 0; }
 
-.team-member:hover .team-desc .designation { color: #cccccc; }
+/* line 1571, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member:hover .team-desc .designation {
+  color: #ccc; }
 
-.team-member ul.social { padding: 0; margin: 0; }
+/* line 1575, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member ul.social {
+  padding: 0;
+  margin: 0; }
 
-.team-member ul.social li { display: inline-block; margin: 0 5px; }
+/* line 1580, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member ul.social li {
+  display: inline-block;
+  margin: 0 5px; }
 
-.team-member ul.social li a { color: #aaaaaa; }
+/* line 1585, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.team-member ul.social li a {
+  color: #aaa; }
 
 /*--------------------------------------------------------------
 ## Testimonials
 --------------------------------------------------------------*/
-#testimonials blockquote { border-left: 5px solid #fff; margin: 0; }
+/* line 1592, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#testimonials blockquote {
+  border-left: 5px solid #fff;
+  margin: 0; }
 
-#testimonials .carousel-indicators { bottom: -50px; }
+/* line 1597, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#testimonials .carousel-indicators {
+  bottom: -50px; }
 
 /*--------------------------------------------------------------
 ## Blog
 --------------------------------------------------------------*/
-#blog #shuffle { margin-top: 20px; }
+/* line 1604, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #shuffle {
+  margin-top: 20px; }
 
-#blog #shuffle > .item { margin-bottom: 30px; }
+/* line 1608, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #shuffle > .item {
+  margin-bottom: 30px; }
 
-#blog #shuffle .item .post { background: #f0f0f0; -webkit-border-radius: 4px; border-radius: 4px; height: auto; }
+/* line 1612, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #shuffle .item .post {
+  background: #f0f0f0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  height: auto; }
 
-#blog #shuffle .post-thumbnail { position: relative; width: 100%; overflow: hidden; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; }
+/* line 1619, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #shuffle .post-thumbnail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0; }
 
-#blog #shuffle .post-thumbnail img { width: 100%; max-width: 100%; height: auto; display: block; }
+/* line 1627, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #shuffle .post-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
 
-#blog #shuffle .post-details { padding: 15px; }
+/* line 1634, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #shuffle .post-details {
+  padding: 15px; }
 
 /* Grid */
-#blog #grid .blog-item-thumbnail img { width: 100%; max-width: 100%; height: auto; display: block; }
+/* line 1639, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #grid .blog-item-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
 
-#blog #grid .blog-item-details { opacity: 0; position: absolute; top: 0; display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, 0); -webkit-transition: 300ms; -moz-transition: 300ms; -o-transition: 300ms; transition: 300ms; }
+/* line 1646, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #grid .blog-item-details {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
 
-#blog #grid .blog-item-details:hover { opacity: 1; }
+/* line 1660, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #grid .blog-item-details:hover {
+  opacity: 1; }
 
-#blog #grid .blog-item-details a { display: block; width: 100%; height: 100%; }
+/* line 1664, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #grid .blog-item-details a {
+  display: block;
+  width: 100%;
+  height: 100%; }
 
-#blog #grid .blog-item-details a .caption { position: absolute; top: 50%; width: 100%; height: 70px; margin-top: -35px; text-align: center; color: #ffffff; }
+/* line 1670, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#blog #grid .blog-item-details a .caption {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 70px;
+  margin-top: -35px;
+  text-align: center;
+  color: #ffffff; }
 
 /*--------------------------------------------------------------
 ## Portfolio
 --------------------------------------------------------------*/
 /* Shuffle */
-#portfolio #shuffle { margin-top: 20px; }
+/* line 1684, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #shuffle {
+  margin-top: 20px; }
 
-#portfolio #shuffle > .item { margin-bottom: 30px; }
+/* line 1688, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #shuffle > .item {
+  margin-bottom: 30px; }
 
-#portfolio #shuffle .item .portfolio-item { background: #f0f0f0; -webkit-border-radius: 4px; border-radius: 4px; height: auto; }
+/* line 1692, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #shuffle .item .portfolio-item {
+  background: #f0f0f0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  height: auto; }
 
-#portfolio #shuffle .portfolio-item-thumbnail { position: relative; width: 100%; overflow: hidden; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; }
+/* line 1699, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #shuffle .portfolio-item-thumbnail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0; }
 
-#portfolio #shuffle .portfolio-item-thumbnail img { width: 100%; max-width: 100%; height: auto; display: block; }
+/* line 1707, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #shuffle .portfolio-item-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
 
-#portfolio #shuffle .portfolio-item-details { padding: 15px; }
+/* line 1714, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #shuffle .portfolio-item-details {
+  padding: 15px; }
 
 /* Grid */
-#portfolio #grid .portfolio-item-thumbnail img { width: 100%; max-width: 100%; height: auto; display: block; }
+/* line 1719, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #grid .portfolio-item-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
 
-#portfolio #grid .portfolio-item-details { opacity: 0; position: absolute; top: 0; display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, 0); -webkit-transition: 300ms; -moz-transition: 300ms; -o-transition: 300ms; transition: 300ms; }
+/* line 1726, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #grid .portfolio-item-details {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
 
-#portfolio #grid .portfolio-item-details:hover { opacity: 1; }
+/* line 1740, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #grid .portfolio-item-details:hover {
+  opacity: 1; }
 
-#portfolio #grid .portfolio-item-details a { display: block; width: 100%; height: 100%; }
+/* line 1744, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #grid .portfolio-item-details a {
+  display: block;
+  width: 100%;
+  height: 100%; }
 
-#portfolio #grid .portfolio-item-details a .caption { position: absolute; top: 50%; width: 100%; height: 70px; margin-top: -35px; text-align: center; color: #ffffff; }
+/* line 1750, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#portfolio #grid .portfolio-item-details a .caption {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 70px;
+  margin-top: -35px;
+  text-align: center;
+  color: #ffffff; }
 
 /*--------------------------------------------------------------
 ## Products
 --------------------------------------------------------------*/
-#products #shuffle { margin-top: 20px; }
+/* line 1763, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#products #shuffle {
+  margin-top: 20px; }
 
-#products #shuffle > .item { margin-bottom: 30px; }
+/* line 1767, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#products #shuffle > .item {
+  margin-bottom: 30px; }
 
-#products #shuffle .item .product { background: #f0f0f0; -webkit-border-radius: 4px; border-radius: 4px; height: auto; }
+/* line 1771, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#products #shuffle .item .product {
+  background: #f0f0f0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  height: auto; }
 
-.product-thumbnail { position: relative; width: 100%; overflow: hidden; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0; }
+/* line 1778, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.product-thumbnail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0; }
 
-.product-thumbnail img { width: 100%; max-width: 100%; height: auto; display: block; }
+/* line 1786, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.product-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
 
-.product-thumbnail .label { font-size: 15px; font-weight: 400; position: absolute; top: 10px; right: 10px; }
+/* line 1793, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.product-thumbnail .label {
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  right: 10px; }
 
-.product-details { padding: 15px; }
+/* line 1801, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.product-details {
+  padding: 15px; }
 
-.product-price { font-weight: bolder; font-size: 20px; margin-top: 30px; text-align: center; }
+/* line 1805, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.product-price {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center; }
 
-.modal-body .carousel .item img { width: 100%; height: auto; }
+/* line 1812, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.modal-body .carousel .item img {
+  width: 100%;
+  height: auto; }
 
 /*--------------------------------------------------------------
 ## Services
 --------------------------------------------------------------*/
-#services i { font-size: 36px; height: 68px; width: 68px; line-height: 68px; color: #fff; margin-right: 10px; background-color: rgba(0, 0, 0, 0); text-align: center; display: block; border-radius: 100%; -webkit-transition: 300ms; -moz-transition: 300ms; -o-transition: 300ms; transition: 300ms; }
+/* line 1820, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#services i {
+  font-size: 36px;
+  height: 68px;
+  width: 68px;
+  line-height: 68px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: block;
+  border-radius: 100%;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
 
-.service { margin-bottom: 30px; }
+/* line 1837, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.service {
+  margin-bottom: 30px; }
 
-#services .service:hover i { border-radius: 10px; background-color: rgba(0, 0, 0, 0); }
+/* line 1841, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+#services .service:hover i {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8); }
 
 /*--------------------------------------------------------------
 ## Page
 --------------------------------------------------------------*/
 /* Header */
-.entry-header.left, .page-header.left { text-align: left; }
+/* line 1851, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.entry-header.left,
+.page-header.left {
+  text-align: left; }
 
-.entry-header.center, .page-header.center { text-align: center; }
+/* line 1856, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.entry-header.center,
+.page-header.center {
+  text-align: center; }
 
-.entry-header.right, .page-header.right { text-align: right; }
+/* line 1861, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.entry-header.right,
+.page-header.right {
+  text-align: right; }
 
-.entry-header, .page-header { padding-top: 0; padding-bottom: 0; }
+/* line 1866, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.entry-header,
+.page-header {
+  padding-top: 0;
+  padding-bottom: 0; }
 
-.entry-header .effect, .page-header .effect { padding-top: 100px; padding-bottom: 100px; }
+/* line 1872, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.entry-header .effect,
+.page-header .effect {
+  padding-top: 100px;
+  padding-bottom: 100px; }
 
-.page-header { margin: 0; border: 0; }
+/* line 1877, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.page-header {
+  margin: 0;
+  border: 0; }
 
-header.entry-header h3.boxed, header.entry-header h4.boxed, header.page-header h3.boxed, header.page-header h4.boxed { padding: 10px 15px; display: inline-block; clear: both; }
+/* line 1885, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+header.entry-header h3.boxed,
+header.entry-header h4.boxed,
+header.page-header h3.boxed,
+header.page-header h4.boxed {
+  padding: 10px 15px;
+  display: inline-block;
+  clear: both; }
 
 /* Content */
-.home .entry-content { margin: 0; }
+/* line 1892, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.home .entry-content {
+  margin: 0; }
 
 /*--------------------------------------------------------------
 ## Posts
 --------------------------------------------------------------*/
-.post header { margin-bottom: 15px; }
+/* line 1899, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.post header {
+  margin-bottom: 15px; }
 
-.post .panel-title a { text-decoration: none; }
+/* line 1903, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.post .panel-title a {
+  text-decoration: none; }
 
-.post .panel-title a:after { font-family: 'FontAwesome'; content: "\f068"; float: right; color: #aaa; }
+/* line 1907, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.post .panel-title a:after {
+  font-family: 'FontAwesome';
+  content: "\f068";
+  float: right;
+  color: #aaa; }
 
-.post .panel-title a.collapsed:after { content: "\f067"; }
+/* line 1914, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.post .panel-title a.collapsed:after {
+  content: "\f067"; }
 
 /*--------------------------------------------------------------
 ## Sections
 --------------------------------------------------------------*/
-section.section { padding-top: 0; padding-bottom: 0; }
+/* line 1921, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+section.section {
+  padding-top: 0;
+  padding-bottom: 0; }
 
-.section.left { text-align: left; }
+/* line 1926, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.section.left {
+  text-align: left; }
 
-.section.center { text-align: center; }
+/* line 1930, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.section.center {
+  text-align: center; }
 
-.section.right { text-align: right; }
+/* line 1934, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.section.right {
+  text-align: right; }
 
-.section h2.boxed, .section p.boxed { padding: 10px 15px; display: inline-block; clear: both; }
+/* line 1939, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.section h2.boxed,
+.section p.boxed {
+  padding: 10px 15px;
+  display: inline-block;
+  clear: both; }
 
 /*--------------------------------------------------------------
 ## Partners
 --------------------------------------------------------------*/
-.partner { display: table; width: 100%; }
+/* line 1948, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.partner {
+  display: table;
+  width: 100%; }
 
-.partner-inner { display: table-cell; vertical-align: middle; text-align: center; height: 160px; width: 100%; }
+/* line 1953, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.partner-inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 160px;
+  width: 100%; }
 
-.partner img { width: 100%; height: auto; max-width: 140px; max-height: 140px; }
+/* line 1961, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.partner img {
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+  max-height: 140px; }
 
 /*--------------------------------------------------------------
 ## Scroll to top
 --------------------------------------------------------------*/
-.scroll-top-wrapper { position: fixed; opacity: 0; visibility: hidden; overflow: hidden; text-align: center; z-index: 999; background-color: rgba(0, 0, 0, 0); width: 36px; height: 36px; right: 30px; bottom: 30px; border-radius: 4px; -webkit-transition: all 300ms linear; -moz-transition: all 300ms linear; -ms-transition: all 300ms linear; -o-transition: all 300ms linear; transition: all 300ms linear; }
+/* line 1971, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.scroll-top-wrapper {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 36px;
+  height: 36px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 4px;
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear; }
 
-.scroll-top-wrapper:hover { background-color: rgba(0, 0, 0, 0); }
+/* line 1991, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.scroll-top-wrapper:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
 
-.scroll-top-wrapper.show { visibility: visible; cursor: pointer; opacity: 1.0; }
+/* line 1995, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.scroll-top-wrapper.show {
+  visibility: visible;
+  cursor: pointer;
+  opacity: 1.0; }
 
-.scroll-top-inner { color: #fff; display: inline-block; font-size: 8px; line-height: 36px; }
+/* line 2001, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.scroll-top-inner {
+  color: #fff;
+  display: inline-block;
+  font-size: 8px;
+  line-height: 36px; }
 
 /*--------------------------------------------------------------
 ## TML
 --------------------------------------------------------------*/
-.tml-action-links, .tml-user-links { padding-left: 0px; list-style: outside none none; }
+/* line 2012, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.tml-action-links,
+.tml-user-links {
+  padding-left: 0px;
+  list-style: outside none none; }
 
 /*--------------------------------------------------------------
 ## Timeline
 --------------------------------------------------------------*/
 /* On cache les icones pour le moment car bug de choix avec Bootstrap Shortcodes activé */
-.cd-timeline-img.cd-picture .fa { display: none !important; }
+/* line 2021, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+.cd-timeline-img.cd-picture .fa {
+  display: none !important; }
 
-@media only screen and (min-width: 822px) { .cd-timeline-img { width: 40px !important; height: 40px !important; margin-left: -20px !important; } }
+@media only screen and (min-width: 822px) {
+  /* line 2026, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/css.scss */
+  .cd-timeline-img {
+    width: 40px !important;
+    height: 40px !important;
+    margin-left: -20px !important; } }
+
+/*# sourceMappingURL=style.css.map */
