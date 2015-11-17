@@ -1,0 +1,18 @@
+/* Overlays */
+/* line 3, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/overlays.scss */
+.effect.light {
+  background: rgba(255, 255, 255, 0.5); }
+
+/* line 7, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/overlays.scss */
+.effect.dark {
+  background: rgba(0, 0, 0, 0.75); }
+
+/* line 11, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/overlays.scss */
+.effect.trame-01 {
+  background: url(img/textures/grid.png); }
+
+/* line 15, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/overlays.scss */
+.effect.trame-02 {
+  background: url(img/textures/squares.png); }
+
+/*# sourceMappingURL=overlays.css.map */

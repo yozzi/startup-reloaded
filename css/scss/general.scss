@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------
+## Général
+--------------------------------------------------------------*/
+
+a,
+button,
+input[type="submit"] {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+    .pull-left-lg {
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .pull-right-md {
+        float: right;
+    }
+    .pull-left-md {
+        float: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .pull-right-sm {
+        float: right;
+    }
+    .pull-left-sm {
+        float: left;
+    }
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.hentry {
+    margin: 0;
+}
+
+.well {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}

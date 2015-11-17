@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+#secondary,
+#colophon {
+    color: #999
+}
+
+#secondary {
+    padding-top: 50px
+}
+
+#colophon {
+    padding-bottom: 30px
+}
+
+#secondary a,
+#colophon a {
+    color: #ccc
+}
+
+#secondary a:focus,
+#secondary a:hover,
+#colophon a:focus,
+#colophon a:hover {
+    color: #ddd;
+    text-decoration: none;
+}

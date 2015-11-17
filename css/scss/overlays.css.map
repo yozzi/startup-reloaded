@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "overlays.css",
+  "sources": [
+    "overlays.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA,cAAc;;AAEP,OAAO,AAAA,MAAM,CAAN;EACV,UAAU,EAAE,wBAAI,GADL;;;AAIR,OAAO,AAAA,KAAK,CAAN;EACT,UAAU,EAAE,mBAAI,GADN;;;AAIP,OAAO,AAAA,SAAS,CAAN;EACb,UAAU,EAAE,0BAAG,GADD;;;AAIX,OAAO,AAAA,SAAS,CAAN;EACb,UAAU,EAAE,6BAAG,GADD",
+  "names": []
+}

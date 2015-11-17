@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+## Fullscreen Panel
+--------------------------------------------------------------*/
+
+#fullscreen-panel ul {
+    margin: 0;
+    padding: 0;
+}
+
+#fullscreen-panel ul li {
+    text-transform: uppercase;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#fullscreen-panel ul li a {
+    color: #ccc;
+    font-size: 45px;
+}
+
+#fullscreen-panel ul li a:hover {
+    color: #999;
+    text-decoration: none;
+}

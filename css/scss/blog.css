@@ -1,0 +1,80 @@
+/*--------------------------------------------------------------
+## Blog
+--------------------------------------------------------------*/
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #shuffle {
+  margin-top: 20px; }
+
+/* line 9, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #shuffle > .item {
+  margin-bottom: 30px; }
+
+/* line 13, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #shuffle .item .post {
+  background: #f0f0f0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  height: auto; }
+
+/* line 20, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #shuffle .post-thumbnail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0; }
+
+/* line 28, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #shuffle .post-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+/* line 35, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #shuffle .post-details {
+  padding: 15px; }
+
+/* Grid */
+/* line 40, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #grid .blog-item-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #grid .blog-item-details {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
+
+/* line 61, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #grid .blog-item-details:hover {
+  opacity: 1; }
+
+/* line 65, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #grid .blog-item-details a {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/* line 71, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/blog.scss */
+#blog #grid .blog-item-details a .caption {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 70px;
+  margin-top: -35px;
+  text-align: center;
+  color: #ffffff; }
+
+/*# sourceMappingURL=blog.css.map */

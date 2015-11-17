@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+## Fullscreen Panel
+--------------------------------------------------------------*/
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/fullscreen-panel.scss */
+#fullscreen-panel ul {
+  margin: 0;
+  padding: 0; }
+
+/* line 10, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/fullscreen-panel.scss */
+#fullscreen-panel ul li {
+  text-transform: uppercase;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/fullscreen-panel.scss */
+#fullscreen-panel ul li a {
+  color: #ccc;
+  font-size: 45px; }
+
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/fullscreen-panel.scss */
+#fullscreen-panel ul li a:hover {
+  color: #999;
+  text-decoration: none; }
+
+/*# sourceMappingURL=fullscreen-panel.css.map */

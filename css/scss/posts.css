@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------
+## Posts
+--------------------------------------------------------------*/
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/posts.scss */
+.post header {
+  margin-bottom: 15px; }
+
+/* line 9, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/posts.scss */
+.post .panel-title a {
+  text-decoration: none; }
+
+/* line 13, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/posts.scss */
+.post .panel-title a:after {
+  font-family: 'FontAwesome';
+  content: "\f068";
+  float: right;
+  color: #aaa; }
+
+/* line 20, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/posts.scss */
+.post .panel-title a.collapsed:after {
+  content: "\f067"; }
+
+/*# sourceMappingURL=posts.css.map */

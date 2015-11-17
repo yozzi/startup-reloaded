@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+## Posts
+--------------------------------------------------------------*/
+
+.post header {
+    margin-bottom: 15px
+}
+
+.post .panel-title a {
+    text-decoration: none;
+}
+
+.post .panel-title a:after {
+    font-family: 'FontAwesome';
+    content: "\f068";
+    float: right;
+    color: #aaa;
+}
+
+.post .panel-title a.collapsed:after {
+    content: "\f067";
+}

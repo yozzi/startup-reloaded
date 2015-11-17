@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+/* line 6, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/footer.scss */
+#secondary,
+#colophon {
+  color: #999; }
+
+/* line 10, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/footer.scss */
+#secondary {
+  padding-top: 50px; }
+
+/* line 14, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/footer.scss */
+#colophon {
+  padding-bottom: 30px; }
+
+/* line 19, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/footer.scss */
+#secondary a,
+#colophon a {
+  color: #ccc; }
+
+/* line 26, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/footer.scss */
+#secondary a:focus,
+#secondary a:hover,
+#colophon a:focus,
+#colophon a:hover {
+  color: #ddd;
+  text-decoration: none; }
+
+/*# sourceMappingURL=footer.css.map */
