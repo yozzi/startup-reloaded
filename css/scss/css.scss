@@ -2013,19 +2013,3 @@ section.section {
     padding-left: 0px;
     list-style: outside none none;
 }
-
-/*--------------------------------------------------------------
-## Timeline
---------------------------------------------------------------*/
-/* On cache les icones pour le moment car bug de choix avec Bootstrap Shortcodes activé */
-.cd-timeline-img.cd-picture .fa{
-display: none !important;
-}
-
-@media only screen and (min-width: 822px) {
-    .cd-timeline-img {
-        width: 40px !important;
-        height: 40px !important;
-        margin-left: -20px !important;
-    }
-}
