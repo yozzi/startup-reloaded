@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------
+## StartUp CPT Partners
+--------------------------------------------------------------*/
+
+.partner {
+    display: table;
+    width: 100%;
+}
+
+.partner-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 160px;
+    width: 100%;
+}
+
+.partner img {
+    width: 100%;
+    height: auto;
+    max-width: 140px;
+    max-height: 140px;
+}

@@ -1,0 +1,93 @@
+/*--------------------------------------------------------------
+## StartUp CPT Team
+--------------------------------------------------------------*/
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+#team-carousel .carousel-control {
+  background: transparent;
+  width: 20px;
+  margin: 0;
+  top: 40%; }
+
+/* line 12, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+#team-carousel .carousel-control i {
+  width: 15px;
+  line-height: 40px;
+  background: rgba(148, 148, 148, 0.61); }
+
+/* line 18, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+#team-carousel .carousel-control.left i {
+  border-radius: 4px 0 0 4px; }
+
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+#team-carousel .carousel-control.right i {
+  border-radius: 0 4px 4px 0; }
+
+/* line 26, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+#team-carousel .carousel-control.left {
+  left: -2px; }
+
+/* line 30, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+#team-carousel .carousel-control.right {
+  right: -2px; }
+
+/* line 34, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member {
+  overflow: hidden;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 30px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
+
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-image img {
+  width: 100% !important; }
+
+/* line 51, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member:hover {
+  color: #fff; }
+
+/* line 55, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member:hover ul.social li a {
+  color: #fff; }
+
+/* line 59, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member:hover .team-image img {
+  opacity: .6; }
+
+/* line 63, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member:hover {
+  background: #666; }
+
+/* line 67, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-desc {
+  padding: 15px;
+  cursor: default; }
+
+/* line 72, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member:hover .team-desc {
+  border: 0; }
+
+/* line 76, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member:hover .team-desc .designation {
+  color: #ccc; }
+
+/* line 80, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member ul.social {
+  padding: 0;
+  margin: 0; }
+
+/* line 85, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member ul.social li {
+  display: inline-block;
+  margin: 0 5px; }
+
+/* line 90, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-team.scss */
+.team-member ul.social li a {
+  color: #aaa; }
+
+/*# sourceMappingURL=startup-cpt-team.css.map */

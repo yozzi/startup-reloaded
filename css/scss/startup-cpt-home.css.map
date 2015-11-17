@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "startup-cpt-home.css",
+  "sources": [
+    "startup-cpt-home.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA;;gEAEgE;;AAEhE,KAAK,CAAC;EACF,UAAU,EAAE,OAAQ,GADjB",
+  "names": []
+}

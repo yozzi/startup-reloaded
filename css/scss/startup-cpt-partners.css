@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+## StartUp CPT Partners
+--------------------------------------------------------------*/
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-partners.scss */
+.partner {
+  display: table;
+  width: 100%; }
+
+/* line 10, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-partners.scss */
+.partner-inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 160px;
+  width: 100%; }
+
+/* line 18, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-partners.scss */
+.partner img {
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+  max-height: 140px; }
+
+/*# sourceMappingURL=startup-cpt-partners.css.map */

@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+## StartUp CPT Products
+--------------------------------------------------------------*/
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+#products #shuffle {
+  margin-top: 20px; }
+
+/* line 9, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+#products #shuffle > .item {
+  margin-bottom: 30px; }
+
+/* line 13, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+#products #shuffle .item .product {
+  background: #f0f0f0;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  height: auto; }
+
+/* line 20, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+.product-thumbnail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0; }
+
+/* line 28, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+.product-thumbnail img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block; }
+
+/* line 35, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+.product-thumbnail .label {
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+/* line 43, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+.product-details {
+  padding: 15px; }
+
+/* line 47, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+.product-price {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center; }
+
+/* line 54, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/startup-cpt-products.scss */
+.modal-body .carousel .item img {
+  width: 100%;
+  height: auto; }
+
+/*# sourceMappingURL=startup-cpt-products.css.map */

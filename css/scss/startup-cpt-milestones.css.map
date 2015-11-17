@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "startup-cpt-milestones.css",
+  "sources": [
+    "startup-cpt-milestones.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA;;gEAEgE;;AAEhE,WAAW,CAAC;EACR,UAAU,EAAE,MAAO,GADV;;;AAID,WAAW,CAAC,CAAC,CAAX;EACV,KAAK,EAAE,IACV,GAFc;;;AAIf,eAAe,CAAC;EACZ,KAAK,EAAE,IAAK;EACZ,OAAO,EAAE,MAAO;EAChB,WAAW,EAAE,IAAK;EAClB,OAAO,EAAE,KAAM;EACf,QAAQ,EAAE,MAAO;EACjB,aAAa,EAAE,CAAE;EACjB,SAAS,EAAE,IAAK,GAPH;;;AAUjB,kBAAkB,CAAC;EACf,SAAS,EAAE,IAAK;EAChB,WAAW,EAAE,GAAI;EACjB,KAAK,EAAE,IACV,GAJmB",
+  "names": []
+}

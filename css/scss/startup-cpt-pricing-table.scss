@@ -1,0 +1,95 @@
+/*--------------------------------------------------------------
+## StartUp CPT Pricing Table
+--------------------------------------------------------------*/
+
+#pricing .pricing-table {
+    padding-bottom: 30px;
+}
+
+#pricing .pricing-table .pricing-header {
+    position: relative;
+    background: #666;
+    padding: 22px 22px;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+#pricing .featured.pricing-table .pricing-header {
+    background: #3e3e3e;
+}
+
+#pricing .pricing-table .pricing-header .pricing-title {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    cursor: default;
+}
+
+#pricing .pricing-table .pricing-header .pricing-rate {
+    font-size: 70px;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+#pricing .pricing-table .pricing-header .pricing-rate sup {
+    font-size: 24px;
+    position: relative;
+    top: -30px;
+    color: #ccc;
+    cursor: default;
+}
+
+#pricing .pricing-table .pricing-header .pricing-rate span {
+    font-size: 16px;
+    color: #ccc;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+#pricing .pricing-list {
+    padding: 20px 0 40px 0;
+    background: #ffffff;
+    border: 1px solid #ccc;
+}
+
+#pricing .pricing-list ul {
+    padding: 0px;
+    display: table;
+    margin: 0px auto;
+}
+
+#pricing .pricing-list ul li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    color: #939393;
+    font-size: 16px;
+    line-height: 42px;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+    cursor: default;
+}
+
+#pricing .pricing-list ul li:last-child {
+    border: none;
+}
+
+#pricing .pricing-list ul li:hover {
+    color: #323232;
+}
+
+#pricing .pricing-list ul li i {
+    margin-right: 12px;
+    color: #ccc;
+}
+
+#pricing .pricing-list ul li span {
+    color: #666;
+}
