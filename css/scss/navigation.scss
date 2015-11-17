@@ -1,0 +1,355 @@
+/*--------------------------------------------------------------
+## Navigation
+--------------------------------------------------------------*/
+
+#masthead.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar-toggle {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+
+.navbar-toggle .icon-bar {
+    height: 3px;
+    border-radius: 0;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background: #323232;
+    border: none;
+    border-radius: 0;
+}
+
+#site-navigation .navbar-toggle.left-toggle {
+    float: left
+}
+
+#site-navigation .navbar-toggle.right-toggle {
+    margin-right: 0;
+}
+
+/* Under Slider */
+/* Mettre une condition : si la navbar est à plus de 50% du top de la page */
+/*
+.navbar-fixed-slider .dropdown .caret {
+  content: "";
+  border-top: 0;
+  border-bottom: 4px solid;
+}
+.navbar-fixed-slider .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+.navbar-fixed-slider .navbar-nav > li > .dropdown-menu {
+  margin-bottom: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+*/
+
+/* Style clair */
+
+.navbar-nav>li>a {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand {
+    color: #000;
+}
+
+.navbar-brand:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+/* Style foncé (inverse) */
+
+.navbar-inverse .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-toggle,
+.navbar-toggle:hover {
+    background: transparent !important;
+    border: none !important;
+}
+/* Non-collapsing icons */
+
+@media (max-width: 767px) {
+    #site-navigation .navbar-right {
+        float: right;
+        padding-right: 15px;
+    }
+    #site-navigation .nav.navbar-nav.navbar-right li {
+        float: right;
+    }
+    #site-navigation .nav.navbar-nav.navbar-right li > a {
+        padding: 7.5px 5px;
+    }
+    #site-navigation .navbar-header {
+        float: left;
+        width: auto!important;
+    }
+    #site-navigation .navbar-collapse {
+        clear: both;
+        float: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .non-collapsing li.icon {
+        margin-top: -7.5px;
+        margin-bottom: -7.5px;
+    }
+}
+
+.non-collapsing button {
+    margin-right: 0;
+    padding-left: 10px;
+}
+/* Non-collapsing links */
+
+@media (max-width: 767px) {
+    .non-collapsing li a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+/**************** Styling ****************/
+/******** Transparent ********/
+
+@media (min-width: 768px) {
+    body.home #site-navigation.navbar-transparent {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    body.home #site-navigation.logo.navbar-transparent {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    body.home #site-navigation.logo.navbar-transparent .navbar-brand > img {
+        height: 65px;
+    }
+}
+
+body.home #site-navigation.navbar-transparent.top-nav-collapse {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0
+}
+
+.navbar a:focus {
+    outline-style: none !important;
+}
+/******** Logo ********/
+/* Static-top */
+
+@media (min-width: 768px) {
+    .logo.navbar-static-top .navbar-brand > img {
+        height: 65px;
+    }
+    .logo.navbar-static-top .navbar-brand {
+        height: 100%;
+    }
+    .logo.navbar-static-top .navbar-nav {
+        padding-top: 22.5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo.navbar-static-top .navbar-brand > img {
+        height: 40px;
+    }
+    .logo.navbar-static-top .navbar-brand {
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+/* Fixed-top */
+
+@media (min-width: 768px) {
+    .logo.navbar-fixed-top .navbar-brand > img {
+        height: 65px;
+    }
+    .logo.navbar-fixed-top .navbar-brand {
+        height: 100%;
+    }
+    .logo.navbar-fixed-top .navbar-nav {
+        padding-top: 22.5px;
+    }
+    .logo.navbar-fixed-top.top-nav-collapse .navbar-brand > img {
+        height: 40px;
+    }
+    .logo.navbar-fixed-top.top-nav-collapse .navbar-brand {
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .logo.navbar-fixed-top.top-nav-collapse .navbar-nav {
+        padding-top: 0;
+    }
+    body.home #site-navigation.logo.navbar-transparent.top-nav-collapse .navbar-brand > img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo.navbar-fixed-top .navbar-brand > img {
+        height: 40px;
+    }
+    .logo.navbar-fixed-top .navbar-brand {
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+/* Fixed-slider */
+
+@media (min-width: 768px) {
+    .logo.navbar-fixed-slider .navbar-brand > img {
+        height: 65px;
+    }
+    .logo.navbar-fixed-slider .navbar-brand {
+        height: 100%;
+    }
+    .logo.navbar-fixed-slider .navbar-nav {
+        padding-top: 22.5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo.navbar-fixed-slider .navbar-brand > img {
+        height: 40px;
+    }
+    .logo.navbar-fixed-slider .navbar-brand {
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+/**************** Transitions ****************/
+
+body.home #site-navigation.navbar-transparent {
+    -webkit-transition: background 300ms linear, padding 300ms linear;
+    -moz-transition: background 300ms linear, padding 300ms linear;
+    -ms-transition: background 300ms linear, padding 300ms linear;
+    -o-transition: background 300ms linear, padding 300ms linear;
+    transition: background 300ms linear, padding 300ms linear;
+}
+
+.logo .navbar-brand > img {
+    -webkit-transition: height 300ms linear, padding 300ms linear;
+    -moz-transition: height 300ms linear, padding 300ms linear;
+    -ms-transition: height 300ms linear, padding 300ms linear;
+    -o-transition: height 300ms linear, padding 300ms linear;
+    transition: height 300ms linear, padding 300ms linear;
+}
+
+.logo .navbar-nav {
+    -webkit-transition: padding 300ms linear;
+    -moz-transition: padding 300ms linear;
+    -ms-transition: padding 300ms linear;
+    -o-transition: padding 300ms linear;
+    transition: padding 300ms linear;
+}
+/**************** Padding ****************/
+/******** Static top ********/
+/******** Fixed top ********/
+
+body.fixed-top #content {
+    padding-top: 50px;
+}
+
+body.logo-on.fixed-top #content {
+    padding-top: 95px;
+}
+
+@media (max-width: 767px) {
+    body.logo-on.fixed-top #content {
+        padding-top: 50px;
+    }
+}
+/* Home */
+
+body.home.fixed-top #content {
+    padding-top: 50px;
+}
+
+body.logo-on.home.fixed-top #content {
+    padding-top: 95px;
+}
+
+@media (max-width: 767px) {
+    body.logo-on.home.fixed-top #content {
+        padding-top: 50px;
+    }
+}
+/* Home Transparent */
+
+body.home.fixed-top.transparent-on #content {
+    padding-top: 0;
+}
+
+@media (max-width: 767px) {
+    body.home.fixed-top.transparent-on #content {
+        padding-top: 50px;
+    }
+    body.logo-on.home.fixed-top.transparent-on #content {
+        padding-top: 50px;
+    }
+}
+/******** Fixed bottom ********/
+
+body.fixed-bottom {
+    padding-bottom: 50px;
+}
+
+body.logo-on.fixed-bottom {
+    padding-bottom: 95px;
+}
+/******** Under slider ********/
+
+body.fixed-slider #content {
+    padding-top: 50px;
+}
+
+body.logo-on.fixed-slider #content {
+    padding-top: 95px;
+}
+
+@media (max-width: 767px) {
+    body.logo-on.fixed-slider #content {
+        padding-top: 50px;
+    }
+}
+/* Home */
+
+body.home.fixed-slider #content {
+    padding-top: 0;
+}
+
+body.home.logo-on.fixed-slider #content {
+    padding-top: 0;
+}
+
+@media (max-width: 767px) {
+    body.home.logo-on.fixed-slider #content {
+        padding-top: 0;
+    }
+}

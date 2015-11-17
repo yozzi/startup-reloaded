@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+## Hamburgers
+--------------------------------------------------------------*/
+
+.custom-hamburger {
+    display: block;
+    float: left;
+    padding-left: 15px;
+}
+
+@media (max-width: 767px) {
+    .custom-hamburger {
+        margin-left: 15px;
+    }
+}
+
+.custom-hamburger#left-panel-button .bottom-bar {
+    width: 12px;
+}
+
+.custom-hamburger#right-panel-button .bottom-bar {
+    width: 12px;
+    margin-left: 10px;
+}
+
+.custom-hamburger#fullscreen-panel-button .top-bar,
+.custom-hamburger#fullscreen-panel-button .bottom-bar {
+    width: 18px;
+    margin-left: 2px;
+}

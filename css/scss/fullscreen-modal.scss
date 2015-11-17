@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------
+## Fullscreen Modal
+--------------------------------------------------------------*/
+
+.modal.fade.simple {
+    background-color: #fff;
+}
+
+.modal.fade.simple .modal-dialog {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.modal.fade.in.simple .modal-dialog {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+}
+
+.modal.simple .modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+.modal.simple .modal-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px #555;
+    text-align: center;
+}
+
+hr.star-primary:after {
+    color: #555;
+    background: #fff;
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+.modal.simple .modal-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal.simple .modal-header,
+.modal.simple .modal-footer {
+    border: 0;
+}
+
+.modal.simple .modal-footer {
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+/*--------------------------------------------------------------
+## No gutter
+--------------------------------------------------------------*/
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/no-gutter.scss */
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+
+/* line 11, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/no-gutter.scss */
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0; }
+
+/*# sourceMappingURL=no-gutter.css.map */

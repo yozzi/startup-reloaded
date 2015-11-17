@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+## Bottom Navbar
+--------------------------------------------------------------*/
+
+#menu-bottom ul {
+    text-align: left;
+    padding-left: 0;
+    list-style: none;
+    padding-top: 20px
+}
+
+#menu-bottom ul li a {
+    height: 30px;
+    line-height: 30px;
+}
+
+@media (min-width: 768px) {
+        #menu-bottom ul {
+        margin-left: -10px;
+            
+    }
+    #menu-bottom ul li {
+        display: inline;
+        padding: 10px;
+    }
+    #menu-bottom ul li a {
+        height: 50px;
+        line-height: 50px;
+    }
+}

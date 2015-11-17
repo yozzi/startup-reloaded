@@ -1,0 +1,340 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------
+## Navigation
+--------------------------------------------------------------*/
+/* line 5, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+#masthead.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; }
+
+/* line 12, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-toggle {
+  margin-top: 7.5px;
+  margin-bottom: 7.5px; }
+
+/* line 17, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-toggle .icon-bar {
+  height: 3px;
+  border-radius: 0; }
+
+/* line 22, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar {
+  margin-bottom: 0;
+  background: #323232;
+  border: none;
+  border-radius: 0; }
+
+/* line 29, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+#site-navigation .navbar-toggle.left-toggle {
+  float: left; }
+
+/* line 33, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+#site-navigation .navbar-toggle.right-toggle {
+  margin-right: 0; }
+
+/* Under Slider */
+/* Mettre une condition : si la navbar est à plus de 50% du top de la page */
+/*
+.navbar-fixed-slider .dropdown .caret {
+  content: "";
+  border-top: 0;
+  border-bottom: 4px solid;
+}
+.navbar-fixed-slider .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+.navbar-fixed-slider .navbar-nav > li > .dropdown-menu {
+  margin-bottom: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+*/
+/* Style clair */
+/* line 61, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-nav > li > a {
+  color: rgba(0, 0, 0, 0.7); }
+
+/* line 65, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-brand {
+  color: #000; }
+
+/* line 69, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-brand:hover {
+  color: rgba(0, 0, 0, 0.7); }
+
+/* Style foncé (inverse) */
+/* line 74, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-inverse .navbar-nav > li > a {
+  color: rgba(255, 255, 255, 0.7); }
+
+/* line 78, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-inverse .navbar-brand {
+  color: #fff; }
+
+/* line 82, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-inverse .navbar-brand:hover {
+  color: rgba(255, 255, 255, 0.7); }
+
+/* line 87, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar-toggle,
+.navbar-toggle:hover {
+  background: transparent !important;
+  border: none !important; }
+
+/* Non-collapsing icons */
+@media (max-width: 767px) {
+  /* line 94, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  #site-navigation .navbar-right {
+    float: right;
+    padding-right: 15px; }
+  /* line 98, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  #site-navigation .nav.navbar-nav.navbar-right li {
+    float: right; }
+  /* line 101, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  #site-navigation .nav.navbar-nav.navbar-right li > a {
+    padding: 7.5px 5px; }
+  /* line 104, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  #site-navigation .navbar-header {
+    float: left;
+    width: auto !important; }
+  /* line 108, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  #site-navigation .navbar-collapse {
+    clear: both;
+    float: none; } }
+
+@media (max-width: 767px) {
+  /* line 115, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .non-collapsing li.icon {
+    margin-top: -7.5px;
+    margin-bottom: -7.5px; } }
+
+/* line 121, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.non-collapsing button {
+  margin-right: 0;
+  padding-left: 10px; }
+
+/* Non-collapsing links */
+@media (max-width: 767px) {
+  /* line 128, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .non-collapsing li a {
+    margin-left: 10px;
+    margin-right: 10px; } }
+
+/**************** Styling ****************/
+/******** Transparent ********/
+@media (min-width: 768px) {
+  /* line 137, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.home #site-navigation.navbar-transparent {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+  /* line 141, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.home #site-navigation.logo.navbar-transparent {
+    padding-top: 0;
+    padding-bottom: 0; }
+  /* line 145, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.home #site-navigation.logo.navbar-transparent .navbar-brand > img {
+    height: 65px; } }
+
+/* line 150, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.home #site-navigation.navbar-transparent.top-nav-collapse {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0; }
+
+/* line 156, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.navbar a:focus {
+  outline-style: none !important; }
+
+/******** Logo ********/
+/* Static-top */
+@media (min-width: 768px) {
+  /* line 163, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-static-top .navbar-brand > img {
+    height: 65px; }
+  /* line 166, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-static-top .navbar-brand {
+    height: 100%; }
+  /* line 169, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-static-top .navbar-nav {
+    padding-top: 22.5px; } }
+
+@media (max-width: 767px) {
+  /* line 175, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-static-top .navbar-brand > img {
+    height: 40px; }
+  /* line 178, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-static-top .navbar-brand {
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px; } }
+
+/* Fixed-top */
+@media (min-width: 768px) {
+  /* line 187, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-top .navbar-brand > img {
+    height: 65px; }
+  /* line 190, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-top .navbar-brand {
+    height: 100%; }
+  /* line 193, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-top .navbar-nav {
+    padding-top: 22.5px; }
+  /* line 196, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-top.top-nav-collapse .navbar-brand > img {
+    height: 40px; }
+  /* line 199, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-top.top-nav-collapse .navbar-brand {
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  /* line 204, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-top.top-nav-collapse .navbar-nav {
+    padding-top: 0; }
+  /* line 207, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.home #site-navigation.logo.navbar-transparent.top-nav-collapse .navbar-brand > img {
+    height: 40px; } }
+
+@media (max-width: 767px) {
+  /* line 213, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-top .navbar-brand > img {
+    height: 40px; }
+  /* line 216, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-top .navbar-brand {
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px; } }
+
+/* Fixed-slider */
+@media (min-width: 768px) {
+  /* line 225, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-slider .navbar-brand > img {
+    height: 65px; }
+  /* line 228, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-slider .navbar-brand {
+    height: 100%; }
+  /* line 231, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-slider .navbar-nav {
+    padding-top: 22.5px; } }
+
+@media (max-width: 767px) {
+  /* line 237, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-slider .navbar-brand > img {
+    height: 40px; }
+  /* line 240, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  .logo.navbar-fixed-slider .navbar-brand {
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px; } }
+
+/**************** Transitions ****************/
+/* line 248, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.home #site-navigation.navbar-transparent {
+  -webkit-transition: background 300ms linear, padding 300ms linear;
+  -moz-transition: background 300ms linear, padding 300ms linear;
+  -ms-transition: background 300ms linear, padding 300ms linear;
+  -o-transition: background 300ms linear, padding 300ms linear;
+  transition: background 300ms linear, padding 300ms linear; }
+
+/* line 256, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.logo .navbar-brand > img {
+  -webkit-transition: height 300ms linear, padding 300ms linear;
+  -moz-transition: height 300ms linear, padding 300ms linear;
+  -ms-transition: height 300ms linear, padding 300ms linear;
+  -o-transition: height 300ms linear, padding 300ms linear;
+  transition: height 300ms linear, padding 300ms linear; }
+
+/* line 264, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+.logo .navbar-nav {
+  -webkit-transition: padding 300ms linear;
+  -moz-transition: padding 300ms linear;
+  -ms-transition: padding 300ms linear;
+  -o-transition: padding 300ms linear;
+  transition: padding 300ms linear; }
+
+/**************** Padding ****************/
+/******** Static top ********/
+/******** Fixed top ********/
+/* line 275, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.fixed-top #content {
+  padding-top: 50px; }
+
+/* line 279, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.logo-on.fixed-top #content {
+  padding-top: 95px; }
+
+@media (max-width: 767px) {
+  /* line 284, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.logo-on.fixed-top #content {
+    padding-top: 50px; } }
+
+/* Home */
+/* line 290, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.home.fixed-top #content {
+  padding-top: 50px; }
+
+/* line 294, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.logo-on.home.fixed-top #content {
+  padding-top: 95px; }
+
+@media (max-width: 767px) {
+  /* line 299, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.logo-on.home.fixed-top #content {
+    padding-top: 50px; } }
+
+/* Home Transparent */
+/* line 305, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.home.fixed-top.transparent-on #content {
+  padding-top: 0; }
+
+@media (max-width: 767px) {
+  /* line 310, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.home.fixed-top.transparent-on #content {
+    padding-top: 50px; }
+  /* line 313, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.logo-on.home.fixed-top.transparent-on #content {
+    padding-top: 50px; } }
+
+/******** Fixed bottom ********/
+/* line 319, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.fixed-bottom {
+  padding-bottom: 50px; }
+
+/* line 323, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.logo-on.fixed-bottom {
+  padding-bottom: 95px; }
+
+/******** Under slider ********/
+/* line 328, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.fixed-slider #content {
+  padding-top: 50px; }
+
+/* line 332, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.logo-on.fixed-slider #content {
+  padding-top: 95px; }
+
+@media (max-width: 767px) {
+  /* line 337, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.logo-on.fixed-slider #content {
+    padding-top: 50px; } }
+
+/* Home */
+/* line 343, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.home.fixed-slider #content {
+  padding-top: 0; }
+
+/* line 347, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+body.home.logo-on.fixed-slider #content {
+  padding-top: 0; }
+
+@media (max-width: 767px) {
+  /* line 352, /Applications/XAMPP/xamppfiles/htdocs/dev/startup/wp-content/themes/startup-reloaded/css/scss/navigation.scss */
+  body.home.logo-on.fixed-slider #content {
+    padding-top: 0; } }
+
+/*# sourceMappingURL=navigation.css.map */
