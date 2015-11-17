@@ -1,0 +1,15 @@
+{
+    "sass.enabled": false,
+    "path": {
+        "wp-content/themes/startup-reloaded/css/scss/style.scss": {
+            "sass.enabled": true,
+            "sass.compiler": "ruby",
+            "sass.options": {
+                "outputDir": "../../",
+                "includePaths": [],
+                "sourceComments": false,
+                "outputStyle": "nested"
+            }
+        }
+    }
+}
