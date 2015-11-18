@@ -3,9 +3,9 @@
     "path": {
         "wp-content/themes/startup-reloaded/css/scss/style.scss": {
             "sass.enabled": true,
-            "sass.compiler": "ruby",
+            //"sass.compiler": "ruby",
             "sass.options": {
-                "outputDir": "../../",
+                "outputDir": "../",
                 "includePaths": [],
                 "sourceComments": false,
                 "outputStyle": "nested"

@@ -1,13 +1,13 @@
 /*--------------------------------------------------------------
 ## Panels
 --------------------------------------------------------------*/
-/* Hide mmenu flickering */
-
-#page #left-panel,
-#page #right-panel {
-    display: none;
-}
 
 .mm-menu {
     background: #323232;
+}
+
+/* Hide mmenu flickering */
+#page #left-panel,
+#page #right-panel {
+    display: none;
 }

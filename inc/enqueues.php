@@ -25,7 +25,7 @@ function startup_reloaded_scripts() {
         wp_enqueue_style( 'startup-reloaded-mmenu', get_template_directory_uri() . '/lib/jQuery.mmenu/core/css/jquery.mmenu.all.css' );
     }
     
-    wp_enqueue_style( 'startup-reloaded-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'startup-reloaded-style', get_template_directory_uri() . '/css/style.css');
 
     /************************************************************************* js */
     wp_enqueue_script( 'jquery' );
