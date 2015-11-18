@@ -8,7 +8,8 @@
                 "outputDir": "../",
                 "includePaths": [],
                 "sourceComments": false,
-                "outputStyle": "nested"
+                //"outputStyle": "nested",
+                "outputStyle": "compressed"
             }
         }
     }
