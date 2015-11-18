@@ -5,8 +5,15 @@ add_action( 'tgmpa_register', 'startup_reloaded_register_required_plugins' );
 
 function startup_reloaded_register_required_plugins() {
     $plugins = array(
+        
+        /*******************************************************************
+        **
+        ** StartUp Plugins
+        **
+        *******************************************************************/
+        
         array(
-            'name'               => 'StartUp Plugin',
+            'name'               => 'StartUp',
             'slug'               => 'startup',
             'source'             => 'https://github.com/yozzi/startup/archive/master.zip',
             'required'           => false,
@@ -15,8 +22,18 @@ function startup_reloaded_register_required_plugins() {
             'force_deactivation' => false,
             'external_url'       => 'https://github.com/yozzi/startup',
         ),
-         array(
-            'name'               => 'StartUp Home',
+        array(
+            'name'               => 'StartUp CPT Charts',
+            'slug'               => 'startup-cpt-charts',
+            'source'             => 'https://github.com/yozzi/startup-cpt-charts/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-charts',
+        ),     
+        array(
+            'name'               => 'StartUp CPT Home',
             'slug'               => 'startup-cpt-home',
             'source'             => 'https://github.com/yozzi/startup-cpt-home/archive/master.zip',
             'required'           => false,
@@ -24,19 +41,19 @@ function startup_reloaded_register_required_plugins() {
             'force_activation'   => false,
             'force_deactivation' => false,
             'external_url'       => 'https://github.com/yozzi/startup-cpt-home',
-        ),     
+        ),   
         array(
-            'name'               => 'StartUp Sections',
-            'slug'               => 'startup-cpt-sections',
-            'source'             => 'https://github.com/yozzi/startup-cpt-sections/archive/master.zip',
+            'name'               => 'StartUp CPT Menus',
+            'slug'               => 'startup-cpt-menus',
+            'source'             => 'https://github.com/yozzi/startup-cpt-menus/archive/master.zip',
             'required'           => false,
             'version'            => '',
             'force_activation'   => false,
             'force_deactivation' => false,
-            'external_url'       => 'https://github.com/yozzi/startup-cpt-sections',
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-menus',
         ),
         array(
-            'name'               => 'StartUp Milestones',
+            'name'               => 'StartUp CPT Milestones',
             'slug'               => 'startup-cpt-milestones',
             'source'             => 'https://github.com/yozzi/startup-cpt-milestones/archive/master.zip',
             'required'           => false,
@@ -46,7 +63,17 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-milestones',
         ),
         array(
-            'name'               => 'StartUp Portfolio',
+            'name'               => 'StartUp CPT Partners',
+            'slug'               => 'startup-cpt-partners',
+            'source'             => 'https://github.com/yozzi/startup-cpt-partners/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-partners',
+        ),
+        array(
+            'name'               => 'StartUp CPT Portfolio',
             'slug'               => 'startup-cpt-portfolio',
             'source'             => 'https://github.com/yozzi/startup-cpt-portfolio/archive/master.zip',
             'required'           => false,
@@ -56,7 +83,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-portfolio',
         ),
         array(
-            'name'               => 'StartUp Pricing Table',
+            'name'               => 'StartUp CPT Pricing Table',
             'slug'               => 'startup-cpt-pricing-table',
             'source'             => 'https://github.com/yozzi/startup-cpt-pricing-table/archive/master.zip',
             'required'           => false,
@@ -66,7 +93,17 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-pricing-table',
         ),
         array(
-            'name'               => 'StartUp Projects',
+            'name'               => 'StartUp CPT Products',
+            'slug'               => 'startup-cpt-products',
+            'source'             => 'https://github.com/yozzi/startup-cpt-products/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-products',
+        ),
+        array(
+            'name'               => 'StartUp CPT Projects',
             'slug'               => 'startup-cpt-projects',
             'source'             => 'https://github.com/yozzi/startup-cpt-projects/archive/master.zip',
             'required'           => false,
@@ -76,7 +113,17 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-projects',
         ),
         array(
-            'name'               => 'StartUp Rooms',
+            'name'               => 'StartUp CPT Quotes',
+            'slug'               => 'startup-cpt-quotes',
+            'source'             => 'https://github.com/yozzi/startup-cpt-quotes/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-quotes',
+        ),
+        array(
+            'name'               => 'StartUp CPT Rooms',
             'slug'               => 'startup-cpt-rooms',
             'source'             => 'https://github.com/yozzi/startup-cpt-rooms/archive/master.zip',
             'required'           => false,
@@ -86,7 +133,17 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-rooms',
         ),
         array(
-            'name'               => 'StartUp Services',
+            'name'               => 'StartUp CPT Sections',
+            'slug'               => 'startup-cpt-sections',
+            'source'             => 'https://github.com/yozzi/startup-cpt-sections/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-sections',
+        ),
+        array(
+            'name'               => 'StartUp CPT Services',
             'slug'               => 'startup-cpt-services',
             'source'             => 'https://github.com/yozzi/startup-cpt-services/archive/master.zip',
             'required'           => false,
@@ -96,7 +153,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-services',
         ),
         array(
-            'name'               => 'StartUp Slider',
+            'name'               => 'StartUp CPT Slider',
             'slug'               => 'startup-cpt-slider',
             'source'             => 'https://github.com/yozzi/startup-cpt-slider/archive/master.zip',
             'required'           => false,
@@ -106,7 +163,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-slider',
         ),
         array(
-            'name'               => 'StartUp Team',
+            'name'               => 'StartUp CPT Team',
             'slug'               => 'startup-cpt-team',
             'source'             => 'https://github.com/yozzi/startup-cpt-team/archive/master.zip',
             'required'           => false,
@@ -116,7 +173,7 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-team',
         ),
         array(
-            'name'               => 'StartUp Testimonials',
+            'name'               => 'StartUp CPT Testimonials',
             'slug'               => 'startup-cpt-testimonials',
             'source'             => 'https://github.com/yozzi/startup-cpt-testimonials/archive/master.zip',
             'required'           => false,
@@ -126,51 +183,25 @@ function startup_reloaded_register_required_plugins() {
             'external_url'       => 'https://github.com/yozzi/startup-cpt-testimonials',
         ),     
         array(
-            'name'               => 'StartUp Menus',
-            'slug'               => 'startup-cpt-menus',
-            'source'             => 'https://github.com/yozzi/startup-cpt-menus/archive/master.zip',
+            'name'               => 'StartUp CPT Timeline',
+            'slug'               => 'startup-cpt-timeline',
+            'source'             => 'https://github.com/yozzi/startup-cpt-timeline/archive/master.zip',
             'required'           => false,
             'version'            => '',
             'force_activation'   => false,
             'force_deactivation' => false,
-            'external_url'       => 'https://github.com/yozzi/startup-cpt-menus',
-        ),
+            'external_url'       => 'https://github.com/yozzi/startup-cpt-timeline',
+        ),     
         
-        array(
-            'name'               => 'StartUp Products',
-            'slug'               => 'startup-cpt-products',
-            'source'             => 'https://github.com/yozzi/startup-cpt-products/archive/master.zip',
-            'required'           => false,
-            'version'            => '',
-            'force_activation'   => false,
-            'force_deactivation' => false,
-            'external_url'       => 'https://github.com/yozzi/startup-cpt-products',
-        ),
-        
-        array(
-            'name'               => 'StartUp Partners',
-            'slug'               => 'startup-cpt-partners',
-            'source'             => 'https://github.com/yozzi/startup-cpt-partners/archive/master.zip',
-            'required'           => false,
-            'version'            => '',
-            'force_activation'   => false,
-            'force_deactivation' => false,
-            'external_url'       => 'https://github.com/yozzi/startup-cpt-partners',
-        ),
+        /*******************************************************************
+        **
+        ** Production Plugins
+        **
+        *******************************************************************/
 
         array(
             'name'      => 'Bootstrap Shortcodes for WordPress',
             'slug'      => 'bootstrap-3-shortcodes',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Simple Page Ordering',
-            'slug'      => 'simple-page-ordering',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'User Role Editor',
-            'slug'      => 'user-role-editor',
             'required'  => false,
         ),
         array(
@@ -184,33 +215,13 @@ function startup_reloaded_register_required_plugins() {
             'required'  => false,
         ),
         array(
-            'name'      => 'WP Maintenance Mode',
-            'slug'      => 'wp-maintenance-mode',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Loco Translate',
-            'slug'      => 'loco-translate',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Regenerate Thumbnails',
-            'slug'      => 'regenerate-thumbnails',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'WPAdverts - Classifieds Plugin',
-            'slug'      => 'wpadverts',
-            'required'  => false,
-        ),
-        array(
-            'name'      => 'Resize images before upload',
-            'slug'      => 'resize-images-before-upload',
-            'required'  => false,
-        ),
-        array(
             'name'      => 'Gallery Carousel Without JetPack',
             'slug'      => 'carousel-without-jetpack',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'jQuery Updater',
+            'slug'      => 'jquery-updater',
             'required'  => false,
         ),
         array(
@@ -219,10 +230,82 @@ function startup_reloaded_register_required_plugins() {
             'required'  => false,
         ),
         array(
+            'name'      => 'Popup Maker',
+            'slug'      => 'popup-maker',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Resize images before upload',
+            'slug'      => 'resize-images-before-upload',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Simple Page Ordering',
+            'slug'      => 'simple-page-ordering',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Simply Show IDs',
+            'slug'      => 'simply-show-ids',
+            'required'  => false,
+        ),
+        array(
             'name'      => 'Theme My Login',
             'slug'      => 'theme-my-login',
             'required'  => false,
         ),
+        array(
+            'name'      => 'User Role Editor',
+            'slug'      => 'user-role-editor',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'WPAdverts - Classifieds Plugin',
+            'slug'      => 'wpadverts',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'WP Maintenance Mode',
+            'slug'      => 'wp-maintenance-mode',
+            'required'  => false,
+        ),
+        
+        /*******************************************************************
+        **
+        ** Developpement Plugins
+        **
+        *******************************************************************/
+        
+        array(
+            'name'      => 'Loco Translate',
+            'slug'      => 'loco-translate',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Log Deprecated Notices',
+            'slug'      => 'log-deprecated-notices',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Regenerate Thumbnails',
+            'slug'      => 'regenerate-thumbnails',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Theme Check',
+            'slug'      => 'theme-check',
+            'required'  => false,
+        ),
+        array(
+            'name'               => 'WordPress Admin Style',
+            'slug'               => 'WordPress-Admin-Style',
+            'source'             => 'https://github.com/bueltge/WordPress-Admin-Style/archive/master.zip',
+            'required'           => false,
+            'version'            => '',
+            'force_activation'   => false,
+            'force_deactivation' => false,
+            'external_url'       => 'https://github.com/bueltge/WordPress-Admin-Style',
+        ),  
  
     );
  
