@@ -245,11 +245,6 @@ function startup_reloaded_register_required_plugins() {
             'required'  => false,
         ),
         array(
-            'name'      => 'Simply Show IDs',
-            'slug'      => 'simply-show-ids',
-            'required'  => false,
-        ),
-        array(
             'name'      => 'Theme My Login',
             'slug'      => 'theme-my-login',
             'required'  => false,

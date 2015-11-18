@@ -31,9 +31,10 @@ function startup_reloaded_scripts() {
     wp_enqueue_script( 'jquery' );
     
     wp_enqueue_script( 'startup-reloaded-bootstrap', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js', array( ), false, 'all' );
-    
+   
+    /**/
     wp_enqueue_script( 'startup-reloaded-touchswipe', get_template_directory_uri() . '/js/jquery.touchSwipe.min.js', array( ), false, 'all' );
-    
+    /**/
     wp_enqueue_script( 'startup-reloaded-viewportchecker', get_template_directory_uri() . '/js/jquery.viewportchecker.min.js', array( ), false, 'all' );
 
 	wp_enqueue_script( 'startup-reloaded-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -47,7 +48,7 @@ function startup_reloaded_scripts() {
     if( of_get_option( 'general-ytplayer' ) ){
         wp_enqueue_script( 'startup-reloaded-ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/jquery.mb.YTPlayer.min.js', array( ), false, 'all' );
     }
-    
+    /**/
     if( of_get_option( 'blog-style' ) == 'shuffle' || of_get_option( 'portfolio-style' ) == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){
         wp_enqueue_script( 'startup-reloaded-shuffle', get_template_directory_uri() . '/js/jquery.shuffle.modernizr.min.js', array( ), false, 'all' );
         wp_enqueue_script( 'startup-reloaded-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array( ), false, 'all' );
