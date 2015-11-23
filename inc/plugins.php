@@ -282,6 +282,11 @@ function startup_reloaded_register_required_plugins() {
             'required'  => false,
         ),
         array(
+            'name'      => 'Query Monitor',
+            'slug'      => 'query-monitor',
+            'required'  => false,
+        ),
+        array(
             'name'      => 'Regenerate Thumbnails',
             'slug'      => 'regenerate-thumbnails',
             'required'  => false,
