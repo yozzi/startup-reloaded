@@ -1034,7 +1034,7 @@ function optionsframework_options() {
     $options[] = array(
         'name' => __('Login screen', 'options_check'),
         'desc' => __( 'Overlay color', 'startup-reloaded' ),
-		'id' => 'overlay',
+		'id' => 'login_overlay',
 		'std' => '#ff4500',
 		'type' => 'color'
 	);
