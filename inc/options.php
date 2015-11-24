@@ -1033,6 +1033,13 @@ function optionsframework_options() {
     
     $options[] = array(
         'name' => __('Login screen', 'options_check'),
+        'desc' => __( 'Overlay color', 'startup-reloaded' ),
+		'id' => 'overlay',
+		'std' => '#ff4500',
+		'type' => 'color'
+	);
+    
+    $options[] = array(
         'desc' => __('Choose an image for the login screen background.', 'startup-reloaded'),
         'id' => 'login_01',
         'type' => 'upload');
