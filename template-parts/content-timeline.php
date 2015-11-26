@@ -11,7 +11,7 @@ $total_timelines = count($timelines);
                 $icon    = get_post_meta($timeline->ID, '_startup_reloaded_timeline_icon', true );
                 $color   = get_post_meta($timeline->ID, '_startup_reloaded_timeline_color', true );
                 $date    = get_post_meta($timeline->ID, '_startup_reloaded_timeline_date', true );
-                $page    = get_post_meta($timeline->ID, '_startup_reloaded_timeline_page', true );
+                $page    = get_permalink( get_post_meta($timeline->ID, '_startup_reloaded_timeline_page', true ) );
             ?>
                 <div class="cd-timeline-block">
                     <div class="cd-timeline-img" style="background:<?php echo $color ?>">
@@ -23,7 +23,7 @@ $total_timelines = count($timelines);
                         <p><?php echo $timeline->post_content ?></p>
                         <?php if ( $page ) { ?>
                                             <p>
-                                                <a href="<?php  echo site_url() . '/' . $page ?>" class="btn btn-custom btn-sm"><?php _e( 'Read more', 'startup-reloaded' ) ?></a>
+                                                <a href="<?php echo $page ?>" class="btn btn-custom btn-sm"><?php _e( 'Read more', 'startup-reloaded' ) ?></a>
                                             </p>
                                         <?php } ?>
                         <span class="cd-date"><?php echo $date ?></span>

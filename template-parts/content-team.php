@@ -47,7 +47,7 @@ $total_team = count($team);
                             $team_social_link_3 = get_post_meta($team->ID, '_startup_reloaded_team_link_3', true );
                             $team_social_icon_4 = get_post_meta($team->ID, '_startup_reloaded_team_icon_4', true );
                             $team_social_link_4 = get_post_meta($team->ID, '_startup_reloaded_team_link_4', true );
-                            $team_page          = get_post_meta($team->ID, '_startup_reloaded_team_page', true );
+                            $team_page          = get_permalink( get_post_meta($team->ID, '_startup_reloaded_team_page', true ) );
 
                             if ( $count%4 == 1 ) { 
                                 if ( $slider ) { ?>
@@ -75,7 +75,7 @@ $total_team = count($team);
                                         </p>
                                         <?php if ( $team_page ) { ?>
                                             <p>
-                                                <a href="<?php  echo site_url() . '/' . $team_page ?>" class="btn btn-custom btn-sm" role="button"><?php _e( 'Profile', 'startup-reloaded' ) ?></a>
+                                                <a href="<?php echo $team_page ?>" class="btn btn-custom btn-sm" role="button"><?php _e( 'Profile', 'startup-reloaded' ) ?></a>
                                             </p>
                                         <?php } ?>
                                     </div>
