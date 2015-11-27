@@ -87,6 +87,8 @@
                                     <a href="<?php echo esc_url( $link ) ?>" class="btn btn-info btn-lg btn-block" role="button" target="_blank"><?php _e( 'Show', 'startup-reloaded' ) ?></a>
                                 <?php } else if ( $format == 'audio' ) { ?>
                                     <?php echo do_shortcode('[audio src="' . $link . '"]') ?>
+                                <?php } else if ( $format == 'video' ) { ?>
+                                    <?php echo do_shortcode('[embed]' . $link . '[/embed]') ?>
                                 <?php } ?>
                             </div>        
                         </div>
