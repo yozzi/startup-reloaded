@@ -121,6 +121,18 @@ add_action( 'cmb2_admin_init', 'startup_reloaded_metabox_posts' );
 function startup_reloaded_metabox_posts() {
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_startup_reloaded_posts_';
+    
+    $cmb_box = new_cmb2_box( array(
+		'id'            => $prefix . 'link',
+		'title'         => __( 'Link', 'startup-reloaded' ),
+		'object_types'  => array( 'post' )
+	) );
+    
+    $cmb_box->add_field( array(
+        'desc'             => __( 'URL of the content : YouTube video, pdf link, etc...', 'startup-reloaded' ),
+		'id'         => $prefix . 'link_url',
+		'type'       => 'text'
+	) );
 
 	$cmb_box = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',

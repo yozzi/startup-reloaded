@@ -59,6 +59,19 @@
                 <?php foreach ($blog as $key=> $post) {
                     $categories = get_the_terms( $post->ID, 'category' );
                     $image = get_the_post_thumbnail($post->ID, 'grid_thumb');
+                    $format = get_post_format($post->ID);
+                    $link = get_post_meta( $post->ID, '_startup_reloaded_posts_link_url', true );
+                    if ( $format == 'image' ) {
+                        $icon = 'camera';
+                    } else if ( $format == 'audio' ) {
+                        $icon = 'music';
+                    } else if ( $format == 'video' ) {
+                        $icon == 'video-camera';
+                    } else if ( $format == 'link' ) {
+                        $icon = 'link';
+                    } else {
+                        $icon = 'pencil';
+                    }
                 ?>
                     <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
                         <div class="post">
@@ -68,9 +81,13 @@
                                 </div>
                             <?php } ?>
                             <div class="post-details">
-                                <h4><?php echo $post->post_title ?></h4>
+                                <h4><?php if ( $icon ) { ?><i class="fa fa-<?php echo $icon ?>"></i> <?php } ?><?php echo $post->post_title ?></h4>
                                 <p><?php echo $post->post_content ?></p>
-                                <a href="<?php echo esc_url( get_permalink($post->ID) ) ?>" class="btn btn-info btn-lg btn-block" role="button"><?php _e( 'Read more', 'startup-reloaded' ) ?></a>
+                                <?php if ( $format == 'link' ) { ?>
+                                    <a href="<?php echo esc_url( $link ) ?>" class="btn btn-info btn-lg btn-block" role="button" target="_blank"><?php _e( 'Show', 'startup-reloaded' ) ?></a>
+                                <?php } else if ( $format == 'audio' ) { ?>
+                                    <?php echo do_shortcode('[audio src="' . $link . '"]') ?>
+                                <?php } ?>
                             </div>        
                         </div>
                     </div>
