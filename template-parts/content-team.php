@@ -48,6 +48,7 @@ $total_team = count($team);
                             $team_social_icon_4 = get_post_meta($team->ID, '_startup_reloaded_team_icon_4', true );
                             $team_social_link_4 = get_post_meta($team->ID, '_startup_reloaded_team_link_4', true );
                             $team_page          = get_permalink( get_post_meta($team->ID, '_startup_reloaded_team_page', true ) );
+                            $team_page_test     = get_post_meta($team->ID, '_startup_reloaded_team_page', true );
 
                             if ( $count%4 == 1 ) { 
                                 if ( $slider ) { ?>
@@ -73,7 +74,7 @@ $total_team = count($team);
                                                 <li class="pinterest"><a target="_blank" href="<?php echo $team_social_link_4; ?>"><i class="fa fa-<?php echo $team_social_icon_4; ?>"></i></a></li>
                                             </ul>
                                         </p>
-                                        <?php if ( $team_page ) { ?>
+                                        <?php if ( $team_page_test ) { ?>
                                             <p>
                                                 <a href="<?php echo $team_page ?>" class="btn btn-custom btn-sm" role="button"><?php _e( 'Profile', 'startup-reloaded' ) ?></a>
                                             </p>
