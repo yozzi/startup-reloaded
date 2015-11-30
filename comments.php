@@ -19,6 +19,9 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
 
 	<?php // You can start editing here -- including this comment! ?>
 
@@ -76,5 +79,7 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php comment_form(); ?>
-
+            </div>
+        </div>
+    </div>
 </div><!-- #comments -->
