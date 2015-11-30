@@ -250,6 +250,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+        'desc' => __( 'Boxed width.', 'startup-reloaded' ),
+		'id' => 'page-header-boxed-width',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
 		'desc' => __( 'Background', 'startup-reloaded' ),
 		'id' => 'page-header-background-color',
 		'std' => '#323232',

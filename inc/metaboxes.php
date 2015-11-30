@@ -20,6 +20,13 @@ function startup_reloaded_metabox_pages() {
 	) );
     
     $cmb_box->add_field( array(
+		'name'             => __( 'Boxed width', 'startup-reloaded' ),
+        'desc'             => __( 'Got to test on boxed design...', 'startup-reloaded' ),
+		'id'               => $prefix . 'header_boxed_width',
+		'type'             => 'checkbox'
+	) );
+    
+    $cmb_box->add_field( array(
         'name'    => __( 'Background color', 'startup-reloaded' ),
         'id'      => $prefix . 'header_background_color',
         'type'    => 'colorpicker',
@@ -144,6 +151,13 @@ function startup_reloaded_metabox_posts() {
 		'name'             => __( 'Hidden', 'startup-reloaded' ),
         'desc'             => __( 'Hide the header. Or not.', 'startup-reloaded' ),
 		'id'               => $prefix . 'header_visible',
+		'type'             => 'checkbox'
+	) );
+    
+    $cmb_box->add_field( array(
+		'name'             => __( 'Boxed width', 'startup-reloaded' ),
+        'desc'             => __( 'Got to test on boxed design...', 'startup-reloaded' ),
+		'id'               => $prefix . 'header_boxed_width',
 		'type'             => 'checkbox'
 	) );
     
