@@ -1,4 +1,5 @@
 <?php
+    $boxed = of_get_option( 'general-boxed' );
     $page_header_visible = get_post_meta( get_the_ID(), '_startup_reloaded_pages_header_visible', true );
     if ( !$page_header_visible ) { $page_header_visible = of_get_option( 'page-header-hidden' ); };
     $page_header_background_color = get_post_meta( get_the_ID(), '_startup_reloaded_pages_header_background_color', true );
@@ -22,7 +23,7 @@
     if (!is_front_page() && !$page_header_visible ){?>
         <header class="entry-header <?php echo $page_header_position ?>"<?php if ( !$page_header_boxed_width ) { ?> style="<?php if ( $page_header_color ){ echo 'color:' . $page_header_color . ';'; }; if ( $page_header_background && $page_header_parallax == '' ){  echo 'background: url(' . $page_header_background[0] . '); background-size:cover; background-position: center ' . $page_header_background_position . ';';} elseif ( $page_header_background_color && $page_header_parallax == '' ) { echo 'background: ' . $page_header_background_color . ';';} ?>" <?php if ( $page_header_parallax ){ echo 'data-parallax="scroll" data-image-src="' . $page_header_background[0] . '"'; } ?><?php } ?>>
             <?php if ( $page_header_boxed_width ) { ?>
-                <div class="container">
+                <?php if(!$boxed) { ?><div class="container"><?php } ?>
                     <div class="row">
                         <div class="col-lg-12">
                             <div<?php if ( $page_header_boxed_width ) { ?> style="<?php if ( $page_header_color ){ echo 'color:' . $page_header_color . ';'; }; if ( $page_header_background && $page_header_parallax == '' ){  echo 'background: url(' . $page_header_background[0] . '); background-size:cover; background-position: center ' . $page_header_background_position . ';';} elseif ( $page_header_background_color && $page_header_parallax == '' ) { echo 'background: ' . $page_header_background_color . ';';} ?>" <?php if ( $page_header_parallax ){ echo 'data-parallax="scroll" data-image-src="' . $page_header_background[0] . '"'; } ?><?php } ?>>
@@ -53,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                <?php if(!$boxed) { ?></div><?php } ?>
             <?php } ?>
         </header><!-- .entry-header -->
 <?php } ?>

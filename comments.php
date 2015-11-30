@@ -16,10 +16,11 @@
 if ( post_password_required() ) {
 	return;
 }
+$boxed = of_get_option( 'general-boxed' );
 ?>
 
 <div id="comments" class="comments-area">
-    <div class="container">
+    <?php if(!$boxed) { ?><div class="container"><?php } ?>
         <div class="row">
             <div class="col-lg-12">
 
@@ -81,5 +82,5 @@ if ( post_password_required() ) {
 	<?php comment_form(); ?>
             </div>
         </div>
-    </div>
+    <?php if(!$boxed) { ?></div><?php } ?>
 </div><!-- #comments -->
