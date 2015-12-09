@@ -52,3 +52,8 @@ section {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+.post-details{ overflow: hidden }
+// Responsive images
+.content img,
+.post-details img{ height: auto; max-width: 100%; }
