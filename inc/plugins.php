@@ -240,6 +240,11 @@ function startup_reloaded_register_required_plugins() {
             'required'  => false,
         ),
         array(
+            'name'      => 'Shortcake (Shortcode UI)',
+            'slug'      => 'shortcode-ui',
+            'required'  => false,
+        ),
+        array(
             'name'      => 'Simple 301 Redirects',
             'slug'      => 'simple-301-redirects',
             'required'  => false,
