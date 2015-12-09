@@ -83,7 +83,7 @@
                             <div class="post-details">
                                 <h4><?php if ( $icon ) { ?><i class="fa fa-<?php echo $icon ?>"></i><?php } ?><span class="pull-right"><?php the_time('d/m/Y') ?> <i class="fa fa-clock-o"></i></span></h4>
 								<h4><span class="pull-right"><?php echo $post->post_title ?></span></h4>
-                                <p><?php echo $post->post_content ?></p>
+                                <p><?php echo do_shortcode($post->post_content) ?></p>
                                 <?php if ( $format == 'link' ) { ?>
                                     <a href="<?php echo esc_url( $link ) ?>" class="btn btn-custom btn-lg btn-block" role="button" target="_blank"><?php _e( 'Show', 'startup-reloaded' ) ?></a>
                                 <?php } else if ( $format == 'audio' ) { ?>
