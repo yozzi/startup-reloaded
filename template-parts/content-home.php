@@ -9,10 +9,10 @@ $counter = 0;
 if ( $atts['id'] ) {
     // Si attribut id
         $home_post = get_post( $atts['id'] );
-        $title = get_post_meta( $home_post->ID, '_startup_reloaded_home_title', true );
-        $button_text = get_post_meta( $home_post->ID, '_startup_reloaded_home_button_text', true );
-        $button_url = get_post_meta( $home_post->ID, '_startup_reloaded_home_button_url', true );
-        $blank = get_post_meta( $home_post->ID, '_startup_reloaded_home_blank', true );
+        $title = get_post_meta( $home_post->ID, '_startup_cpt_home_title', true );
+        $button_text = get_post_meta( $home_post->ID, '_startup_cpt_home_button_text', true );
+        $button_url = get_post_meta( $home_post->ID, '_startup_cpt_home_button_url', true );
+        $blank = get_post_meta( $home_post->ID, '_startup_cpt_home_blank', true );
     ?>
             <section id="home-<?php echo $atts['id'] ?>"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
                 <div class="container">
@@ -38,10 +38,10 @@ if ( $atts['id'] ) {
                 <?php if (is_front_page()) { ?><div class="container"><?php } ?>
                     <div class="row">
                         <?php foreach ($home_sections as $key=> $home_section) {
-                            $title = get_post_meta( $home_section->ID, '_startup_reloaded_home_title', true );
-                            $button_text = get_post_meta( $home_section->ID, '_startup_reloaded_home_button_text', true );
-                            $button_url = get_post_meta( $home_section->ID, '_startup_reloaded_home_button_url', true );
-                            $blank = get_post_meta( $home_section->ID, '_startup_reloaded_home_blank', true );
+                            $title = get_post_meta( $home_section->ID, '_startup_cpt_home_title', true );
+                            $button_text = get_post_meta( $home_section->ID, '_startup_cpt_home_button_text', true );
+                            $button_url = get_post_meta( $home_section->ID, '_startup_cpt_home_button_url', true );
+                            $blank = get_post_meta( $home_section->ID, '_startup_cpt_home_blank', true );
                         ?>
                             <?php if ( $counter == 0 ) {?>
                                 <div class="col-xs-12">
