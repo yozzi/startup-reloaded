@@ -20,7 +20,7 @@ if ( $atts['id'] ) {
                         <div class="col-xs-12">
                             <div class="home-section">
                                 <?php if ( $title ){ ?><h3><?php echo $home_post->post_title ?></h3><?php } ?>
-                                <p><?php echo $home_post->post_content ?></p>
+                                <p><?php echo do_shortcode($home_post->post_content) ?></p>
                                 <?php if ( $button_text ) { ?>
                                 <br />
                                 <a class="btn btn-custom" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
@@ -50,7 +50,7 @@ if ( $atts['id'] ) {
                             <?php } ?>
                                 <div class="home-section">
                                     <?php if ( $title ){ ?><h3><?php echo $home_section->post_title ?></h3><?php } ?>                     
-                                    <p><?php echo $home_section->post_content ?></p>
+                                    <p><?php echo do_shortcode($home_section->post_content) ?></p>
                                     <?php if ( $button_text ) { ?>
                                     <br />
                                     <a class="btn btn-custom" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
