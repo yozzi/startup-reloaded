@@ -288,3 +288,6 @@ function startup_reloaded_editor_styles() {
 }
 
 add_action( 'admin_init', 'startup_reloaded_editor_styles' );
+
+// Disable smart quotes
+//add_filter( 'run_wptexturize', '__return_false' );
