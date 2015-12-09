@@ -9,9 +9,9 @@ $milestones = get_posts( $args );
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($milestones as $key=> $milestone) {
-                $milestone_icon    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_icon', true );
-                $milestone_value    = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_value', true );
-                $milestone_unit   = get_post_meta( $milestone->ID, '_startup_reloaded_milestones_unit', true );
+                $milestone_icon    = get_post_meta( $milestone->ID, '_startup_cpt_milestones_icon', true );
+                $milestone_value    = get_post_meta( $milestone->ID, '_startup_cpt_milestones_value', true );
+                $milestone_unit   = get_post_meta( $milestone->ID, '_startup_cpt_milestones_unit', true );
             ?>
                 <div class="col-xs-6 col-sm-3">
                     <div class="milestone">
