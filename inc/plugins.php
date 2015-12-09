@@ -255,6 +255,11 @@ function startup_reloaded_register_required_plugins() {
             'required'  => false,
         ),
         array(
+            'name'      => 'TinyMCE Advanced',
+            'slug'      => 'tinymce-advanced',
+            'required'  => false,
+        ),
+        array(
             'name'      => 'User Role Editor',
             'slug'      => 'user-role-editor',
             'required'  => false,
