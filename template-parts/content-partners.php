@@ -15,8 +15,8 @@ $total_partners = count($partners);
                         <?php }  $count = 1; ?>
                             <div class="item<?php if ($count == 1){ echo ' active';} ?>">
                                 <?php foreach ($partners as $key=> $partner) {
-                                    $logo  = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_reloaded_partners_logo_id', 1 ), 'partners' );
-                                    $url  = get_post_meta( $partner->ID, '_startup_reloaded_partners_url', true ); ?>
+                                    $logo  = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_cpt_partners_logo_id', 1 ), 'partners' );
+                                    $url  = get_post_meta( $partner->ID, '_startup_cpt_partners_url', true ); ?>
                                     <div class="col-sm-3 col-xs-6">
                                         <div class="partner">
                                             <div class="partner-inner">
