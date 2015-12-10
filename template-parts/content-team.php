@@ -1,6 +1,10 @@
 <?php
 $slider = of_get_option( 'team-slider' );
-$order = of_get_option( 'team-order' );
+if ( $atts['order'] ) {
+    $order = $atts['order'];
+} else {
+    $order = of_get_option( 'team-order' );
+}
 $number = of_get_option( 'team-number' );
 if ( $number ) { $max = $number; } else {$max = -1;};
 if ( $atts['cat'] ) {
@@ -38,17 +42,17 @@ $total_team = count($team);
                             //$team_image_url     = wp_get_attachment_url( get_post_thumbnail_id($team->ID) );
                             $team_image_url     = wp_get_attachment_image_src( get_post_thumbnail_id($team->ID), 'grid_thumb' );
                             
-                            $team_capacity      = get_post_meta($team->ID, '_startup_reloaded_team_capacity', true );
-                            $team_social_icon_1 = get_post_meta($team->ID, '_startup_reloaded_team_icon_1', true );
-                            $team_social_link_1 = get_post_meta($team->ID, '_startup_reloaded_team_link_1', true );
-                            $team_social_icon_2 = get_post_meta($team->ID, '_startup_reloaded_team_icon_2', true );
-                            $team_social_link_2 = get_post_meta($team->ID, '_startup_reloaded_team_link_2', true );
-                            $team_social_icon_3 = get_post_meta($team->ID, '_startup_reloaded_team_icon_3', true );
-                            $team_social_link_3 = get_post_meta($team->ID, '_startup_reloaded_team_link_3', true );
-                            $team_social_icon_4 = get_post_meta($team->ID, '_startup_reloaded_team_icon_4', true );
-                            $team_social_link_4 = get_post_meta($team->ID, '_startup_reloaded_team_link_4', true );
-                            $team_page          = get_permalink( get_post_meta($team->ID, '_startup_reloaded_team_page', true ) );
-                            $team_page_test     = get_post_meta($team->ID, '_startup_reloaded_team_page', true );
+                            $team_capacity      = get_post_meta($team->ID, '_startup_cpt_team_capacity', true );
+                            $team_social_icon_1 = get_post_meta($team->ID, '_startup_cpt_team_icon_1', true );
+                            $team_social_link_1 = get_post_meta($team->ID, '_startup_cpt_team_link_1', true );
+                            $team_social_icon_2 = get_post_meta($team->ID, '_startup_cpt_team_icon_2', true );
+                            $team_social_link_2 = get_post_meta($team->ID, '_startup_cpt_team_link_2', true );
+                            $team_social_icon_3 = get_post_meta($team->ID, '_startup_cpt_team_icon_3', true );
+                            $team_social_link_3 = get_post_meta($team->ID, '_startup_cpt_team_link_3', true );
+                            $team_social_icon_4 = get_post_meta($team->ID, '_startup_cpt_team_icon_4', true );
+                            $team_social_link_4 = get_post_meta($team->ID, '_startup_cpt_team_link_4', true );
+                            $team_page          = get_permalink( get_post_meta($team->ID, '_startup_cpt_team_page', true ) );
+                            $team_page_test     = get_post_meta($team->ID, '_startup_cpt_team_page', true );
 
                             if ( $count%4 == 1 ) { 
                                 if ( $slider ) { ?>
