@@ -1,7 +1,7 @@
 StartUp Reloaded
 ===
 
-Hi. I'm a WordPress theme for developpers called `StartUp reloaded` based on [_s](http://underscores.me/). My goal is to speed up the process of developping a WordPress theme for developpers as well as web designers.
+Hurray! I'm a WordPress theme for developpers called `StartUp reloaded` based on [_s](http://underscores.me/). My goal is to speed up the process of developping a WordPress theme for developpers as well as web designers.
 
 I'm fully loaded with all the things you put together everytime you create a new theme:
 
