@@ -27,5 +27,4 @@ I'm fully loaded with all the things you put together everytime you create a new
 * [A bunch of additionnal plugins for custom post types](https://github.com/yozzi?tab=repositories)
     * [startup-cpt-timeline](https://github.com/yozzi/startup-cpt-timeline)
     * [startup-cpt-testimonials](https://github.com/yozzi/startup-cpt-testimonials)
-
 * Much, much more...
