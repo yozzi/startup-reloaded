@@ -6,6 +6,7 @@ Hi. I'm a WordPress theme for developpers called `StartUp reloaded` based on [_s
 I'm fully loaded with all the things you put together everytime you create a new theme:
 
 * [Bootstrap](http://getbootstrap.com/)
+* [SASS](http://sass-lang.com/) with [Brackets](http://brackets.io/) [configuration example](https://github.com/yozzi/startup-reloaded/blob/master/brackets.json)
 * [Options Frameworks](https://github.com/devinsays/options-framework-theme)
 * [CMB2](https://github.com/WebDevStudios/cmb2)
 * [Shortcake](https://github.com/wp-shortcake/shortcake)
@@ -22,7 +23,9 @@ I'm fully loaded with all the things you put together everytime you create a new
 * [CounterUp](https://github.com/bfintal/Counter-Up)
 * [TGM Plugin Activation](https://github.com/TGMPA/TGM-Plugin-Activation)
 * [Hover](http://ianlunn.github.io/Hover/)
+* [SartUp](https://github.com/yozzi/startup) plugin, taylor made for StartUp Reloaded
 * [A bunch of additionnal plugins for custom post types](https://github.com/yozzi?tab=repositories)
-* Much, much more.
-    * test
-    * test
+    * [startup-cpt-timeline](https://github.com/yozzi/startup-cpt-timeline)
+    * [startup-cpt-testimonials](https://github.com/yozzi/startup-cpt-testimonials)
+
+* Much, much more...
