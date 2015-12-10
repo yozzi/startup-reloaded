@@ -10,7 +10,7 @@ $total_services = count($services);
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
         <div class="row">
             <?php foreach ($services as $key=> $service) {
-                $service_icon    = get_post_meta($service->ID, '_startup_reloaded_services_icon', true );
+                $service_icon    = get_post_meta($service->ID, '_startup_cpt_services_icon', true );
             ?>
             <div class="col-xs-12 col-sm-4">
 
