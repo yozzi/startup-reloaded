@@ -21,4 +21,4 @@ I'm fully loaded with all the things you put together everytime you create a new
 * TGM Plugin Activation
 * Hover
 * Magnific Popup
-* A bunch of additionnal plugins for custom post types
+* [A bunch of additionnal plugins for custom post types](https://github.com/yozzi?tab=repositories)
