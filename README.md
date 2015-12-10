@@ -24,3 +24,5 @@ I'm fully loaded with all the things you put together everytime you create a new
 * [Hover](http://ianlunn.github.io/Hover/)
 * [A bunch of additionnal plugins for custom post types](https://github.com/yozzi?tab=repositories)
 * Much, much more.
+    * test
+    * test
