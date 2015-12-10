@@ -8,11 +8,11 @@ $total_timelines = count($timelines);
     <section id="cd-timeline" class="cd-container">
         <div class="row">
             <?php foreach ($timelines as $key=> $timeline) {
-                $icon    = get_post_meta($timeline->ID, '_startup_reloaded_timeline_icon', true );
-                $color   = get_post_meta($timeline->ID, '_startup_reloaded_timeline_color', true );
-                $date    = get_post_meta($timeline->ID, '_startup_reloaded_timeline_date', true );
-                $page    = get_permalink( get_post_meta($timeline->ID, '_startup_reloaded_timeline_page', true ) );
-                $page_test    = get_post_meta($timeline->ID, '_startup_reloaded_timeline_page', true );
+                $icon    = get_post_meta($timeline->ID, '_startup_cpt_timeline_icon', true );
+                $color   = get_post_meta($timeline->ID, '_startup_cpt_timeline_color', true );
+                $date    = get_post_meta($timeline->ID, '_startup_cpt_timeline_date', true );
+                $page    = get_permalink( get_post_meta($timeline->ID, '_startup_cpt_timeline_page', true ) );
+                $page_test    = get_post_meta($timeline->ID, '_startup_cpt_timeline_page', true );
             ?>
                 <div class="cd-timeline-block">
                     <div class="cd-timeline-img" style="background:<?php echo $color ?>">
