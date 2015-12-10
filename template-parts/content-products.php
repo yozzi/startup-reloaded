@@ -25,15 +25,15 @@ if ( $number ) { $max = $number; } else {$max = -1;};
         </ul>
         <div id="shuffle" class="row">
             <?php foreach ($products as $key=> $product) {
-                $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_reloaded_products_main_pic_id', 1 ), 'shuffle_thumb' );
-                $short  = get_post_meta( $product->ID, '_startup_reloaded_products_short', true );
-                $description  = get_post_meta( $product->ID, '_startup_reloaded_products_description', true );
+                $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_cpt_products_main_pic_id', 1 ), 'shuffle_thumb' );
+                $short  = get_post_meta( $product->ID, '_startup_cpt_products_short', true );
+                $description  = get_post_meta( $product->ID, '_startup_cpt_products_description', true );
                 $categories = get_the_terms( $product->ID, 'product-category' );
-                $status  = get_post_meta( $product->ID, '_startup_reloaded_products_status', true );
-                $price  = get_post_meta( $product->ID, '_startup_reloaded_products_price', true );
-                $special_price  = get_post_meta( $product->ID, '_startup_reloaded_products_special_price', true );
-                $gallery  = get_post_meta( $product->ID, '_startup_reloaded_products_gallery', true );
-                $url  = get_post_meta( $product->ID, '_startup_reloaded_products_url', true );
+                $status  = get_post_meta( $product->ID, '_startup_cpt_products_status', true );
+                $price  = get_post_meta( $product->ID, '_startup_cpt_products_price', true );
+                $special_price  = get_post_meta( $product->ID, '_startup_cpt_products_special_price', true );
+                $gallery  = get_post_meta( $product->ID, '_startup_cpt_products_gallery', true );
+                $url  = get_post_meta( $product->ID, '_startup_cpt_products_url', true );
             ?>
                 <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-groups='[<?php if ( $categories ) { foreach( $categories as $category ) { print '"' . $category->slug . '",'; unset($category); } } ?>"all"]'>
                     <div class="product">
