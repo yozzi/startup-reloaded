@@ -13,6 +13,7 @@ I'm fully loaded with all the things you put together everytime you create a new
 * [animate.css](https://daneden.github.io/animate.css/)
 * [Select2](https://select2.github.io/)
 * [Animsition](https://github.com/blivesta/animsition)
+* [Shuffle](http://vestride.github.io/Shuffle/)
 * [YTPlayer](https://github.com/pupunzi/jquery.mb.YTPlayer)
 * [TouchSwipe](https://github.com/mattbryson/TouchSwipe-Jquery-Plugin)
 * [Waypoint](https://github.com/imakewebthings/waypoints)
