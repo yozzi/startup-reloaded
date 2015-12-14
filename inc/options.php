@@ -1032,7 +1032,7 @@ function optionsframework_options() {
     
 	$options[] = array(
 		'name' => __( 'Mise en forme automatique', 'startup-reloaded' ),
-		'desc' => __( 'Cocher pour <strong>desactiver</strong> la mise en forme automatique de l\'editeur WordPress. Permet de garder le controle de votre code. ( Evite les br, p, et suppression de lignes vides, etc...)', 'startup-reloaded' ),
+		'desc' => __( 'Cocher pour <strong>desactiver</strong> la mise en forme automatique de l\'editeur WordPress. Permet de garder le control de votre code. ( Evite les br, p, et suppression de lignes vides, etc...)', 'startup-reloaded' ),
 		'id' => 'auto-format-off',
 		'std' => '1',
 		'type' => 'checkbox'
