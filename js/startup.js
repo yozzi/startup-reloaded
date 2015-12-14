@@ -1,58 +1,17 @@
 // $ à la place de jQuery dans WordPress
 var $ = jQuery.noConflict();
 
-//Slider
-var $slider = $('#slider');
-
-// Initialize carousel
-$slider.carousel({
-    //interval: 4000
-});
-
-function doAnimations(elems) {
-    var animEndEv = 'webkitAnimationEnd animationend';
-
-    elems.each(function () {
-        var $this = $(this),
-            $animationType = $this.data('animation');
-
-        // Add animate.css classes to
-        // the elements to be animated 
-        // Remove animate.css classes
-        // once the animation event has ended
-        $this.addClass($animationType).one(animEndEv, function () {
-            $this.removeClass($animationType);
-        });
-    });
-}
-
-// Select the elements to be animated
-// in the first slide on page load
-var $firstAnimatingElems = $slider.find('.item:first').find('[data-animation ^= "animated"]');
-
-// Apply the animation using our function
-doAnimations($firstAnimatingElems);
-
-// Attach our doAnimations() function to the
-// carousel's slide.bs.carousel event 
-$slider.on('slide.bs.carousel', function (e) {
-    // Select the elements to be animated inside the active slide 
-    var $animatingElems = $(e.relatedTarget)
-        .find("[data-animation ^= 'animated']");
-    doAnimations($animatingElems);
-});
-
 // Carousel Swipe touch
-$(document).ready(function () {
+jQuery(document).ready(function () {
 
     //Enable swiping...
-    $(".carousel-inner").swipe({
+    jQuery(".carousel-inner").swipe({
         //Generic swipe handler for all directions
         swipeLeft: function (event, direction, distance, duration, fingerCount) {
-            $(this).parent().carousel('prev');
+            jQuery(this).parent().carousel('prev');
         },
         swipeRight: function () {
-            $(this).parent().carousel('next');
+            jQuery(this).parent().carousel('next');
         },
         //Default is 75px, set to 0 for demo so any distance triggers swipe
         threshold: 0
