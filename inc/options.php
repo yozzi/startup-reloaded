@@ -109,6 +109,13 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
+    $options[] = array(
+		'desc' => __( 'Activate FastClick', 'startup-reloaded' ),
+		'id' => 'general-fastclick',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+    
 	$options[] = array(
 		'desc' => __( 'Activate YTPlayer', 'startup-reloaded' ),
 		'id' => 'general-ytplayer',

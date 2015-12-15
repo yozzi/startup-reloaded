@@ -21,6 +21,7 @@ $slider_on = of_get_option( 'slider-on' );
 $slider_height = of_get_option( 'slider-height' );
 $navbar_transparent = of_get_option( 'navbar-transparent' );
 $logo = of_get_option( 'general-logo' );
+$fastclick = of_get_option( 'general-fastclick' );
 
 if ( $navbar_position == 'navbar-fixed-top' ) {
     $scroll_offset = 50;
@@ -55,6 +56,16 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 <?php if( $fullscreen_panel_on ){ get_template_part( 'template-parts/panel', 'fullscreen' ); } ?>
 
 <?php wp_footer(); ?>
+
+<?php if ( $fastclick ) { ?>
+<script type="text/javascript">
+    //Fastclick
+    
+    jQuery(function () {
+        FastClick.attach(document.body);
+    });
+</script>
+<?php } ?>
 
 <script type="text/javascript">
     // Smooth Scroll to anchor

@@ -23,11 +23,6 @@ $(document).ready(function () {
     $('.widget > ul').addClass('list-unstyled');
 });
 
-//Fastclick
-$(function () {
-    FastClick.attach(document.body);
-});
-
 //Scroll to top
 $(function () {
 
