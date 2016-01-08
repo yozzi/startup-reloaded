@@ -30,23 +30,23 @@ if ( $atts['id'] ) {
 
 <?php if ( isset ($inclusions[0]) ) { ?>
     <div id="cocktail" class="course">
-        <h3><?php _e( 'Welcome cocktail', 'salient' ) ?></h3>
+        <h3><?php _e( 'Welcome cocktail', 'startup-reloaded' ) ?></h3>
     </div>
 <?php } ?>
 
 <?php if ( isset ($inclusions[1]) ) { ?>
     <div id="vin" class="course">
-        <h3><?php _e( '&frac12; bottle of wine', 'salient' ) ?></h3>
+        <h3><?php _e( '&frac12; bottle of wine', 'startup-reloaded' ) ?></h3>
     </div>
 <?php } ?>
 
 <?php if ( $miseenbouches ) { ?>
     <div id="miseenbouche" class="course">
-        <h3><?php _e( 'Mise en bouche', 'salient' ) ?></h3>
+        <h3><?php _e( 'Mise en bouche', 'startup-reloaded' ) ?></h3>
         <ul class="list-unstyled">
             <?php foreach ( (array) $miseenbouches as $key => $miseenbouche ) { ?>
                 <li>
-                    <h4><?php echo esc_html( $miseenbouche['name'] ); if ( isset ($miseenbouche['extra']) && $miseenbouche['extra'] ) { ?> <small><?php _e( '+extra', 'salient' ) ?></small><?php } ?></h4>
+                    <h4><?php echo esc_html( $miseenbouche['name'] ); if ( isset ($miseenbouche['extra']) && $miseenbouche['extra'] ) { ?> <small><?php _e( '+extra', 'startup-reloaded' ) ?></small><?php } ?></h4>
                     <?php if ( isset ($miseenbouche['desc']) && $miseenbouche['desc'] ) { ?><small><?php echo esc_html( $miseenbouche['desc'] ); ?></small><?php } ?>
                 </li>
             <?php } ?>     
@@ -56,11 +56,11 @@ if ( $atts['id'] ) {
 
 <?php if ( $entrees ) { ?>
     <div id="entree" class="course">
-        <h3><?php _e( 'Appetizer', 'salient' ) ?></h3>
+        <h3><?php _e( 'Appetizer', 'startup-reloaded' ) ?></h3>
         <ul class="list-unstyled">
             <?php foreach ( (array) $entrees as $key => $entree ) { ?>
                 <li>
-                    <h4><?php echo esc_html( $entree['name'] ); if ( isset ($entree['extra']) && $entree['extra'] ) { ?> <small><?php _e( '+extra', 'salient' ) ?></small><?php } ?></h4>
+                    <h4><?php echo esc_html( $entree['name'] ); if ( isset ($entree['extra']) && $entree['extra'] ) { ?> <small><?php _e( '+extra', 'startup-reloaded' ) ?></small><?php } ?></h4>
                     <?php if ( isset ($entree['desc']) && $entree['desc'] ) { ?><small><?php echo esc_html( $entree['desc'] ); ?></small><?php } ?>
                 </li>
             <?php } ?>     
@@ -70,11 +70,11 @@ if ( $atts['id'] ) {
 
  <?php if ( $preludes ) { ?>
     <div id="preludes" class="course">
-        <h3><?php _e( 'Prelude', 'salient' ) ?></h3>
+        <h3><?php _e( 'Prelude', 'startup-reloaded' ) ?></h3>
         <ul class="list-unstyled">
             <?php foreach ( (array) $preludes as $key => $prelude ) { ?>
                <li>
-                   <h4><?php echo esc_html( $prelude['name'] ); if ( isset ($prelude['extra']) && $prelude['extra'] ) { ?> <small><?php _e( '+extra', 'salient' ) ?></small><?php } ?></h4>
+                   <h4><?php echo esc_html( $prelude['name'] ); if ( isset ($prelude['extra']) && $prelude['extra'] ) { ?> <small><?php _e( '+extra', 'startup-reloaded' ) ?></small><?php } ?></h4>
                    <?php if ( isset ($prelude['desc']) && $prelude['desc'] ) { ?><small><?php echo esc_html( $prelude['desc'] ); ?></small><?php } ?>
                 </li>
             <?php } ?>     
@@ -84,11 +84,11 @@ if ( $atts['id'] ) {
 
 <?php if ( $plats ) { ?>
     <div id="plats" class="course">
-        <h3><?php _e( 'Main course', 'salient' ) ?></h3>
+        <h3><?php _e( 'Main course', 'startup-reloaded' ) ?></h3>
         <ul class="list-unstyled">
             <?php foreach ( (array) $plats as $key => $plat ) { ?>
                 <li>
-                    <h4><?php echo esc_html( $plat['name'] ); if ( isset ($plat['extra']) && $plat['extra'] ) { ?> <small><?php _e( '+extra', 'salient' ) ?></small><?php } ?></h4>
+                    <h4><?php echo esc_html( $plat['name'] ); if ( isset ($plat['extra']) && $plat['extra'] ) { ?> <small><?php _e( '+extra', 'startup-reloaded' ) ?></small><?php } ?></h4>
                     <?php if ( isset ($plat['desc']) && $plat['desc'] ) { ?><small><?php echo esc_html( $plat['desc'] ); ?></small><?php } ?>
                 </li>
             <?php } ?>     
@@ -98,17 +98,17 @@ if ( $atts['id'] ) {
 
 <?php if ( isset ($inclusions[2]) ) { ?>
     <div id="fromage" class="course">
-        <h3><?php _e( 'Plate of fine cheese of Quebec', 'salient' ) ?></h3>
+        <h3><?php _e( 'Plate of fine cheese of Quebec', 'startup-reloaded' ) ?></h3>
     </div>
 <?php } ?>
 
 <?php if ( $desserts ) { ?>
     <div id="desserts" class="course">
-        <h3><?php _e( 'Captain\'s dessert', 'salient' ) ?></h3>
+        <h3><?php _e( 'Captain\'s dessert', 'startup-reloaded' ) ?></h3>
         <ul class="list-unstyled">
             <?php foreach ( (array) $desserts as $key => $dessert ) { ?>
                 <li>
-                    <h4><?php echo esc_html( $dessert['name'] ); if ( isset ($dessert['extra']) && $dessert['extra'] ) { ?> <small><?php _e( '+extra', 'salient' ) ?></small><?php } ?></h4>
+                    <h4><?php echo esc_html( $dessert['name'] ); if ( isset ($dessert['extra']) && $dessert['extra'] ) { ?> <small><?php _e( '+extra', 'startup-reloaded' ) ?></small><?php } ?></h4>
                     <?php if ( isset ($dessert['desc']) && $dessert['desc'] ) { ?><small><?php echo esc_html( $dessert['desc'] ); ?></small><?php } ?>
                 </li>
             <?php } ?>     
@@ -118,13 +118,13 @@ if ( $atts['id'] ) {
 
 <?php if ( isset ($inclusions[3]) ) { ?>
     <div id="digestif" class="course">
-        <h3><?php _e( 'Digestive', 'salient' ) ?></h3>
+        <h3><?php _e( 'Digestive', 'startup-reloaded' ) ?></h3>
     </div>
 <?php } ?>
 
 <?php if ( isset ($inclusions[4]) ) { ?>
     <div id="cafe" class="course">
-        <h3><?php _e( 'Coffee, tea, herbal tea', 'salient' ) ?></h3>
+        <h3><?php _e( 'Coffee, tea, herbal tea', 'startup-reloaded' ) ?></h3>
     </div>
 <?php } ?>
 
