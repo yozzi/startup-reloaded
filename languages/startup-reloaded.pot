@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"POT-Revision-Date: Wed Nov 04 2015 11:06:13 GMT-0500 (Est)\n"
+"POT-Revision-Date: Fri Jan 08 2016 14:42:44 GMT-0500 (Est)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: yann <ycaplain@croisieresaml.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: ../comments.php:29
+#: ../comments.php:33
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -53,19 +53,19 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../comments.php:38 ../comments.php:59
+#: ../comments.php:42 ../comments.php:63
 msgid "Comment navigation"
 msgstr ""
 
-#: ../comments.php:41 ../comments.php:62
+#: ../comments.php:45 ../comments.php:66
 msgid "Older Comments"
 msgstr ""
 
-#: ../comments.php:42 ../comments.php:63
+#: ../comments.php:46 ../comments.php:67
 msgid "Newer Comments"
 msgstr ""
 
-#: ../comments.php:75
+#: ../comments.php:79
 msgid "Comments are closed."
 msgstr ""
 
@@ -107,466 +107,26 @@ msgstr ""
 msgid "Navbar Bottom"
 msgstr ""
 
-#: ../functions.php:248
+#: ../functions.php:254
 msgid "Shuffle thumbnail"
 msgstr ""
 
-#: ../functions.php:249
+#: ../functions.php:255
 msgid "Shuffle main"
 msgstr ""
 
-#: ../functions.php:250
+#: ../functions.php:256
 msgid "Grid thumbnail"
 msgstr ""
 
-#: ../header.php:351
+#: ../header.php:340
 msgid "Skip to content"
 msgstr ""
 
-#: ../options.php:17
-msgid "General"
-msgstr ""
-
-#: ../options.php:22
-msgid "StartUp serial number"
-msgstr ""
-
-#: ../options.php:29
-msgid "Image Logo"
-msgstr ""
-
-#: ../options.php:35
-msgid "Layout"
-msgstr ""
-
-#: ../options.php:40
-msgid "Responsive"
-msgstr ""
-
-#: ../options.php:47 ../inc/metaboxes.php:99 ../inc/metaboxes.php:199
-msgid "Boxed"
-msgstr ""
-
-#: ../options.php:54
-msgid "Page transitions"
-msgstr ""
-
-#: ../options.php:55 ../options.php:324 ../lib/class-tgm-plugin-activation.php:2612
-msgid "Activate"
-msgstr ""
-
-#: ../options.php:62
-msgid "Fade in"
-msgstr ""
-
-#: ../options.php:63
-msgid "Fade out"
-msgstr ""
-
-#: ../options.php:64
-msgid "Fade in up"
-msgstr ""
-
-#: ../options.php:65
-msgid "Fade out up"
-msgstr ""
-
-#: ../options.php:66
-msgid "Fade in down"
-msgstr ""
-
-#: ../options.php:67
-msgid "Fade out down"
-msgstr ""
-
-#: ../options.php:68
-msgid "Fade in left"
-msgstr ""
-
-#: ../options.php:69
-msgid "Fade out left"
-msgstr ""
-
-#: ../options.php:70
-msgid "Fade in right"
-msgstr ""
-
-#: ../options.php:71
-msgid "Fade out right"
-msgstr ""
-
-#: ../options.php:72
-msgid "Rotate in"
-msgstr ""
-
-#: ../options.php:73
-msgid "Rotate out"
-msgstr ""
-
-#: ../options.php:74
-msgid "Flip in X"
-msgstr ""
-
-#: ../options.php:75
-msgid "Flip out X"
-msgstr ""
-
-#: ../options.php:76
-msgid "Flip in Y"
-msgstr ""
-
-#: ../options.php:77
-msgid "Flip out Y"
-msgstr ""
-
-#: ../options.php:78
-msgid "Zoom in"
-msgstr ""
-
-#: ../options.php:79
-msgid "Zoom out"
-msgstr ""
-
-#: ../options.php:83
-msgid "Transition in"
-msgstr ""
-
-#: ../options.php:92
-msgid "Transition out"
-msgstr ""
-
-#: ../options.php:101
-msgid "Options"
-msgstr ""
-
-#: ../options.php:106
-msgid "Back to top button"
-msgstr ""
-
-#: ../options.php:113
-msgid "Activate YTPlayer"
-msgstr ""
-
-#: ../options.php:120
-msgid "Footer content"
-msgstr ""
-
-#: ../options.php:127
-msgid "Google Analytics ID"
-msgstr ""
-
-#: ../options.php:128
-msgid "Provided by Google in the form UA-XXXXXXX-XX"
-msgstr ""
-
-#: ../options.php:143 ../options.php:648 ../options.php:686
-msgid "Style"
-msgstr ""
-
-#: ../options.php:192 ../options.php:217 ../options.php:253
-msgid "Background"
-msgstr ""
-
-#: ../options.php:193
-msgid "Change the background CSS."
-msgstr ""
-
-#: ../options.php:201
-msgid "Cover"
-msgstr ""
-
-#: ../options.php:208
-msgid "Custom button"
-msgstr ""
-
-#: ../options.php:209
-msgid "Corner radius in px"
-msgstr ""
-
-#: ../options.php:224 ../options.php:260
-msgid "Text"
-msgstr ""
-
-#: ../options.php:231
-msgid "Hover, focus, active background"
-msgstr ""
-
-#: ../options.php:238
-msgid "Hover, focus, active text"
-msgstr ""
-
-#: ../options.php:245
-msgid "Pages & posts header"
-msgstr ""
-
-#: ../options.php:246
-msgid "Hide the header. Or not. Overrides individual page setting if ckecked."
-msgstr ""
-
-#: ../options.php:267
-msgid "Padding in px"
-msgstr ""
-
-#: ../options.php:275 ../options.php:368 ../inc/metaboxes.php:78 ../inc/metaboxes.
-#: php:178
-msgid "Left"
-msgstr ""
-
-#: ../options.php:276 ../inc/metaboxes.php:59 ../inc/metaboxes.php:79 ..
-#: /inc/metaboxes.php:159 ../inc/metaboxes.php:179
-msgid "Center"
-msgstr ""
-
-#: ../options.php:277 ../options.php:369 ../inc/metaboxes.php:80 ../inc/metaboxes.
-#: php:180
-msgid "Right"
-msgstr ""
-
-#: ../options.php:281 ../inc/metaboxes.php:72 ../inc/metaboxes.php:172
-msgid "Content position"
-msgstr ""
-
-#: ../options.php:290 ../inc/metaboxes.php:100 ../inc/metaboxes.php:200
-msgid "Put the text inside a box"
-msgstr ""
-
-#: ../options.php:297
-msgid "Footer"
-msgstr ""
-
-#: ../options.php:304
-msgid "Custom CSS"
-msgstr ""
-
-#: ../options.php:318
-msgid "Navigation"
-msgstr ""
-
-#: ../options.php:323
-msgid "Navbar"
-msgstr ""
-
-#: ../options.php:332
-msgid "Static top"
-msgstr ""
-
-#: ../options.php:333
-msgid "Fixed top"
-msgstr ""
-
-#: ../options.php:334
-msgid "Under slider"
-msgstr ""
-
-#: ../options.php:335
-msgid "Fixed bottom"
-msgstr ""
-
-#: ../options.php:339
-msgid "Position"
-msgstr ""
-
-#: ../options.php:348
-msgid "Transparent on homepage. Available for fixed top navbar only."
-msgstr ""
-
-#: ../options.php:355
-msgid "Translucent background on hover. For transparent navbar only."
-msgstr ""
-
-#: ../options.php:373
-msgid "Logo Position"
-msgstr ""
-
-#: ../options.php:382
-msgid "Menu Position"
-msgstr ""
-
-#: ../options.php:391
-msgid "Hamburger Position"
-msgstr ""
-
-#: ../options.php:400
-msgid "Inverse style"
-msgstr ""
-
-#: ../options.php:407
-msgid "Fullscreen panel"
-msgstr ""
-
-#: ../options.php:408
-msgid ""
-"Activate. Use <strong>data-toggle=\"modal\" data-target=\"#fullscreen-"
-"panel\"</strong> on any button / link or activate navbar hamburger below to "
-"make the magic happen."
-msgstr ""
-
-#: ../options.php:415 ../options.php:437 ../options.php:489
-msgid "Activate navbar hamburger."
-msgstr ""
-
-#: ../options.php:422 ../options.php:444 ../options.php:496
-msgid "Override hamburger icon with a text."
-msgstr ""
-
-#: ../options.php:429
-msgid "Left panel"
-msgstr ""
-
-#: ../options.php:430
-msgid ""
-"Activate. Use <strong>#left-panel</strong> on any link / menu item or "
-"activate navbar hamburger below to make the magic go on."
-msgstr ""
-
-#: ../options.php:457 ../options.php:509
-msgid "Theme"
-msgstr ""
-
-#: ../options.php:463 ../options.php:515 ../inc/metaboxes.php:91 ../inc/metaboxes.
-#: php:191
-msgid "Light"
-msgstr ""
-
-#: ../options.php:464 ../options.php:516 ../inc/metaboxes.php:92 ../inc/metaboxes.
-#: php:192
-msgid "Dark"
-msgstr ""
-
-#: ../options.php:469 ../options.php:521
-msgid "Mode"
-msgstr ""
-
-#: ../options.php:475 ../options.php:527 ../lib/CMB2/includes/CMB2_JS.php:87
-msgid "Default"
-msgstr ""
-
-#: ../options.php:476 ../options.php:528
-msgid "Tileview"
-msgstr ""
-
-#: ../options.php:481
-msgid "Right panel"
-msgstr ""
-
-#: ../options.php:482
-msgid ""
-"Activate. Use <strong>#right-panel</strong> on any link / menu item or "
-"activate navbar hamburger below to make the fantasy happen."
-msgstr ""
-
-#: ../options.php:543
-msgid "Slider"
-msgstr ""
-
-#: ../options.php:548
-msgid "Activate on homepage"
-msgstr ""
-
-#: ../options.php:555
-msgid "Height in px. \"100%\" for full viewport height"
-msgstr ""
-
-#: ../options.php:563
-msgid "Interval in ms or false"
-msgstr ""
-
-#: ../options.php:571
-msgid "Slide"
-msgstr ""
-
-#: ../options.php:572
-msgid "Fade"
-msgstr ""
-
-#: ../options.php:576
-msgid "Transition"
-msgstr ""
-
-#: ../options.php:585
-msgid "Show arrows if more than one slide"
-msgstr ""
-
-#: ../options.php:594
-msgid "Arrows hover effect"
-msgstr ""
-
-#: ../options.php:603 ../lib/CMB2/includes/CMB2_Field.php:978 ..
-#: /lib/CMB2/includes/CMB2_Field.php:982
-msgid "None"
-msgstr ""
-
-#: ../options.php:604
-msgid "Pagination"
-msgstr ""
-
-#: ../options.php:605
-msgid "Content arrow"
-msgstr ""
-
-#: ../options.php:609
-msgid "Navigation type"
-msgstr ""
-
-#: ../options.php:627
-msgid "Post types"
-msgstr ""
-
-#: ../options.php:633
-msgid "Home"
-msgstr ""
-
-#: ../options.php:634
-msgid ""
-"Generate home content with Home plugin custom post sections. If not, use a "
-"classic page with the Home template."
-msgstr ""
-
-#: ../options.php:642 ../options.php:680
-msgid "Grid"
-msgstr ""
-
-#: ../options.php:643 ../options.php:681
-msgid "Shuffle"
-msgstr ""
-
-#: ../options.php:647
 msgid "Blog"
 msgstr ""
 
-#: ../options.php:657
-msgid "Buttons"
-msgstr ""
-
-#: ../options.php:658
-msgid "Dropdown"
-msgstr ""
-
-#: ../options.php:662
-msgid "Shuffle filter type"
-msgstr ""
-
-#: ../options.php:671 ../options.php:695
-msgid "Max number of items to show for grid style. Leave empty for unlimited."
-msgstr ""
-
-#: ../options.php:685
 msgid "Portfolio"
-msgstr ""
-
-#: ../options.php:829
-msgid "Advanced"
-msgstr ""
-
-#: ../options.php:834
-msgid "Mise en forme automatique"
-msgstr ""
-
-#: ../options.php:835
-msgid ""
-"Cocher pour <strong>desactiver</strong> la mise en forme automatique de "
-"l'editeur WordPress. Permet de garder le controle de votre code. ( Evite les "
-"br, p, et suppression de lignes vides, etc...)"
 msgstr ""
 
 #. Name of the template
@@ -587,114 +147,646 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: ../inc/metaboxes.php:11 ../inc/metaboxes.php:127
+#: ../inc/metaboxes.php:11 ../inc/metaboxes.php:146
 msgid "Header"
 msgstr ""
 
-#: ../inc/metaboxes.php:16 ../inc/metaboxes.php:132
+#: ../inc/metaboxes.php:16 ../inc/metaboxes.php:151
 msgid "Hidden"
 msgstr ""
 
-#: ../inc/metaboxes.php:17 ../inc/metaboxes.php:133
+#: ../inc/metaboxes.php:17 ../inc/metaboxes.php:152
 msgid "Hide the header. Or not."
 msgstr ""
 
-#: ../inc/metaboxes.php:23 ../inc/metaboxes.php:139
+#: ../inc/metaboxes.php:23 ../inc/metaboxes.php:158
+msgid "Boxed width"
+msgstr ""
+
+#: ../inc/metaboxes.php:24 ../inc/metaboxes.php:159
+msgid "Got to test on boxed design..."
+msgstr ""
+
+#: ../inc/metaboxes.php:30 ../inc/metaboxes.php:165
 msgid "Background color"
 msgstr ""
 
-#: ../inc/metaboxes.php:30 ../inc/metaboxes.php:146
+#: ../inc/metaboxes.php:37 ../inc/metaboxes.php:172
 msgid "Text color"
 msgstr ""
 
-#: ../inc/metaboxes.php:37
+#: ../inc/metaboxes.php:44
 msgid "Subtitle"
 msgstr ""
 
-#: ../inc/metaboxes.php:43
+#: ../inc/metaboxes.php:50
 msgid "Background image"
 msgstr ""
 
-#: ../inc/metaboxes.php:53 ../inc/metaboxes.php:153
+#: ../inc/metaboxes.php:60 ../inc/metaboxes.php:179
 msgid "Background image position"
 msgstr ""
 
-#: ../inc/metaboxes.php:58 ../inc/metaboxes.php:158
+#: ../inc/metaboxes.php:65 ../inc/metaboxes.php:184
 msgid "Top"
 msgstr ""
 
-#: ../inc/metaboxes.php:60 ../inc/metaboxes.php:160
+#: ../inc/metaboxes.php:66 ../inc/metaboxes.php:86 ../inc/metaboxes.php:185 ..
+#: /inc/metaboxes.php:205 ../inc/options.php:290
+msgid "Center"
+msgstr ""
+
+#: ../inc/metaboxes.php:67 ../inc/metaboxes.php:186
 msgid "Bottom"
 msgstr ""
 
-#: ../inc/metaboxes.php:65 ../inc/metaboxes.php:165
+#: ../inc/metaboxes.php:72 ../inc/metaboxes.php:191
 msgid "Padding"
 msgstr ""
 
-#: ../inc/metaboxes.php:66 ../inc/metaboxes.php:166
+#: ../inc/metaboxes.php:73 ../inc/metaboxes.php:192
 msgid "Padding of page header in px"
 msgstr ""
 
-#: ../inc/metaboxes.php:85 ../inc/metaboxes.php:185
+#: ../inc/metaboxes.php:79 ../inc/metaboxes.php:198 ../inc/options.php:295
+msgid "Content position"
+msgstr ""
+
+#: ../inc/metaboxes.php:85 ../inc/metaboxes.php:204 ../inc/options.php:289 ..
+#: /inc/options.php:382
+msgid "Left"
+msgstr ""
+
+#: ../inc/metaboxes.php:87 ../inc/metaboxes.php:206 ../inc/options.php:291 ..
+#: /inc/options.php:383
+msgid "Right"
+msgstr ""
+
+#: ../inc/metaboxes.php:92 ../inc/metaboxes.php:211
 msgid "Effect"
 msgstr ""
 
-#: ../inc/metaboxes.php:93 ../inc/metaboxes.php:193
+#: ../inc/metaboxes.php:98 ../inc/metaboxes.php:217 ../inc/options.php:477 ..
+#: /inc/options.php:529
+msgid "Light"
+msgstr ""
+
+#: ../inc/metaboxes.php:99 ../inc/metaboxes.php:218 ../inc/options.php:478 ..
+#: /inc/options.php:530
+msgid "Dark"
+msgstr ""
+
+#: ../inc/metaboxes.php:100 ../inc/metaboxes.php:219
 msgid "Trame 1"
 msgstr ""
 
-#: ../inc/metaboxes.php:94 ../inc/metaboxes.php:194
+#: ../inc/metaboxes.php:101 ../inc/metaboxes.php:220
 msgid "Trame 2"
 msgstr ""
 
-#: ../inc/metaboxes.php:106 ../inc/metaboxes.php:206
+#: ../inc/metaboxes.php:106 ../inc/metaboxes.php:225 ../inc/options.php:47
+msgid "Boxed"
+msgstr ""
+
+#: ../inc/metaboxes.php:107 ../inc/metaboxes.php:226 ../inc/options.php:304
+msgid "Put the text inside a box"
+msgstr ""
+
+#: ../inc/metaboxes.php:113 ../inc/metaboxes.php:232
 msgid "No"
 msgstr ""
 
-#: ../inc/metaboxes.php:107 ../inc/metaboxes.php:207
+#: ../inc/metaboxes.php:114 ../inc/metaboxes.php:233
 msgid "Yes"
 msgstr ""
 
-#: ../inc/metaboxes.php:112 ../inc/metaboxes.php:212
+#: ../inc/metaboxes.php:119 ../inc/metaboxes.php:238
 msgid "Parallax"
 msgstr ""
 
-#: ../inc/metaboxes.php:113 ../inc/metaboxes.php:213
+#: ../inc/metaboxes.php:120 ../inc/metaboxes.php:239
 msgid "Add parallax effect to the background"
 msgstr ""
 
-#: ../inc/plugins.php:238
+#: ../inc/metaboxes.php:134
+msgid "Link"
+msgstr ""
+
+#: ../inc/metaboxes.php:139
+msgid "URL of the content : YouTube video, pdf link, etc..."
+msgstr ""
+
+#: ../inc/options.php:17
+msgid "General"
+msgstr ""
+
+#: ../inc/options.php:22
+msgid "StartUp serial number"
+msgstr ""
+
+#: ../inc/options.php:29
+msgid "Image Logo"
+msgstr ""
+
+#: ../inc/options.php:35
+msgid "Layout"
+msgstr ""
+
+#: ../inc/options.php:40
+msgid "Responsive"
+msgstr ""
+
+#: ../inc/options.php:54
+msgid "Page transitions"
+msgstr ""
+
+#: ../inc/options.php:55 ../inc/options.php:338 ../lib/class-tgm-plugin-
+#: activation.php:2612
+msgid "Activate"
+msgstr ""
+
+#: ../inc/options.php:62
+msgid "Fade in"
+msgstr ""
+
+#: ../inc/options.php:63
+msgid "Fade out"
+msgstr ""
+
+#: ../inc/options.php:64
+msgid "Fade in up"
+msgstr ""
+
+#: ../inc/options.php:65
+msgid "Fade out up"
+msgstr ""
+
+#: ../inc/options.php:66
+msgid "Fade in down"
+msgstr ""
+
+#: ../inc/options.php:67
+msgid "Fade out down"
+msgstr ""
+
+#: ../inc/options.php:68
+msgid "Fade in left"
+msgstr ""
+
+#: ../inc/options.php:69
+msgid "Fade out left"
+msgstr ""
+
+#: ../inc/options.php:70
+msgid "Fade in right"
+msgstr ""
+
+#: ../inc/options.php:71
+msgid "Fade out right"
+msgstr ""
+
+#: ../inc/options.php:72
+msgid "Rotate in"
+msgstr ""
+
+#: ../inc/options.php:73
+msgid "Rotate out"
+msgstr ""
+
+#: ../inc/options.php:74
+msgid "Flip in X"
+msgstr ""
+
+#: ../inc/options.php:75
+msgid "Flip out X"
+msgstr ""
+
+#: ../inc/options.php:76
+msgid "Flip in Y"
+msgstr ""
+
+#: ../inc/options.php:77
+msgid "Flip out Y"
+msgstr ""
+
+#: ../inc/options.php:78
+msgid "Zoom in"
+msgstr ""
+
+#: ../inc/options.php:79
+msgid "Zoom out"
+msgstr ""
+
+#: ../inc/options.php:83
+msgid "Transition in"
+msgstr ""
+
+#: ../inc/options.php:92
+msgid "Transition out"
+msgstr ""
+
+#: ../inc/options.php:101
+msgid "Options"
+msgstr ""
+
+#: ../inc/options.php:106
+msgid "Back to top button"
+msgstr ""
+
+#: ../inc/options.php:113
+msgid "Activate FastClick"
+msgstr ""
+
+#: ../inc/options.php:120
+msgid "Activate YTPlayer"
+msgstr ""
+
+#: ../inc/options.php:127
+msgid "Footer content"
+msgstr ""
+
+#: ../inc/options.php:134
+msgid "Google Analytics ID"
+msgstr ""
+
+#: ../inc/options.php:135
+msgid "Provided by Google in the form UA-XXXXXXX-XX"
+msgstr ""
+
+#: ../inc/options.php:150 ../inc/options.php:682 ../inc/options.php:720
+msgid "Style"
+msgstr ""
+
+#: ../inc/options.php:199 ../inc/options.php:224 ../inc/options.php:267
+msgid "Background"
+msgstr ""
+
+#: ../inc/options.php:200
+msgid "Change the background CSS."
+msgstr ""
+
+#: ../inc/options.php:208
+msgid "Cover"
+msgstr ""
+
+#: ../inc/options.php:215
+msgid "Custom button"
+msgstr ""
+
+#: ../inc/options.php:216
+msgid "Corner radius in px"
+msgstr ""
+
+#: ../inc/options.php:231 ../inc/options.php:274
+msgid "Text"
+msgstr ""
+
+#: ../inc/options.php:238
+msgid "Hover, focus, active background"
+msgstr ""
+
+#: ../inc/options.php:245
+msgid "Hover, focus, active text"
+msgstr ""
+
+#: ../inc/options.php:252
+msgid "Pages & posts header"
+msgstr ""
+
+#: ../inc/options.php:253
+msgid "Hide the header. Or not. Overrides individual page setting if ckecked."
+msgstr ""
+
+#: ../inc/options.php:260
+msgid "Boxed width."
+msgstr ""
+
+#: ../inc/options.php:281
+msgid "Padding in px"
+msgstr ""
+
+#: ../inc/options.php:311
+msgid "Footer"
+msgstr ""
+
+#: ../inc/options.php:318
+msgid "Custom CSS"
+msgstr ""
+
+#: ../inc/options.php:332
+msgid "Navigation"
+msgstr ""
+
+#: ../inc/options.php:337
+msgid "Navbar"
+msgstr ""
+
+#: ../inc/options.php:346
+msgid "Static top"
+msgstr ""
+
+#: ../inc/options.php:347
+msgid "Fixed top"
+msgstr ""
+
+#: ../inc/options.php:348
+msgid "Under slider"
+msgstr ""
+
+#: ../inc/options.php:349
+msgid "Fixed bottom"
+msgstr ""
+
+#: ../inc/options.php:353
+msgid "Position"
+msgstr ""
+
+#: ../inc/options.php:362
+msgid "Transparent on homepage. Available for fixed top navbar only."
+msgstr ""
+
+#: ../inc/options.php:369
+msgid "Translucent background on hover. For transparent navbar only."
+msgstr ""
+
+#: ../inc/options.php:387
+msgid "Logo Position"
+msgstr ""
+
+#: ../inc/options.php:396
+msgid "Menu Position"
+msgstr ""
+
+#: ../inc/options.php:405
+msgid "Hamburger Position"
+msgstr ""
+
+#: ../inc/options.php:414
+msgid "Inverse style"
+msgstr ""
+
+#: ../inc/options.php:421
+msgid "Fullscreen panel"
+msgstr ""
+
+#: ../inc/options.php:422
+msgid ""
+"Activate. Use <strong>data-toggle=\"modal\" data-target=\"#fullscreen-"
+"panel\"</strong> on any button / link or activate navbar hamburger below to "
+"make the magic happen."
+msgstr ""
+
+#: ../inc/options.php:429 ../inc/options.php:451 ../inc/options.php:503
+msgid "Activate navbar hamburger."
+msgstr ""
+
+#: ../inc/options.php:436 ../inc/options.php:458 ../inc/options.php:510
+msgid "Override hamburger icon with a text."
+msgstr ""
+
+#: ../inc/options.php:443
+msgid "Left panel"
+msgstr ""
+
+#: ../inc/options.php:444
+msgid ""
+"Activate. Use <strong>#left-panel</strong> on any link / menu item or "
+"activate navbar hamburger below to make the magic go on."
+msgstr ""
+
+#: ../inc/options.php:471 ../inc/options.php:523
+msgid "Theme"
+msgstr ""
+
+#: ../inc/options.php:483 ../inc/options.php:535
+msgid "Mode"
+msgstr ""
+
+#: ../inc/options.php:489 ../inc/options.php:541 ../lib/CMB2/includes/CMB2_JS.php:
+#: 87
+msgid "Default"
+msgstr ""
+
+#: ../inc/options.php:490 ../inc/options.php:542
+msgid "Tileview"
+msgstr ""
+
+#: ../inc/options.php:495
+msgid "Right panel"
+msgstr ""
+
+#: ../inc/options.php:496
+msgid ""
+"Activate. Use <strong>#right-panel</strong> on any link / menu item or "
+"activate navbar hamburger below to make the fantasy happen."
+msgstr ""
+
+#: ../inc/options.php:557
+msgid "Slider"
+msgstr ""
+
+#: ../inc/options.php:562
+msgid "Activate on homepage"
+msgstr ""
+
+#: ../inc/options.php:569 ../inc/options.php:729 ../inc/options.php:752 ..
+#: /inc/options.php:774 ../inc/options.php:796 ../inc/options.php:818 ..
+#: /inc/options.php:840 ../inc/options.php:862 ../inc/options.php:890
+msgid "Display order"
+msgstr ""
+
+#: ../inc/options.php:575 ../inc/options.php:735 ../inc/options.php:758 ..
+#: /inc/options.php:780 ../inc/options.php:802 ../inc/options.php:824 ..
+#: /inc/options.php:846 ../inc/options.php:868 ../inc/options.php:896
+msgid "Random"
+msgstr ""
+
+#: ../inc/options.php:576 ../inc/options.php:736 ../inc/options.php:759 ..
+#: /inc/options.php:781 ../inc/options.php:803 ../inc/options.php:825 ..
+#: /inc/options.php:847 ../inc/options.php:869 ../inc/options.php:897
+msgid "Menu order"
+msgstr ""
+
+#: ../inc/options.php:581 ../inc/options.php:763 ../inc/options.php:785 ..
+#: /inc/options.php:807 ../inc/options.php:829 ../inc/options.php:851 ..
+#: /inc/options.php:873 ../inc/options.php:901
+msgid "Max number of items to show. Leave empty for unlimited."
+msgstr ""
+
+#: ../inc/options.php:589
+msgid "Height in px. \"100%\" for full viewport height"
+msgstr ""
+
+#: ../inc/options.php:597
+msgid "Interval in ms or false"
+msgstr ""
+
+#: ../inc/options.php:605
+msgid "Slide"
+msgstr ""
+
+#: ../inc/options.php:606
+msgid "Fade"
+msgstr ""
+
+#: ../inc/options.php:610
+msgid "Transition"
+msgstr ""
+
+#: ../inc/options.php:619
+msgid "Show arrows if more than one slide"
+msgstr ""
+
+#: ../inc/options.php:628
+msgid "Arrows hover effect"
+msgstr ""
+
+#: ../inc/options.php:637 ../lib/CMB2/includes/CMB2_Field.php:978 ..
+#: /lib/CMB2/includes/CMB2_Field.php:982
+msgid "None"
+msgstr ""
+
+#: ../inc/options.php:638
+msgid "Pagination"
+msgstr ""
+
+#: ../inc/options.php:639
+msgid "Content arrow"
+msgstr ""
+
+#: ../inc/options.php:643
+msgid "Navigation type"
+msgstr ""
+
+#: ../inc/options.php:661
+msgid "Post types"
+msgstr ""
+
+#: ../inc/options.php:667
+msgid "Home"
+msgstr ""
+
+#: ../inc/options.php:668
+msgid ""
+"Generate home content with Home plugin custom post sections. If not, use a "
+"classic page with the Home template."
+msgstr ""
+
+#: ../inc/options.php:676 ../inc/options.php:714
+msgid "Grid"
+msgstr ""
+
+#: ../inc/options.php:677 ../inc/options.php:715
+msgid "Shuffle"
+msgstr ""
+
+#: ../inc/options.php:691
+msgid "Buttons"
+msgstr ""
+
+#: ../inc/options.php:692
+msgid "Dropdown"
+msgstr ""
+
+#: ../inc/options.php:696
+msgid "Shuffle filter type"
+msgstr ""
+
+#: ../inc/options.php:705 ../inc/options.php:741
+msgid "Max number of items to show for grid style. Leave empty for unlimited."
+msgstr ""
+
+#: ../inc/options.php:751
+msgid "Testimonials"
+msgstr ""
+
+#: ../inc/options.php:773
+msgid "Partners"
+msgstr ""
+
+#: ../inc/options.php:795
+msgid "Milestones"
+msgstr ""
+
+#: ../inc/options.php:861
+msgid "Services"
+msgstr ""
+
+#: ../inc/options.php:883
+msgid "Team"
+msgstr ""
+
+#: ../inc/options.php:884
+msgid "Carousel if more than 4"
+msgstr ""
+
+#: ../inc/options.php:1036
+msgid "Advanced"
+msgstr ""
+
+#: ../inc/options.php:1041
+msgid "Mise en forme automatique"
+msgstr ""
+
+#: ../inc/options.php:1042
+msgid ""
+"Cocher pour <strong>desactiver</strong> la mise en forme automatique de "
+"l'editeur WordPress. Permet de garder le control de votre code. ( Evite les "
+"br, p, et suppression de lignes vides, etc...)"
+msgstr ""
+
+#: ../inc/options.php:1049
+msgid "Login screen"
+msgstr ""
+
+#: ../inc/options.php:1050
+msgid "Overlay color"
+msgstr ""
+
+#: ../inc/options.php:1057
+msgid "Choose an image for the login screen background."
+msgstr ""
+
+#: ../inc/options.php:1062
+msgid "Choose another one."
+msgstr ""
+
+#: ../inc/options.php:1067
+msgid "Choose one more."
+msgstr ""
+
+#: ../inc/plugins.php:336
 msgid "Additional Plugins"
 msgstr ""
 
-#: ../inc/plugins.php:239
+#: ../inc/plugins.php:337
 msgid "Plugins"
 msgstr ""
 
-#: ../inc/plugins.php:240 ../lib/class-tgm-plugin-activation.php:335
+#: ../inc/plugins.php:338 ../lib/class-tgm-plugin-activation.php:335
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: ../inc/plugins.php:241 ../lib/class-tgm-plugin-activation.php:336
+#: ../inc/plugins.php:339 ../lib/class-tgm-plugin-activation.php:336
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: ../inc/plugins.php:242 ../lib/class-tgm-plugin-activation.php:337
+#: ../inc/plugins.php:340 ../lib/class-tgm-plugin-activation.php:337
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:243 ../lib/class-tgm-plugin-activation.php:342
+#: ../inc/plugins.php:341 ../lib/class-tgm-plugin-activation.php:342
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:244
+#: ../inc/plugins.php:342
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
@@ -707,21 +799,21 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:245 ../lib/class-tgm-plugin-activation.php:367
+#: ../inc/plugins.php:343 ../lib/class-tgm-plugin-activation.php:367
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:246 ../lib/class-tgm-plugin-activation.php:372
+#: ../inc/plugins.php:344 ../lib/class-tgm-plugin-activation.php:372
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:247
+#: ../inc/plugins.php:345
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s plugin."
@@ -734,7 +826,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:248 ../lib/class-tgm-plugin-activation.php:352
+#: ../inc/plugins.php:346 ../lib/class-tgm-plugin-activation.php:352
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -745,7 +837,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:249
+#: ../inc/plugins.php:347
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -758,28 +850,28 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:250 ../lib/class-tgm-plugin-activation.php:382
+#: ../inc/plugins.php:348 ../lib/class-tgm-plugin-activation.php:382
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:251 ../lib/class-tgm-plugin-activation.php:392
+#: ../inc/plugins.php:349 ../lib/class-tgm-plugin-activation.php:392
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../inc/plugins.php:252 ../lib/class-tgm-plugin-activation.php:397
+#: ../inc/plugins.php:350 ../lib/class-tgm-plugin-activation.php:397
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: ../inc/plugins.php:253 ../lib/class-tgm-plugin-activation.php:399 ../lib/class-
+#: ../inc/plugins.php:351 ../lib/class-tgm-plugin-activation.php:399 ../lib/class-
 #: tgm-plugin-activation.php:3029
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: ../inc/plugins.php:254
+#: ../inc/plugins.php:352
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
@@ -1624,8 +1716,8 @@ msgid "Bold Italic"
 msgstr ""
 
 #: ../template-parts/content-blog.php:14 ../template-parts/content-blog.php:36 ..
-#: /template-parts/content-portfolio.php:16 ../template-parts/content-products.
-#: php:12
+#: /template-parts/content-portfolio.php:17 ../template-parts/content-products.
+#: php:15
 msgid "All"
 msgstr ""
 
@@ -1633,8 +1725,54 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#: ../template-parts/content-blog.php:73
-msgid "Read more"
+#: ../template-parts/content-blog.php:88
+msgid "Show"
+msgstr ""
+
+#: ../template-parts/content-menus.php:33
+msgid "Welcome cocktail"
+msgstr ""
+
+#: ../template-parts/content-menus.php:39
+msgid "&frac12; bottle of wine"
+msgstr ""
+
+#: ../template-parts/content-menus.php:45
+msgid "Mise en bouche"
+msgstr ""
+
+#: ../template-parts/content-menus.php:49 ../template-parts/content-menus.php:63 .
+#: ./template-parts/content-menus.php:77 ../template-parts/content-menus.php:91 ..
+#: /template-parts/content-menus.php:111
+msgid "+extra"
+msgstr ""
+
+#: ../template-parts/content-menus.php:59
+msgid "Appetizer"
+msgstr ""
+
+#: ../template-parts/content-menus.php:73
+msgid "Prelude"
+msgstr ""
+
+#: ../template-parts/content-menus.php:87
+msgid "Main course"
+msgstr ""
+
+#: ../template-parts/content-menus.php:101
+msgid "Plate of fine cheese of Quebec"
+msgstr ""
+
+#: ../template-parts/content-menus.php:107
+msgid "Captain's dessert"
+msgstr ""
+
+#: ../template-parts/content-menus.php:121
+msgid "Digestive"
+msgstr ""
+
+#: ../template-parts/content-menus.php:127
+msgid "Coffee, tea, herbal tea"
 msgstr ""
 
 #: ../template-parts/content-none.php:19
@@ -1658,63 +1796,71 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:49 ../template-parts/content-portfolio.
-#: php:107 ../template-parts/content-portfolio.php:155 ../template-parts/content-
-#: portfolio.php:184 ../template-parts/content-products.php:39 ../template-
-#: parts/content-products.php:109 ../template-parts/content-projects.php:42
+#: ../template-parts/content-portfolio.php:50 ../template-parts/content-portfolio.
+#: php:108 ../template-parts/content-portfolio.php:156 ../template-parts/content-
+#: portfolio.php:185 ../template-parts/content-products.php:42 ../template-
+#: parts/content-products.php:112 ../template-parts/content-projects.php:45
 msgid "Image missing!"
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:57 ../template-parts/content-products.
-#: php:60
+#: ../template-parts/content-portfolio.php:58 ../template-parts/content-products.
+#: php:63
 msgid "More information"
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:124 ../template-parts/content-
-#: portfolio.php:201
+#: ../template-parts/content-portfolio.php:125 ../template-parts/content-
+#: portfolio.php:202
 msgid "Client"
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:124 ../template-parts/content-
-#: portfolio.php:201
+#: ../template-parts/content-portfolio.php:125 ../template-parts/content-
+#: portfolio.php:202
 msgid "Date"
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:127 ../template-parts/content-
-#: portfolio.php:204
+#: ../template-parts/content-portfolio.php:128 ../template-parts/content-
+#: portfolio.php:205
 msgid "Visit"
 msgstr ""
 
-#: ../template-parts/content-products.php:43
+#: ../template-parts/content-products.php:46
 msgid "Available"
 msgstr ""
 
-#: ../template-parts/content-products.php:44
+#: ../template-parts/content-products.php:47
 msgid "Sold out soon"
 msgstr ""
 
-#: ../template-parts/content-products.php:45
+#: ../template-parts/content-products.php:48
 msgid "Back order"
 msgstr ""
 
-#: ../template-parts/content-products.php:46
+#: ../template-parts/content-products.php:49
 msgid "Sold out"
 msgstr ""
 
-#: ../template-parts/content-products.php:47
+#: ../template-parts/content-products.php:50
 msgid "Unavailable"
 msgstr ""
 
-#: ../template-parts/content-products.php:48
+#: ../template-parts/content-products.php:51
 msgid "Sale closed"
 msgstr ""
 
-#: ../template-parts/content-products.php:122
+#: ../template-parts/content-products.php:125
 msgid "Buy it now!"
 msgstr ""
 
-#: ../template-parts/content-projects.php:50
+#: ../template-parts/content-projects.php:53
 msgid "Visit project"
+msgstr ""
+
+#: ../template-parts/content-team.php:83
+msgid "Profile"
+msgstr ""
+
+#: ../template-parts/content-timeline.php:27
+msgid "Read more"
 msgstr ""
 
 #: ../template-parts/navbar-primary.php:36
