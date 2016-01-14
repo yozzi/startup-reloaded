@@ -16,7 +16,7 @@ get_header(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                <?php if(!$boxed) { ?><div class="container"><?php } ?>
+                <?php if( !$boxed ) { ?><div class="container"><?php } ?>
                     <div class="row">
 
                         <!-- Blog Post Content Column -->
@@ -126,7 +126,7 @@ get_header(); ?>
                         </div>
 
                     </div>
-                <?php if(!$boxed) { ?></div><?php } ?>
+                <?php if( !$boxed ) { ?></div><?php } ?>
 
             </article><!-- #post-## -->
 

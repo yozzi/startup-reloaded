@@ -1,14 +1,13 @@
 <?php
+    $navbar_on          = of_get_option( 'navbar-on' );
+    $navbar_position    = of_get_option( 'navbar-position' );
+    $slider_on          = of_get_option( 'slider-on' );
 
-$navbar_on          = of_get_option( 'navbar-on' );
-$navbar_position    = of_get_option( 'navbar-position' );
-$slider_on          = of_get_option( 'slider-on' );
+    get_header();
 
-get_header();
-
-if ($slider_on == 1) {
-    get_template_part( 'template-parts/slider', 'home' );
-}
+    if ($slider_on == 1) {
+        get_template_part( 'template-parts/slider', 'home' );
+    }
 ?>
 <?php if( ($navbar_on && $navbar_position == 'navbar-fixed-slider' ) ){ get_template_part( 'template-parts/navbar', 'primary' ); } ?>
 

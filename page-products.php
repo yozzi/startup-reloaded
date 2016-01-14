@@ -13,13 +13,13 @@ get_header(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <div class="entry-content">
-                        <?php if(!$boxed) { ?><div class="container"><?php } ?>
+                        <?php if( !$boxed ) { ?><div class="container"><?php } ?>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <?php get_template_part( 'template-parts/content', 'products' ); ?>
                                 </div>
                             </div>
-                        <?php if(!$boxed) { ?></div><?php } ?>
+                        <?php if( !$boxed ) { ?></div><?php } ?>
                     </div><!-- .entry-content -->
                 </article><!-- #post-## -->
 
