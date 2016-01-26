@@ -5,7 +5,7 @@
 
     get_header();
 
-    if ($slider_on == 1) {
+    if (($slider_on == 1) && (is_plugin_active('startup-cpt-slider/startup-cpt-slider.php'))) {
         get_template_part( 'template-parts/slider', 'home' );
     }
 ?>
