@@ -70,14 +70,22 @@ $total_team = count($team);
                                         <strong class="name"><?php echo $team->post_title ?></strong>
                                         <p class="small text-muted designation"><?php echo $team_capacity ?></p>
                                         <p class="desc"><?php echo $team->post_content ?></p>
-                                        <p>
+                                        <?php if ( $team_social_link_1 || $team_social_link_2 || $team_social_link_3 || $team_social_link_4 ) { ?>
                                             <ul class="social">
-                                                <li class="facebook"><a target="_blank" href="<?php echo $team_social_link_1; ?>"><i class="fa fa-<?php echo $team_social_icon_1; ?>"></i></a></li>
-                                                <li class="twitter"><a target="_blank" href="<?php echo $team_social_link_2; ?>"><i class="fa fa-<?php echo $team_social_icon_2; ?>"></i></a></li>
-                                                <li class="plusone"><a target="_blank" href="<?php echo $team_social_link_3; ?>"><i class="fa fa-<?php echo $team_social_icon_3; ?>"></i></a></li>
-                                                <li class="pinterest"><a target="_blank" href="<?php echo $team_social_link_4; ?>"><i class="fa fa-<?php echo $team_social_icon_4; ?>"></i></a></li>
+                                                <?php if ( $team_social_link_1 ) { ?>
+                                                <li><a target="_blank" href="<?php echo $team_social_link_1; ?>"><i class="fa fa-<?php echo $team_social_icon_1; ?>"></i></a></li>
+                                                <?php } ?>
+                                                <?php if ( $team_social_link_2 ) { ?>
+                                                <li><a target="_blank" href="<?php echo $team_social_link_2; ?>"><i class="fa fa-<?php echo $team_social_icon_2; ?>"></i></a></li>
+                                                <?php } ?>
+                                                <?php if ( $team_social_link_3 ) { ?>
+                                                <li><a target="_blank" href="<?php echo $team_social_link_3; ?>"><i class="fa fa-<?php echo $team_social_icon_3; ?>"></i></a></li>
+                                                <?php } ?>
+                                                <?php if ( $team_social_link_4 ) { ?>
+                                                <li><a target="_blank" href="<?php echo $team_social_link_4; ?>"><i class="fa fa-<?php echo $team_social_icon_4; ?>"></i></a></li>
+                                                <?php } ?>
                                             </ul>
-                                        </p>
+                                        <?php } ?>
                                         <?php if ( $team_page_test ) { ?>
                                             <p>
                                                 <a href="<?php echo $team_page ?>" class="btn btn-custom btn-sm" role="button"><?php _e( 'Profile', 'startup-reloaded' ) ?></a>
