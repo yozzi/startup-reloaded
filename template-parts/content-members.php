@@ -4,7 +4,7 @@ $members = get_posts( $args );
 
 if ( $atts['id'] ) {
     // Si attribut id
-        $member = get_post( $atts['id'] );
+        $member               = get_post( $atts['id'] );
         $member_image_url     = wp_get_attachment_image_src( get_post_thumbnail_id($member->ID), 'grid_thumb' );
         $member_social_icon_1 = get_post_meta($member->ID, '_startup_cpt_team_icon_1', true );
         $member_social_link_1 = get_post_meta($member->ID, '_startup_cpt_team_link_1', true );
