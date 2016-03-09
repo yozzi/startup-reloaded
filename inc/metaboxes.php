@@ -129,6 +129,38 @@ function startup_reloaded_metabox_posts() {
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_startup_reloaded_posts_';
     
+    if ( is_plugin_active('startup-cpt-team/startup-cpt-team.php') ) {
+    
+        $cmb_box = new_cmb2_box( array(
+            'id'            => $prefix . 'author',
+            'title'         => __( 'Author', 'startup-reloaded' ),
+            'object_types'  => array( 'post' )
+        ) );
+
+        // Pull all authors into an array
+        $args = array(
+            'post_type' => 'team',
+            'sort_order' => 'asc',
+            'sort_column' => 'post_title',
+            'hierarchical' => 0
+        ); 
+
+        $authors = array();
+        $authors_obj = get_pages( $args );
+        foreach ($authors_obj as $author) {
+            $authors[$author->ID] = $author->post_title;
+        }
+
+        $cmb_box->add_field( array(
+            'desc'             => __( 'Author to display if different than you.', 'startup-reloaded' ),
+            'id'               => $prefix . 'author',
+            'type'             => 'select',
+            'show_option_none' => true,
+            'options'          => $authors
+        ) );
+    
+    }
+    
     $cmb_box = new_cmb2_box( array(
 		'id'            => $prefix . 'link',
 		'title'         => __( 'Link', 'startup-reloaded' ),
