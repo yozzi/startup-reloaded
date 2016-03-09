@@ -24,7 +24,7 @@ get_header(); ?>
                     <div class="row">
 
                         <!-- Blog Post Content Column -->
-                        <div class="col-lg-8">
+                        <div class="col-md-8">
 
                             <div class="entry-content">
                                 <div class="row">
@@ -54,7 +54,7 @@ get_header(); ?>
                         </div>
 
                         <!-- Blog Sidebar Widgets Column -->
-                        <div class="col-lg-4">
+                        <div id="sidebar" class="col-md-4 hidden-xs hidden-sm">
 
                             <!-- Blog Search -->
                             <div class="panel panel-default">
