@@ -183,7 +183,7 @@ function optionsframework_options() {
     );
 
     $options[] = array( "name" => "User stylesheet",
-        "desc" => 'List of css files in theme directory /css',
+        "desc" => 'Load additional stylesheet from the /css theme directory. Choose _none.css to ignore.',
         "id" => "auto_stylesheet",
         "type" => "select",
         "options" => $alt_stylesheets );

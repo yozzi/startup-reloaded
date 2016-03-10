@@ -197,7 +197,7 @@ if( of_get_option( 'auto-format-off' ) == 1 ){
  */
  
 function options_stylesheets_alt_style()   {
-	if ( of_get_option('auto_stylesheet') ) {
+	if ( of_get_option('auto_stylesheet') && of_get_option('auto_stylesheet') != get_stylesheet_directory_uri() . '/css/_none.css' ) {
 		wp_enqueue_style( 'options_stylesheets_alt_style', of_get_option('auto_stylesheet'), array(), null );
 	}
 }
