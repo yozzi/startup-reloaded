@@ -1,5 +1,6 @@
 <?php
 $fastclick = of_get_option( 'general-fastclick' );
+$smoothscroll = of_get_option( 'general-smoothscroll' );
 $navbar_position = of_get_option( 'navbar-position' );
 if ( $navbar_position == 'navbar-fixed-top' ) {
     $scroll_offset = 50;
@@ -26,22 +27,25 @@ $portfolio_style = of_get_option( 'portfolio-style' );
 </script>
 <?php } ?>
 
-<script type="text/javascript">
-    // Smooth Scroll to anchor
-    
-    jQuery(".scroll").on('click', function (e) {
-        // prevent default anchor click behavior
-        e.preventDefault();
-        // animate
-        jQuery('html, body').animate({
-            scrollTop: jQuery(this.hash).offset().top - <?php echo $scroll_offset ?>
-        }, 400, function () {
-            // when done, add hash to url
-            // (default click behaviour)
-            //window.location.hash = this.hash;
+<?php if ( $smoothscroll ) { ?>
+    <script type="text/javascript">
+        // Smooth Scroll to anchor
+
+        jQuery(".scroll").on('click', function (e) {
+            // prevent default anchor click behavior
+            e.preventDefault();
+            // animate
+            jQuery('html, body').animate({
+                scrollTop: jQuery(this.hash).offset().top - <?php echo $scroll_offset ?>
+            }, 400, function () {
+                // when done, add hash to url
+                // (default click behaviour)
+                //window.location.hash = this.hash;
+            });
         });
-    });
-</script>
+    </script>
+<?php } ?>
+
 <?php if ($slider_on && $slider_height == '100%') { ?>
     <script type="text/javascript">
         <?php

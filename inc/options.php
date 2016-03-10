@@ -124,6 +124,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+		'desc' => __( 'Activate SmoothScroll', 'startup-reloaded' ),
+		'id' => 'general-smoothscroll',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
 		'name' => __( 'Footer content', 'startup-reloaded' ),
 		'id' => 'general-footer',
 		'std' => 'Website powered with Startup by <a href="http://yozz.net" target="_blank">yozz.net</a>',
