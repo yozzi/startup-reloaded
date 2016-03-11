@@ -50,8 +50,8 @@
                 </a>
             </div>
             
-            <<?php //Non-collapsing fullscreen panel menu item ?>
-             <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
+            <?php //Non-collapsing fullscreen panel menu item ?>
+            <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
                 <ul class="nav navbar-nav navbar-right non-collapsing">
                     <?php if ( $fullscreen_panel_hamburger_text ){ ?>
                         <li>
