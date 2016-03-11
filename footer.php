@@ -14,7 +14,7 @@
     $right_panel_on = of_get_option( 'right-panel-on' );
 ?>
 
-	</div><!-- #content -->
+	</div><?php //#content ?>
     <div id="colophon-bg">
         <footer id="colophon" class="container site-footer" role="contentinfo">
             <?php if ( has_nav_menu( 'navbar-bottom' ) ) { ?>
@@ -29,10 +29,10 @@
                 <div class="col-xs-12">
                 <?php echo $footer ?>
                 </div>
-            </div><!-- .site-info -->
-        </footer><!-- #colophon -->
+            </div><?php //.site-info ?>
+        </footer><?php //#colophon ?>
     </div>
-</div><!-- #page -->
+</div><?php //#page ?>
 
 <?php if( $fullscreen_panel_on ){ get_template_part( 'template-parts/panel', 'fullscreen' ); } ?>
 

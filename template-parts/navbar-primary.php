@@ -28,9 +28,9 @@
 <?php } ?>
 
     <nav id="site-navigation" class="navbar navbar-default<?php if($logo){echo ' logo';} ?> <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; if ($navbar_position == 'navbar-fixed-slider' && !is_front_page()) { echo ' navbar-fixed-top'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
+        <?php //Brand and toggle get grouped for better mobile display ?>
         <div class="container">
-            <?php //Brand and toggle get grouped for better mobile display
-                if ( has_nav_menu( 'navbar-primary' ) ) { ?>
+            <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
                     <?php if ($responsive == 1) { ?>
                         <button type="button" class="navbar-toggle <?php if ($navbar_hamburger_position == 'navbar-left') {echo 'left-toggle';} else {echo 'right-toggle';}?>" data-toggle="collapse" data-target=".navbar-sur-collapse">
                             <span class="sr-only"><?php _e( 'Toggle navigation', 'startup-reloaded' ) ?></span>
@@ -50,8 +50,8 @@
                 </a>
             </div>
             
-             <?php //Non-collapsing fullscreen panel menu item
-                if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
+            <<?php //Non-collapsing fullscreen panel menu item ?>
+             <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
                 <ul class="nav navbar-nav navbar-right non-collapsing">
                     <?php if ( $fullscreen_panel_hamburger_text ){ ?>
                         <li>
@@ -70,8 +70,8 @@
                 </ul>
             <?php } ?>
             
-             <?php //Non-collapsing right panel menu item
-                if ( $right_panel_on && $right_panel_hamburger ){ ?>
+            <?php //Non-collapsing right panel menu item ?>
+             <?php if ( $right_panel_on && $right_panel_hamburger ){ ?>
                 <ul class="nav navbar-nav navbar-right non-collapsing">
                     <?php if ( $right_panel_hamburger_text ){ ?>
                         <li>
@@ -90,8 +90,8 @@
                 </ul>
             <?php } ?>
             
-             <?php //Non-collapsing left panel menu item
-                if ( $left_panel_on && $left_panel_hamburger ){ ?>
+             <?php //Non-collapsing left panel menu item ?>
+             <?php if ( $left_panel_on && $left_panel_hamburger ){ ?>
                 <ul class="nav navbar-nav navbar-right non-collapsing">
                     <?php if ( $left_panel_hamburger_text ){ ?>
                         <li>
@@ -116,12 +116,16 @@
             
             
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
+                <?php //Collect the nav links, forms, and other content for toggling ?>
                 <div class="<?php if ($responsive == 1) { ?>collapse navbar-collapse navbar-sur-collapse <?php } ?><?php echo $navbar_menu_position; ?>">
                     <?php wp_nav_menu(array( 'menu'=> 'navbar-primary', 'theme_location' => 'navbar-primary', 'depth' => 2, 'container' => false, 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_page_menu', 'walker' => new wp_bootstrap_navwalker()) ); ?>
                 </div>
+                <?php // /.navbar-collapse ?>
             <?php } ?>
         </div>
+        <?php // /.container ?>
     </nav>
+<?php // #site-navigation ?>
 
 </header>
 <?php if ($navbar_position == 'navbar-fixed-slider') { ?>

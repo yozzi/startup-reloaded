@@ -15,7 +15,7 @@
 ?>
 
     <div id="slider" class="carousel slide <?php echo $slider_transition ?>" data-interval="<?php echo $slider_interval ?>">
-        <!-- Indicators -->
+        <?php //Indicators ?>
         <?php if ($slider_navigation == 'slider_pagination') { ?>
         <ol class="carousel-indicators">
             <?php for($i=0 ; $i<$total_sliders; $i++){ ?>
@@ -23,7 +23,7 @@
             <?php } ?>
         </ol>
         <?php } ?>
-        <!-- Wrapper for slides -->
+        <?php //Wrapper for slides ?>
         <div class="carousel-inner" role="listbox">
             <?php
                 foreach ($sliders as $key=> $slider) {
@@ -78,11 +78,11 @@
             <?php if ( $background_video ) {?>
                 <div class="player" id="background-video-<?php echo $key ?>" data-property="{videoURL:'http://youtu.be/<?php echo $background_video ?>', containment:'#slide-<?php echo $key ?> .video', mute:true, loop:true, opacity:1, showControls:false}"></div>
             <?php } ?>
-                <!--/.item-->
+                <?php // /.item ?>
                 <?php } // endforeach ?>
             </div>
-            <!--/.carousel-inner-->
-        <!-- Controls -->
+            <?php // /.carousel-inner ?>
+        <?php // Controls ?>
         <?php if ( $slider_arrows && $total_sliders > 1) { ?>
             <div class="carousel-arrow left hvr-<?php echo $slider_arrows_hover ?> hidden-xs">
                 <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
@@ -96,7 +96,7 @@
             </div>
         <?php } ?>
 
-        <!-- Goto content -->
+        <?php // Goto content ?>
         <?php if ( empty( $atts['shortcode'] ) ) {
                 if ( $slider_navigation == 'slider_content_arrow' ) { ?>
                     <div class="slider-down hvr-<?php echo $slider_arrows_hover ?>">
