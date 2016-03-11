@@ -21,7 +21,8 @@
  ?>
 
 <style>
-    body{
+    <?php if ( $background['color'] || $background['image'] ) { ?>
+body{
     <?php
     if ( $background['color'] ) { ?>  background-color: <?php echo $background['color'] ?>;
     <?php }
@@ -35,7 +36,8 @@
     <?php }
     if ( $cover && $background['image']) { ?>  background-size: cover;
     <?php } ?>
-    }
+}
+    <?php } ?>
     <?php
     // On définit l'opacité de la navbar
     if ( $navbar_on && $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>
@@ -66,7 +68,7 @@
     } ?>
     
     <?php if ( $navbar_on ) { ?>
-    /* Navbar */
+/* Navbar */
     .navbar{
       background: <?php echo $navbar_color ?>;
     }
