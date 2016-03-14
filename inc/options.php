@@ -425,6 +425,14 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+        'name' => __( 'Search', 'startup-reloaded' ),
+		'desc' => __( 'Activate search form. (experimental)', 'startup-reloaded' ),
+		'id' => 'navbar-search',
+		'std' => '0',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
 		'name' => __( 'Fullscreen panel', 'startup-reloaded' ),
         'desc' => __( 'Activate. Use <strong>data-toggle="modal" data-target="#fullscreen-panel"</strong> on any button / link or activate navbar hamburger below to make the magic happen.', 'startup-reloaded' ),
 		'id' => 'fullscreen-panel-on',

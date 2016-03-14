@@ -8,6 +8,7 @@
     $navbar_inverse = of_get_option( 'navbar-inverse' );
     $navbar_transparent = of_get_option( 'navbar-transparent' );
     $boxed = of_get_option( 'general-boxed' );
+    $search = of_get_option( 'navbar-search' );
     $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
     $fullscreen_panel_hamburger = of_get_option( 'fullscreen-panel-hamburger' );
     $fullscreen_panel_hamburger_text = of_get_option( 'fullscreen-panel-hamburger-text' );
@@ -121,6 +122,19 @@
                     <?php wp_nav_menu(array( 'menu'=> 'navbar-primary', 'theme_location' => 'navbar-primary', 'depth' => 2, 'container' => false, 'menu_class' => 'nav navbar-nav', 'fallback_cb' => 'wp_page_menu', 'walker' => new wp_bootstrap_navwalker()) ); ?>
                 </div>
                 <?php // /.navbar-collapse ?>
+            <?php } ?>
+            
+            <?php if ( $search ) { ?>
+                <ul class="nav navbar-nav navbar-right non-collapsing">
+                        <li class="icon hvr-push">
+                            <button id="search-button" type="button" class="custom-hamburger navbar-toggle">
+                                <a href="#searchbox">
+                                    <span class="sr-only"><?php _e( 'Toggle search form', 'startup-reloaded' ) ?></span>
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </button>
+                        </li>  
+                </ul>
             <?php } ?>
         </div>
         <?php // /.container ?>
