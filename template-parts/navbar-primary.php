@@ -125,15 +125,13 @@
             <?php } ?>
             
             <?php if ( $search ) { ?>
-                <ul class="nav navbar-nav navbar-right non-collapsing">
-                        <li class="icon hvr-push">
-                            <button id="search-button" type="button" class="custom-hamburger navbar-toggle">
-                                <a href="#searchbox">
-                                    <span class="sr-only"><?php _e( 'Toggle search form', 'startup-reloaded' ) ?></span>
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </button>
-                        </li>  
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class="dropdown">
+                        <button type="button" data-toggle="dropdown" class="btn btn-custom navbar-btn dropdown-toggle"><i class="fa fa-search"></i></button>
+                        <ul class="dropdown-menu">
+                            <li><?php get_search_form(); ?></li>
+                        </ul>
+                    </li>
                 </ul>
             <?php } ?>
         </div>
