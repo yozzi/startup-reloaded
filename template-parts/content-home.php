@@ -21,8 +21,7 @@ if ( $atts['id'] ) {
                             <div class="home-section">
                                 <?php if ( $title ){ ?><h3><?php echo $home_post->post_title ?></h3><?php } ?>
                                 <p><?php echo do_shortcode($home_post->post_content) ?></p>
-                                <?php if ( $button_text ) { ?>
-                                <br />
+                                <?php if ( $button_url ) { ?>
                                 <a class="btn btn-custom" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
                                     <?php echo $button_text ?>
                                 </a>
@@ -51,8 +50,7 @@ if ( $atts['id'] ) {
                                 <div class="home-section">
                                     <?php if ( $title ){ ?><h3><?php echo $home_section->post_title ?></h3><?php } ?>                     
                                     <p><?php echo do_shortcode($home_section->post_content) ?></p>
-                                    <?php if ( $button_text ) { ?>
-                                    <br />
+                                    <?php if ( $button_url ) { ?>
                                     <a class="btn btn-custom" href="<?php echo $button_url ?>"<?php if ( $blank ) { echo ' target="_blank"'; }?>>
                                         <?php echo $button_text ?>
                                     </a>
