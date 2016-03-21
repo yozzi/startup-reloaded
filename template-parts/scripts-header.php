@@ -1,15 +1,7 @@
 <?php
-    $ga = of_get_option( 'general-ga' ); //Code utilisateur Google Analyics
-    $navbar_position = of_get_option( 'navbar-position' );
-    $page_transition = of_get_option( 'page-transition' );
-    $navbar_on = of_get_option( 'navbar-on' );
-    $left_panel_on = of_get_option( 'left-panel-on' );
-    $left_panel_theme = of_get_option( 'left-panel-theme' );
-    $left_panel_mode = of_get_option( 'left-panel-mode' );
-    $right_panel_on = of_get_option( 'right-panel-on' );
-    $right_panel_theme = of_get_option( 'right-panel-theme' );
-    $right_panel_mode = of_get_option( 'right-panel-mode' );
-    $ytplayer = of_get_option( 'general-ytplayer' );
+
+require get_template_directory() . '/inc/theme-options.php';
+
 ?>
 
 <?php if ($ga){ ?>

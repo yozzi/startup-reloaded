@@ -3,6 +3,8 @@
  * Enqueue scripts and styles.
  */
 function startup_reloaded_scripts() {
+    
+    require get_template_directory() . '/inc/theme-options.php';
 
     /************************************************************************* css */
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/lib/bootstrap/css/bootstrap.min.css', array( ), false, 'all' );
@@ -13,15 +15,15 @@ function startup_reloaded_scripts() {
     
     wp_enqueue_style( 'animate', get_template_directory_uri() . '/lib/animate-css/animate.css' );
     
-    if( of_get_option( 'page-transition' ) ){
+    if( $page_transition ){
         wp_enqueue_style( 'animsition', get_template_directory_uri() . '/lib/animsition/animsition.min.css' );
     }
     
-    if( of_get_option( 'general-ytplayer' ) ){
+    if( $ytplayer ){
         wp_enqueue_style( 'ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/css/jquery.mb.YTPlayer.min.css' );
     }
     
-    if( of_get_option( 'left-panel-on' ) || of_get_option( 'right-panel-on' ) ){
+    if( $left_panel_on || $right_panel_on ){
         wp_enqueue_style( 'mmenu', get_template_directory_uri() . '/lib/jQuery.mmenu/core/css/jquery.mmenu.all.css' );
     }
     
@@ -41,24 +43,24 @@ function startup_reloaded_scripts() {
     
     wp_enqueue_script( 'parallax', get_template_directory_uri() . '/js/parallax.min.js', array( ), '', false );
     
-    if( of_get_option( 'page-transition' ) ){
+    if( $page_transition ){
         wp_enqueue_script( 'animsition', get_template_directory_uri() . '/lib/animsition/jquery.animsition.min.js', array( ), '', false );
     }
     
-    if( of_get_option( 'general-ytplayer' ) ){
+    if( $ytplayer ){
         wp_enqueue_script( 'ytplayer', get_template_directory_uri() . '/lib/jquery.mb.YTPlayer/jquery.mb.YTPlayer.min.js', array( ), '', false );
     }
     /**/
-    if( of_get_option( 'blog-style' ) == 'shuffle' || of_get_option( 'portfolio-style' ) == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){
+    if( $blog_style == 'shuffle' || $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){
         wp_enqueue_script( 'shuffle', get_template_directory_uri() . '/js/jquery.shuffle.modernizr.min.js', array( ), '', false );
         wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array( ), '', true );
     }
     
-    if( of_get_option( 'general-fastclick' ) ){
+    if( $fastclick ){
         wp_enqueue_script( 'fastclick', get_template_directory_uri() . '/js/fastclick.js', array( ), '', false );
     }
        
-    if( of_get_option( 'left-panel-on' ) || of_get_option( 'right-panel-on' ) ){
+    if( $left_panel_on || $right_panel_on ){
         wp_enqueue_script( 'mmenu', get_template_directory_uri() . '/lib/jQuery.mmenu/core/js/jquery.mmenu.min.all.js', array( ), '', false );
     }
     

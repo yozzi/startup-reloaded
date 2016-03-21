@@ -99,9 +99,9 @@ add_action( 'after_setup_theme', 'startup_reloaded_content_width', 0 );
 require get_template_directory() . '/inc/sidebars.php';
 
 /**
- * Register theme features.
+ * Register theme images.
  */
-require get_template_directory() . '/inc/features.php';
+require get_template_directory() . '/inc/images.php';
 
 /**
  * Enqueue scripts and styles.
@@ -184,10 +184,12 @@ require_once dirname( __FILE__ ) . '/lib/options-framework/options-framework.php
 $optionsfile = locate_template( '/inc/options.php' );
 load_template( $optionsfile );
 
+require get_template_directory() . '/inc/theme-options.php';
+
 /**
  * Désactiver les br automatiques de l'éditeur et autres
  */
-if( of_get_option( 'auto-format-off' ) == 1 ){
+if( $auto_format_off ){
     remove_filter('the_content', 'wpautop');
 }
 
@@ -197,8 +199,9 @@ if( of_get_option( 'auto-format-off' ) == 1 ){
  */
  
 function options_stylesheets_alt_style()   {
-	if ( of_get_option('auto_stylesheet') && of_get_option('auto_stylesheet') != get_stylesheet_directory_uri() . '/css/_none.css' ) {
-		wp_enqueue_style( 'options_stylesheets_alt_style', of_get_option('auto_stylesheet'), array(), null );
+    require get_template_directory() . '/inc/theme-options.php';
+	if ( $user_style && $user_style != get_stylesheet_directory_uri() . '/css/_none.css' ) {
+		wp_enqueue_style( 'options_stylesheets_alt_style', $user_style, array(), null );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'options_stylesheets_alt_style' );
@@ -215,7 +218,7 @@ function wp_get_attachment( $attachment_id ) {
         'src' => $attachment->guid,
         'title' => $attachment->post_title
     );
-}        
+}
 
 //Adverts
 if (is_plugin_active('wpadverts/wpadverts.php')){
@@ -247,17 +250,6 @@ if (is_plugin_active('wpadverts/wpadverts.php')){
 
     add_filter("adverts_form_load", "startup_reloaded_limit_category_selection");
 }
-
-// Ajouter les tailles personnalisées au selecteur de l'uploadeur
-function startup_reloaded_insert_custom_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'shuffle_thumb' => __( 'Shuffle thumbnail', 'startup-reloaded' ),
-        'shuffle_main' => __( 'Shuffle main', 'startup-reloaded' ),
-        'grid_thumb' => __( 'Grid thumbnail', 'startup-reloaded' ),
-    ) );
-}
-
-add_filter( 'image_size_names_choose', 'startup_reloaded_insert_custom_sizes' );
 
 // Page slug priority over archive
 function startup_reloaded_page_priority_init() {

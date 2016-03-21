@@ -1,7 +1,7 @@
 <?php
-$fastclick = of_get_option( 'general-fastclick' );
-$smoothscroll = of_get_option( 'general-smoothscroll' );
-$navbar_position = of_get_option( 'navbar-position' );
+
+require get_template_directory() . '/inc/theme-options.php';
+
 if ( $navbar_position == 'navbar-fixed-top' ) {
     $scroll_offset = 50;
 } elseif ( $navbar_position == 'navbar-fixed-slider' ){
@@ -9,12 +9,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 } else {
     $scroll_offset = 0;
 }
-$slider_on = of_get_option( 'slider-on' );
-$slider_height = of_get_option( 'slider-height' );
-$navbar_transparent = of_get_option( 'navbar-transparent' );
-$logo = of_get_option( 'general-logo' );
-$blog_style = of_get_option( 'blog-style' );
-$portfolio_style = of_get_option( 'portfolio-style' );
+
 ?>
 
 <?php if ( $fastclick ) { ?>

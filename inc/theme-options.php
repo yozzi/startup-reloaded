@@ -9,14 +9,29 @@
     $page_transition_in                 = of_get_option( 'page-transition-in' );
     $page_transition_out                = of_get_option( 'page-transition-out' );
     $back_to_top                        = of_get_option( 'general-back-to-top' );
+    $ytplayer                           = of_get_option( 'general-ytplayer' );
+    $fastclick                          = of_get_option( 'general-fastclick' );
+    $smoothscroll                       = of_get_option( 'general-smoothscroll' );
+    $ga                                 = of_get_option( 'general-ga' );
 // Style
+    $user_style                         = of_get_option( 'auto_stylesheet' );
+    $background                         = of_get_option( 'style-background' );
+    $cover                              = of_get_option( 'style-cover' );
     $page_header_visible                = of_get_option( 'page-header-hidden' );
     $page_header_background_color       = of_get_option( 'page-header-background-color' );
     $page_header_color                  = of_get_option( 'page-header-text-color' );
     $page_header_padding                = of_get_option( 'page-header-padding' );
     $page_header_position               = of_get_option( 'page-header-position' );
     $page_header_boxed                  = of_get_option( 'page-header-boxed' );
+    $page_header_boxed_width            = of_get_option( 'page-header-boxed-width' );
     $footer                             = of_get_option( 'general-footer' );
+    $bt_radius                          = of_get_option( 'button-radius' );
+    $bt_background                      = of_get_option( 'button-background' );
+    $bt_text                            = of_get_option( 'button-text' );
+    $bt_hover_background                = of_get_option( 'button-hover-background' );
+    $bt_hover_text                      = of_get_option( 'button-hover-text' );
+    $custom_css                         = of_get_option( 'custom-css' );
+    $footer_color                       = of_get_option( 'footer-color' );
 // Navigation
     $navbar_on                          = of_get_option( 'navbar-on' );
     $navbar_position                    = of_get_option( 'navbar-position' );
@@ -24,16 +39,24 @@
     $navbar_logo_position               = of_get_option( 'navbar-logo-position' );
     $navbar_menu_position               = of_get_option( 'navbar-menu-position' );
     $navbar_hamburger_position          = of_get_option( 'navbar-hamburger-position' );
+    $navbar_translucent                 = of_get_option( 'navbar-translucent' );
+    $navbar_color                       = of_get_option( 'navbar-color' );
     $navbar_inverse                     = of_get_option( 'navbar-inverse' );
     $fullscreen_panel_on                = of_get_option( 'fullscreen-panel-on' );
     $fullscreen_panel_hamburger         = of_get_option( 'fullscreen-panel-hamburger' );
     $fullscreen_panel_hamburger_text    = of_get_option( 'fullscreen-panel-hamburger-text' );
     $left_panel_on                      = of_get_option( 'left-panel-on' );
+    $left_panel_color                   = of_get_option( 'left-panel-color' );
     $left_panel_hamburger               = of_get_option( 'left-panel-hamburger' );
     $left_panel_hamburger_text          = of_get_option( 'left-panel-hamburger-text' );
+    $left_panel_theme                   = of_get_option( 'left-panel-theme' );
+    $left_panel_mode                    = of_get_option( 'left-panel-mode' );
     $right_panel_on                     = of_get_option( 'right-panel-on' );
+    $right_panel_color                  = of_get_option( 'right-panel-color' );
     $right_panel_hamburger              = of_get_option( 'right-panel-hamburger' );
     $right_panel_hamburger_text         = of_get_option( 'right-panel-hamburger-text' );
+    $right_panel_theme                  = of_get_option( 'right-panel-theme' );
+    $right_panel_mode                   = of_get_option( 'right-panel-mode' );
 // Slider
     $slider_order                       = of_get_option( 'slider-order' );
     $slider_number                      = of_get_option( 'slider-number' );

@@ -1,24 +1,8 @@
 <?php
-    //Charger les variables d'Option Framework
-    $navbar_on = of_get_option( 'navbar-on' );
-    $navbar_position = of_get_option( 'navbar-position' );
-    $navbar_transparent = of_get_option( 'navbar-transparent' );
-    $navbar_translucent = of_get_option( 'navbar-translucent' );
-    $navbar_color = of_get_option( 'navbar-color' );
-    $left_panel_on = of_get_option( 'left-panel-on' );
-    $left_panel_color = of_get_option( 'left-panel-color' );
-    $right_panel_on = of_get_option( 'right-panel-on' );
-    $right_panel_color = of_get_option( 'right-panel-color' );
-    $background = of_get_option( 'style-background' );
-    $cover = of_get_option( 'style-cover' );
-    $bt_radius = of_get_option( 'button-radius' );
-    $bt_background = of_get_option( 'button-background' );
-    $bt_text = of_get_option( 'button-text' );
-    $bt_hover_background = of_get_option( 'button-hover-background' );
-    $bt_hover_text = of_get_option( 'button-hover-text' );
-    $custom_css = of_get_option( 'custom-css' );
-    $footer_color = of_get_option( 'footer-color' );
- ?>
+
+require get_template_directory() . '/inc/theme-options.php';
+
+?>
 
 <style>
     <?php if ( $background['color'] || $background['image'] ) { ?>
