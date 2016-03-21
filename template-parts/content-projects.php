@@ -1,8 +1,9 @@
 <?php
-$order = of_get_option( 'projects-order' );
-$number = of_get_option( 'projects-number' );
-if ( $number ) { $max = $number; } else {$max = -1;};
-$args=array( 'post_type'=>'projects', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+
+require get_template_directory() . '/inc/theme-options.php';
+
+if ( $projects_number ) { $max = $projects_number; } else {$max = -1;};
+$args=array( 'post_type'=>'projects', 'orderby' => $projects_order,'order' => 'ASC', 'numberposts' => $max );
 $projects = get_posts( $args );
 $total_projects = count($projects);
 ?>

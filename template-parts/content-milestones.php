@@ -1,8 +1,9 @@
 <?php
-$order = of_get_option( 'milestones-order' );
-$number = of_get_option( 'milestones-number' );
-if ( $number ) { $max = $number; } else {$max = -1;};
-$args=array( 'post_type'=>'milestones', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+
+require get_template_directory() . '/inc/theme-options.php';
+
+if ( $milestones_number ) { $max = $milestones_number; } else {$max = -1;};
+$args=array( 'post_type'=>'milestones', 'orderby' => $milestones_order,'order' => 'ASC', 'numberposts' => $max );
 $milestones = get_posts( $args );
 ?>
 <section id="milestones"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>

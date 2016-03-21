@@ -5,7 +5,11 @@
  * @package StartUp Reloaded
  */
 
-get_header(); ?>
+get_header();
+
+require get_template_directory() . '/inc/theme-options.php';
+
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -16,7 +20,6 @@ get_header(); ?>
             }
             ?>
             <?php get_template_part( 'template-parts/title', 'single' ); ?>
-			<?php $boxed = of_get_option( 'general-boxed' ); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

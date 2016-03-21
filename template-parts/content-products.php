@@ -1,12 +1,11 @@
 <?php
-    $order = of_get_option( 'products-order' );
-    $number = of_get_option( 'products-number' );
-if ( $number ) { $max = $number; } else {$max = -1;};
-    $args=array( 'post_type'=>'products', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+
+    require get_template_directory() . '/inc/theme-options.php';
+
+    if ( $products_number ) { $max = $products_number; } else {$max = -1;};
+    $args=array( 'post_type'=>'products', 'orderby' => $products_order,'order' => 'ASC', 'numberposts' => $max );
     $products = get_posts( $args );
     $total_products = count($products);
-    $slider_arrows_hover    = of_get_option( 'slider-arrows-hover' );
-    $auto_format_off = of_get_option( 'auto-format-off' );
 ?>
 
 <section id="products"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>

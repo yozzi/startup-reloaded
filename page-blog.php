@@ -2,14 +2,17 @@
 /**
 * Template Name: Blog */
 
-get_header(); ?>
+get_header();
+
+require get_template_directory() . '/inc/theme-options.php';
+
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
             
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part( 'template-parts/title', 'page' ); ?>
-				<?php $boxed = of_get_option( 'general-boxed' ); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>  
                     <div class="entry-content">

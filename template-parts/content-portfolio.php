@@ -1,18 +1,16 @@
 <?php
-    $order = of_get_option( 'portfolio-order' );
-    $number = of_get_option( 'portfolio-number' );
-    $style = of_get_option( 'portfolio-style' );
-    if (($number) && ($style != 'shuffle')) {$max = $number;} else {$max = -1;};
-    $args = array( 'post_type'=>'portfolio', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+
+    require get_template_directory() . '/inc/theme-options.php';
+
+    if (($portfolio_number) && ($portfolio_style != 'shuffle')) {$max = $portfolio_number;} else {$max = -1;};
+    $args = array( 'post_type'=>'portfolio', 'orderby' => $portfolio_order,'order' => 'ASC', 'numberposts' => $max );
     $portfolio = get_posts( $args );
     $total_portfolio = count($portfolio);
-    $slider_arrows_hover = of_get_option( 'slider-arrows-hover' );
-    $auto_format_off = of_get_option( 'auto-format-off' );
 ?>
 
 <section id="portfolio"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
-        <?php if ($style == 'shuffle'){ ?>
+        <?php if ($portfolio_style == 'shuffle'){ ?>
             <ul id="filter" class="nav nav-pills">
                 <li><a class="active" href="#" data-group="all"><?php _e( 'All', 'startup-reloaded' ) ?></a></li>
                 <?php 
@@ -27,7 +25,7 @@
             </ul>
         <?php } ?>
 
-        <?php if ($style == 'shuffle'){ ?>
+        <?php if ($portfolio_style == 'shuffle'){ ?>
             <div id="shuffle" class="row">
                 <?php foreach ($portfolio as $key=> $portfolio_item) {
                     $thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_thumbnail_id', 1 ), 'shuffle_thumb' );

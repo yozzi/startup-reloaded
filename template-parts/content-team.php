@@ -1,12 +1,15 @@
 <?php
-$slider = of_get_option( 'team-slider' );
+
+require get_template_directory() . '/inc/theme-options.php';
+
+
 if ( $atts['order'] ) {
     $order = $atts['order'];
 } else {
-    $order = of_get_option( 'team-order' );
+    $order = $team_order;
 }
-$number = of_get_option( 'team-number' );
-if ( $number ) { $max = $number; } else {$max = -1;};
+
+if ( $team_number ) { $max = $team_number; } else {$max = -1;};
 if ( $atts['cat'] ) {
     $args=array(
         'post_type'=>'team',
@@ -31,8 +34,8 @@ $total_team = count($team);
 ?>
 <section id="team<?php if ( $atts['cat'] ) { echo '-' . $atts['cat']; } ?>"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if ( is_front_page() ) { ?><div class="container"><?php } ?>
-        <?php if ( $slider ) { ?><div class="row"><?php } ?>
-            <?php if ( $total_team > 4 && $slider ) { ?>
+        <?php if ( $team_slider ) { ?><div class="row"><?php } ?>
+            <?php if ( $total_team > 4 && $team_slider ) { ?>
                 <div id="team-carousel" class="carousel slide">
                     <div class="carousel-inner">
                         <?php }
@@ -55,7 +58,7 @@ $total_team = count($team);
                             $team_page_test     = get_post_meta($team->ID, '_startup_cpt_team_page', true );
 
                             if ( $count%4 == 1 ) { 
-                                if ( $slider ) { ?>
+                                if ( $team_slider ) { ?>
                                     <div class="item<?php if ( $count == 1 ) { echo ' active'; } ?>">
                                 <?php } else { ?>
                                     <div class="row">
@@ -103,12 +106,12 @@ $total_team = count($team);
                         if  ( $count%4 != 1  ) {
                             echo "</div>";
                         };
-                        if ( $total_team > 4 && $slider ) { ?>
+                        if ( $total_team > 4 && $team_slider ) { ?>
                             </div>
                                 <a class="left carousel-control hidden-xs" href="#team-carousel" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                                 <a class="right carousel-control hidden-xs" href="#team-carousel" data-slide="next"><i class="fa fa-chevron-right"></i></a>
                             </div>
                         <?php } ?>
-        <?php if ( $slider ) { ?></div><?php } ?>
+        <?php if ( $team_slider ) { ?></div><?php } ?>
     <?php if ( is_front_page() ) { ?></div><?php } ?>
 </section>

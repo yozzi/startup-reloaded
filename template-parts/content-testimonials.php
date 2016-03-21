@@ -1,8 +1,9 @@
 <?php
-$order = of_get_option( 'testimonials-order' );
-$number = of_get_option( 'testimonials-number' );
-if ( $number ) { $max = $number; } else {$max = -1;};
-$args=array( 'post_type'=>'testimonials', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+
+require get_template_directory() . '/inc/theme-options.php';
+
+if ( $testimonials_number ) { $max = $testimonials_number; } else {$max = -1;};
+$args=array( 'post_type'=>'testimonials', 'orderby' => $testimonials_order,'order' => 'ASC', 'numberposts' => $max );
 $testimonials = get_posts( $args );
 $total_testimonials = count($testimonials);
 ?>

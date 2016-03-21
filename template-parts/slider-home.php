@@ -1,17 +1,11 @@
 <?php
-    $order                  = of_get_option( 'slider-order' );
-    $number                 = of_get_option( 'slider-number' );
-    if ( $number ) { $max = $number; } else {$max = -1;};
-    $args                   = array( 'post_type'=>'slider', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+
+    require get_template_directory() . '/inc/theme-options.php';
+    
+    if ( $slider_number ) { $max = $slider_number; } else {$max = -1;};
+    $args                   = array( 'post_type'=>'slider', 'orderby' => $slider_order,'order' => 'ASC', 'numberposts' => $max );
     $sliders                = get_posts( $args );
     $total_sliders          = count( $sliders );
-    $slider_on              = of_get_option( 'slider-on' );
-    $slider_height          = of_get_option( 'slider-height' );
-    $slider_interval        = of_get_option( 'slider-interval' );
-    $slider_transition      = of_get_option( 'slider-transition' );
-    $slider_arrows          = of_get_option( 'slider-arrows' );
-    $slider_arrows_hover    = of_get_option( 'slider-arrows-hover' );
-    $slider_navigation      = of_get_option( 'slider-navigation' );
 ?>
 
     <div id="slider" class="carousel slide <?php echo $slider_transition ?>" data-interval="<?php echo $slider_interval ?>">

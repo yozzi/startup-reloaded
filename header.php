@@ -1,9 +1,6 @@
 <?php /** * The header for our theme. * * Displays all of the <head> section and everything up till
         <div id="content">
     * * @package StartUp Reloaded */
-
-    $str = of_get_option( 'general-serial' );
-    if (md5($str) == "b87c576bb0768f30e0ea7d0c6d3c3d96"){ echo 'serial ok'; }
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -13,18 +10,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 <?php
-//Charger les variables d'Option Framework
-$logo = of_get_option( 'general-logo' );
-$responsive = of_get_option( 'general-responsive' );
-$page_transition = of_get_option( 'page-transition' );
-$page_transition_in = of_get_option( 'page-transition-in' );
-$page_transition_out = of_get_option( 'page-transition-out' );
-$navbar_on = of_get_option( 'navbar-on' );
-$navbar_position = of_get_option( 'navbar-position' );
-$navbar_transparent = of_get_option( 'navbar-transparent' );
-$left_panel_on = of_get_option( 'left-panel-on' );
-$right_panel_on = of_get_option( 'right-panel-on' );
-$boxed = of_get_option( 'general-boxed' );
+
+require get_template_directory() . '/inc/theme-options.php';
 
 if ($logo){$body_logo = 'logo-on';} else {$body_logo = 'logo-off';};
 if ($navbar_transparent){$body_transparent = 'transparent-on';} else {$body_transparent = 'transparent-off';};

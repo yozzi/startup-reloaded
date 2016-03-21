@@ -21,7 +21,9 @@ if ( post_password_required() ) { ?>
   <?php
     return;
   }
-$boxed = of_get_option( 'general-boxed' );
+
+require get_template_directory() . '/inc/theme-options.php';
+
 ?>
 
 <div id="comments" class="comments-area">

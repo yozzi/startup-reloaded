@@ -7,11 +7,8 @@
  * @package StartUp Reloaded
  */
 
-    $back_to_top = of_get_option( 'general-back-to-top' );
-    $footer = of_get_option( 'general-footer' );
-    $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
-    $left_panel_on = of_get_option( 'fullscreen-panel-on' );
-    $right_panel_on = of_get_option( 'right-panel-on' );
+require get_template_directory() . '/inc/theme-options.php';
+
 ?>
 
 	</div><?php //#content ?>

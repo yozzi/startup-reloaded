@@ -1,24 +1,7 @@
 <?php
-    $logo = of_get_option( 'general-logo' );
-    $responsive = of_get_option( 'general-responsive' );
-    $navbar_position = of_get_option( 'navbar-position' );
-    $navbar_logo_position = of_get_option( 'navbar-logo-position' );
-    $navbar_menu_position = of_get_option( 'navbar-menu-position' );
-    $navbar_hamburger_position = of_get_option( 'navbar-hamburger-position' );
-    $navbar_inverse = of_get_option( 'navbar-inverse' );
-    $navbar_transparent = of_get_option( 'navbar-transparent' );
-    $boxed = of_get_option( 'general-boxed' );
-    $search = of_get_option( 'navbar-search' );
-    $fullscreen_panel_on = of_get_option( 'fullscreen-panel-on' );
-    $fullscreen_panel_hamburger = of_get_option( 'fullscreen-panel-hamburger' );
-    $fullscreen_panel_hamburger_text = of_get_option( 'fullscreen-panel-hamburger-text' );
-    $left_panel_on = of_get_option( 'left-panel-on' );
-    $left_panel_hamburger = of_get_option( 'left-panel-hamburger' );
-    $left_panel_hamburger_text = of_get_option( 'left-panel-hamburger-text' );
-    $right_panel_on = of_get_option( 'right-panel-on' );
-    $right_panel_hamburger = of_get_option( 'right-panel-hamburger' );
-    $right_panel_hamburger_text = of_get_option( 'right-panel-hamburger-text' );
-    $slider_height = of_get_option( 'slider-height' );
+
+require get_template_directory() . '/inc/theme-options.php';
+
 ?>
 
 <?php if (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>

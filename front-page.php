@@ -1,7 +1,6 @@
 <?php
-    $navbar_on          = of_get_option( 'navbar-on' );
-    $navbar_position    = of_get_option( 'navbar-position' );
-    $slider_on          = of_get_option( 'slider-on' );
+
+    require get_template_directory() . '/inc/theme-options.php';
 
     get_header();
 
@@ -17,7 +16,7 @@
         <?php while ( have_posts() ) : the_post(); ?>
 
         <?php $hasposts = get_posts('post_type=home');
-              $home_type = of_get_option( 'home-type' );
+              
             if ( is_plugin_active('startup-cpt-home/startup-cpt-home.php') && !empty ( $hasposts ) && $home_type ) {
 
                 get_template_part( 'template-parts/content', 'home' );

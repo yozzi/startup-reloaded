@@ -1,8 +1,9 @@
 <?php
-$order = of_get_option( 'partners-order' );
-$number = of_get_option( 'partners-number' );
-if ( $number ) { $max = $number; } else {$max = -1;};
-$args=array( 'post_type'=>'partners', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+
+require get_template_directory() . '/inc/theme-options.php';
+
+if ( $partners_number ) { $max = $partners_number; } else {$max = -1;};
+$args=array( 'post_type'=>'partners', 'orderby' => $partners_order,'order' => 'ASC', 'numberposts' => $max );
 $partners = get_posts( $args );
 $total_partners = count($partners);
 ?>

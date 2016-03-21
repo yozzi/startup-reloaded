@@ -1,10 +1,10 @@
 <?php
-    $number = of_get_option( 'blog-number' );
-    $blog_style = of_get_option( 'blog-style' );
-    if (($number) && ($blog_style != 'shuffle')) {$max = $number;} else {$max = -1;};
+
+    require get_template_directory() . '/inc/theme-options.php';
+
+    if (($blog_number) && ($blog_style != 'shuffle')) {$max = $blog_number;} else {$max = -1;};
     $args = array( 'post_type'=>'post', 'orderby' => 'date','order' => 'DESC', 'numberposts' => $max );
     $blog = get_posts( $args );   
-    $blog_filter = of_get_option( 'blog-filter' );
 ?>
 
 <section id="blog"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
