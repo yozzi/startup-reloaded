@@ -141,7 +141,9 @@ require get_template_directory() . '/lib/wp_bootstrap_navwalker.php';
 /**
  * Charger CMB2.
  */
-require get_template_directory() . '/lib/CMB2/init.php';
+if ( !defined( 'CMB2_LOADED') ) {
+    require get_template_directory() . '/lib/CMB2/init.php';
+}
 
 /**
  * Charger CMB2 Gmaps.
