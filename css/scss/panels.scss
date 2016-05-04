@@ -2,6 +2,10 @@
 ## Panels
 --------------------------------------------------------------*/
 
+html.mm-opened {
+    overflow: auto !important; /* content jump fix */
+}
+
 .mm-menu {
     background: #323232;
 }
