@@ -12,7 +12,7 @@ $total_partners = count($partners);
         <div class="row">            
             <?php if ($total_partners > 4){ ?>
                 <div id="partners-carousel" class="carousel slide" data-interval="2000" data-ride="carousel" data-type="multi">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner partners-inner">
                         <?php } $count = 1; ?>
                             
                                 <?php foreach ($partners as $key=> $partner) {
