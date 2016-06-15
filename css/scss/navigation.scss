@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-## Navigation
+## Navigation 
 --------------------------------------------------------------*/
 
 #masthead.affix {
@@ -24,6 +24,16 @@
     background: #323232;
     border: none;
     border-radius: 0;
+}
+
+.navbar-normal {
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.navbar-normal .non-collapsing{
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 #site-navigation .navbar-toggle.left-toggle {
@@ -352,4 +362,16 @@ body.home.logo-on.fixed-slider #content {
     body.home.logo-on.fixed-slider #content {
         padding-top: 0;
     }
+}
+
+/* Menu Icons */
+.fa-menu:before{
+    font-family: fontawesome;
+    color: #fff;
+    font-size: 14px;
+}
+
+.fa-menu a{
+    display: inline-block !important;
+    padding-left: 5px !important;
 }

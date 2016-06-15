@@ -353,7 +353,8 @@ function optionsframework_options() {
 		'navbar-static-top' => __( 'Static top', 'startup-reloaded' ),
 		'navbar-fixed-top' => __( 'Fixed top', 'startup-reloaded' ),
         'navbar-fixed-slider' => __( 'Under slider', 'startup-reloaded' ),
-		'navbar-fixed-bottom' => __( 'Fixed bottom', 'startup-reloaded' )
+		'navbar-fixed-bottom' => __( 'Fixed bottom', 'startup-reloaded' ),
+        'navbar-normal' => __( 'Normal', 'startup-reloaded' )
 	);
     
 	$options[] = array(
