@@ -84,6 +84,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 			if ( $args->has_children && $depth === 0 ) {
 				$atts['href']   		= '#';
 				$atts['data-toggle']	= 'dropdown';
+                $atts['data-hover']	    = 'dropdown';
 				$atts['class']			= 'dropdown-toggle';
 				$atts['aria-haspopup']	= 'true';
 			} else {
@@ -110,7 +111,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 			 * property is NOT null we apply it as the class name for the glyphicon.
 			 */
 			if ( ! empty( $item->attr_title ) )
-				$item_output .= '<a'. $attributes .'><span class="glyphicon ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
+				$item_output .= '<a'. $attributes .'><span class="fa ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
 			else
 				$item_output .= '<a'. $attributes .'>';
 

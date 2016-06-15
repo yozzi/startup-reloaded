@@ -126,3 +126,9 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
         });
     </script>
 <?php } ?>
+
+<script type="text/javascript">
+    jQuery('.fa-only').parent().contents().filter(function(){
+        return this.nodeType === 3;
+    }).remove();
+</script>
