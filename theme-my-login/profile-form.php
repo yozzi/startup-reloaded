@@ -10,7 +10,7 @@ require get_template_directory() . '/inc/theme-options.php';
 <div class="login profile" id="theme-my-login<?php $template->the_instance(); ?>">
     <?php if ( $boxed ){ ?><div class="container"><?php } ?>
         <div class="row">
-            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="col-md-12">
                 <?php $template->the_action_template_message( 'profile' ); ?>
                 <?php $template->the_errors(); ?>
                 <form id="your-profile" action="<?php $template->the_action_url( 'profile' ); ?>" method="post">
