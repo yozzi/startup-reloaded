@@ -131,4 +131,5 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
     jQuery('.fa-only').parent().contents().filter(function(){
         return this.nodeType === 3;
     }).remove();
+    jQuery('.navbar-nav').show();
 </script>
