@@ -11,7 +11,7 @@ require get_template_directory() . '/inc/theme-options.php';
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
             <div class="entry-content">
-                <?php if(!$boxed) { ?><div class="container"><?php } ?>
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
@@ -22,7 +22,7 @@ require get_template_directory() . '/inc/theme-options.php';
                             ?>
                         </div>
                     </div>
-                <?php if(!$boxed) { ?></div><?php } ?>
+                </div>
             </div><!-- .entry-content -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
