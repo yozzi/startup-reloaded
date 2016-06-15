@@ -57,6 +57,17 @@ body{
       background: <?php echo $navbar_color ?>;
     }
     <?php } ?>
+    
+    /* Menu class helpers */
+    <?php if ( is_user_logged_in () ) { ?>
+    .logged-out{
+      display: none !important;
+    }
+    <?php } else { ?>
+    .logged-in{
+      display: none !important;
+    }
+    <?php } ?>
         
     /* Custom buttons */
     .btn{
