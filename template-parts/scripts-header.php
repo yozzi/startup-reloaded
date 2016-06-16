@@ -164,7 +164,7 @@ require get_template_directory() . '/inc/theme-options.php';
                 inDuration            :    1000,
                 outDuration           :    800,
                 //linkElement           :   '.animsition-link',
-                linkElement   :   'a:not([target="_blank"]):not([href^=#]):not([class="no-animsition"])',
+                linkElement   :   'a:not([target="_blank"]):not([href^="#"]):not([class="no-animsition"])',
                 loading               :    true,
                 loadingParentElement  :   'body', //animsition wrapper element
                 loadingClass          :   'animsition-loading',
