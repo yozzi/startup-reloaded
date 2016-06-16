@@ -100,7 +100,9 @@ require get_template_directory() . '/inc/theme-options.php';
                                     <button type="button" class="btn btn-default button button-secondary wp-generate-pw hide-if-no-js"><?php _e( 'Generate Password', 'theme-my-login' ); ?></button>
                                     <div class="wp-pwd hide-if-js">
                                         <span class="password-input-wrapper">
-                                            <input type="password" name="pass1" id="pass1" class="regular-text" value="" autocomplete="off" data-pw="<?php echo esc_attr( wp_generate_password( 24 ) ); ?>" aria-describedby="pass-strength-result" />
+                                            <div class="form-group">
+                                                <input type="password" name="pass1" id="pass1" class="form-control regular-text" value="" autocomplete="off" data-pw="<?php echo esc_attr( wp_generate_password( 24 ) ); ?>" aria-describedby="pass-strength-result" />
+                                            </div>
                                         </span>
                                         <div style="display:none" id="pass-strength-result" aria-live="polite"></div>
                                         <button type="button" class="btn btn-default button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Hide password', 'theme-my-login' ); ?>">
@@ -115,8 +117,10 @@ require get_template_directory() . '/inc/theme-options.php';
                             </tr>
                             <tr class="user-pass2-wrap hide-if-js">
                                 <td>
-                                    <input name="pass2" type="password" id="pass2" class="regular-text" value="" autocomplete="off" />
-                                    <p class="description"><?php _e( 'Type your new password again.', 'theme-my-login' ); ?></p>
+                                    <div class="form-group">
+                                        <input name="pass2" type="password" id="pass2" class="form-control regular-text" value="" autocomplete="off" />
+                                        <p class="help-block"><?php _e( 'Type your new password again.', 'theme-my-login' ); ?></p>
+                                    </div>
                                 </td>
                             </tr>
                             <tr class="pw-weak">
