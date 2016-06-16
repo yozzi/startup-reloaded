@@ -19,28 +19,28 @@ require get_template_directory() . '/inc/theme-options.php';
                     <input type="hidden" name="checkuser_id" value="<?php echo $current_user->ID; ?>" />
                     
                     <div class="form-group">
-                        <label for="user_login"><?php _e( 'Username', 'theme-my-login' ); ?></label>
+                        <label for="user_login"><?php _e( 'Username', 'startup-reloaded' ); ?></label>
                         <input type="text" name="user_login" id="user_login" value="<?php echo esc_attr( $profileuser->user_login ); ?>" disabled="disabled" class="form-control" />
-                        <span class="help-block"><?php _e( 'Usernames cannot be changed.', 'theme-my-login' ); ?></span>
+                        <span class="help-block"><?php _e( 'Usernames cannot be changed.', 'startup-reloaded' ); ?></span>
                     </div>
 
                     <div class="form-group">
-                        <label for="first_name"><?php _e( 'First Name', 'theme-my-login' ); ?></label>
+                        <label for="first_name"><?php _e( 'First Name', 'startup-reloaded' ); ?></label>
                         <input type="text" name="first_name" id="first_name" value="<?php echo esc_attr( $profileuser->first_name ); ?>" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <label for="last_name"><?php _e( 'Last Name', 'theme-my-login' ); ?></label>
+                        <label for="last_name"><?php _e( 'Last Name', 'startup-reloaded' ); ?></label>
                         <input type="text" name="last_name" id="last_name" value="<?php echo esc_attr( $profileuser->last_name ); ?>" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <label for="nickname"><?php _e( 'Nickname', 'theme-my-login' ); ?> <?php _e( '(required)', 'theme-my-login' ); ?></label>
+                        <label for="nickname"><?php _e( 'Nickname', 'startup-reloaded' ); ?> <?php _e( '(required)', 'startup-reloaded' ); ?></label>
                         <input type="text" name="nickname" id="nickname" value="<?php echo esc_attr( $profileuser->nickname ); ?>" class="form-control" />
                     </div>
 
                     <div class="form-group">
-                        <label for="display_name"><?php _e( 'Display name publicly as', 'theme-my-login' ); ?></label>
+                        <label for="display_name"><?php _e( 'Display name publicly as', 'startup-reloaded' ); ?></label>
                         <select name="display_name" id="display_name" class="form-control">
                             <?php
                             $public_display = array();
@@ -74,7 +74,7 @@ require get_template_directory() . '/inc/theme-options.php';
                     </div>
 
                     <div class="form-group">
-                        <label for="email"><?php _e( 'E-mail', 'theme-my-login' ); ?> <?php _e( '(required)', 'theme-my-login' ); ?></label>
+                        <label for="email"><?php _e( 'E-mail', 'startup-reloaded' ); ?> <?php _e( '(required)', 'startup-reloaded' ); ?></label>
                         <input type="text" name="email" id="email" value="<?php echo esc_attr( $profileuser->user_email ); ?>" class="form-control" />
                     </div>
                     
@@ -83,7 +83,7 @@ require get_template_directory() . '/inc/theme-options.php';
                     if ( $new_email && $new_email['newemail'] != $current_user->user_email ) : ?>
                         <div class="updated inline">
                             <p><?php
-                                printf(__( 'There is a pending change of your e-mail to %1$s. <a href="%2$s">Cancel</a>', 'theme-my-login' ), '<code>' . $new_email['newemail'] . '</code>', esc_url( self_admin_url( 'profile.php?dismiss=' . $current_user->ID . '_new_email' ) )
+                                printf(__( 'There is a pending change of your e-mail to %1$s. <a href="%2$s">Cancel</a>', 'startup-reloaded' ), '<code>' . $new_email['newemail'] . '</code>', esc_url( self_admin_url( 'profile.php?dismiss=' . $current_user->ID . '_new_email' ) )
                             ); ?></p>
                         </div>
                     <?php endif; ?>
@@ -97,7 +97,7 @@ require get_template_directory() . '/inc/theme-options.php';
                             <tr id="password" class="user-pass1-wrap">
                                 <td>
                                     <input class="hidden" value=" " /><!-- #24364 workaround -->
-                                    <button type="button" class="btn btn-default button button-secondary wp-generate-pw hide-if-no-js"><?php _e( 'Generate Password', 'theme-my-login' ); ?></button>
+                                    <button type="button" class="btn btn-default button button-secondary wp-generate-pw hide-if-no-js"><?php _e( 'Change Password', 'startup-reloaded' ); ?></button>
                                     <div class="wp-pwd hide-if-js">
                                         <span class="password-input-wrapper">
                                             <div class="form-group">
@@ -105,12 +105,12 @@ require get_template_directory() . '/inc/theme-options.php';
                                             </div>
                                         </span>
                                         <div style="display:none" id="pass-strength-result" aria-live="polite"></div>
-                                        <button type="button" class="btn btn-default button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Hide password', 'theme-my-login' ); ?>">
+                                        <button type="button" class="btn btn-default button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Hide password', 'startup-reloaded' ); ?>">
                                             <span class="dashicons dashicons-hidden"></span>
-                                            <span class="text"><?php _e( 'Hide', 'theme-my-login' ); ?></span>
+                                            <span class="text"><?php _e( 'Hide', 'startup-reloaded' ); ?></span>
                                         </button>
-                                        <button type="button" class="btn btn-default button button-secondary wp-cancel-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Cancel password change', 'theme-my-login' ); ?>">
-                                            <span class="text"><?php _e( 'Cancel', 'theme-my-login' ); ?></span>
+                                        <button type="button" class="btn btn-default button button-secondary wp-cancel-pw hide-if-no-js" data-toggle="0" aria-label="<?php esc_attr_e( 'Cancel password change', 'startup-reloaded' ); ?>">
+                                            <span class="text"><?php _e( 'Cancel', 'startup-reloaded' ); ?></span>
                                         </button>
                                     </div>
                                 </td>
@@ -119,7 +119,7 @@ require get_template_directory() . '/inc/theme-options.php';
                                 <td>
                                     <div class="form-group">
                                         <input name="pass2" type="password" id="pass2" class="form-control regular-text" value="" autocomplete="off" />
-                                        <p class="help-block"><?php _e( 'Type your new password again.', 'theme-my-login' ); ?></p>
+                                        <p class="help-block"><?php _e( 'Type your new password again.', 'startup-reloaded' ); ?></p>
                                     </div>
                                 </td>
                             </tr>
@@ -127,7 +127,7 @@ require get_template_directory() . '/inc/theme-options.php';
                                 <td>
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" name="pw_weak" class="pw-checkbox" /> <?php _e( 'Confirm use of weak password', 'theme-my-login' ); ?>
+                                            <input type="checkbox" name="pw_weak" class="pw-checkbox" /> <?php _e( 'Confirm use of weak password', 'startup-reloaded' ); ?>
                                         </label>
                                     </div>
                                 </td>
@@ -142,7 +142,7 @@ require get_template_directory() . '/inc/theme-options.php';
                     <input type="hidden" name="instance" value="<?php $template->the_instance(); ?>" />
                     <input type="hidden" name="user_id" id="user_id" value="<?php echo esc_attr( $current_user->ID ); ?>" />
 
-                    <input type="submit" class="btn btn-default" value="<?php esc_attr_e( 'Update Profile', 'theme-my-login' ); ?>" name="submit" id="submit" />
+                    <input type="submit" class="btn btn-default" value="<?php esc_attr_e( 'Update Profile', 'startup-reloaded' ); ?>" name="submit" id="submit" />
 
                 </form>
             </div>
