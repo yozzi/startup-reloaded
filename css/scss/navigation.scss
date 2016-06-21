@@ -370,12 +370,10 @@ body.home.logo-on.fixed-slider #content {
     display: none;
 }
 
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-    background-color: transparent;
-    color: #5e5e5e;
+.navbar-nav li.last-menu a{
+        border-radius: 0 4px 4px 0;
 }
 
-.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
-    background-color: transparent;
-    color: #fff;
+.no-caret .caret{
+    display: none;
 }
