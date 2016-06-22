@@ -15,10 +15,12 @@ require get_template_directory() . '/inc/theme-options.php';
 
 if ($logo){$body_logo = 'logo-on';} else {$body_logo = 'logo-off';};
 if ($navbar_transparent){$body_transparent = 'transparent-on';} else {$body_transparent = 'transparent-off';};
+    
 if ($navbar_position == 'navbar-static-top'){$body_position = 'static-top';};
 if ($navbar_position == 'navbar-fixed-top'){$body_position = 'fixed-top';};
 if ($navbar_position == 'navbar-fixed-slider'){$body_position = 'fixed-slider';};
 if ($navbar_position == 'navbar-fixed-bottom'){$body_position = 'fixed-bottom';};
+if ($navbar_position == 'navbar-normal'){$body_position = NULL;};
 
 if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
