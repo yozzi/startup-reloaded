@@ -6,7 +6,7 @@ $counter = 0;
 
 
 
-if ( $atts['id'] ) {
+if ( isset($atts) && $atts['id'] ) {
     // Si attribut id
         $home_post = get_post( $atts['id'] );
         $title = get_post_meta( $home_post->ID, '_startup_cpt_home_title', true );
@@ -33,7 +33,7 @@ if ( $atts['id'] ) {
             </section>
     <?php } else {
     // Si pas d'attribut id ?>
-            <section id="home"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
+            <section id="home"<?php if ( isset($atts) && $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
                 <?php if (is_front_page()) { ?><div class="container"><?php } ?>
                     <div class="row">
                         <?php foreach ($home_sections as $key=> $home_section) {
