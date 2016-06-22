@@ -15,7 +15,7 @@ require get_template_directory() . '/inc/theme-options.php';
                     <div class="row">
                         <div class="col-lg-12">
                             <?php
-                                $user = get_userdatabylogin($wp_query->query_vars['member']);   
+                                $user = get_user_by('login',$wp_query->query_vars['member']);   
                                 $content = '[stickers user=' . $user->ID . ']';
                                 $content = do_shortcode($content);
                                 echo $content;
