@@ -23,7 +23,7 @@
     if ( !$this_page_header_boxed_width ) { $this_page_header_boxed_width = $page_header_boxed_width; };
 
     if (!is_front_page() && !$this_page_header_visible ){?>
-        <header class="entry-header <?php echo $this_page_header_position ?>"<?php if ( !$this_page_header_boxed_width ) { ?> style="<?php if ( $this_page_header_color ){ echo 'color:' . $this_page_header_color . ';'; }; if ( $this_page_header_background && $this_page_header_parallax == '' ){  echo 'background: url(' . $this_page_header_background[0] . '); background-size:cover; background-position: center ' . $this_page_header_background_position . ';';} elseif ( $this_page_header_background_color && $this_page_header_parallax == '' ) { echo 'background: ' . $this_page_header_background_color . ';';} ?>" <?php if ( $this_page_header_parallax ){ echo 'data-parallax="scroll" data-image-src="' . $this_page_header_background[0] . '"'; } ?><?php } ?>>
+        <header class="page-header <?php echo $this_page_header_position ?>"<?php if ( !$this_page_header_boxed_width ) { ?> style="<?php if ( $this_page_header_color ){ echo 'color:' . $this_page_header_color . ';'; }; if ( $this_page_header_background && $this_page_header_parallax == '' ){  echo 'background: url(' . $this_page_header_background[0] . '); background-size:cover; background-position: center ' . $this_page_header_background_position . ';';} elseif ( $this_page_header_background_color && $this_page_header_parallax == '' ) { echo 'background: ' . $this_page_header_background_color . ';';} ?>" <?php if ( $this_page_header_parallax ){ echo 'data-parallax="scroll" data-image-src="' . $this_page_header_background[0] . '"'; } ?><?php } ?>>
             <?php if ( $this_page_header_boxed_width ) { ?>
                 <?php if(!$boxed) { ?><div class="container"><?php } ?>
                     <div class="row">
@@ -39,10 +39,10 @@
                                                     <?php if ( $this_page_header_boxed_width ) { ?>
                                                         <div class="col-lg-12">
                                                     <?php } ?>
-                                                            <?php if ( $this_page_header_boxed ){ the_title( '<h3 class="entry-title boxed">', '</h3>' ); }  
-                                                                else { the_title( '<h3 class="entry-title">', '</h3>' ); } ?>                                                      
-                                                            <?php if ( $this_page_header_subtitle && $this_page_header_boxed ){ echo '<h4 class="boxed">' . $this_page_header_subtitle . '</h4>'; }  
-                                                                else if ( $this_page_header_subtitle ){ echo '<h4>' . $this_page_header_subtitle . '</h4>'; } ?>
+                                                            <?php if ( $this_page_header_boxed ){ the_title( '<h1 class="boxed">', '</h1>' ); }  
+                                                                else { the_title( '<h1>', '</h1>' ); } ?>                                                      
+                                                            <?php if ( $this_page_header_subtitle && $this_page_header_boxed ){ echo '<h2 class="boxed">' . $this_page_header_subtitle . '</h2>'; }  
+                                                                else if ( $this_page_header_subtitle ){ echo '<h2>' . $this_page_header_subtitle . '</h2>'; } ?>
                                                     <?php if ( $this_page_header_boxed_width ) { ?>
                                                         </div>
                                                     <?php } ?>
@@ -58,5 +58,5 @@
                     </div>
                 <?php if(!$boxed) { ?></div><?php } ?>
             <?php } ?>
-        </header><!-- .entry-header -->
+        </header><!-- .page-header -->
 <?php } ?>
