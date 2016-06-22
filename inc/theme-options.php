@@ -17,6 +17,7 @@
     $user_style                         = of_get_option( 'auto_stylesheet' );
     $background                         = of_get_option( 'style-background' );
     $cover                              = of_get_option( 'style-cover' );
+    $page_background                    = of_get_option( 'style-page' );
     $page_header_visible                = of_get_option( 'page-header-hidden' );
     $page_header_background_color       = of_get_option( 'page-header-background-color' );
     $page_header_color                  = of_get_option( 'page-header-text-color' );

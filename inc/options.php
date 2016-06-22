@@ -219,6 +219,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+        'name' => __( 'Page background', 'startup-reloaded' ),
+		'id' => 'style-page',
+		'std' => '',
+		'type' => 'color'
+	);
+    
+    $options[] = array(
 		'name' => __( 'Custom button', 'startup-reloaded' ),
         'desc' => __( 'Corner radius in px', 'startup-reloaded' ),
 		'id' => 'button-radius',

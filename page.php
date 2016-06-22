@@ -24,7 +24,7 @@ require get_template_directory() . '/inc/theme-options.php';
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                     <div class="entry-content">
-                        <?php if(!$boxed) { ?><div class="container"><?php } ?>
+                        <?php //if(!$boxed) { ?><div class="container"><?php //} ?>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <?php the_content();
@@ -35,7 +35,7 @@ require get_template_directory() . '/inc/theme-options.php';
                                     ?>
                                 </div>
                             </div>
-                        <?php if(!$boxed) { ?></div><?php } ?>
+                        <?php //if(!$boxed) { ?></div><?php //} ?>
                     </div><!-- .entry-content -->
                 </article><!-- #post-## -->
 

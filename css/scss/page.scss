@@ -52,6 +52,12 @@ header.page-header h2.boxed {
 }
 /* Content */
 
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 1.5em 0;
+}
+
 .home .entry-content {
     margin: 0;
 }
