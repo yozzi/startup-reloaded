@@ -56,3 +56,5 @@ if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
         
 
             <div id="content" class="site-content">
+                
+                <?php if ( $header ){ echo do_shortcode(get_post($header)->post_content); } ?>

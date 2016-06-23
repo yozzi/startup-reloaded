@@ -31,6 +31,23 @@ function optionsframework_options() {
 		'type' => 'upload'
 	);
     
+    // Pull all the pages into an array
+	$options_pages = array();
+	$options_pages_obj = get_pages( 'sort_column=post_parent,menu_order' );
+	$options_pages[''] = __( 'None', 'startup-reloaded' );
+	foreach ($options_pages_obj as $page) {
+		$options_pages[$page->ID] = $page->post_title;
+	}
+    
+    $options[] = array(
+		'name' => __( 'Header', 'startup-reloaded' ),
+		'desc' => __( 'Choose a page to use as site header', 'startup-reloaded' ),
+		'id' => 'general-header',
+		'type' => 'select',
+        'class' => 'mini', //mini, tiny, small
+		'options' => $options_pages
+	);
+    
 	$options[] = array(
 		'name' => __( 'Layout', 'startup-reloaded' ),
 		'type' => 'info'
