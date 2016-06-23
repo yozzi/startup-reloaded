@@ -25,15 +25,17 @@ require get_template_directory() . '/inc/theme-options.php';
                         </button>
                     <?php } ?>
                 <?php } ?>
-            <div class="navbar-header <?php echo $navbar_logo_position; ?>">
-                <a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
-                    <?php if ( $logo ) {?>
-                    <img src="<?php echo $logo ?>" alt="<?php bloginfo('name'); ?>" />
-                    <?php } else {?>
-                    <?php bloginfo('name'); ?>
-                    <?php } ?>
-                </a>
-            </div>
+            <?php if ( $navbar_logo_position ) { ?>
+                <div class="navbar-header <?php echo $navbar_logo_position; ?>">
+                    <a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
+                        <?php if ( $logo ) {?>
+                        <img src="<?php echo $logo ?>" alt="<?php bloginfo('name'); ?>" />
+                        <?php } else {?>
+                        <?php bloginfo('name'); ?>
+                        <?php } ?>
+                    </a>
+                </div>
+            <?php } ?>
             
             <?php //Non-collapsing fullscreen panel menu item ?>
             <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>

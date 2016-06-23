@@ -410,9 +410,10 @@ function optionsframework_options() {
 		'type' => 'color'
 	);
     
-    $navbar_item_positions = array(
+    $navbar_logo_positions = array(
 		'navbar-left' => __( 'Left', 'startup-reloaded' ),
-		'navbar-right' => __( 'Right', 'startup-reloaded' )
+		'navbar-right' => __( 'Right', 'startup-reloaded' ),
+        '' => __( 'Hidden', 'startup-reloaded' )
 	);
     
 	$options[] = array(
@@ -421,7 +422,12 @@ function optionsframework_options() {
 		'std' => 'navbar-left',
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
-		'options' => $navbar_item_positions
+		'options' => $navbar_logo_positions
+	);
+    
+    $navbar_item_positions = array(
+		'navbar-left' => __( 'Left', 'startup-reloaded' ),
+		'navbar-right' => __( 'Right', 'startup-reloaded' )
 	);
     
     $options[] = array(
