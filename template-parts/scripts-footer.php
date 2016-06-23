@@ -74,27 +74,6 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
     </script>
 <?php } ?>
 
-<?php if ($navbar_position == 'navbar-fixed-slider') { ?>
-<!-- A finir
-    <script type="text/javascript">
-        var midHeight = jQuery(window).height() / 2 //Splits screen in half
-        var scrollTop = jQuery(window).scrollTop(),
-        elementOffset = jQuery('#masthead').offset().top,
-        distance      = (elementOffset - scrollTop);
-
-        jQuery(window).scroll(function () {
-            if (distance > midHeight) {
-                //Do something on bottom
-                //alert("Bellow 50%!");
-            } else {
-                //Do something on top
-                alert("Above 50%!");
-            }
-        })
-    </script>
--->
-<?php } ?>
-
 <?php  if( $blog_style == 'shuffle' || $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){ ?>
     <script type="text/javascript">
        //On utilise imagesloaded pour que Shuffle ne fasse pas de bug d'overlapping avec les tailles d'images responsives
