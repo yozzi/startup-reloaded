@@ -9,6 +9,12 @@
     z-index: 999;
 }
 
+@media (min-width: 768px) {
+    body.fixed-slider #page.container #masthead.affix{
+        width: inherit;
+    }
+}
+
 .navbar-toggle {
     margin-top: 7.5px;
     margin-bottom: 7.5px;
