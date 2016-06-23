@@ -179,3 +179,10 @@ require get_template_directory() . '/inc/theme-options.php';
         });
     </script>
 <?php } ?>
+
+<!--[if lt IE 9]>
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/lib/polyfills/selectivizr.js"></script>
+    <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/lib/polyfills/html5shiv.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/lib/polyfills/respond.min.js"></script>
+<!-- <![endif] -->
