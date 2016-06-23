@@ -373,12 +373,12 @@ function optionsframework_options() {
 	);
 
 	$navbar_position = array(
-        //'' => __( 'Float', 'startup-reloaded' ),
-		'navbar-static-top' => __( 'Static top', 'startup-reloaded' ),
-		'navbar-fixed-top' => __( 'Fixed top', 'startup-reloaded' ),
-        'navbar-fixed-slider' => __( 'Under slider', 'startup-reloaded' ),
-		'navbar-fixed-bottom' => __( 'Fixed bottom', 'startup-reloaded' ),
-        'navbar-normal' => __( 'Normal', 'startup-reloaded' )
+        'navbar-normal'       => __( 'Normal', 'startup-reloaded' ),
+		'navbar-static-top'   => __( 'Static top', 'startup-reloaded' ),
+		'navbar-fixed-top'    => __( 'Fixed top', 'startup-reloaded' ),
+        'navbar-fixed-slider' => __( 'Fixed under slider', 'startup-reloaded' ),
+        'navbar-static-header' => __( 'Static under header', 'startup-reloaded' ),
+		'navbar-fixed-bottom' => __( 'Fixed bottom', 'startup-reloaded' )
 	);
     
 	$options[] = array(

@@ -19,6 +19,7 @@ if ($navbar_transparent){$body_transparent = 'transparent-on';} else {$body_tran
 if ($navbar_position == 'navbar-static-top'){$body_position = 'static-top';};
 if ($navbar_position == 'navbar-fixed-top'){$body_position = 'fixed-top';};
 if ($navbar_position == 'navbar-fixed-slider'){$body_position = 'fixed-slider';};
+if ($navbar_position == 'navbar-static-header'){$body_position = 'static-header';};
 if ($navbar_position == 'navbar-fixed-bottom'){$body_position = 'fixed-bottom';};
 if ($navbar_position == 'navbar-normal'){$body_position = NULL;};
 
@@ -52,9 +53,11 @@ if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
             </a>
 
-            <?php if( ($navbar_on && $navbar_position != 'navbar-fixed-slider') || ( $navbar_on && !is_front_page()) ){ get_template_part( 'template-parts/navbar', 'primary' ); } ?>
+            <?php if( ($navbar_on && $navbar_position != 'navbar-fixed-slider' && $navbar_position != 'navbar-static-header') || ( $navbar_on && !is_front_page() && $navbar_position != 'navbar-static-header') ){ get_template_part( 'template-parts/navbar', 'primary' ); } ?>
         
 
             <div id="content" class="site-content">
                 
                 <?php if ( $header ){ echo do_shortcode(get_post($header)->post_content); } ?>
+                
+                <?php if( ($navbar_on && $navbar_position == 'navbar-static-header' ) ){ get_template_part( 'template-parts/navbar', 'primary' ); } ?>
