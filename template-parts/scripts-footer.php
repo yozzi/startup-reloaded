@@ -1,16 +1,4 @@
-<?php
-
-require get_template_directory() . '/inc/theme-options.php';
-
-if ( $navbar_position == 'navbar-fixed-top' ) {
-    $scroll_offset = 50;
-} elseif ( $navbar_position == 'navbar-fixed-slider' ){
-    $scroll_offset = 50;
-} else {
-    $scroll_offset = 0;
-}
-
-?>
+<?php require get_template_directory() . '/inc/theme-options.php'; ?>
 
 <?php if ( $fastclick ) { ?>
 <script type="text/javascript">
@@ -22,7 +10,17 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 </script>
 <?php } ?>
 
-<?php if ( $smoothscroll ) { ?>
+<?php if ( $smoothscroll ) {
+    if ( $navbar_position == 'navbar-fixed-top' ) {
+        $scroll_offset = 50;
+    } elseif ( $navbar_position == 'navbar-fixed-slider' ){
+        $scroll_offset = 50;
+    } elseif ( $navbar_position == 'navbar-fixed-header' ){
+        $scroll_offset = 50;
+    } else {
+        $scroll_offset = 0;
+    }
+?>
     <script type="text/javascript">
         // Smooth Scroll to anchor
 
