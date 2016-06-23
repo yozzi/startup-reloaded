@@ -58,6 +58,6 @@ if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
 
             <div id="content" class="site-content">
                 
-                <?php if ( $header ){ echo do_shortcode(get_post($header)->post_content); } ?>
+                <?php if ( $header ){ ?><header id="head" role="banner"><?php echo do_shortcode(get_post($header)->post_content) ?></header><?php } ?>
                 
                 <?php if( ($navbar_on && $navbar_position == 'navbar-static-header' ) ){ get_template_part( 'template-parts/navbar', 'primary' ); } ?>
