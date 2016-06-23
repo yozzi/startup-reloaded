@@ -4,7 +4,10 @@ require get_template_directory() . '/inc/theme-options.php';
 
 ?>
 
-<?php if (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>
+<?php if (is_front_page() && $navbar_position == 'navbar-fixed-header') { ?>
+    <div id="navbar-spacer" style="min-height:<?php if ($logo) { ?>95px<?php } else { ?>50px<?php } ?>">
+        <header id="masthead" class="site-header" role="banner" data-spy="affix" data-offset-top="<?php echo "120" ?>">
+<?php } elseif (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>
     <div id="navbar-spacer" style="min-height:<?php if ($logo) { ?>95px<?php } else { ?>50px<?php } ?>">
         <header id="masthead" class="site-header" role="banner" data-spy="affix" <?php if ($slider_height !='100%') { ?>data-offset-top="<?php echo $slider_height ?>"<?php } ?>>
 <?php } else { ?>
@@ -127,4 +130,4 @@ require get_template_directory() . '/inc/theme-options.php';
 <?php // #site-navigation ?>
 <?php if ( $navbar_position == 'navbar-normal' ) { ?></div><?php } ?>
 </header>
-<?php if (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?></div><?php } ?>
+<?php if (is_front_page() && ($navbar_position == 'navbar-fixed-header' || $navbar_position == 'navbar-fixed-slider')) { ?></div><?php } ?>
