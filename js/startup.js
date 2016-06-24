@@ -1,6 +1,3 @@
-// $ à la place de jQuery dans WordPress
-var $ = jQuery.noConflict();
-
 // Carousel Swipe touch
 jQuery(document).ready(function () {
 
@@ -19,46 +16,46 @@ jQuery(document).ready(function () {
 });
 
 // Ajouter une class au ul des widgets
-$(document).ready(function () {
-    $('.widget > ul').addClass('list-unstyled');
+jQuery(document).ready(function () {
+    jQuery('.widget > ul').addClass('list-unstyled');
 });
 
 //Scroll to top
-$(function () {
+jQuery(function () {
 
-    $(document).on('scroll', function () {
+    jQuery(document).on('scroll', function () {
 
-        if ($(window).scrollTop() > 300) {
-            $('.scroll-top-wrapper').removeClass('fadeOutDownBig');
-            $('.scroll-top-wrapper').addClass('show animated fadeInUpBig');
+        if (jQuery(window).scrollTop() > 300) {
+            jQuery('.scroll-top-wrapper').removeClass('fadeOutDownBig');
+            jQuery('.scroll-top-wrapper').addClass('show animated fadeInUpBig');
         } else {
-            $('.scroll-top-wrapper').removeClass('show');
-            $('.scroll-top-wrapper').addClass('animated fadeOutDownBig');
+            jQuery('.scroll-top-wrapper').removeClass('show');
+            jQuery('.scroll-top-wrapper').addClass('animated fadeOutDownBig');
         }
     });
 
-    $('.scroll-top-wrapper').on('click', scrollToTop);
+    jQuery('.scroll-top-wrapper').on('click', scrollToTop);
 });
 
 function scrollToTop() {
     verticalOffset = typeof (verticalOffset) !== 'undefined' ? verticalOffset : 0;
-    element = $('body');
+    element = jQuery('body');
     offset = element.offset();
     offsetTop = offset.top;
-    $('html, body').animate({
+    jQuery('html, body').animate({
         scrollTop: offsetTop
     }, 2000, 'swing');
 }
 
 // Ajouter une class aux éléments d'un menu (pour hover.css)
-$(document).ready(function () {
-    $('#fullscreen-panel li > a').addClass('hvr-grow');
+jQuery(document).ready(function () {
+    jQuery('#fullscreen-panel li > a').addClass('hvr-grow');
 });
 
 // Font awesome only, on evite le flickering
-$(document).ready(function () {
-    $('.fa-only').parent().contents().filter(function(){
+jQuery(document).ready(function () {
+    jQuery('.fa-only').parent().contents().filter(function(){
         return this.nodeType === 3;
     }).remove();
-    $('.navbar-nav').show();
+    jQuery('.navbar-nav').show();
 });
