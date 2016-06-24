@@ -266,6 +266,17 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
+/* Static-header */
+
+    .logo.navbar-static-header .navbar-brand > img {
+        height: 40px;
+    }
+    .logo.navbar-static-header .navbar-brand {
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 /**************** Transitions ****************/
 
 body.home #site-navigation.navbar-transparent {
