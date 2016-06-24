@@ -11,12 +11,13 @@
 <?php } ?>
 
 <?php if ( $smoothscroll ) {
-    if ( $navbar_position == 'navbar-fixed-top' ) {
-        $scroll_offset = 50;
-    } elseif ( $navbar_position == 'navbar-fixed-slider' ){
-        $scroll_offset = 50;
-    } elseif ( $navbar_position == 'navbar-fixed-header' ){
-        $scroll_offset = 50;
+    if ( $navbar_position == 'navbar-fixed-top' || $navbar_position == 'navbar-fixed-slider' || $navbar_position == 'navbar-fixed-header' ) {
+        if ( $logo ) {
+            $scroll_offset = 95;
+        } else {
+            $scroll_offset = 50;
+        }
+        
     } else {
         $scroll_offset = 0;
     }
