@@ -260,6 +260,31 @@ body.home #site-navigation.navbar-transparent.top-nav-collapse {
         padding-bottom: 5px;
     }
 }
+
+/* Fixed-header */
+
+@media (min-width: 768px) {
+    .logo.navbar-fixed-header .navbar-brand > img {
+        height: 65px;
+    }
+    .logo.navbar-fixed-header .navbar-brand {
+        height: 100%;
+    }
+    .logo.navbar-fixed-header .navbar-nav {
+        padding-top: 22.5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo.navbar-fixed-header .navbar-brand > img {
+        height: 40px;
+    }
+    .logo.navbar-fixed-header .navbar-brand {
+        height: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
 /**************** Transitions ****************/
 
 body.home #site-navigation.navbar-transparent {
