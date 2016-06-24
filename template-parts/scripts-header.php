@@ -41,7 +41,6 @@ require get_template_directory() . '/inc/theme-options.php';
         $left_panel_title = __('Navigation', 'startup-reloaded');
         if (isset($menu_locations[ $location_left_id ])) {
             foreach ($menus as $menu) {
-                // If the ID of this menu is the ID associated with the location we're searching for
                 if ($menu->term_id == $menu_locations[ $location_left_id ]) {
                     $left_panel_title = $menu->name;
                     break;
@@ -87,7 +86,6 @@ require get_template_directory() . '/inc/theme-options.php';
         $right_panel_title = __('Navigation', 'startup-reloaded');
         if (isset($menu_locations[ $location_right_id ])) {
             foreach ($menus as $menu) {
-                // If the ID of this menu is the ID associated with the location we're searching for
                 if ($menu->term_id == $menu_locations[ $location_right_id ]) {
                     $right_panel_title = $menu->name;
                     break;
