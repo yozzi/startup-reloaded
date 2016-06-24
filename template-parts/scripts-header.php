@@ -38,26 +38,16 @@ require get_template_directory() . '/inc/theme-options.php';
 
     if( $left_panel_on ){
         $location_left_id = 'left-panel';
+        $left_panel_title = __('Navigation', 'startup-reloaded');
         if (isset($menu_locations[ $location_left_id ])) {
             foreach ($menus as $menu) {
                 // If the ID of this menu is the ID associated with the location we're searching for
                 if ($menu->term_id == $menu_locations[ $location_left_id ]) {
-                    // This is the correct menu
-
-                    // Get the items for this menu
                     $left_panel_title = $menu->name;
-
-                    // Now do something with them here.
-                    //
-                    //
                     break;
                 }
             }
-        } else {
-            // The location that you're trying to search doesn't exist
-            $left_panel_title = 'menu';
         } ?>
-
     <script type="text/javascript">
         jQuery(function() {
             jQuery('nav#left-panel').mmenu({
@@ -93,26 +83,17 @@ require get_template_directory() . '/inc/theme-options.php';
 <?php }
 
     if( $right_panel_on ){
-            $location_right_id = 'right-panel';
-            if (isset($menu_locations[ $location_right_id ])) {
-                foreach ($menus as $menu) {
-                    // If the ID of this menu is the ID associated with the location we're searching for
-                    if ($menu->term_id == $menu_locations[ $location_right_id ]) {
-                        // This is the correct menu
-
-                        // Get the items for this menu
-                        $right_panel_title = $menu->name;
-
-                        // Now do something with them here.
-                        //
-                        //
-                        break;
-                    }
+        $location_right_id = 'right-panel';
+        $right_panel_title = __('Navigation', 'startup-reloaded');
+        if (isset($menu_locations[ $location_right_id ])) {
+            foreach ($menus as $menu) {
+                // If the ID of this menu is the ID associated with the location we're searching for
+                if ($menu->term_id == $menu_locations[ $location_right_id ]) {
+                    $right_panel_title = $menu->name;
+                    break;
                 }
-            } else {
-                // The location that you're trying to search doesn't exist
-                $right_panel_title = 'menu';
-            } ?>
+            }
+        } ?>
     <script type="text/javascript">
         jQuery(function() {
             jQuery('nav#right-panel').mmenu({
