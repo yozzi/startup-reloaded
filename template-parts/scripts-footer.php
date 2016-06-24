@@ -12,12 +12,7 @@
 
 <?php if ( $smoothscroll ) {
     if ( $navbar_position == 'navbar-fixed-top' || $navbar_position == 'navbar-fixed-slider' || $navbar_position == 'navbar-fixed-header' ) {
-        if ( $logo ) {
-            $scroll_offset = 95;
-        } else {
-            $scroll_offset = 50;
-        }
-        
+            $scroll_offset = 50;   
     } else {
         $scroll_offset = 0;
     }
@@ -42,11 +37,10 @@
 
 <?php if ( $navbar_position == 'navbar-fixed-header' ) { ?>
     <script type="text/javascript">
-        function guessHeaderHeight() {
-            var the_height = jQuery('header#head').outerHeight();               
+        function guessHeaderHeight() {             
                 jQuery('#masthead').affix({
                   offset: {
-                    top: function() { return the_height; }
+                    top: function() { return jQuery('header#head').height(); }
                   }
                 });
         }
