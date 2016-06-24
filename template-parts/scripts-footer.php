@@ -72,7 +72,7 @@
             <?php if ( $navbar_position == 'navbar-fixed-slider' ) { ?>
                 jQuery('#masthead').affix({
                   offset: {
-                    top: function() { return jQuery('#slider').height(); }
+                    top: function() { return jQuery('#slider').height() + jQuery('header#head').height(); }
                   }
                 }); 
             <?php } ?>
