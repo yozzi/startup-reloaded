@@ -509,6 +509,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+        'desc' => __( 'Push page content', 'startup-reloaded' ),
+		'id' => 'left-panel-push',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
 		'id' => 'left-panel-color',
         'std' => '#323232',
 		'type' => 'color'
@@ -524,6 +531,13 @@ function optionsframework_options() {
             'theme-light' => __( 'Light', 'startup-reloaded' ),
             'theme-dark' => __( 'Dark', 'startup-reloaded' )
         )
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Slide items', 'startup-reloaded' ),
+		'id' => 'left-panel-slide',
+		'std' => '1',
+		'type' => 'checkbox'
 	);
     
 	$options[] = array(
@@ -561,6 +575,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+        'desc' => __( 'Push page content', 'startup-reloaded' ),
+		'id' => 'right-panel-push',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
 		'id' => 'right-panel-color',
         'std' => '#323232',
 		'type' => 'color'
@@ -576,6 +597,13 @@ function optionsframework_options() {
             'theme-light' => __( 'Light', 'startup-reloaded' ),
             'theme-dark' => __( 'Dark', 'startup-reloaded' )
         )
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Slide items', 'startup-reloaded' ),
+		'id' => 'right-panel-slide',
+		'std' => '1',
+		'type' => 'checkbox'
 	);
     
 	$options[] = array(

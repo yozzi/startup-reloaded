@@ -53,7 +53,7 @@ require get_template_directory() . '/inc/theme-options.php';
                 onClick: {
                     close: true
                 },
-                slidingSubmenus : false,
+                <?php if( !$left_panel_slide ){ ?>slidingSubmenus : false,<?php } ?>
                 extensions	: [ 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                 navbar 		: {
                     title		: '<?php echo $left_panel_title ?>'
@@ -69,7 +69,7 @@ require get_template_directory() . '/inc/theme-options.php';
                     }
                 ],
                 "offCanvas": {
-              "zposition": "front"
+               <?php if( !$left_panel_push ){ ?>"zposition": "front",<?php } ?>
            }
             });
             var API = jQuery("nav#left-panel").data( "mmenu" );
@@ -97,12 +97,12 @@ require get_template_directory() . '/inc/theme-options.php';
             jQuery('nav#right-panel').mmenu({
                 offCanvas: {
                     position: "right",
-                    "zposition": "front"
+                    <?php if( !$right_panel_push ){ ?>"zposition": "front",<?php } ?>
                  },
                 onClick: {
                     close: true
                 },
-                slidingSubmenus : false,
+                <?php if( !$right_panel_slide ){ ?>slidingSubmenus : false,<?php } ?>
 
                 extensions	: [ 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                 navbar 		: {
@@ -143,7 +143,7 @@ require get_template_directory() . '/inc/theme-options.php';
                 inDuration            :    1000,
                 outDuration           :    800,
                 //linkElement           :   '.animsition-link',
-                linkElement   :   'a:not([target="_blank"]):not([href^="#"]):not([class="no-animsition"])',
+                linkElement   :   'a:not([target="_blank"]):not([href^="#"]):not([class="no-animsition"]):not([class^="mm-prev"])',
                 loading               :    true,
                 loadingParentElement  :   'body', //animsition wrapper element
                 loadingClass          :   'animsition-loading',

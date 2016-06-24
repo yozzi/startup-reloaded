@@ -48,16 +48,20 @@
     $fullscreen_panel_hamburger         = of_get_option( 'fullscreen-panel-hamburger' );
     $fullscreen_panel_hamburger_text    = of_get_option( 'fullscreen-panel-hamburger-text' );
     $left_panel_on                      = of_get_option( 'left-panel-on' );
+    $left_panel_push                    = of_get_option( 'left-panel-push' );
     $left_panel_color                   = of_get_option( 'left-panel-color' );
     $left_panel_hamburger               = of_get_option( 'left-panel-hamburger' );
     $left_panel_hamburger_text          = of_get_option( 'left-panel-hamburger-text' );
     $left_panel_theme                   = of_get_option( 'left-panel-theme' );
+    $left_panel_slide                   = of_get_option( 'left-panel-slide' );
     $left_panel_mode                    = of_get_option( 'left-panel-mode' );
     $right_panel_on                     = of_get_option( 'right-panel-on' );
+    $right_panel_push                   = of_get_option( 'right-panel-push' );
     $right_panel_color                  = of_get_option( 'right-panel-color' );
     $right_panel_hamburger              = of_get_option( 'right-panel-hamburger' );
     $right_panel_hamburger_text         = of_get_option( 'right-panel-hamburger-text' );
     $right_panel_theme                  = of_get_option( 'right-panel-theme' );
+    $right_panel_slide                  = of_get_option( 'right-panel-slide' );
     $right_panel_mode                   = of_get_option( 'right-panel-mode' );
 // Slider
     $slider_order                       = of_get_option( 'slider-order' );
