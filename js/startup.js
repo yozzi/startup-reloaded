@@ -47,7 +47,7 @@ function scrollToTop() {
     offsetTop = offset.top;
     $('html, body').animate({
         scrollTop: offsetTop
-    }, 200, 'linear');
+    }, 2000, 'swing');
 }
 
 // Ajouter une class aux éléments d'un menu (pour hover.css)
@@ -55,45 +55,10 @@ $(document).ready(function () {
     $('#fullscreen-panel li > a').addClass('hvr-grow');
 });
 
-// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
-//$('.dropdown').on('show.bs.dropdown', function(e){
-//    $(this).find('.dropdown-menu').first().stop(true, true).fadeIn();
-//});
-
-// ADD SLIDEUP ANIMATION TO DROPDOWN //
-//$('.dropdown').on('hide.bs.dropdown', function(e){
-//    $(this).find('.dropdown-menu').first().stop(true, true).fadeOut();
-//});
-
-////animate.css		
-//jQuery(document).ready(function() {
-//    jQuery('#products .product-thumbnail').viewportChecker({
-//        classToAdd: 'animated bounceIn',
-//        offset: 100,
-//        repeat: true,
-//        callbackFunction: function(elem, action){},
-//        scrollHorizontal: false
-//    });
-//});
-
-//Scroll jump fix
-//$(document).ready(function(){
-//    $(window).load(function(){
-//        var oldSSB = $.fn.modal.Constructor.prototype.setScrollbar;
-//        $.fn.modal.Constructor.prototype.setScrollbar = function () 
-//        {
-//            oldSSB.apply(this);
-//            if(this.bodyIsOverflowing && this.scrollbarWidth) 
-//            {
-//                $('.navbar-fixed-top, .navbar-fixed-bottom').css('padding-right', this.scrollbarWidth);
-//            }       
-//        }
-//
-//        var oldRSB = $.fn.modal.Constructor.prototype.resetScrollbar;
-//        $.fn.modal.Constructor.prototype.resetScrollbar = function () 
-//        {
-//            oldRSB.apply(this);
-//            $('.navbar-fixed-top, .navbar-fixed-bottom').css('padding-right', '');
-//        }
-//    });
-//});
+// Font awesome only, on evite le flickering
+$(document).ready(function () {
+    $('.fa-only').parent().contents().filter(function(){
+        return this.nodeType === 3;
+    }).remove();
+    $('.navbar-nav').show();
+});

@@ -26,7 +26,7 @@
             // animate
             jQuery('html, body').animate({
                 scrollTop: jQuery(this.hash).offset().top - <?php echo $scroll_offset ?>
-            }, 400, function () {
+            }, 2000, 'swing', function () {
                 // when done, add hash to url
                 // (default click behaviour)
                 //window.location.hash = this.hash;
@@ -113,10 +113,3 @@
         });
     </script>
 <?php } ?>
-
-<script type="text/javascript">
-    jQuery('.fa-only').parent().contents().filter(function(){
-        return this.nodeType === 3;
-    }).remove();
-    jQuery('.navbar-nav').show();
-</script>
