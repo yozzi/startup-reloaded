@@ -130,4 +130,4 @@ require get_template_directory() . '/inc/theme-options.php';
 <?php // #site-navigation ?>
 <?php if ( $navbar_position == 'navbar-normal' ) { ?></div><?php } ?>
 </header>
-<?php if (is_front_page() && ($navbar_position == 'navbar-fixed-header' || $navbar_position == 'navbar-fixed-slider')) { ?></div><?php } ?>
+<?php if ((is_front_page() && $navbar_position == 'navbar-fixed-slider') || ($navbar_position == 'navbar-fixed-header') ) { ?></div><?php } ?>
