@@ -39,7 +39,26 @@
     </script>
 <?php } ?>
 
-<?php if ($slider_on && $slider_height == '100%') { ?>
+<?php if ( $navbar_position == 'navbar-fixed-header' ) { ?>
+    <script type="text/javascript">
+        function guessHeaderHeight() {
+            var the_height = jQuery('header#head').outerHeight();               
+                jQuery('#masthead').affix({
+                  offset: {
+                    top: function() { return the_height; }
+                  }
+                });
+        }
+        jQuery(document).ready(function(e) {
+            guessHeaderHeight();    
+        });
+        jQuery(window).resize(function(e) {
+            guessHeaderHeight();
+        });
+    </script>
+<?php } ?>
+
+<?php if ($slider_on && is_plugin_active('startup-cpt-slider/startup-cpt-slider.php') && $slider_height == '100%' && is_front_page() ) { ?>
     <script type="text/javascript">
         <?php
             if(($navbar_position == 'navbar-static-top') || ($navbar_position == 'navbar-fixed-top' && !$navbar_transparent) || ($navbar_position == 'navbar-fixed-bottom') || ($navbar_position == 'navbar-fixed-slider')){
@@ -52,7 +71,7 @@
                 $slider_offset = 0;
             }
         ?>
-        function showViewportSize() {
+        function guessSliderHeight() {
             var the_height = jQuery(window).height() - <?php echo $slider_offset ?>;                   
             jQuery('#slider .item').css("height",the_height);
             <?php if ( $navbar_position == 'navbar-fixed-slider' ) { ?>
@@ -64,10 +83,10 @@
             <?php } ?>
         }
         jQuery(document).ready(function(e) {
-            showViewportSize();    
+            guessSliderHeight();    
         });
         jQuery(window).resize(function(e) {
-            showViewportSize();
+            guessSliderHeight();
         });
     </script>
 <?php } ?>

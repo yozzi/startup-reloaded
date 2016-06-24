@@ -54,7 +54,19 @@ if ( $responsive ) { //Fonction à compléter mais c'est un bon début ?>
                 <?php esc_html_e( 'Skip to content', 'startup-reloaded' ); ?>
             </a>
 
-            <?php if( ($navbar_on && $navbar_position != 'navbar-fixed-slider' && $navbar_position != 'navbar-static-header' && $navbar_position != 'navbar-fixed-header') || ( $navbar_on && !is_front_page() && $navbar_position != 'navbar-static-header') ){ get_template_part( 'template-parts/navbar', 'primary' ); } ?>
+            <?php if(
+                        (
+                            $navbar_on
+                            && $navbar_position != 'navbar-fixed-slider'
+                            && $navbar_position != 'navbar-static-header'
+                            && $navbar_position != 'navbar-fixed-header'
+                        ) || (
+                            $navbar_on
+                            && !is_front_page()
+                            && $navbar_position != 'navbar-static-header'
+                            && $navbar_position != 'navbar-fixed-header'
+                        )
+                    ){ get_template_part( 'template-parts/navbar', 'primary' ); } ?>
         
 
             <div id="content" class="site-content">
