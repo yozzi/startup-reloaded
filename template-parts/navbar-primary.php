@@ -5,10 +5,10 @@ require get_template_directory() . '/inc/theme-options.php';
 ?>
 
 <?php if ($navbar_position == 'navbar-fixed-header') { ?>
-    <div id="navbar-spacer" style="min-height:<?php if ($logo) { ?>95px<?php } else { ?>50px<?php } ?>">
+    <div id="navbar-spacer">
         <header id="masthead" class="site-header" role="banner" data-spy="affix">
 <?php } elseif (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>
-    <div id="navbar-spacer" style="min-height:<?php if ($logo) { ?>95px<?php } else { ?>50px<?php } ?>">
+    <div id="navbar-spacer">
         <header id="masthead" class="site-header" role="banner" data-spy="affix" <?php if ($slider_height !='100%') { ?>data-offset-top="<?php echo $slider_height ?>"<?php } ?>>
 <?php } else { ?>
     <header id="masthead" class="site-header" role="banner">    

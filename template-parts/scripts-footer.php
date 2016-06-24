@@ -57,11 +57,7 @@
     <script type="text/javascript">
         <?php
             if(($navbar_position == 'navbar-static-top') || ($navbar_position == 'navbar-fixed-top' && !$navbar_transparent) || ($navbar_position == 'navbar-fixed-bottom') || ($navbar_position == 'navbar-fixed-slider')){
-                if($logo){
-                    $slider_offset = 95;
-                } else {
                     $slider_offset = 50;
-                };
             } else {
                 $slider_offset = 0;
             }
