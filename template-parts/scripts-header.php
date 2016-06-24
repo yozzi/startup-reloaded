@@ -50,10 +50,14 @@ require get_template_directory() . '/inc/theme-options.php';
     <script type="text/javascript">
         jQuery(function() {
             jQuery('nav#left-panel').mmenu({
+                offCanvas: {
+                    <?php if( !$left_panel_push ){ ?>"zposition": "front",<?php } ?>
+                 },
                 onClick: {
                     close: true
                 },
                 <?php if( $left_panel_slide || $left_panel_mode == 'tileview' ){ ?>slidingSubmenus : true,<?php } else { ?>slidingSubmenus : false,<?php } ?>
+
                 extensions	: [ 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                 navbar 		: {
                     title		: '<?php echo $left_panel_title ?>'
@@ -67,10 +71,7 @@ require get_template_directory() . '/inc/theme-options.php';
                             'close'
                         ]
                     }
-                ],
-                "offCanvas": {
-               <?php if( !$left_panel_push ){ ?>"zposition": "front",<?php } ?>
-           }
+                ]
             });
             var API = jQuery("nav#left-panel").data( "mmenu" );
 
