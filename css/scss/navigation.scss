@@ -52,30 +52,12 @@
 }
 
 #site-navigation .navbar-toggle.right-toggle {
-    margin-right: 0;
+    margin-right: -10px;
 }
 
-/* Under Slider */
-/* Mettre une condition : si la navbar est à plus de 50% du top de la page */
-/*
-.navbar-fixed-slider .dropdown .caret {
-  content: "";
-  border-top: 0;
-  border-bottom: 4px solid;
+#page.container #site-navigation .navbar-toggle.right-toggle {
+    margin-right: 5px;
 }
-.navbar-fixed-slider .dropdown .dropdown-menu {
-  top: auto;
-  bottom: 100%;
-  margin-bottom: 2px;
-}
-.navbar-fixed-slider .navbar-nav > li > .dropdown-menu {
-  margin-bottom: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-*/
 
 /* Style clair */
 
@@ -149,6 +131,12 @@
     .non-collapsing li a {
         margin-left: 10px;
         margin-right: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    #page.container ul.navbar-right{
+        margin-right:5px;
     }
 }
 /**************** Styling ****************/
