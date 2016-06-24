@@ -533,13 +533,6 @@ function optionsframework_options() {
         )
 	);
     
-    $options[] = array(
-        'desc' => __( 'Slide items', 'startup-reloaded' ),
-		'id' => 'left-panel-slide',
-		'std' => '1',
-		'type' => 'checkbox'
-	);
-    
 	$options[] = array(
 		'desc' => __( 'Mode', 'startup-reloaded' ),
 		'id' => 'left-panel-mode',
@@ -550,7 +543,14 @@ function optionsframework_options() {
             'default' => __( 'Default', 'startup-reloaded' ),
             'tileview' => __( 'Tileview', 'startup-reloaded' )
         )
-	);	
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Slide items (optional for default mode only)', 'startup-reloaded' ),
+		'id' => 'left-panel-slide',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
      
 	$options[] = array(
 		'name' => __( 'Right panel', 'startup-reloaded' ),
@@ -599,13 +599,6 @@ function optionsframework_options() {
         )
 	);
     
-    $options[] = array(
-        'desc' => __( 'Slide items', 'startup-reloaded' ),
-		'id' => 'right-panel-slide',
-		'std' => '1',
-		'type' => 'checkbox'
-	);
-    
 	$options[] = array(
 		'desc' => __( 'Mode', 'startup-reloaded' ),
 		'id' => 'right-panel-mode',
@@ -616,7 +609,14 @@ function optionsframework_options() {
             'default' => __( 'Default', 'startup-reloaded' ),
             'tileview' => __( 'Tileview', 'startup-reloaded' )
         )
-	);	
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Slide items (optional for default mode only)', 'startup-reloaded' ),
+		'id' => 'right-panel-slide',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
     
     //*****************************************************************************
     //*****************************************************************************

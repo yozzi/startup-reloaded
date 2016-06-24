@@ -53,7 +53,7 @@ require get_template_directory() . '/inc/theme-options.php';
                 onClick: {
                     close: true
                 },
-                <?php if( !$left_panel_slide ){ ?>slidingSubmenus : false,<?php } ?>
+                <?php if( $left_panel_slide || $left_panel_mode == 'tileview' ){ ?>slidingSubmenus : true,<?php } else { ?>slidingSubmenus : false,<?php } ?>
                 extensions	: [ 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                 navbar 		: {
                     title		: '<?php echo $left_panel_title ?>'
@@ -102,7 +102,7 @@ require get_template_directory() . '/inc/theme-options.php';
                 onClick: {
                     close: true
                 },
-                <?php if( !$right_panel_slide ){ ?>slidingSubmenus : false,<?php } ?>
+                <?php if( $right_panel_slide || $right_panel_mode == 'tileview' ){ ?>slidingSubmenus : true,<?php } else { ?>slidingSubmenus : false,<?php } ?>
 
                 extensions	: [ 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                 navbar 		: {
