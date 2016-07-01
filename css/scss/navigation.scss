@@ -47,6 +47,14 @@
     padding-left: 15px;
 }
 
+#site-navigation.navbar-normal .navbar-toggle.right-toggle {
+    margin-right: 5px;
+}
+
+.navbar-normal .non-collapsing {
+     padding-left: 0;
+}
+
 #site-navigation .navbar-toggle.left-toggle {
     float: left
 }
