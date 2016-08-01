@@ -2,8 +2,35 @@
 
 require get_template_directory() . '/inc/theme-options.php';
 
+if ( $atts['order'] ) {
+    $order = $atts['order'];
+} else {
+    $order = $partners_order;
+}
+
 if ( $partners_number ) { $max = $partners_number; } else {$max = -1;};
-$args=array( 'post_type'=>'partners', 'orderby' => $partners_order,'order' => 'ASC', 'numberposts' => $max );
+
+
+if ( $atts['cat'] ) {
+    $args=array(
+        'post_type'=>'partners',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'partners-category',
+                'field' => 'ID',
+                'terms' => $atts['cat']
+                )
+           ),
+        'orderby' => $order,
+        'order' => 'ASC',
+        'numberposts' => $max
+    );
+} elseif ( $atts['id'] ) {
+    //Fiche unique ici
+} else {
+
+    $args=array( 'post_type'=>'partners', 'orderby' => $order,'order' => 'ASC', 'numberposts' => $max );
+}
 $partners = get_posts( $args );
 $total_partners = count($partners);
 ?>
