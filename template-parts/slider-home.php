@@ -58,7 +58,7 @@
 
                                             <?php if ( $button_text ) { ?>
                                             <br />
-                                            <a class="btn btn-default btn-lg" href="<?php echo $button_url ?>" data-animation="animated <?php echo $button_animation ?>" style="-webkit-animation-delay: <?php echo $button_delay ?>ms;-moz-animation-delay: <?php echo $button_delay ?>ms;animation-delay: <?php echo $button_delay ?>ms;" <?php if ( $blank ) { echo 'target="_blank"'; }?>>
+                                            <a class="btn btn-custom btn-lg" href="<?php echo $button_url ?>" data-animation="animated <?php echo $button_animation ?>" style="-webkit-animation-delay: <?php echo $button_delay ?>ms;-moz-animation-delay: <?php echo $button_delay ?>ms;animation-delay: <?php echo $button_delay ?>ms;" <?php if ( $blank ) { echo 'target="_blank"'; }?>>
                                                 <?php echo $button_text ?>
                                             </a>
                                             <?php } ?>

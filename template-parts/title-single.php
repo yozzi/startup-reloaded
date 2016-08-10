@@ -39,10 +39,10 @@
                                                     <?php if ( $this_post_header_boxed_width ) { ?>
                                                         <div class="col-lg-12">
                                                     <?php } ?>
-                                                            <?php if ( $this_post_header_boxed ){ the_title( '<h3 class="entry-title boxed">', '</h3>' ); }  
-                                                                else { the_title( '<h3 class="entry-title">', '</h3>' ); } ?>                                                      
-                                                            <?php if ( $this_post_header_boxed ){ ?><h4 class="boxed"><?php startup_reloaded_posted_on(); ?></h4>
-                                                            <?php } else { ?><h4><?php startup_reloaded_posted_on(); ?></h4><?php } ?>
+                                                            <?php if ( $this_post_header_boxed ){ the_title( '<h1 class="entry-title boxed">', '</h1>' ); }  
+                                                                else { the_title( '<h1 class="entry-title">', '</h1>' ); } ?>                                                      
+                                                            <?php if ( $this_post_header_boxed ){ ?><h2 class="boxed"><?php startup_reloaded_posted_on(); ?></h2>
+                                                            <?php } else { ?><h2><?php startup_reloaded_posted_on(); ?></h2><?php } ?>
                                                     <?php if ( $this_post_header_boxed_width ) { ?>
                                                         </div>
                                                     <?php } ?>
@@ -61,7 +61,7 @@
         </header><!-- .entry-header -->
     <?php } else { ?>
         <header class="entry-header">
-            <?php the_title( '<h4 class="entry-title">', '</h4>' ); ?>
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
             <div class="entry-meta">
                 <?php startup_reloaded_posted_on(); ?>

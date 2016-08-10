@@ -22,6 +22,13 @@ body{
     <?php } ?>
 }
     <?php } ?>
+    
+    <?php
+    if ( $page_background ) { ?>
+#page{
+      background-color: <?php echo $page_background ?>;
+    }
+    <?php } ?>
     <?php
     // On définit l'opacité de la navbar
     if ( $navbar_on && $navbar_transparent && $navbar_position == 'navbar-fixed-top' ){ ?>

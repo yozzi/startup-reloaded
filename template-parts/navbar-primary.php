@@ -4,16 +4,20 @@ require get_template_directory() . '/inc/theme-options.php';
 
 ?>
 
-<?php if (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>
-    <div id="navbar-spacer" style="min-height:<?php if ($logo) { ?>95px<?php } else { ?>50px<?php } ?>">
+<?php if ($navbar_position == 'navbar-fixed-header') { ?>
+    <div id="navbar-spacer">
+        <header id="masthead" class="site-header" role="banner" data-spy="affix">
+<?php } elseif (is_front_page() && $navbar_position == 'navbar-fixed-slider') { ?>
+    <div id="navbar-spacer">
         <header id="masthead" class="site-header" role="banner" data-spy="affix" <?php if ($slider_height !='100%') { ?>data-offset-top="<?php echo $slider_height ?>"<?php } ?>>
 <?php } else { ?>
     <header id="masthead" class="site-header" role="banner">    
 <?php } ?>
     <?php if ( $navbar_position == 'navbar-normal' ) { ?><div class="container"><?php } ?>
-    <nav id="site-navigation" class="navbar navbar-default<?php if($logo){echo ' logo';} ?> <?php if( $boxed ){ echo 'navbar-boxed '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; if ($navbar_position == 'navbar-fixed-slider' && !is_front_page()) { echo ' navbar-fixed-top'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
+    <nav id="site-navigation" class="navbar navbar-default<?php if($logo){echo ' logo';} ?> <?php if( $boxed && $navbar_position != 'navbar-normal' ){ echo 'container '; }  echo $navbar_position; if ($navbar_inverse) { echo ' navbar-inverse'; }; if ($navbar_position == 'navbar-fixed-slider' && !is_front_page()) { echo ' navbar-fixed-top'; }; ?> <?php if ($navbar_transparent  && ( $navbar_position == 'navbar-fixed-top' ) && is_front_page()) { echo 'navbar-transparent'; }; ?>" role="navigation">
         <?php //Brand and toggle get grouped for better mobile display ?>
-        <?php if ( $navbar_position != 'navbar-normal' ) { ?><div class="container"><?php } ?>
+        <?php if ( $navbar_position != 'navbar-normal' && !$boxed ) { ?><div class="container"><?php } ?>
+        <?php if ( $navbar_position != 'navbar-normal' && $boxed ) { ?><div class="row"><?php } ?>
             <?php if ( has_nav_menu( 'navbar-primary' ) ) { ?>
                     <?php if ($responsive == 1) { ?>
                         <button type="button" class="navbar-toggle <?php if ($navbar_hamburger_position == 'navbar-left') {echo 'left-toggle';} else {echo 'right-toggle';}?>" data-toggle="collapse" data-target=".navbar-sur-collapse">
@@ -24,15 +28,17 @@ require get_template_directory() . '/inc/theme-options.php';
                         </button>
                     <?php } ?>
                 <?php } ?>
-            <div class="navbar-header <?php echo $navbar_logo_position; ?>">
-                <a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
-                    <?php if ( $logo ) {?>
-                    <img src="<?php echo $logo ?>" alt="<?php bloginfo('name'); ?>" />
-                    <?php } else {?>
-                    <?php bloginfo('name'); ?>
-                    <?php } ?>
-                </a>
-            </div>
+            <?php if ( $navbar_logo_position ) { ?>
+                <div class="navbar-header <?php echo $navbar_logo_position; ?>">
+                    <a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
+                        <?php if ( $logo ) {?>
+                        <img src="<?php echo $logo ?>" alt="<?php bloginfo('name'); ?>" />
+                        <?php } else {?>
+                        <?php bloginfo('name'); ?>
+                        <?php } ?>
+                    </a>
+                </div>
+            <?php } ?>
             
             <?php //Non-collapsing fullscreen panel menu item ?>
             <?php if ( $fullscreen_panel_on && $fullscreen_panel_hamburger ){ ?>
@@ -117,12 +123,11 @@ require get_template_directory() . '/inc/theme-options.php';
                     </li>
                 </ul>
             <?php } ?>
-        <?php if ( $navbar_position != 'navbar-normal' ) { ?></div><?php } ?>
+        <?php if ( $navbar_position != 'navbar-normal' && $boxed ) { ?></div><?php } ?>
+        <?php if ( $navbar_position != 'navbar-normal' && !$boxed ) { ?></div><?php } ?>
         <?php // /.container ?>
     </nav>
 <?php // #site-navigation ?>
 <?php if ( $navbar_position == 'navbar-normal' ) { ?></div><?php } ?>
 </header>
-<?php if ($navbar_position == 'navbar-fixed-slider') { ?>
-    </div>
-<?php } ?>
+<?php if ((is_front_page() && $navbar_position == 'navbar-fixed-slider') || ($navbar_position == 'navbar-fixed-header') ) { ?></div><?php } ?>

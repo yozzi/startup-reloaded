@@ -1,16 +1,4 @@
-<?php
-
-require get_template_directory() . '/inc/theme-options.php';
-
-if ( $navbar_position == 'navbar-fixed-top' ) {
-    $scroll_offset = 50;
-} elseif ( $navbar_position == 'navbar-fixed-slider' ){
-    $scroll_offset = 50;
-} else {
-    $scroll_offset = 0;
-}
-
-?>
+<?php require get_template_directory() . '/inc/theme-options.php'; ?>
 
 <?php if ( $fastclick ) { ?>
 <script type="text/javascript">
@@ -22,7 +10,13 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
 </script>
 <?php } ?>
 
-<?php if ( $smoothscroll ) { ?>
+<?php if ( $smoothscroll ) {
+    if ( $navbar_position == 'navbar-fixed-top' || $navbar_position == 'navbar-fixed-slider' || $navbar_position == 'navbar-fixed-header' ) {
+            $scroll_offset = 50;   
+    } else {
+        $scroll_offset = 0;
+    }
+?>
     <script type="text/javascript">
         // Smooth Scroll to anchor
 
@@ -32,7 +26,7 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
             // animate
             jQuery('html, body').animate({
                 scrollTop: jQuery(this.hash).offset().top - <?php echo $scroll_offset ?>
-            }, 400, function () {
+            }, 2000, 'swing', function () {
                 // when done, add hash to url
                 // (default click behaviour)
                 //window.location.hash = this.hash;
@@ -41,58 +35,51 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
     </script>
 <?php } ?>
 
-<?php if ($slider_on && $slider_height == '100%') { ?>
+<?php if ( $navbar_position == 'navbar-fixed-header' ) { ?>
+    <script type="text/javascript">
+        function guessHeaderHeight() {             
+                jQuery('#masthead').affix({
+                  offset: {
+                    top: function() { return jQuery('header#head').height(); }
+                  }
+                });
+        }
+        jQuery(document).ready(function(e) {
+            guessHeaderHeight();    
+        });
+        jQuery(window).resize(function(e) {
+            guessHeaderHeight();
+        });
+    </script>
+<?php } ?>
+
+<?php if ($slider_on && is_plugin_active('startup-cpt-slider/startup-cpt-slider.php') && $slider_height == '100%' && is_front_page() ) { ?>
     <script type="text/javascript">
         <?php
-            if(($navbar_position == 'navbar-static-top') || ($navbar_position == 'navbar-fixed-top' && !$navbar_transparent) || ($navbar_position == 'navbar-fixed-bottom') || ($navbar_position == 'navbar-fixed-slider')){
-                if($logo){
-                    $slider_offset = 95;
-                } else {
+            if($navbar_position == 'navbar-static-top' || ($navbar_position == 'navbar-fixed-top' && !$navbar_transparent) || $navbar_position == 'navbar-fixed-bottom' || $navbar_position == 'navbar-fixed-slider' || $navbar_position == 'navbar-static-header' || $navbar_position == 'navbar-fixed-header'){
                     $slider_offset = 50;
-                };
             } else {
                 $slider_offset = 0;
             }
         ?>
-        function showViewportSize() {
-            var the_height = jQuery(window).height() - <?php echo $slider_offset ?>;                   
+        function guessSliderHeight() {
+            var the_height = jQuery(window).height() - <?php echo $slider_offset ?> - jQuery('header#head').height();                
             jQuery('#slider .item').css("height",the_height);
             <?php if ( $navbar_position == 'navbar-fixed-slider' ) { ?>
                 jQuery('#masthead').affix({
                   offset: {
-                    top: function() { return jQuery('#slider').height(); }
+                    top: function() { return jQuery('#slider').height() + jQuery('header#head').height(); }
                   }
                 }); 
             <?php } ?>
         }
         jQuery(document).ready(function(e) {
-            showViewportSize();    
+            guessSliderHeight();    
         });
         jQuery(window).resize(function(e) {
-            showViewportSize();
+            guessSliderHeight();
         });
     </script>
-<?php } ?>
-
-<?php if ($navbar_position == 'navbar-fixed-slider') { ?>
-<!-- A finir
-    <script type="text/javascript">
-        var midHeight = jQuery(window).height() / 2 //Splits screen in half
-        var scrollTop = jQuery(window).scrollTop(),
-        elementOffset = jQuery('#masthead').offset().top,
-        distance      = (elementOffset - scrollTop);
-
-        jQuery(window).scroll(function () {
-            if (distance > midHeight) {
-                //Do something on bottom
-                //alert("Bellow 50%!");
-            } else {
-                //Do something on top
-                alert("Above 50%!");
-            }
-        })
-    </script>
--->
 <?php } ?>
 
 <?php  if( $blog_style == 'shuffle' || $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){ ?>
@@ -126,10 +113,3 @@ if ( $navbar_position == 'navbar-fixed-top' ) {
         });
     </script>
 <?php } ?>
-
-<script type="text/javascript">
-    jQuery('.fa-only').parent().contents().filter(function(){
-        return this.nodeType === 3;
-    }).remove();
-    jQuery('.navbar-nav').show();
-</script>

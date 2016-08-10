@@ -38,33 +38,26 @@ require get_template_directory() . '/inc/theme-options.php';
 
     if( $left_panel_on ){
         $location_left_id = 'left-panel';
+        $left_panel_title = __('Navigation', 'startup-reloaded');
         if (isset($menu_locations[ $location_left_id ])) {
             foreach ($menus as $menu) {
-                // If the ID of this menu is the ID associated with the location we're searching for
                 if ($menu->term_id == $menu_locations[ $location_left_id ]) {
-                    // This is the correct menu
-
-                    // Get the items for this menu
                     $left_panel_title = $menu->name;
-
-                    // Now do something with them here.
-                    //
-                    //
                     break;
                 }
             }
-        } else {
-            // The location that you're trying to search doesn't exist
-            $left_panel_title = 'menu';
         } ?>
-
     <script type="text/javascript">
         jQuery(function() {
             jQuery('nav#left-panel').mmenu({
+                offCanvas: {
+                    <?php if( !$left_panel_push ){ ?>"zposition": "front",<?php } ?>
+                 },
                 onClick: {
                     close: true
                 },
-                slidingSubmenus : false,
+                <?php if( $left_panel_slide || $left_panel_mode == 'tileview' ){ ?>slidingSubmenus : true,<?php } else { ?>slidingSubmenus : false,<?php } ?>
+
                 extensions	: [ 'border-full'<?php if( $left_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $left_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                 navbar 		: {
                     title		: '<?php echo $left_panel_title ?>'
@@ -78,10 +71,7 @@ require get_template_directory() . '/inc/theme-options.php';
                             'close'
                         ]
                     }
-                ],
-                "offCanvas": {
-              "zposition": "front"
-           }
+                ]
             });
             var API = jQuery("nav#left-panel").data( "mmenu" );
 
@@ -93,37 +83,27 @@ require get_template_directory() . '/inc/theme-options.php';
 <?php }
 
     if( $right_panel_on ){
-            $location_right_id = 'right-panel';
-            if (isset($menu_locations[ $location_right_id ])) {
-                foreach ($menus as $menu) {
-                    // If the ID of this menu is the ID associated with the location we're searching for
-                    if ($menu->term_id == $menu_locations[ $location_right_id ]) {
-                        // This is the correct menu
-
-                        // Get the items for this menu
-                        $right_panel_title = $menu->name;
-
-                        // Now do something with them here.
-                        //
-                        //
-                        break;
-                    }
+        $location_right_id = 'right-panel';
+        $right_panel_title = __('Navigation', 'startup-reloaded');
+        if (isset($menu_locations[ $location_right_id ])) {
+            foreach ($menus as $menu) {
+                if ($menu->term_id == $menu_locations[ $location_right_id ]) {
+                    $right_panel_title = $menu->name;
+                    break;
                 }
-            } else {
-                // The location that you're trying to search doesn't exist
-                $right_panel_title = 'menu';
-            } ?>
+            }
+        } ?>
     <script type="text/javascript">
         jQuery(function() {
             jQuery('nav#right-panel').mmenu({
                 offCanvas: {
                     position: "right",
-                    "zposition": "front"
+                    <?php if( !$right_panel_push ){ ?>"zposition": "front",<?php } ?>
                  },
                 onClick: {
                     close: true
                 },
-                slidingSubmenus : false,
+                <?php if( $right_panel_slide || $right_panel_mode == 'tileview' ){ ?>slidingSubmenus : true,<?php } else { ?>slidingSubmenus : false,<?php } ?>
 
                 extensions	: [ 'border-full'<?php if( $right_panel_theme == 'theme-dark' ){ ?>, 'theme-dark'<?php } ?><?php if( $right_panel_mode == 'tileview' ){ ?>, 'tileview'<?php } ?> ],
                 navbar 		: {
@@ -164,7 +144,7 @@ require get_template_directory() . '/inc/theme-options.php';
                 inDuration            :    1000,
                 outDuration           :    800,
                 //linkElement           :   '.animsition-link',
-                linkElement   :   'a:not([target="_blank"]):not([href^="#"]):not([class="no-animsition"])',
+                linkElement   :   'a:not([target="_blank"]):not([href^="#"]):not([class="no-animsition"]):not([class^="mm-prev"])',
                 loading               :    true,
                 loadingParentElement  :   'body', //animsition wrapper element
                 loadingClass          :   'animsition-loading',
@@ -179,3 +159,10 @@ require get_template_directory() . '/inc/theme-options.php';
         });
     </script>
 <?php } ?>
+
+<!--[if lt IE 9]>
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/lib/polyfills/selectivizr.js"></script>
+    <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/lib/polyfills/html5shiv.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri() ?>/lib/polyfills/respond.min.js"></script>
+<![endif] -->

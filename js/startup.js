@@ -1,6 +1,3 @@
-// $ à la place de jQuery dans WordPress
-var $ = jQuery.noConflict();
-
 // Carousel Swipe touch
 jQuery(document).ready(function () {
 
@@ -19,81 +16,46 @@ jQuery(document).ready(function () {
 });
 
 // Ajouter une class au ul des widgets
-$(document).ready(function () {
-    $('.widget > ul').addClass('list-unstyled');
+jQuery(document).ready(function () {
+    jQuery('.widget > ul').addClass('list-unstyled');
 });
 
 //Scroll to top
-$(function () {
+jQuery(function () {
 
-    $(document).on('scroll', function () {
+    jQuery(document).on('scroll', function () {
 
-        if ($(window).scrollTop() > 300) {
-            $('.scroll-top-wrapper').removeClass('fadeOutDownBig');
-            $('.scroll-top-wrapper').addClass('show animated fadeInUpBig');
+        if (jQuery(window).scrollTop() > 300) {
+            jQuery('.scroll-top-wrapper').removeClass('fadeOutDownBig');
+            jQuery('.scroll-top-wrapper').addClass('show animated fadeInUpBig');
         } else {
-            $('.scroll-top-wrapper').removeClass('show');
-            $('.scroll-top-wrapper').addClass('animated fadeOutDownBig');
+            jQuery('.scroll-top-wrapper').removeClass('show');
+            jQuery('.scroll-top-wrapper').addClass('animated fadeOutDownBig');
         }
     });
 
-    $('.scroll-top-wrapper').on('click', scrollToTop);
+    jQuery('.scroll-top-wrapper').on('click', scrollToTop);
 });
 
 function scrollToTop() {
     verticalOffset = typeof (verticalOffset) !== 'undefined' ? verticalOffset : 0;
-    element = $('body');
+    element = jQuery('body');
     offset = element.offset();
     offsetTop = offset.top;
-    $('html, body').animate({
+    jQuery('html, body').animate({
         scrollTop: offsetTop
-    }, 200, 'linear');
+    }, 2000, 'swing');
 }
 
 // Ajouter une class aux éléments d'un menu (pour hover.css)
-$(document).ready(function () {
-    $('#fullscreen-panel li > a').addClass('hvr-grow');
+jQuery(document).ready(function () {
+    jQuery('#fullscreen-panel li > a').addClass('hvr-grow');
 });
 
-// ADD SLIDEDOWN ANIMATION TO DROPDOWN //
-//$('.dropdown').on('show.bs.dropdown', function(e){
-//    $(this).find('.dropdown-menu').first().stop(true, true).fadeIn();
-//});
-
-// ADD SLIDEUP ANIMATION TO DROPDOWN //
-//$('.dropdown').on('hide.bs.dropdown', function(e){
-//    $(this).find('.dropdown-menu').first().stop(true, true).fadeOut();
-//});
-
-////animate.css		
-//jQuery(document).ready(function() {
-//    jQuery('#products .product-thumbnail').viewportChecker({
-//        classToAdd: 'animated bounceIn',
-//        offset: 100,
-//        repeat: true,
-//        callbackFunction: function(elem, action){},
-//        scrollHorizontal: false
-//    });
-//});
-
-//Scroll jump fix
-//$(document).ready(function(){
-//    $(window).load(function(){
-//        var oldSSB = $.fn.modal.Constructor.prototype.setScrollbar;
-//        $.fn.modal.Constructor.prototype.setScrollbar = function () 
-//        {
-//            oldSSB.apply(this);
-//            if(this.bodyIsOverflowing && this.scrollbarWidth) 
-//            {
-//                $('.navbar-fixed-top, .navbar-fixed-bottom').css('padding-right', this.scrollbarWidth);
-//            }       
-//        }
-//
-//        var oldRSB = $.fn.modal.Constructor.prototype.resetScrollbar;
-//        $.fn.modal.Constructor.prototype.resetScrollbar = function () 
-//        {
-//            oldRSB.apply(this);
-//            $('.navbar-fixed-top, .navbar-fixed-bottom').css('padding-right', '');
-//        }
-//    });
-//});
+// Font awesome only, on evite le flickering
+jQuery(document).ready(function () {
+    jQuery('.fa-only').parent().contents().filter(function(){
+        return this.nodeType === 3;
+    }).remove();
+    jQuery('.navbar-nav').show();
+});

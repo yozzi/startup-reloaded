@@ -31,6 +31,23 @@ function optionsframework_options() {
 		'type' => 'upload'
 	);
     
+    // Pull all the pages into an array
+	$options_pages = array();
+	$options_pages_obj = get_pages( 'sort_column=post_parent,menu_order' );
+	$options_pages[''] = __( 'None', 'startup-reloaded' );
+	foreach ($options_pages_obj as $page) {
+		$options_pages[$page->ID] = $page->post_title;
+	}
+    
+    $options[] = array(
+		'name' => __( 'Header', 'startup-reloaded' ),
+		'desc' => __( 'Choose a page to use as site header', 'startup-reloaded' ),
+		'id' => 'general-header',
+		'type' => 'select',
+        'class' => 'mini', //mini, tiny, small
+		'options' => $options_pages
+	);
+    
 	$options[] = array(
 		'name' => __( 'Layout', 'startup-reloaded' ),
 		'type' => 'info'
@@ -219,6 +236,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+        'name' => __( 'Page background', 'startup-reloaded' ),
+		'id' => 'style-page',
+		'std' => '',
+		'type' => 'color'
+	);
+    
+    $options[] = array(
 		'name' => __( 'Custom button', 'startup-reloaded' ),
         'desc' => __( 'Corner radius in px', 'startup-reloaded' ),
 		'id' => 'button-radius',
@@ -349,12 +373,13 @@ function optionsframework_options() {
 	);
 
 	$navbar_position = array(
-        //'' => __( 'Float', 'startup-reloaded' ),
-		'navbar-static-top' => __( 'Static top', 'startup-reloaded' ),
-		'navbar-fixed-top' => __( 'Fixed top', 'startup-reloaded' ),
-        'navbar-fixed-slider' => __( 'Under slider', 'startup-reloaded' ),
-		'navbar-fixed-bottom' => __( 'Fixed bottom', 'startup-reloaded' ),
-        'navbar-normal' => __( 'Normal', 'startup-reloaded' )
+        'navbar-normal'       => __( 'Normal', 'startup-reloaded' ),
+		'navbar-static-top'   => __( 'Static top', 'startup-reloaded' ),
+		'navbar-fixed-top'    => __( 'Fixed top', 'startup-reloaded' ),
+        'navbar-fixed-slider' => __( 'Fixed under slider', 'startup-reloaded' ),
+        'navbar-static-header' => __( 'Static under header', 'startup-reloaded' ),
+        'navbar-fixed-header' => __( 'Fixed under header', 'startup-reloaded' ),
+		'navbar-fixed-bottom' => __( 'Fixed bottom', 'startup-reloaded' )
 	);
     
 	$options[] = array(
@@ -386,9 +411,10 @@ function optionsframework_options() {
 		'type' => 'color'
 	);
     
-    $navbar_item_positions = array(
+    $navbar_logo_positions = array(
 		'navbar-left' => __( 'Left', 'startup-reloaded' ),
-		'navbar-right' => __( 'Right', 'startup-reloaded' )
+		'navbar-right' => __( 'Right', 'startup-reloaded' ),
+        '' => __( 'Hidden', 'startup-reloaded' )
 	);
     
 	$options[] = array(
@@ -397,7 +423,12 @@ function optionsframework_options() {
 		'std' => 'navbar-left',
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
-		'options' => $navbar_item_positions
+		'options' => $navbar_logo_positions
+	);
+    
+    $navbar_item_positions = array(
+		'navbar-left' => __( 'Left', 'startup-reloaded' ),
+		'navbar-right' => __( 'Right', 'startup-reloaded' )
 	);
     
     $options[] = array(
@@ -478,6 +509,13 @@ function optionsframework_options() {
 	);
     
     $options[] = array(
+        'desc' => __( 'Push page content', 'startup-reloaded' ),
+		'id' => 'left-panel-push',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
+    
+    $options[] = array(
 		'id' => 'left-panel-color',
         'std' => '#323232',
 		'type' => 'color'
@@ -505,7 +543,14 @@ function optionsframework_options() {
             'default' => __( 'Default', 'startup-reloaded' ),
             'tileview' => __( 'Tileview', 'startup-reloaded' )
         )
-	);	
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Slide items (optional for default mode only)', 'startup-reloaded' ),
+		'id' => 'left-panel-slide',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
      
 	$options[] = array(
 		'name' => __( 'Right panel', 'startup-reloaded' ),
@@ -527,6 +572,13 @@ function optionsframework_options() {
 		'id' => 'right-panel-hamburger-text',
         'type' => 'text',
         'class' => 'mini'
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Push page content', 'startup-reloaded' ),
+		'id' => 'right-panel-push',
+		'std' => '1',
+		'type' => 'checkbox'
 	);
     
     $options[] = array(
@@ -557,7 +609,14 @@ function optionsframework_options() {
             'default' => __( 'Default', 'startup-reloaded' ),
             'tileview' => __( 'Tileview', 'startup-reloaded' )
         )
-	);	
+	);
+    
+    $options[] = array(
+        'desc' => __( 'Slide items (optional for default mode only)', 'startup-reloaded' ),
+		'id' => 'right-panel-slide',
+		'std' => '1',
+		'type' => 'checkbox'
+	);
     
     //*****************************************************************************
     //*****************************************************************************
@@ -937,9 +996,9 @@ function optionsframework_options() {
     
 	$options[] = array(
 		'name' => __( 'Mise en forme automatique', 'startup-reloaded' ),
-		'desc' => __( 'Cocher pour <strong>desactiver</strong> la mise en forme automatique de l\'editeur WordPress. Permet de garder le control de votre code. ( Evite les br, p, et suppression de lignes vides, etc...)', 'startup-reloaded' ),
+		'desc' => __( 'Cocher pour <strong>desactiver</strong> la mise en forme automatique de l\'editeur WordPress. Evite les br, p, et suppression de lignes vides, etc...', 'startup-reloaded' ),
 		'id' => 'auto-format-off',
-		'std' => '1',
+		'std' => '0',
 		'type' => 'checkbox'
 	);
     
