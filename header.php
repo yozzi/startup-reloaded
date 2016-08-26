@@ -15,7 +15,8 @@ require get_template_directory() . '/inc/theme-options.php';
 
 if ($logo){$body_logo = 'logo-on';} else {$body_logo = 'logo-off';};
 if ($navbar_transparent){$body_transparent = 'transparent-on';} else {$body_transparent = 'transparent-off';};
-    
+
+$body_position = NULL;
 if ($navbar_position == 'navbar-static-top'){$body_position = 'static-top';};
 if ($navbar_position == 'navbar-fixed-top'){$body_position = 'fixed-top';};
 if ($navbar_position == 'navbar-fixed-slider'){$body_position = 'fixed-slider';};
