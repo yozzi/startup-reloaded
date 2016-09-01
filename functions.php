@@ -232,6 +232,24 @@ function wp_get_attachment( $attachment_id ) {
     );
 }
 
+// Fonction pour récupérer les info d'un attachement à partir de son url, utilisé avec CMB2, particulièrement dans les options de plugins
+//
+// Utilisation:
+// store the image ID in a var
+// $image_id = wp_get_image_id($image_url);
+//
+// retrieve the thumbnail size of our image:
+// $image_thumb = wp_get_attachment_image_src($image_id, 'thumbnail');
+//
+// display the image:
+// echo $image_thumb[0];
+
+function wp_get_image_id($image_url) {
+	global $wpdb;
+	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
+        return $attachment[0]; 
+}
+
 //Adverts
 if (is_plugin_active('wpadverts/wpadverts.php')){
     // Ajouter CPF aux annonces
