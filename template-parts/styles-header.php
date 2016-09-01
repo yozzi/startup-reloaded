@@ -60,7 +60,7 @@ body{
     
     <?php if ( $navbar_on ) { ?>
 /* Navbar */
-    .navbar{
+    #site-navigation.navbar{
       background: <?php echo $navbar_color ?>;
     }
     <?php } ?>
