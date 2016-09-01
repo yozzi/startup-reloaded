@@ -189,6 +189,16 @@ load_template( $optionsfile );
 require get_template_directory() . '/inc/theme-options.php';
 
 /**
+ * Désactiver les pages avec noms des auteurs
+ */
+function bwp_template_redirect() {
+    if (is_author()) {
+        wp_redirect( home_url() ); exit;
+    }
+}
+add_action(‘template_redirect’, ‘bwp_template_redirect’);
+
+/**
  * Désactiver les br automatiques de l'éditeur et autres
  */
 if( $auto_format_off ){
