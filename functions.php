@@ -313,3 +313,27 @@ add_action( 'admin_init', 'startup_reloaded_editor_styles' );
 
 // Disable smart quotes
 //add_filter( 'run_wptexturize', '__return_false' );
+
+// Show current template file for dev purpose
+//
+// Usage:
+// startup_reloaded_get_current_template()
+function startup_reloaded_define_current_template( $template ) {
+    $GLOBALS['current_theme_template'] = basename($template);
+
+    return $template;
+}
+add_action('template_include', 'startup_reloaded_define_current_template', 1000);
+
+function startup_reloaded_get_current_template( $echo = false ) {
+    if ( !isset( $GLOBALS['current_theme_template'] ) ) {
+        trigger_error( '$current_theme_template has not been defined yet', E_USER_WARNING );
+        return false;
+    }
+    if ( $echo ) {
+        echo $GLOBALS['current_theme_template'];
+    }
+    else {
+        return $GLOBALS['current_theme_template'];
+    }
+}
