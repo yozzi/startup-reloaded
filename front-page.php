@@ -16,32 +16,37 @@
         <?php while ( have_posts() ) : the_post(); ?>
 
         <?php $hasposts = get_posts('post_type=home');
+        
+            if ( $front_page == "default") {
               
-            if ( is_plugin_active('startup-cpt-home/startup-cpt-home.php') && !empty ( $hasposts ) && $home_type ) {
+                if ( is_plugin_active('startup-cpt-home/startup-cpt-home.php') && !empty ( $hasposts ) && $home_type ) {
 
-                get_template_part( 'template-parts/content', 'home' );
+                    get_template_part( 'template-parts/content', 'home' );
 
-            } else { ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <div class="entry-content">
-                    <?php
-                        /* translators: %s: Name of current post */
-                        the_content( sprintf(
-                            wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'startup-reloaded' ), array( 'span' => array( 'class' => array() ) ) ),
-                            the_title( '<span class="screen-reader-text">"', '"</span>', false )
-                        ) );
-                    ?>
+                } else { ?>
+                    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                        <div class="entry-content">
+                            <?php
+                                /* translators: %s: Name of current post */
+                                the_content( sprintf(
+                                    wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'startup-reloaded' ), array( 'span' => array( 'class' => array() ) ) ),
+                                    the_title( '<span class="screen-reader-text">"', '"</span>', false )
+                                ) );
+                            ?>
 
-                    <?php
-                        wp_link_pages( array(
-                            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'startup-reloaded' ),
-                            'after'  => '</div>',
-                        ) );
-                    ?>
-                </div><!-- .entry-content -->
-            </article><!-- #post-## -->
-        <?php } ?>
-
+                            <?php
+                                wp_link_pages( array(
+                                    'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'startup-reloaded' ),
+                                    'after'  => '</div>',
+                                ) );
+                            ?>
+                        </div><!-- .entry-content -->
+                    </article><!-- #post-## -->
+                <?php }
+        
+            } else {
+                get_template_part( 'template-parts/front-page', 'login' );
+            } ?>
         <?php endwhile; // end of the loop. ?>
 
     </main>

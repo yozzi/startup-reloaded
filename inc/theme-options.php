@@ -5,6 +5,7 @@
     $header                             = of_get_option( 'general-header' );
     $responsive                         = of_get_option( 'general-responsive' );
     $boxed                              = of_get_option( 'general-boxed' );
+    $front_page                         = of_get_option( 'front-page' );
     $search                             = of_get_option( 'navbar-search' );
     $page_transition                    = of_get_option( 'page-transition' );
     $page_transition_in                 = of_get_option( 'page-transition-in' );

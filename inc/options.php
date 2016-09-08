@@ -67,6 +67,20 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
+	$home_page_type = array(
+		'default' => __( 'Default', 'startup-reloaded' ),
+		'login' => __( 'Login', 'startup-reloaded' ),
+	);
+    
+	$options[] = array(
+		'name' => __( 'Front page', 'startup-reloaded' ),
+		'id' => 'front-page',
+		'std' => 'default',
+		'type' => 'select',
+		'class' => 'mini', //mini, tiny, small
+		'options' => $home_page_type
+	);
+    
 	$options[] = array(
 		'name' => __( 'Page transitions', 'startup-reloaded' ),
         'desc' => __( 'Activate', 'startup-reloaded' ),
