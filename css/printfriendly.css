@@ -1,0 +1,123 @@
+/* Général */
+
+#printfriendly {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+#printfriendly #pf-src {
+    display: none;
+}
+
+#printfriendly #pf-title {
+    display: none;
+}
+/* Menus */
+
+#printfriendly .startup-cpt-menus.entry-header {
+    background: #999;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+    padding: 0;
+    height: 145px;
+}
+
+#printfriendly .startup-cpt-menus.entry-header .col-xs-12 {
+    float: left;
+    height: 145px;
+    padding-left: 30px;
+}
+
+#printfriendly .startup-cpt-menus.entry-header #pf-entry-title {
+    font-size: 30px;
+    padding-top: 20px;
+    display: block;
+}
+
+#printfriendly .startup-cpt-menus.entry-header h2 {
+    margin-top: 0;
+}
+
+#printfriendly .startup-cpt-menus.entry-header #pf-entry-logos {
+    float: right;
+    padding: 20px 30px 0 10px;
+}
+
+#printfriendly .startup-cpt-menus.entry-header #pf-entry-logos img {
+    margin-bottom: 10px;
+}
+
+#printfriendly .startup-cpt-menus.entry-header hr {
+    margin-left: 0;
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #fff;
+}
+
+#printfriendly .startup-cpt-menus.entry-header img {
+    float: left;
+    margin: 0;
+    width: 145px;
+}
+
+#printfriendly .startup-cpt-menus.entry-content {
+    text-align: center;
+}
+
+#printfriendly .startup-cpt-menus.entry-content #triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 30px;
+    border-color: #999999 transparent transparent transparent;
+    -webkit-transform: rotate(360deg);
+    position: relative;
+    margin-left: 80%;
+}
+
+#printfriendly .startup-cpt-menus.entry-content hr {
+    width: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #999;
+}
+
+#printfriendly .startup-cpt-menus.entry-content h3,
+#printfriendly .startup-cpt-menus.entry-content #others strong {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#printfriendly .startup-cpt-menus.entry-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#printfriendly .startup-cpt-menus.entry-content #others ul li em {
+    margin-top: -10px;
+    display: block;
+}
+
+#printfriendly .startup-cpt-menus.entry-content #price h1 .label {
+    padding: .3em .6em;
+    background-color: #777;
+    display: inline;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+#printfriendly .startup-cpt-menus.entry-content small,
+#printfriendly .startup-cpt-menus.entry-content .small {
+    color: #333;
+}

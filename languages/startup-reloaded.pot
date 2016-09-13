@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-01-06 02:24:02+00:00\n"
-"POT-Revision-Date: Fri Jan 08 2016 14:42:44 GMT-0500 (Est)\n"
+"POT-Revision-Date: Wed Sep 07 2016 15:35:26 GMT-0400 (Est (heure d’été))\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: yann <ycaplain@croisieresaml.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,11 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: ../comments.php:33
+#: ../comments.php:20
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: ../comments.php:40
 #, php-format
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -53,29 +57,30 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../comments.php:42 ../comments.php:63
+#: ../comments.php:49 ../comments.php:70
 msgid "Comment navigation"
 msgstr ""
 
-#: ../comments.php:45 ../comments.php:66
+#: ../comments.php:52 ../comments.php:73
 msgid "Older Comments"
 msgstr ""
 
-#: ../comments.php:46 ../comments.php:67
+#: ../comments.php:53 ../comments.php:74
 msgid "Newer Comments"
 msgstr ""
 
-#: ../comments.php:79
+#: ../comments.php:86
 msgid "Comments are closed."
 msgstr ""
 
 #. translators: %s: Name of current post
-#: ../front-page.php:32
+#: ../front-page.php:30
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../front-page.php:39 ../page.php:29 ../single.php:31
+#: ../front-page.php:37 ../page-restricted.php:26 ../page.php:32 ../single-advert.
+#: php:34 ../single.php:38
 msgid "Pages:"
 msgstr ""
 
@@ -107,39 +112,8 @@ msgstr ""
 msgid "Navbar Bottom"
 msgstr ""
 
-#: ../functions.php:254
-msgid "Shuffle thumbnail"
-msgstr ""
-
-#: ../functions.php:255
-msgid "Shuffle main"
-msgstr ""
-
-#: ../functions.php:256
-msgid "Grid thumbnail"
-msgstr ""
-
-#: ../header.php:340
+#: ../header.php:54
 msgid "Skip to content"
-msgstr ""
-
-msgid "Blog"
-msgstr ""
-
-msgid "Portfolio"
-msgstr ""
-
-#. Name of the template
-msgid "Products"
-msgstr ""
-
-#. Name of the template
-msgid "Projects"
-msgstr ""
-
-#: ../search.php:16
-#, php-format
-msgid "Search Results for: %s"
 msgstr ""
 
 #: ../inc/extras.php:52
@@ -147,31 +121,51 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: ../inc/metaboxes.php:11 ../inc/metaboxes.php:146
+#: ../inc/images.php:22
+msgid "Shuffle thumbnail"
+msgstr ""
+
+#: ../inc/images.php:23
+msgid "Shuffle main"
+msgstr ""
+
+#: ../inc/images.php:24
+msgid "Grid thumbnail"
+msgstr ""
+
+#: ../inc/images.php:25
+msgid "Grid main"
+msgstr ""
+
+#: ../inc/images.php:26 ../inc/options.php:848
+msgid "Partners"
+msgstr ""
+
+#: ../inc/metaboxes.php:11 ../inc/metaboxes.php:178 ../inc/options.php:43
 msgid "Header"
 msgstr ""
 
-#: ../inc/metaboxes.php:16 ../inc/metaboxes.php:151
+#: ../inc/metaboxes.php:16 ../inc/metaboxes.php:183 ../inc/options.php:417
 msgid "Hidden"
 msgstr ""
 
-#: ../inc/metaboxes.php:17 ../inc/metaboxes.php:152
+#: ../inc/metaboxes.php:17 ../inc/metaboxes.php:184
 msgid "Hide the header. Or not."
 msgstr ""
 
-#: ../inc/metaboxes.php:23 ../inc/metaboxes.php:158
+#: ../inc/metaboxes.php:23 ../inc/metaboxes.php:190
 msgid "Boxed width"
 msgstr ""
 
-#: ../inc/metaboxes.php:24 ../inc/metaboxes.php:159
+#: ../inc/metaboxes.php:24 ../inc/metaboxes.php:191
 msgid "Got to test on boxed design..."
 msgstr ""
 
-#: ../inc/metaboxes.php:30 ../inc/metaboxes.php:165
+#: ../inc/metaboxes.php:30 ../inc/metaboxes.php:197
 msgid "Background color"
 msgstr ""
 
-#: ../inc/metaboxes.php:37 ../inc/metaboxes.php:172
+#: ../inc/metaboxes.php:37 ../inc/metaboxes.php:204
 msgid "Text color"
 msgstr ""
 
@@ -183,96 +177,104 @@ msgstr ""
 msgid "Background image"
 msgstr ""
 
-#: ../inc/metaboxes.php:60 ../inc/metaboxes.php:179
+#: ../inc/metaboxes.php:60 ../inc/metaboxes.php:211
 msgid "Background image position"
 msgstr ""
 
-#: ../inc/metaboxes.php:65 ../inc/metaboxes.php:184
+#: ../inc/metaboxes.php:65 ../inc/metaboxes.php:216
 msgid "Top"
 msgstr ""
 
-#: ../inc/metaboxes.php:66 ../inc/metaboxes.php:86 ../inc/metaboxes.php:185 ..
-#: /inc/metaboxes.php:205 ../inc/options.php:290
+#: ../inc/metaboxes.php:66 ../inc/metaboxes.php:86 ../inc/metaboxes.php:217 ..
+#: /inc/metaboxes.php:237 ../inc/options.php:321
 msgid "Center"
 msgstr ""
 
-#: ../inc/metaboxes.php:67 ../inc/metaboxes.php:186
+#: ../inc/metaboxes.php:67 ../inc/metaboxes.php:218
 msgid "Bottom"
 msgstr ""
 
-#: ../inc/metaboxes.php:72 ../inc/metaboxes.php:191
+#: ../inc/metaboxes.php:72 ../inc/metaboxes.php:223
 msgid "Padding"
 msgstr ""
 
-#: ../inc/metaboxes.php:73 ../inc/metaboxes.php:192
+#: ../inc/metaboxes.php:73 ../inc/metaboxes.php:224
 msgid "Padding of page header in px"
 msgstr ""
 
-#: ../inc/metaboxes.php:79 ../inc/metaboxes.php:198 ../inc/options.php:295
+#: ../inc/metaboxes.php:79 ../inc/metaboxes.php:230 ../inc/options.php:326
 msgid "Content position"
 msgstr ""
 
-#: ../inc/metaboxes.php:85 ../inc/metaboxes.php:204 ../inc/options.php:289 ..
-#: /inc/options.php:382
+#: ../inc/metaboxes.php:85 ../inc/metaboxes.php:236 ../inc/options.php:320 ..
+#: /inc/options.php:415 ../inc/options.php:430
 msgid "Left"
 msgstr ""
 
-#: ../inc/metaboxes.php:87 ../inc/metaboxes.php:206 ../inc/options.php:291 ..
-#: /inc/options.php:383
+#: ../inc/metaboxes.php:87 ../inc/metaboxes.php:238 ../inc/options.php:322 ..
+#: /inc/options.php:416 ../inc/options.php:431
 msgid "Right"
 msgstr ""
 
-#: ../inc/metaboxes.php:92 ../inc/metaboxes.php:211
+#: ../inc/metaboxes.php:92 ../inc/metaboxes.php:243
 msgid "Effect"
 msgstr ""
 
-#: ../inc/metaboxes.php:98 ../inc/metaboxes.php:217 ../inc/options.php:477 ..
-#: /inc/options.php:529
+#: ../inc/metaboxes.php:98 ../inc/metaboxes.php:249 ../inc/options.php:531 ..
+#: /inc/options.php:597
 msgid "Light"
 msgstr ""
 
-#: ../inc/metaboxes.php:99 ../inc/metaboxes.php:218 ../inc/options.php:478 ..
-#: /inc/options.php:530
+#: ../inc/metaboxes.php:99 ../inc/metaboxes.php:250 ../inc/options.php:532 ..
+#: /inc/options.php:598
 msgid "Dark"
 msgstr ""
 
-#: ../inc/metaboxes.php:100 ../inc/metaboxes.php:219
+#: ../inc/metaboxes.php:100 ../inc/metaboxes.php:251
 msgid "Trame 1"
 msgstr ""
 
-#: ../inc/metaboxes.php:101 ../inc/metaboxes.php:220
+#: ../inc/metaboxes.php:101 ../inc/metaboxes.php:252
 msgid "Trame 2"
 msgstr ""
 
-#: ../inc/metaboxes.php:106 ../inc/metaboxes.php:225 ../inc/options.php:47
+#: ../inc/metaboxes.php:106 ../inc/metaboxes.php:257 ../inc/options.php:64
 msgid "Boxed"
 msgstr ""
 
-#: ../inc/metaboxes.php:107 ../inc/metaboxes.php:226 ../inc/options.php:304
+#: ../inc/metaboxes.php:107 ../inc/metaboxes.php:258 ../inc/options.php:335
 msgid "Put the text inside a box"
 msgstr ""
 
-#: ../inc/metaboxes.php:113 ../inc/metaboxes.php:232
+#: ../inc/metaboxes.php:113 ../inc/metaboxes.php:264
 msgid "No"
 msgstr ""
 
-#: ../inc/metaboxes.php:114 ../inc/metaboxes.php:233
+#: ../inc/metaboxes.php:114 ../inc/metaboxes.php:265
 msgid "Yes"
 msgstr ""
 
-#: ../inc/metaboxes.php:119 ../inc/metaboxes.php:238
+#: ../inc/metaboxes.php:119 ../inc/metaboxes.php:270
 msgid "Parallax"
 msgstr ""
 
-#: ../inc/metaboxes.php:120 ../inc/metaboxes.php:239
+#: ../inc/metaboxes.php:120 ../inc/metaboxes.php:271
 msgid "Add parallax effect to the background"
 msgstr ""
 
-#: ../inc/metaboxes.php:134
+#: ../inc/metaboxes.php:136
+msgid "Author"
+msgstr ""
+
+#: ../inc/metaboxes.php:155
+msgid "Author to display if different than you."
+msgstr ""
+
+#: ../inc/metaboxes.php:166
 msgid "Link"
 msgstr ""
 
-#: ../inc/metaboxes.php:139
+#: ../inc/metaboxes.php:171
 msgid "URL of the content : YouTube video, pdf link, etc..."
 msgstr ""
 
@@ -288,470 +290,525 @@ msgstr ""
 msgid "Image Logo"
 msgstr ""
 
-#: ../inc/options.php:35
+#: ../inc/options.php:37 ../inc/options.php:712 ../lib/CMB2/includes/CMB2_Field.
+#: php:978 ../lib/CMB2/includes/CMB2_Field.php:982
+msgid "None"
+msgstr ""
+
+#: ../inc/options.php:44
+msgid "Choose a page to use as site header"
+msgstr ""
+
+#: ../inc/options.php:52
 msgid "Layout"
 msgstr ""
 
-#: ../inc/options.php:40
+#: ../inc/options.php:57
 msgid "Responsive"
 msgstr ""
 
-#: ../inc/options.php:54
+#: ../inc/options.php:71
 msgid "Page transitions"
 msgstr ""
 
-#: ../inc/options.php:55 ../inc/options.php:338 ../lib/class-tgm-plugin-
+#: ../inc/options.php:72 ../inc/options.php:369 ../lib/class-tgm-plugin-
 #: activation.php:2612
 msgid "Activate"
 msgstr ""
 
-#: ../inc/options.php:62
+#: ../inc/options.php:79
 msgid "Fade in"
 msgstr ""
 
-#: ../inc/options.php:63
+#: ../inc/options.php:80
 msgid "Fade out"
 msgstr ""
 
-#: ../inc/options.php:64
+#: ../inc/options.php:81
 msgid "Fade in up"
 msgstr ""
 
-#: ../inc/options.php:65
+#: ../inc/options.php:82
 msgid "Fade out up"
 msgstr ""
 
-#: ../inc/options.php:66
+#: ../inc/options.php:83
 msgid "Fade in down"
 msgstr ""
 
-#: ../inc/options.php:67
+#: ../inc/options.php:84
 msgid "Fade out down"
 msgstr ""
 
-#: ../inc/options.php:68
+#: ../inc/options.php:85
 msgid "Fade in left"
 msgstr ""
 
-#: ../inc/options.php:69
+#: ../inc/options.php:86
 msgid "Fade out left"
 msgstr ""
 
-#: ../inc/options.php:70
+#: ../inc/options.php:87
 msgid "Fade in right"
 msgstr ""
 
-#: ../inc/options.php:71
+#: ../inc/options.php:88
 msgid "Fade out right"
 msgstr ""
 
-#: ../inc/options.php:72
+#: ../inc/options.php:89
 msgid "Rotate in"
 msgstr ""
 
-#: ../inc/options.php:73
+#: ../inc/options.php:90
 msgid "Rotate out"
 msgstr ""
 
-#: ../inc/options.php:74
+#: ../inc/options.php:91
 msgid "Flip in X"
 msgstr ""
 
-#: ../inc/options.php:75
+#: ../inc/options.php:92
 msgid "Flip out X"
 msgstr ""
 
-#: ../inc/options.php:76
+#: ../inc/options.php:93
 msgid "Flip in Y"
 msgstr ""
 
-#: ../inc/options.php:77
+#: ../inc/options.php:94
 msgid "Flip out Y"
 msgstr ""
 
-#: ../inc/options.php:78
+#: ../inc/options.php:95
 msgid "Zoom in"
 msgstr ""
 
-#: ../inc/options.php:79
+#: ../inc/options.php:96
 msgid "Zoom out"
 msgstr ""
 
-#: ../inc/options.php:83
+#: ../inc/options.php:100
 msgid "Transition in"
 msgstr ""
 
-#: ../inc/options.php:92
+#: ../inc/options.php:109
 msgid "Transition out"
 msgstr ""
 
-#: ../inc/options.php:101
+#: ../inc/options.php:118
 msgid "Options"
 msgstr ""
 
-#: ../inc/options.php:106
+#: ../inc/options.php:123
 msgid "Back to top button"
 msgstr ""
 
-#: ../inc/options.php:113
+#: ../inc/options.php:130
 msgid "Activate FastClick"
 msgstr ""
 
-#: ../inc/options.php:120
+#: ../inc/options.php:137
 msgid "Activate YTPlayer"
 msgstr ""
 
-#: ../inc/options.php:127
+#: ../inc/options.php:144
+msgid "Activate SmoothScroll"
+msgstr ""
+
+#: ../inc/options.php:151
 msgid "Footer content"
 msgstr ""
 
-#: ../inc/options.php:134
+#: ../inc/options.php:158
 msgid "Google Analytics ID"
 msgstr ""
 
-#: ../inc/options.php:135
+#: ../inc/options.php:159
 msgid "Provided by Google in the form UA-XXXXXXX-XX"
 msgstr ""
 
-#: ../inc/options.php:150 ../inc/options.php:682 ../inc/options.php:720
+#: ../inc/options.php:174 ../inc/options.php:757 ../inc/options.php:795
 msgid "Style"
 msgstr ""
 
-#: ../inc/options.php:199 ../inc/options.php:224 ../inc/options.php:267
+#: ../inc/options.php:223 ../inc/options.php:255 ../inc/options.php:298
 msgid "Background"
 msgstr ""
 
-#: ../inc/options.php:200
+#: ../inc/options.php:224
 msgid "Change the background CSS."
 msgstr ""
 
-#: ../inc/options.php:208
+#: ../inc/options.php:232
 msgid "Cover"
 msgstr ""
 
-#: ../inc/options.php:215
+#: ../inc/options.php:239
+msgid "Page background"
+msgstr ""
+
+#: ../inc/options.php:246
 msgid "Custom button"
 msgstr ""
 
-#: ../inc/options.php:216
+#: ../inc/options.php:247
 msgid "Corner radius in px"
 msgstr ""
 
-#: ../inc/options.php:231 ../inc/options.php:274
+#: ../inc/options.php:262 ../inc/options.php:305
 msgid "Text"
 msgstr ""
 
-#: ../inc/options.php:238
+#: ../inc/options.php:269
 msgid "Hover, focus, active background"
 msgstr ""
 
-#: ../inc/options.php:245
+#: ../inc/options.php:276
 msgid "Hover, focus, active text"
 msgstr ""
 
-#: ../inc/options.php:252
+#: ../inc/options.php:283
 msgid "Pages & posts header"
 msgstr ""
 
-#: ../inc/options.php:253
+#: ../inc/options.php:284
 msgid "Hide the header. Or not. Overrides individual page setting if ckecked."
 msgstr ""
 
-#: ../inc/options.php:260
+#: ../inc/options.php:291
 msgid "Boxed width."
 msgstr ""
 
-#: ../inc/options.php:281
+#: ../inc/options.php:312
 msgid "Padding in px"
 msgstr ""
 
-#: ../inc/options.php:311
+#: ../inc/options.php:342
 msgid "Footer"
 msgstr ""
 
-#: ../inc/options.php:318
+#: ../inc/options.php:349
 msgid "Custom CSS"
 msgstr ""
 
-#: ../inc/options.php:332
+#: ../inc/options.php:363 ../template-parts/scripts-header.php:41 ../template-
+#: parts/scripts-header.php:87
 msgid "Navigation"
 msgstr ""
 
-#: ../inc/options.php:337
+#: ../inc/options.php:368
 msgid "Navbar"
 msgstr ""
 
-#: ../inc/options.php:346
+#: ../inc/options.php:376 ../lib/options-framework/includes/class-options-
+#: sanitization.php:424
+msgid "Normal"
+msgstr ""
+
+#: ../inc/options.php:377
 msgid "Static top"
 msgstr ""
 
-#: ../inc/options.php:347
+#: ../inc/options.php:378
 msgid "Fixed top"
 msgstr ""
 
-#: ../inc/options.php:348
-msgid "Under slider"
+#: ../inc/options.php:379
+msgid "Fixed under slider"
 msgstr ""
 
-#: ../inc/options.php:349
+#: ../inc/options.php:380
+msgid "Static under header"
+msgstr ""
+
+#: ../inc/options.php:381
+msgid "Fixed under header"
+msgstr ""
+
+#: ../inc/options.php:382
 msgid "Fixed bottom"
 msgstr ""
 
-#: ../inc/options.php:353
+#: ../inc/options.php:386
 msgid "Position"
 msgstr ""
 
-#: ../inc/options.php:362
+#: ../inc/options.php:395
 msgid "Transparent on homepage. Available for fixed top navbar only."
 msgstr ""
 
-#: ../inc/options.php:369
+#: ../inc/options.php:402
 msgid "Translucent background on hover. For transparent navbar only."
 msgstr ""
 
-#: ../inc/options.php:387
+#: ../inc/options.php:421
 msgid "Logo Position"
 msgstr ""
 
-#: ../inc/options.php:396
+#: ../inc/options.php:435
 msgid "Menu Position"
 msgstr ""
 
-#: ../inc/options.php:405
+#: ../inc/options.php:444
 msgid "Hamburger Position"
 msgstr ""
 
-#: ../inc/options.php:414
+#: ../inc/options.php:453
 msgid "Inverse style"
 msgstr ""
 
-#: ../inc/options.php:421
+#: ../inc/options.php:460
+msgid "Search"
+msgstr ""
+
+#: ../inc/options.php:461
+msgid "Activate search form. (experimental)"
+msgstr ""
+
+#: ../inc/options.php:468
 msgid "Fullscreen panel"
 msgstr ""
 
-#: ../inc/options.php:422
+#: ../inc/options.php:469
 msgid ""
 "Activate. Use <strong>data-toggle=\"modal\" data-target=\"#fullscreen-"
 "panel\"</strong> on any button / link or activate navbar hamburger below to "
 "make the magic happen."
 msgstr ""
 
-#: ../inc/options.php:429 ../inc/options.php:451 ../inc/options.php:503
+#: ../inc/options.php:476 ../inc/options.php:498 ../inc/options.php:564
 msgid "Activate navbar hamburger."
 msgstr ""
 
-#: ../inc/options.php:436 ../inc/options.php:458 ../inc/options.php:510
+#: ../inc/options.php:483 ../inc/options.php:505 ../inc/options.php:571
 msgid "Override hamburger icon with a text."
 msgstr ""
 
-#: ../inc/options.php:443
+#: ../inc/options.php:490
 msgid "Left panel"
 msgstr ""
 
-#: ../inc/options.php:444
+#: ../inc/options.php:491
 msgid ""
 "Activate. Use <strong>#left-panel</strong> on any link / menu item or "
 "activate navbar hamburger below to make the magic go on."
 msgstr ""
 
-#: ../inc/options.php:471 ../inc/options.php:523
+#: ../inc/options.php:512 ../inc/options.php:578
+msgid "Push page content"
+msgstr ""
+
+#: ../inc/options.php:525 ../inc/options.php:591
 msgid "Theme"
 msgstr ""
 
-#: ../inc/options.php:483 ../inc/options.php:535
+#: ../inc/options.php:537 ../inc/options.php:603
 msgid "Mode"
 msgstr ""
 
-#: ../inc/options.php:489 ../inc/options.php:541 ../lib/CMB2/includes/CMB2_JS.php:
+#: ../inc/options.php:543 ../inc/options.php:609 ../lib/CMB2/includes/CMB2_JS.php:
 #: 87
 msgid "Default"
 msgstr ""
 
-#: ../inc/options.php:490 ../inc/options.php:542
+#: ../inc/options.php:544 ../inc/options.php:610
 msgid "Tileview"
 msgstr ""
 
-#: ../inc/options.php:495
+#: ../inc/options.php:549 ../inc/options.php:615
+msgid "Slide items (optional for default mode only)"
+msgstr ""
+
+#: ../inc/options.php:556
 msgid "Right panel"
 msgstr ""
 
-#: ../inc/options.php:496
+#: ../inc/options.php:557
 msgid ""
 "Activate. Use <strong>#right-panel</strong> on any link / menu item or "
 "activate navbar hamburger below to make the fantasy happen."
 msgstr ""
 
-#: ../inc/options.php:557
+#: ../inc/options.php:632
 msgid "Slider"
 msgstr ""
 
-#: ../inc/options.php:562
+#: ../inc/options.php:637
 msgid "Activate on homepage"
 msgstr ""
 
-#: ../inc/options.php:569 ../inc/options.php:729 ../inc/options.php:752 ..
-#: /inc/options.php:774 ../inc/options.php:796 ../inc/options.php:818 ..
-#: /inc/options.php:840 ../inc/options.php:862 ../inc/options.php:890
+#: ../inc/options.php:644 ../inc/options.php:804 ../inc/options.php:827 ..
+#: /inc/options.php:849 ../inc/options.php:871 ../inc/options.php:893 ..
+#: /inc/options.php:915 ../inc/options.php:937 ../inc/options.php:965
 msgid "Display order"
 msgstr ""
 
-#: ../inc/options.php:575 ../inc/options.php:735 ../inc/options.php:758 ..
-#: /inc/options.php:780 ../inc/options.php:802 ../inc/options.php:824 ..
-#: /inc/options.php:846 ../inc/options.php:868 ../inc/options.php:896
+#: ../inc/options.php:650 ../inc/options.php:810 ../inc/options.php:833 ..
+#: /inc/options.php:855 ../inc/options.php:877 ../inc/options.php:899 ..
+#: /inc/options.php:921 ../inc/options.php:943 ../inc/options.php:971
 msgid "Random"
 msgstr ""
 
-#: ../inc/options.php:576 ../inc/options.php:736 ../inc/options.php:759 ..
-#: /inc/options.php:781 ../inc/options.php:803 ../inc/options.php:825 ..
-#: /inc/options.php:847 ../inc/options.php:869 ../inc/options.php:897
+#: ../inc/options.php:651 ../inc/options.php:811 ../inc/options.php:834 ..
+#: /inc/options.php:856 ../inc/options.php:878 ../inc/options.php:900 ..
+#: /inc/options.php:922 ../inc/options.php:944 ../inc/options.php:972
 msgid "Menu order"
 msgstr ""
 
-#: ../inc/options.php:581 ../inc/options.php:763 ../inc/options.php:785 ..
-#: /inc/options.php:807 ../inc/options.php:829 ../inc/options.php:851 ..
-#: /inc/options.php:873 ../inc/options.php:901
+#: ../inc/options.php:656 ../inc/options.php:838 ../inc/options.php:860 ..
+#: /inc/options.php:882 ../inc/options.php:904 ../inc/options.php:926 ..
+#: /inc/options.php:948 ../inc/options.php:976
 msgid "Max number of items to show. Leave empty for unlimited."
 msgstr ""
 
-#: ../inc/options.php:589
+#: ../inc/options.php:664
 msgid "Height in px. \"100%\" for full viewport height"
 msgstr ""
 
-#: ../inc/options.php:597
+#: ../inc/options.php:672
 msgid "Interval in ms or false"
 msgstr ""
 
-#: ../inc/options.php:605
+#: ../inc/options.php:680
 msgid "Slide"
 msgstr ""
 
-#: ../inc/options.php:606
+#: ../inc/options.php:681
 msgid "Fade"
 msgstr ""
 
-#: ../inc/options.php:610
+#: ../inc/options.php:685
 msgid "Transition"
 msgstr ""
 
-#: ../inc/options.php:619
+#: ../inc/options.php:694
 msgid "Show arrows if more than one slide"
 msgstr ""
 
-#: ../inc/options.php:628
+#: ../inc/options.php:703
 msgid "Arrows hover effect"
 msgstr ""
 
-#: ../inc/options.php:637 ../lib/CMB2/includes/CMB2_Field.php:978 ..
-#: /lib/CMB2/includes/CMB2_Field.php:982
-msgid "None"
-msgstr ""
-
-#: ../inc/options.php:638
+#: ../inc/options.php:713
 msgid "Pagination"
 msgstr ""
 
-#: ../inc/options.php:639
+#: ../inc/options.php:714
 msgid "Content arrow"
 msgstr ""
 
-#: ../inc/options.php:643
+#: ../inc/options.php:718
 msgid "Navigation type"
 msgstr ""
 
-#: ../inc/options.php:661
+#: ../inc/options.php:736
 msgid "Post types"
 msgstr ""
 
-#: ../inc/options.php:667
+#: ../inc/options.php:742
 msgid "Home"
 msgstr ""
 
-#: ../inc/options.php:668
+#: ../inc/options.php:743
 msgid ""
 "Generate home content with Home plugin custom post sections. If not, use a "
 "classic page with the Home template."
 msgstr ""
 
-#: ../inc/options.php:676 ../inc/options.php:714
+#: ../inc/options.php:751 ../inc/options.php:789
 msgid "Grid"
 msgstr ""
 
-#: ../inc/options.php:677 ../inc/options.php:715
+#: ../inc/options.php:752 ../inc/options.php:790
 msgid "Shuffle"
 msgstr ""
 
-#: ../inc/options.php:691
+#: ../inc/options.php:756
+msgid "Blog"
+msgstr ""
+
+#: ../inc/options.php:766
 msgid "Buttons"
 msgstr ""
 
-#: ../inc/options.php:692
+#: ../inc/options.php:767
 msgid "Dropdown"
 msgstr ""
 
-#: ../inc/options.php:696
+#: ../inc/options.php:771
 msgid "Shuffle filter type"
 msgstr ""
 
-#: ../inc/options.php:705 ../inc/options.php:741
+#: ../inc/options.php:780 ../inc/options.php:816
 msgid "Max number of items to show for grid style. Leave empty for unlimited."
 msgstr ""
 
-#: ../inc/options.php:751
+#: ../inc/options.php:794
+msgid "Portfolio"
+msgstr ""
+
+#: ../inc/options.php:826
 msgid "Testimonials"
 msgstr ""
 
-#: ../inc/options.php:773
-msgid "Partners"
-msgstr ""
-
-#: ../inc/options.php:795
+#: ../inc/options.php:870
 msgid "Milestones"
 msgstr ""
 
-#: ../inc/options.php:861
+#. Name of the template
+#: ../inc/options.php:892
+msgid "Products"
+msgstr ""
+
+#. Name of the template
+#: ../inc/options.php:914
+msgid "Projects"
+msgstr ""
+
+#: ../inc/options.php:936
 msgid "Services"
 msgstr ""
 
-#: ../inc/options.php:883
+#: ../inc/options.php:958
 msgid "Team"
 msgstr ""
 
-#: ../inc/options.php:884
+#: ../inc/options.php:959
 msgid "Carousel if more than 4"
 msgstr ""
 
-#: ../inc/options.php:1036
+#: ../inc/options.php:993
 msgid "Advanced"
 msgstr ""
 
-#: ../inc/options.php:1041
+#: ../inc/options.php:998
 msgid "Mise en forme automatique"
 msgstr ""
 
-#: ../inc/options.php:1042
+#: ../inc/options.php:999
 msgid ""
 "Cocher pour <strong>desactiver</strong> la mise en forme automatique de "
-"l'editeur WordPress. Permet de garder le control de votre code. ( Evite les "
-"br, p, et suppression de lignes vides, etc...)"
+"l'editeur WordPress. Evite les br, p, et suppression de lignes vides, etc..."
 msgstr ""
 
-#: ../inc/options.php:1049
+#: ../inc/options.php:1007
 msgid "Login screen"
 msgstr ""
 
-#: ../inc/options.php:1050
+#: ../inc/options.php:1008
 msgid "Overlay color"
 msgstr ""
 
-#: ../inc/options.php:1057
+#: ../inc/options.php:1015
 msgid "Choose an image for the login screen background."
 msgstr ""
 
-#: ../inc/options.php:1062
+#: ../inc/options.php:1020
 msgid "Choose another one."
 msgstr ""
 
-#: ../inc/options.php:1067
+#: ../inc/options.php:1025
 msgid "Choose one more."
 msgstr ""
 
@@ -1699,10 +1756,6 @@ msgstr ""
 msgid "Fixed in Place"
 msgstr ""
 
-#: ../lib/options-framework/includes/class-options-sanitization.php:424
-msgid "Normal"
-msgstr ""
-
 #: ../lib/options-framework/includes/class-options-sanitization.php:425
 msgid "Italic"
 msgstr ""
@@ -1715,9 +1768,101 @@ msgstr ""
 msgid "Bold Italic"
 msgstr ""
 
+#. Name of the template
+msgid "Restricted"
+msgstr ""
+
+#. Name of the template
+msgid "Menu pour site"
+msgstr ""
+
+#: ../page-sitemenu.php:45 ../single-menus.php:112 ../template-parts/content-
+#: menus.php:37
+msgid "Welcome cocktail"
+msgstr ""
+
+#: ../page-sitemenu.php:51 ../single-menus.php:119 ../template-parts/content-
+#: menus.php:43
+msgid "&frac12; bottle of wine"
+msgstr ""
+
+#: ../page-sitemenu.php:57 ../single-menus.php:126 ../template-parts/content-
+#: menus.php:49
+msgid "Mise en bouche"
+msgstr ""
+
+#: ../page-sitemenu.php:61 ../page-sitemenu.php:75 ../page-sitemenu.php:89 ..
+#: /page-sitemenu.php:103 ../page-sitemenu.php:123 ../template-parts/content-
+#: menus.php:53 ../template-parts/content-menus.php:67 ../template-parts/content-
+#: menus.php:81 ../template-parts/content-menus.php:95 ../template-parts/content-
+#: menus.php:115
+msgid "+extra"
+msgstr ""
+
+#: ../page-sitemenu.php:71 ../single-menus.php:141 ../template-parts/content-
+#: menus.php:63
+msgid "Appetizer"
+msgstr ""
+
+#: ../page-sitemenu.php:85 ../single-menus.php:156 ../template-parts/content-
+#: menus.php:77
+msgid "Prelude"
+msgstr ""
+
+#: ../page-sitemenu.php:99 ../single-menus.php:171 ../template-parts/content-
+#: menus.php:91
+msgid "Main course"
+msgstr ""
+
+#: ../page-sitemenu.php:113 ../single-menus.php:186 ../template-parts/content-
+#: menus.php:105
+msgid "Plate of fine cheese of Quebec"
+msgstr ""
+
+#: ../page-sitemenu.php:119 ../single-menus.php:193 ../template-parts/content-
+#: menus.php:111
+msgid "Captain's dessert"
+msgstr ""
+
+#: ../page-sitemenu.php:133 ../single-menus.php:215 ../template-parts/content-
+#: menus.php:125
+msgid "Digestive"
+msgstr ""
+
+#: ../page-sitemenu.php:139 ../single-menus.php:222 ../template-parts/content-
+#: menus.php:131
+msgid "Coffee, tea, herbal tea"
+msgstr ""
+
+#. Name of the template
+msgid "Stickers"
+msgstr ""
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../searchform.php:4 ../searchform.php:4
+msgid "Search..."
+msgstr ""
+
+#: ../single-menus.php:90
+msgid "Season"
+msgstr ""
+
+#: ../single-menus.php:130 ../single-menus.php:145 ../single-menus.php:160 ..
+#: /single-menus.php:175 ../single-menus.php:197
+msgid "extra"
+msgstr ""
+
+#: ../single-menus.php:256
+msgid "Prices subject to change without notice."
+msgstr ""
+
 #: ../template-parts/content-blog.php:14 ../template-parts/content-blog.php:36 ..
-#: /template-parts/content-portfolio.php:17 ../template-parts/content-products.
-#: php:15
+#: /template-parts/content-portfolio.php:15 ../template-parts/content-products.
+#: php:14
 msgid "All"
 msgstr ""
 
@@ -1729,133 +1874,87 @@ msgstr ""
 msgid "Show"
 msgstr ""
 
-#: ../template-parts/content-menus.php:33
-msgid "Welcome cocktail"
-msgstr ""
-
-#: ../template-parts/content-menus.php:39
-msgid "&frac12; bottle of wine"
-msgstr ""
-
-#: ../template-parts/content-menus.php:45
-msgid "Mise en bouche"
-msgstr ""
-
-#: ../template-parts/content-menus.php:49 ../template-parts/content-menus.php:63 .
-#: ./template-parts/content-menus.php:77 ../template-parts/content-menus.php:91 ..
-#: /template-parts/content-menus.php:111
-msgid "+extra"
-msgstr ""
-
-#: ../template-parts/content-menus.php:59
-msgid "Appetizer"
-msgstr ""
-
-#: ../template-parts/content-menus.php:73
-msgid "Prelude"
-msgstr ""
-
-#: ../template-parts/content-menus.php:87
-msgid "Main course"
-msgstr ""
-
-#: ../template-parts/content-menus.php:101
-msgid "Plate of fine cheese of Quebec"
-msgstr ""
-
-#: ../template-parts/content-menus.php:107
-msgid "Captain's dessert"
-msgstr ""
-
-#: ../template-parts/content-menus.php:121
-msgid "Digestive"
-msgstr ""
-
-#: ../template-parts/content-menus.php:127
-msgid "Coffee, tea, herbal tea"
-msgstr ""
-
-#: ../template-parts/content-none.php:19
+#: ../template-parts/content-none.php:16
 msgid "Nothing Found"
 msgstr ""
 
-#: ../template-parts/content-none.php:25
+#: ../template-parts/content-none.php:22
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: ../template-parts/content-none.php:29
+#: ../template-parts/content-none.php:26
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: ../template-parts/content-none.php:34
+#: ../template-parts/content-none.php:31
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:50 ../template-parts/content-portfolio.
-#: php:108 ../template-parts/content-portfolio.php:156 ../template-parts/content-
-#: portfolio.php:185 ../template-parts/content-products.php:42 ../template-
-#: parts/content-products.php:112 ../template-parts/content-projects.php:45
+#: ../template-parts/content-portfolio.php:48 ../template-parts/content-portfolio.
+#: php:106 ../template-parts/content-portfolio.php:154 ../template-parts/content-
+#: portfolio.php:183 ../template-parts/content-products.php:41 ../template-
+#: parts/content-products.php:111 ../template-parts/content-projects.php:46
 msgid "Image missing!"
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:58 ../template-parts/content-products.
-#: php:63
+#: ../template-parts/content-portfolio.php:56 ../template-parts/content-products.
+#: php:62
 msgid "More information"
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:125 ../template-parts/content-
-#: portfolio.php:202
+#: ../template-parts/content-portfolio.php:123 ../template-parts/content-
+#: portfolio.php:200
 msgid "Client"
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:125 ../template-parts/content-
-#: portfolio.php:202
+#: ../template-parts/content-portfolio.php:123 ../template-parts/content-
+#: portfolio.php:200
 msgid "Date"
 msgstr ""
 
-#: ../template-parts/content-portfolio.php:128 ../template-parts/content-
-#: portfolio.php:205
+#: ../template-parts/content-portfolio.php:126 ../template-parts/content-
+#: portfolio.php:203
 msgid "Visit"
 msgstr ""
 
-#: ../template-parts/content-products.php:46
+#: ../template-parts/content-products.php:45
 msgid "Available"
 msgstr ""
 
-#: ../template-parts/content-products.php:47
+#: ../template-parts/content-products.php:46
 msgid "Sold out soon"
 msgstr ""
 
-#: ../template-parts/content-products.php:48
+#: ../template-parts/content-products.php:47
 msgid "Back order"
 msgstr ""
 
-#: ../template-parts/content-products.php:49
+#: ../template-parts/content-products.php:48
 msgid "Sold out"
 msgstr ""
 
-#: ../template-parts/content-products.php:50
+#: ../template-parts/content-products.php:49
 msgid "Unavailable"
 msgstr ""
 
-#: ../template-parts/content-products.php:51
+#: ../template-parts/content-products.php:50
 msgid "Sale closed"
 msgstr ""
 
-#: ../template-parts/content-products.php:125
+#: ../template-parts/content-products.php:124
 msgid "Buy it now!"
 msgstr ""
 
-#: ../template-parts/content-projects.php:53
+#: ../template-parts/content-projects.php:54
 msgid "Visit project"
 msgstr ""
 
-#: ../template-parts/content-team.php:83
+#: ../template-parts/content-team.php:94
 msgid "Profile"
 msgstr ""
 
@@ -1863,19 +1962,19 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
-#: ../template-parts/navbar-primary.php:36
+#: ../template-parts/navbar-primary.php:24
 msgid "Toggle navigation"
 msgstr ""
 
-#: ../template-parts/navbar-primary.php:63
+#: ../template-parts/navbar-primary.php:53
 msgid "Toggle fullscreen panel"
 msgstr ""
 
-#: ../template-parts/navbar-primary.php:83
+#: ../template-parts/navbar-primary.php:73
 msgid "Toggle right panel"
 msgstr ""
 
-#: ../template-parts/navbar-primary.php:103
+#: ../template-parts/navbar-primary.php:93
 msgid "Toggle left panel"
 msgstr ""
 
@@ -1883,132 +1982,130 @@ msgstr ""
 msgid "Main navigation"
 msgstr ""
 
-#: ../theme-my-login/login-form.php:13 ../theme-my-login/profile-form.php:37 ..
-#: /theme-my-login/register-form.php:13
+#: ../template-parts/toolbar-menus.php:13
+msgid "With price"
+msgstr ""
+
+#: ../template-parts/toolbar-menus.php:20
+msgid "Without price"
+msgstr ""
+
+#: ../template-parts/toolbar-menus.php:27
+msgid "Hi, here is the link for the page"
+msgstr ""
+
+#: ../theme-my-login/login-form.php:18 ../theme-my-login/profile-form.php:22 ..
+#: /theme-my-login/register-form.php:18
 msgid "Username"
 msgstr ""
 
-#: ../theme-my-login/login-form.php:17
+#: ../theme-my-login/login-form.php:22
 msgid "Password"
 msgstr ""
 
-#: ../theme-my-login/login-form.php:24
+#: ../theme-my-login/login-form.php:29
 msgid "Remember Me"
 msgstr ""
 
-#: ../theme-my-login/login-form.php:26
+#: ../theme-my-login/login-form.php:31
 msgid "Log In"
 msgstr ""
 
-#: ../theme-my-login/lostpassword-form.php:13
+#: ../theme-my-login/lostpassword-form.php:18
 msgid "Username or E-mail:"
 msgstr ""
 
-#: ../theme-my-login/lostpassword-form.php:19
+#: ../theme-my-login/lostpassword-form.php:24
 msgid "Get New Password"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:18
-msgid "Personal Options"
+#: ../theme-my-login/profile-form.php:24
+msgid "Usernames cannot be changed."
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:22
-msgid "Toolbar"
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:25
-msgid "Show Toolbar when viewing site"
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:33
-msgid "Name"
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:38
-msgid "Your username cannot be changed."
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:42
+#: ../theme-my-login/profile-form.php:28
 msgid "First Name"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:47
+#: ../theme-my-login/profile-form.php:33
 msgid "Last Name"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:52
+#: ../theme-my-login/profile-form.php:38
 msgid "Nickname"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:52 ../theme-my-login/profile-form.php:97
+#: ../theme-my-login/profile-form.php:38 ../theme-my-login/profile-form.php:77
 msgid "(required)"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:57
+#: ../theme-my-login/profile-form.php:43
 msgid "Display name publicly as"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:93
-msgid "Contact Info"
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:97 ../theme-my-login/register-form.php:18
+#: ../theme-my-login/profile-form.php:77 ../theme-my-login/register-form.php:23
 msgid "E-mail"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:102
-msgid "Website"
+#: ../theme-my-login/profile-form.php:86
+#, php-format
+msgid "There is a pending change of your e-mail to %1$s. <a href=\"%2$s\">Cancel</a>"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:118
-msgid "About Yourself"
+#: ../theme-my-login/profile-form.php:100
+msgid "Change Password"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:108
+msgid "Hide password"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:110
+msgid "Hide"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:112
+msgid "Cancel password change"
+msgstr ""
+
+#: ../theme-my-login/profile-form.php:113
+msgid "Cancel"
 msgstr ""
 
 #: ../theme-my-login/profile-form.php:122
-msgid "Biographical Info"
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:124
-msgid ""
-"Share a little biographical information to fill out your profile. This may "
-"be shown publicly."
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:132
-msgid "New Password"
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:133
-msgid ""
-"If you would like to change the password type a new one. Otherwise leave "
-"this blank."
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:134
 msgid "Type your new password again."
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:135
-msgid "Strength indicator"
+#: ../theme-my-login/profile-form.php:130
+msgid "Confirm use of weak password"
 msgstr ""
 
-#: ../theme-my-login/profile-form.php:136
-msgid ""
-"Hint: The password should be at least seven characters long. To make it "
-"stronger, use upper and lower case letters, numbers and symbols like ! \" ? $ "
-"% ^ &amp; )."
-msgstr ""
-
-#: ../theme-my-login/profile-form.php:148
+#: ../theme-my-login/profile-form.php:145
 msgid "Update Profile"
 msgstr ""
 
-#: ../theme-my-login/register-form.php:24
+#: ../theme-my-login/register-form.php:29
 msgid "A password will be e-mailed to you."
 msgstr ""
 
-#: ../theme-my-login/register-form.php:26
+#: ../theme-my-login/register-form.php:31
 msgid "Register"
+msgstr ""
+
+#: ../theme-my-login/resetpass-form.php:14
+msgid "New password"
+msgstr ""
+
+#: ../theme-my-login/resetpass-form.php:21
+msgid "Strength indicator"
+msgstr ""
+
+#: ../theme-my-login/resetpass-form.php:26
+msgid "Confirm new password"
+msgstr ""
+
+#: ../theme-my-login/resetpass-form.php:35
+msgid "Reset Password"
 msgstr ""
 
 #. Name of the theme
