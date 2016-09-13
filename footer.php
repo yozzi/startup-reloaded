@@ -25,7 +25,7 @@ require get_template_directory() . '/inc/theme-options.php';
             <div class="row site-info">
                 <div class="col-xs-12">
                 <?php echo $footer ?>
-                <?php if ( current_user_can( 'manage_options' ) ) { echo '<h3><span class="label label-default pull-right">' . startup_reloaded_get_current_template() . '</span></h3>'; } ?>
+                <?php if ( current_user_can( 'manage_options' ) ) { echo '<span class="label label-default pull-right">' . startup_reloaded_get_current_template() . '</span>'; } ?>
                 </div>
             </div><?php //.site-info ?>
         </footer><?php //#colophon ?>
