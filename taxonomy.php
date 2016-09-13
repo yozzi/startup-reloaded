@@ -24,7 +24,8 @@ require get_template_directory() . '/inc/theme-options.php';
                             <div class="row">
                                 <div class="col-lg-12">
                                     <?php if ( $page_header_boxed == 1){ ?><h3 class="page-title boxed"><?php the_archive_title(); ?></h3><?php }  
-                                        else { ?><h3 class="page-title"><?php the_archive_title(); ?></h3><?php } ?>                                                      
+                                        else { ?><h3 class="page-title"><?php the_archive_title(); ?></h3><?php } ?>  
+                                    
                                     <?php //if ( the_archive_description() && $page_header_boxed == 1){ echo '<h4 class="boxed">' . the_archive_description() . '</h4>'; }  
                                         //else if ( the_archive_description() ){ echo '<h4>' . the_archive_description() . '</h4>'; } ?>
                                 </div>
