@@ -37,7 +37,7 @@ require get_template_directory() . '/inc/theme-options.php';
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <?php get_template_part( 'template-parts/content', 'blog' ); ?>
+                            <?php get_template_part( 'template-parts/content', get_post_type() ); ?>
                         </div>
                     </div>
                 </div>

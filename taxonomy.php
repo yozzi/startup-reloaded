@@ -38,7 +38,7 @@ require get_template_directory() . '/inc/theme-options.php';
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <?php get_template_part( 'template-parts/content', 'taxonomy' ); ?>
+                            <?php get_template_part( 'template-parts/content', get_post_type() ); ?>
                             <?php the_posts_navigation(); ?>
                         </div>
                     </div>
