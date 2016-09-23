@@ -1,7 +1,7 @@
 <section id="catalog">
     <div id="grid" class="row no-gutters">
         <?php while ( have_posts() ) : the_post();
-            $main_pic = wp_get_attachment_image( get_post_meta( get_the_ID(), '_startup_cpt_catalog_main_pic_id', 1 ), 'grid_thumb' );
+            $main_pic = wp_get_attachment_image( get_post_meta( get_the_ID(), '_startup_cpt_catalog_main_pic_id', 1 ), 'col-3-square' );
         ?>    
             <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="catalog-item">

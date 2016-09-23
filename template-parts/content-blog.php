@@ -58,7 +58,7 @@
             <div id="shuffle" class="row">
                 <?php foreach ($blog as $key=> $post) {
                     $categories = get_the_terms( $post->ID, 'category' );
-                    $image = get_the_post_thumbnail($post->ID, 'grid_thumb');
+                    $image = get_the_post_thumbnail($post->ID, 'col-3-square');
                     $format = get_post_format($post->ID);
                     $link = get_post_meta( $post->ID, '_startup_reloaded_posts_link_url', true );
                     if ( $format == 'image' ) {
@@ -101,7 +101,7 @@
             <div id="grid" class="row no-gutters">
                 <?php foreach ($blog as $key=> $post) {
                     $categories = get_the_terms( $post->ID, 'category' );
-                    $image = get_the_post_thumbnail($post->ID, 'grid_thumb');
+                    $image = get_the_post_thumbnail($post->ID, 'col-3-square');
                 ?>
                     <div class="item col-xs-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="blog-item">

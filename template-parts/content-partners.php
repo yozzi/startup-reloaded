@@ -43,7 +43,7 @@ $total_partners = count($partners);
                         <?php } $count = 1; ?>
                             
                                 <?php foreach ($partners as $key=> $partner) {
-                                    $logo = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_cpt_partners_logo_id', 1 ), 'partners' );
+                                    $logo = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_cpt_partners_logo_id', 1 ), 'col-2-full' );
                                     $url = get_post_meta( $partner->ID, '_startup_cpt_partners_url', true ); ?>
                                     <div class="item<?php if ($count == 1){ echo ' active';} ?>">
                                         <div class="col-md-3 col-sm-6 col-xs-12">
@@ -69,7 +69,7 @@ $total_partners = count($partners);
     <?php } else { ?>
         <div class="row">
             <?php foreach ($partners as $key=> $partner) {
-                $logo = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_cpt_partners_logo_id', 1 ), 'partners' );
+                $logo = wp_get_attachment_image( get_post_meta( $partner->ID, '_startup_cpt_partners_logo_id', 1 ), 'col-2-full' );
                 $url = get_post_meta( $partner->ID, '_startup_cpt_partners_url', true ); ?>
                     <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
                         <div class="partner">

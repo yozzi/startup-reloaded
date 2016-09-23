@@ -24,7 +24,7 @@
         </ul>
         <div id="shuffle" class="row">
             <?php foreach ($products as $key=> $product) {
-                $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_cpt_products_main_pic_id', 1 ), 'shuffle_thumb' );
+                $main_pic  = wp_get_attachment_image( get_post_meta( $product->ID, '_startup_cpt_products_main_pic_id', 1 ), 'col-3-full' );
                 $short  = get_post_meta( $product->ID, '_startup_cpt_products_short', true );
                 $description  = get_post_meta( $product->ID, '_startup_cpt_products_description', true );
                 $categories = get_the_terms( $product->ID, 'product-category' );
@@ -82,7 +82,7 @@
                                     <?php $x = 1;
                                     foreach ( $gallery as $attachment_id => $img_product_main_url ) { ?>
                                         <div class="item <?php echo ( $x==1 ) ? 'active' : '' ?>">
-                                            <?php $image = wp_get_attachment_image($attachment_id, 'shuffle_main'); ?>
+                                            <?php $image = wp_get_attachment_image($attachment_id, 'col-3-crop'); ?>
                                             <?php if ( $total_slides > 1 ) { ?>
                                                 <a href="#carousel-popup-<?php echo $product->ID; ?>" role="button" data-slide="next">
                                             <?php } ?>  

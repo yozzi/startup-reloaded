@@ -28,10 +28,10 @@
         <?php if ($portfolio_style == 'shuffle'){ ?>
             <div id="shuffle" class="row">
                 <?php foreach ($portfolio as $key=> $portfolio_item) {
-                    $thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_thumbnail_id', 1 ), 'shuffle_thumb' );
-                    $main_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'shuffle_thumb' );
-                    $detail_thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'grid_main' );
-                    $detail_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'grid_main' );
+                    $thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_thumbnail_id', 1 ), 'col-3-full' );
+                    $main_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'col-3-full' );
+                    $detail_thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'col-8-full' );
+                    $detail_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'col-8-full' );
                     $gallery  = get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_gallery', true );
                     $short = get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_short', true );
                     $description  = get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_description', true );
@@ -83,7 +83,7 @@
                                                         <?php $x = 1;
                                                         foreach ( $gallery as $attachment_id => $img_portfolio_main_url ) { ?>
                                                             <div class="item <?php echo ( $x==1 ) ? 'active' : '' ?>">
-                                                                <?php $image = wp_get_attachment_image($attachment_id, 'shuffle_main'); ?>
+                                                                <?php $image = wp_get_attachment_image($attachment_id, 'col-3-crop'); ?>
                                                                 <a href="#carousel-popup-<?php echo $portfolio_item->ID ?>" role="button" data-slide="next"><?php echo $image ?></a>
                                                             </div>
                                                         <?php $x++;
@@ -136,10 +136,10 @@
         <?php } else { ?>
             <div id="grid" class="row no-gutters">
                 <?php foreach ($portfolio as $key=> $portfolio_item) {
-                    $thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_thumbnail_id', 1 ), 'grid_thumb' );
-                    $main_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'grid_thumb' );
-                    $detail_thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'grid_main' );
-                    $detail_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'grid_main' );
+                    $thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_thumbnail_id', 1 ), 'col-3-square' );
+                    $main_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'col-3-square' );
+                    $detail_thumbnail = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'col-8-full' );
+                    $detail_pic = wp_get_attachment_image( get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_main_pic_id', 1 ), 'col-8-full' );
                     $gallery  = get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_gallery', true );
                     $description  = get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_description', true );
                     $client  = get_post_meta( $portfolio_item->ID, '_startup_cpt_portfolio_client', true );

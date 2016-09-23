@@ -21,9 +21,9 @@ get_header(); ?>
             $default_pic_url = startup_cpt_menus_get_option( 'startup_cpt_menus_default_pic' );
             if ( $default_pic_url ) {
                 $default_pic_id = wp_get_image_id($default_pic_url);
-                $default_pic  = wp_get_attachment_image_src($default_pic_id, 'grid_thumb');
+                $default_pic  = wp_get_attachment_image_src($default_pic_id, 'col-3-square');
             }
-            $main_pic  = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_startup_cpt_menus_main_pic_id', 1 ), 'grid_thumb' );
+            $main_pic  = wp_get_attachment_image_src( get_post_meta( get_the_ID(), '_startup_cpt_menus_main_pic_id', 1 ), 'col-3-square' );
             $thumbnail  = get_post_meta( get_the_ID(), '_startup_cpt_menus_thumbnail', true );                    
             $short  = get_post_meta( get_the_ID(), '_startup_cpt_menus_short', true );
             $seasons  = get_the_terms( get_the_ID(), 'menu-season' );

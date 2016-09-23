@@ -43,7 +43,7 @@ $total_team = count($team);
 
                         foreach ( $team as $key=> $team ) {
                             //$team_image_url     = wp_get_attachment_url( get_post_thumbnail_id($team->ID) );
-                            $team_image_url     = wp_get_attachment_image_src( get_post_thumbnail_id($team->ID), 'grid_thumb' );
+                            $team_image_url     = wp_get_attachment_image_src( get_post_thumbnail_id($team->ID), 'col-3-square' );
                             
                             $team_capacity      = get_post_meta($team->ID, '_startup_cpt_team_capacity', true );
                             $team_social_icon_1 = get_post_meta($team->ID, '_startup_cpt_team_icon_1', true );
