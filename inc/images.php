@@ -6,11 +6,12 @@ function startup_reloaded_custom_theme_features()  {
 
 	set_post_thumbnail_size( 1200, 400, true );
     
+    add_image_size( 'col-2-full', 140, 140, false);    
     add_image_size( 'col-3-full', 480, 0, false);
     add_image_size( 'col-3-crop', 480, 220, true);
     add_image_size( 'col-3-square', 480, 480, true);
+    add_image_size( 'col-6-full', 555, 0, false);
     add_image_size( 'col-8-full', 720, 0, false);
-    add_image_size( 'col-2-full', 140, 140, false);
     add_image_size( 'col-12-full', 1140, 0, false);
     add_image_size( 'col-12-crop', 1140, 450, true);
     

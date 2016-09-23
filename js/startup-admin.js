@@ -18,5 +18,6 @@ jQuery( document ).ready(function() {
     jQuery('#_startup_cpt_pricing_icon_3').select2();
     jQuery('#_startup_cpt_pricing_icon_4').select2();
     jQuery('#_startup_cpt_timeline_icon').select2();
+    jQuery('#_startup_cpt_catalog_menu').select2();
     jQuery('#general-header').select2();
 });

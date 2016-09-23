@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+## Toolbars
+--------------------------------------------------------------*/
+
+#toolbar .input-group.tools a {
+   margin-right: 4px;
+}
+
+#toolbar .input-group.tools a:last-child {
+   margin-right: 0;
+}
+
+@media (max-width: 767px) {
+    #toolbar form.navbar-form>input.form-control{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
