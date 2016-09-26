@@ -25,7 +25,26 @@ require get_template_directory() . '/inc/theme-options.php';
             <div class="row site-info">
                 <div class="col-xs-12">
                 <?php echo $footer ?>
-                <?php if ( current_user_can( 'manage_options' ) ) { echo '<span class="label label-default pull-right">' . startup_reloaded_get_current_template() . '</span>'; } ?>
+                    
+                <?php if ( current_user_can( 'edit_posts') || current_user_can( 'manage_options' )) { ?>
+                    <div class="btn-group pull-right">
+                <?php } ?>
+                        
+                    <?php if ( is_single() || is_page() ) {
+                        edit_post_link( 'Edit', '', '', $wp_query->post->ID, 'btn btn-custom btn-xs' );
+                    } ?>
+                        
+                    <?php if ( current_user_can( 'edit_posts' ) ) { ?>
+                        <a href="<?php echo admin_url() ?>" class="btn btn-custom btn-xs"><?php _e( 'Admin', 'startup-reloaded' ) ?></a>
+                    <?php } ?> 
+                      
+                    <?php if ( current_user_can( 'manage_options' ) ) { ?>
+                        <a href="<?php echo admin_url() . "/theme-editor.php?file=" . startup_reloaded_get_current_template() . "&theme=" . get_template() ?>" class="btn btn-custom btn-xs"><?php echo startup_reloaded_get_current_template() ?></a>
+                    <?php } ?> 
+                        
+                <?php if ( current_user_can( 'edit_posts') || current_user_can( 'manage_options' )) { ?>
+                    </div>
+                <?php } ?>
                 </div>
             </div><?php //.site-info ?>
         </footer><?php //#colophon ?>

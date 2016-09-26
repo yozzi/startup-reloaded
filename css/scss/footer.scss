@@ -32,3 +32,11 @@
 #secondary h2 {
     font-weight: normal;
 }
+
+#colophon .site-info .btn-group .btn-custom{
+    background: #444;
+}
+#colophon .site-info .btn-group .btn-custom:focus,
+#colophon .site-info .btn-group .btn-custom:hover{
+    background: #000;
+}
