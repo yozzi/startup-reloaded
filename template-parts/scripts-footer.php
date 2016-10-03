@@ -82,7 +82,7 @@
     </script>
 <?php } ?>
 
-<?php  if( $blog_style == 'shuffle' || $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php')){ ?>
+<?php if( $blog_style == 'shuffle' || $portfolio_style == 'shuffle' || is_plugin_active('startup-cpt-products/startup-cpt-products.php') || is_plugin_active('startup-cpt-catalog/startup-cpt-catalog.php') ){ ?>
     <script type="text/javascript">
        //On utilise imagesloaded pour que Shuffle ne fasse pas de bug d'overlapping avec les tailles d'images responsives
 
