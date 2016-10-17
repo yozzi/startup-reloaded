@@ -196,7 +196,7 @@ function bwp_template_redirect() {
         wp_redirect( home_url() ); exit;
     }
 }
-add_action(‘template_redirect’, ‘bwp_template_redirect’);
+add_action('template_redirect', 'bwp_template_redirect');
 
 /**
  * Désactiver les br automatiques de l'éditeur et autres
