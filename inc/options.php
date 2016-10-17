@@ -1016,39 +1016,6 @@ function optionsframework_options() {
 		'type' => 'checkbox'
 	);
     
-    if (!is_plugin_active('theme-my-login/theme-my-login.php')){
-        $options[] = array(
-            'name' => __('Login screen', 'options_check'),
-            'desc' => __( 'Overlay color', 'startup-reloaded' ),
-            'id' => 'login_overlay',
-            'std' => '#ff4500',
-            'type' => 'color'
-        );
-
-        $options[] = array(
-            'desc' => __('Choose an image for the login screen background.', 'startup-reloaded'),
-            'id' => 'login_01',
-            'type' => 'upload');
-
-        $options[] = array(
-            'desc' => __('Choose another one.', 'startup-reloaded'),
-            'id' => 'login_02',
-            'type' => 'upload');
-
-        $options[] = array(
-            'desc' => __('Choose one more.', 'startup-reloaded'),
-            'id' => 'login_03',
-            'type' => 'upload');
-
-        $options[] = array(
-            'id' => 'login_04',
-            'type' => 'upload');
-
-        $options[] = array(
-            'id' => 'login_05',
-            'type' => 'upload');
-    }
-    
 	return $options;
 }
 
