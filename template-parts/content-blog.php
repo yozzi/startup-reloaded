@@ -82,15 +82,16 @@
                             <?php } ?>
                             <div class="post-details">
                                 <h4><?php if ( $icon ) { ?><i class="fa fa-<?php echo $icon ?>"></i><?php } ?><span class="pull-right"><?php the_time('d/m/Y') ?> <i class="fa fa-clock-o"></i></span></h4>
-								<h4><span class="pull-right"><?php echo $post->post_title ?></span></h4>
-                                <p><?php echo do_shortcode($post->post_content) ?></p>
-                                <?php if ( $format == 'link' ) { ?>
-                                    <a href="<?php echo esc_url( $link ) ?>" class="btn btn-custom btn-lg btn-block" role="button" target="_blank"><?php _e( 'Show', 'startup-reloaded' ) ?></a>
-                                <?php } else if ( $format == 'audio' ) { ?>
-                                    <?php echo do_shortcode('[audio src="' . $link . '"]') ?>
-                                <?php } else if ( $format == 'video' ) { ?>
-                                    <?php echo do_shortcode('[embed]' . $link . '[/embed]') ?>
-                                <?php } ?>
+								<h3><?php echo $post->post_title ?></h3>
+                                
+                                                            <?php               
+                                if( has_excerpt() ){
+                                    $content = $post->post_excerpt;
+                                } else {
+                                    $content = $post->post_content;
+                                } ?>
+                                <p><?php echo $content ?></p>
+                                    <a href="<?php echo get_permalink( $post->ID ) ?>" class="btn btn-custom btn-sm btn-block" role="button" target="_blank"><?php _e( 'Lire la suite', 'startup-reloaded' ) ?></a>
                             </div>        
                         </div>
                     </div>
