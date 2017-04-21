@@ -27,12 +27,12 @@
                         <div class="sticky-item">
                             <div class="sticky-item-thumbnail">  
                                 <?php if ( $image ) { echo $image; } ?>
-                                <div class="sticky-item-details">
-                                </div>
+                            </div>
+                            <div class="sticky-item-details">
                                 <h2><?php echo $title ?></h2>
                                 <p><?php echo $content ?></p>
                                 <p><a class="btn btn-sm btn-custom" href="<?php echo esc_url( get_permalink($post->ID) ) ?>">Lire la suite</a></p>
-                            </div>       
+                            </div>
                         </div>
                     </div>
                 <?php } // endforeach ?>
