@@ -5,15 +5,12 @@
     /* Get all sticky posts */
     $sticky = get_option( 'sticky_posts' );
 
-    /* Sort the stickies with the newest ones at the top */
-    rsort( $sticky );
+    $args = array( 'post_type' => 'post', 'post__in' => $sticky, 'posts_per_page'      => 3, 'ignore_sticky_posts' => 1);
+    $blog = get_posts( $args );
 
-    /* Get the 5 newest stickies (change 5 for a different number) */
-    $sticky = array_slice( $sticky, 0, 5 );
-
-    $args = array( 'post__in' => $sticky, 'ignore_sticky_posts' => 1 );
-    $blog = get_posts( $args );   
+    if (!empty($sticky)) {
 ?>
+
 
 <section id="sticky"<?php if ( $atts['bg'] ) { ?> style="background:<?php echo $atts['bg'] ?>"<?php } ?>>
     <?php if (is_front_page()) { ?><div class="container"><?php } ?>
@@ -44,3 +41,4 @@
     
     <?php if (is_front_page()) { ?></div><?php } ?>
 </section>
+<?php } ?>
