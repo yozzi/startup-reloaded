@@ -37,7 +37,8 @@
 }
 /* Grid */
 
-#blog #grid .blog-item-thumbnail img {
+#blog #grid .blog-item-thumbnail img,
+#sticky #grid .sticky-item-thumbnail img {
     width: 100%;
     max-width: 100%;
     height: auto;
